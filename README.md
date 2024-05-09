@@ -19,4 +19,4 @@ A call for members was launched at the ESGEM General Meeting on April 29, and we
 
 If after reading the documents above you are interested to join, please register your interest and let us know what organism/s you have expertise in, using [this form](https://forms.gle/QjvQNuB3vCHGMiiA7), by June 2.
 
-Following a review of registrations, individuals will be formally invited to join and asked to sign a Memborandum of Understanding and Code of Conduct.
+Following a review of registrations, individuals will be formally invited to join and asked to sign a [Memborandum of Understanding](https://github.com/interpretAMR/AMRrulesCuration/blob/main/ESGEM-AMR%20MOU.pdf) and [Code of Conduct](https://github.com/interpretAMR/AMRrulesCuration/blob/main/ESGEM-AMR%20Code%20of%20Ethics.pdf).
