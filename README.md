@@ -13,7 +13,7 @@ We are partnering with [ESGEM, the ESCMID Study Group on Epidemiological Markers
 
 ## Members
 
-The leaders of the working group are Kat Holt (LSHTM), Natacha Couto (ESGEM Chair), and Jane Hawkey (Monash, leading bioinformatics development).
+The convenors of the working group are Kat Holt (LSHTM), Natacha Couto (ESGEM Chair), and Jane Hawkey (Monash, leading bioinformatics development).
 
 A call for members was launched at the ESGEM General Meeting on April 29, and we are currently taking expressions of interest to join the Working Group. Membership of the working group is open to anyone with relevant expertise, you do not have to be an ESGEM member.
 
