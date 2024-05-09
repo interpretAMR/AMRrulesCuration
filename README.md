@@ -8,9 +8,11 @@ Our goal is to develop interpretive standards for AMR genotypes, akin to the int
 
 An overview of the concept, with example data structures and code, is available in the [AMRrules](https://github.com/interpretAMR/AMRrules) repository.
 
-We are partnering with [ESGEM, the ESCMID Study Group on Epidemiological Markers](https://www.escmid.org/esgem/), to form an ESGEM-AMR Working Group to curate organism-specific rule sets. Membership of the working group is open to anyone with relevant expertise, you do not have to be an ESGEM member.
+We are partnering with [ESGEM, the ESCMID Study Group on Epidemiological Markers](https://www.escmid.org/esgem/), to form an ESGEM-AMR Working Group to curate organism-specific rule sets. A detailed description of the Working Group is available [here](https://github.com/interpretAMR/AMRrulesCuration/blob/main/ESGEM-AMR%20Working%20Group.pdf), including scope, plans and timeline. Technical guidance for curation of rule sets is available [here](https://github.com/interpretAMR/AMRrulesCuration/blob/main/ESGEM-AMR%20Technical%20Guidance.pdf), this is a work in progress and will be refined as we go.
 
-A detailed description of the ESGEM-AMR Working Group is available [here](https://github.com/interpretAMR/AMRrulesCuration/blob/main/ESGEM-AMR%20Working%20Group.pdf), including scope / plans / timeline. Technical guidance for curation of rule sets is available [here](https://github.com/interpretAMR/AMRrulesCuration/blob/main/ESGEM-AMR%20Technical%20Guidance.pdf).
 
-If after reading these documents you are interested to join the working group, please register your interest, and let us know what organism/s you have expertise in, using [this form](https://forms.gle/QjvQNuB3vCHGMiiA7), by June 2.
+## Members
 
+The leaders of the working group are Kat Holt (LSHTM), Natacha Couto (ESGEM Chair), and Jane Hawkey (Monash, leading bioinformatics development).
+
+A call for members was launched at the ESGEM General Meeting on April 29, and we are currently taking expressions of interest to join the Working Group. If after reading these documents you are interested to join, please register your interest, and let us know what organism/s you have expertise in, using [this form](https://forms.gle/QjvQNuB3vCHGMiiA7), by June 2. Membership of the working group is open to anyone with relevant expertise, you do not have to be an ESGEM member.
