@@ -18,11 +18,9 @@ We have partnered with [ESGEM, the ESCMID Study Group on Epidemiological Markers
 
 The convenors of the ESGEM-AMR Working Group are Kat Holt (LSHTM), Natacha Couto (ESGEM Chair), and Jane Hawkey (Monash, leading bioinformatics development).
 
-A call for members was launched at the ESGEM General Meeting on April 29, and we are currently taking expressions of interest to join the Working Group. Membership of the working group is open to anyone with relevant expertise, you do not have to be an ESGEM member.
+A call for members was launched at the ESGEM General Meeting on April 29 and closed June 2. Over 120 applications were received. Following a review of registrations, individuals will be formally invited to join and asked to sign a [Memborandum of Understanding](https://github.com/interpretAMR/AMRrulesCuration/blob/main/ESGEM-AMR%20MOU.pdf) and [Code of Ethics](https://github.com/interpretAMR/AMRrulesCuration/blob/main/ESGEM-AMR%20Code%20of%20Ethics.pdf).
 
-If after reading the documents above you are interested to join, please register your interest and let us know what organism/s you have expertise in, using [this form](https://forms.gle/QjvQNuB3vCHGMiiA7), by June 2.
-
-Following a review of registrations, individuals will be formally invited to join and asked to sign a [Memborandum of Understanding](https://github.com/interpretAMR/AMRrulesCuration/blob/main/ESGEM-AMR%20MOU.pdf) and [Code of Ethics](https://github.com/interpretAMR/AMRrulesCuration/blob/main/ESGEM-AMR%20Code%20of%20Ethics.pdf).
+We will consider requests for additional members after reviewing the first round. If after reading the documents above you are interested to join, please register your interest and let us know what organism/s you have expertise in, using [this form](https://docs.google.com/forms/d/e/1FAIpQLSeH96VlioxLKarZOLMqD-f1fLnb9WYOHYz4tZ9NtQzpHrKyzw/viewform?usp=sf_link).
 
 ## Partners
 
