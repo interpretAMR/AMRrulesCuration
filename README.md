@@ -30,5 +30,17 @@ We are keen to partner with other allied organisations and initiatives, please [
 
 ## Member Resources
 
-AMRrules Spec - v0.2 [[google sheet]](https://docs.google.com/spreadsheets/d/14fuGcn-29OpYNeIpsjQ1MsPB3pqo4iz044fc4HLQHZI/edit?usp=sharing)
-Technical Guidance - v1.2 [[PDF]](https://github.com/interpretAMR/AMRrulesCuration/blob/main/ESGEM-AMR%20Technical%20Guidance%20v1.2.pdf)
+* AMRrules Spec - v0.2 [[google sheet]](https://docs.google.com/spreadsheets/d/14fuGcn-29OpYNeIpsjQ1MsPB3pqo4iz044fc4HLQHZI/edit?usp=sharing)
+* AMRrules Technical Guidance - v1.2 [[PDF]](https://github.com/interpretAMR/AMRrulesCuration/blob/main/ESGEM-AMR%20Technical%20Guidance%20v1.2.pdf)
+* GTDB taxonomy: [[browser]](https://gtdb.ecogenomic.org/) [[GTDBtk software]](https://github.com/Ecogenomics/GTDBTk)
+* CARD/Antimicrobial Resistance Ontology (ARO): [[browser]](https://card.mcmaster.ca/)
+* Drug class definitions: [ATC Index](https://atcddd.fhi.no/atc_ddd_index/)
+* Variant specification: [HGVS](https://hgvs-nomenclature.org/stable/)
+* EUCAST: [[Breakpoints]](https://www.eucast.org/clinical_breakpoints) [[Expected Resistance]](https://www.eucast.org/expert_rules_and_expected_phenotypes/expected_phenotypes)
+* NCBI AMRfinderplus: [[software]](https://www.ncbi.nlm.nih.gov/pathogens/antimicrobial-resistance/AMRFinder/)
+* NCBI refgene (AMR Gene Catalog): [[browser]](https://www.ncbi.nlm.nih.gov/pathogens/refgene/)
+* NCBI AMR Reference Gene Hierarchy: [[browser]](https://www.ncbi.nlm.nih.gov/pathogens/genehierarchy) [[TXT file download]](https://ftp.ncbi.nlm.nih.gov/pathogen/Antimicrobial_resistance/AMRFinderPlus/database/latest/ReferenceGeneHierarchy.txt)
+* NCBI refseq: [[browser]](https://www.ncbi.nlm.nih.gov/refseq/)
+* NCBI AST data: [[browser]](https://www.ncbi.nlm.nih.gov/pathogens/ast/)
+* NCBI AST data submission: [[info]](https://www.ncbi.nlm.nih.gov/pathogens/submit-data/) [[submission format]](https://www.ncbi.nlm.nih.gov/biosample/docs/antibiogram/)
+  
