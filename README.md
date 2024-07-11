@@ -43,5 +43,5 @@ We are keen to partner with other allied organisations and initiatives, please [
 * NCBI refseq: [[browser]](https://www.ncbi.nlm.nih.gov/refseq/)
 * NCBI AST data: [[browser]](https://www.ncbi.nlm.nih.gov/pathogens/ast/)
 * NCBI AST data submission: [[info]](https://www.ncbi.nlm.nih.gov/pathogens/submit-data/) [[submission format]](https://www.ncbi.nlm.nih.gov/biosample/docs/antibiogram/)
-* Introductory webinar slides: [[PDF]](https://github.com/interpretAMR/AMRrulesCuration/blob/main/slides/ESGEM-AMR%20Working%20Group.pdf)
+* Introductory webinar slides: [[PDF]](https://github.com/interpretAMR/AMRrulesCuration/blob/main/slides/ESGEM-AMR%20Webinar.pdf)
 * Kickoff meeting slides: [[PDF]](https://github.com/interpretAMR/AMRrulesCuration/blob/main/slides/ESGEM-AMR%20Kickoff%20slides.pdf)
