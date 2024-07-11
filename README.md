@@ -9,9 +9,9 @@ The goal of AMRrules is to develop interpretive standards for AMR genotypes, aki
 An overview of the concept, with example data structures and code, is available in the [AMRrules](https://github.com/interpretAMR/AMRrules) repository. 
 
 We have partnered with [ESGEM, the ESCMID Study Group on Epidemiological Markers](https://www.escmid.org/esgem/), to form an ESGEM-AMR Working Group to curate organism-specific rule sets. 
-* Slides from the introductory webinars held May 14/15 are available [here](https://github.com/interpretAMR/AMRrulesCuration/blob/main/ESGEM-AMR%20Webinar.pdf).
+* Slides from the introductory webinars held May 14/15 are available [here](https://github.com/interpretAMR/AMRrulesCuration/blob/main/slides/ESGEM-AMR%20Webinar.pdf).
 * A detailed description of the Working Group and the overall AMRrules approach is available [here](https://github.com/interpretAMR/AMRrulesCuration/blob/main/ESGEM-AMR%20Working%20Group.pdf), including scope, plans and timeline.
-* Technical guidance for curation of rule sets is available [here](https://github.com/interpretAMR/AMRrulesCuration/blob/main/ESGEM-AMR%20Technical%20Guidance.pdf), this is a work in progress and will be refined as we go.
+* Technical guidance for curation of rule sets is available [here](https://github.com/interpretAMR/AMRrulesCuration/blob/main/ESGEM-AMR%20Technical%20Guidance%20v1.2.pdf), this is a work in progress and will be refined as we go.
 
 
 ## Working Group Members
@@ -43,4 +43,5 @@ We are keen to partner with other allied organisations and initiatives, please [
 * NCBI refseq: [[browser]](https://www.ncbi.nlm.nih.gov/refseq/)
 * NCBI AST data: [[browser]](https://www.ncbi.nlm.nih.gov/pathogens/ast/)
 * NCBI AST data submission: [[info]](https://www.ncbi.nlm.nih.gov/pathogens/submit-data/) [[submission format]](https://www.ncbi.nlm.nih.gov/biosample/docs/antibiogram/)
-  
+* Introductory webinar slides: [[PDF]](https://github.com/interpretAMR/AMRrulesCuration/blob/main/slides/ESGEM-AMR%20Working%20Group.pdf)
+* Kickoff meeting slides: [[PDF]](https://github.com/interpretAMR/AMRrulesCuration/blob/main/slides/ESGEM-AMR%20Kickoff%20slides.pdf)
