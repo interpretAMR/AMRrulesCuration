@@ -12,15 +12,15 @@ We have partnered with [ESGEM, the ESCMID Study Group on Epidemiological Markers
 * Slides from the introductory webinars held May 14/15 are available [here](https://github.com/interpretAMR/AMRrulesCuration/blob/main/slides/ESGEM-AMR%20Webinar.pdf).
 * A detailed description of the Working Group and the overall AMRrules approach is available [here](https://github.com/interpretAMR/AMRrulesCuration/blob/main/ESGEM-AMR%20Working%20Group.pdf), including scope, plans and timeline.
 * Technical guidance for curation of rule sets is available [here](https://github.com/interpretAMR/AMRrulesCuration/blob/main/ESGEM-AMR%20Technical%20Guidance%20v1.2.pdf), this is a work in progress and will be refined as we go.
-
+* The rule specification template is [here (v0.2, under active development)](https://docs.google.com/spreadsheets/d/14fuGcn-29OpYNeIpsjQ1MsPB3pqo4iz044fc4HLQHZI/edit?usp=sharing).
 
 ## Working Group Members
 
 The convenors of the ESGEM-AMR Working Group are Kat Holt (LSHTM), Natacha Couto (ESGEM Chair), and Jane Hawkey (Monash, leading bioinformatics development).
 
-A call for members was launched at the ESGEM General Meeting on April 29 and closed June 2. Over 120 applications were received. Following a review of registrations, individuals will be formally invited to join and asked to sign a [Memborandum of Understanding](https://github.com/interpretAMR/AMRrulesCuration/blob/main/ESGEM-AMR%20MOU.pdf) and [Code of Ethics](https://github.com/interpretAMR/AMRrulesCuration/blob/main/ESGEM-AMR%20Code%20of%20Ethics.pdf).
+A call for members was launched at the ESGEM General Meeting on April 29 and closed June 2. Over 120 applications were received and most of these have been invited to join organism-focused subgroups. The list of members will be posted here shortly.
 
-We will consider requests for additional members after reviewing the first round. If after reading the documents above you are interested to join, please register your interest and let us know what organism/s you have expertise in, using [this form](https://docs.google.com/forms/d/e/1FAIpQLSeH96VlioxLKarZOLMqD-f1fLnb9WYOHYz4tZ9NtQzpHrKyzw/viewform?usp=sf_link).
+Additional requests to join ESGEM-AMR will be considered later in the year, once the subgroups are up and running and it is clear where additional help would be beneficial. In the meantime you may register your interest and let us know what organism/s you have expertise in, using [this form](https://docs.google.com/forms/d/e/1FAIpQLSeH96VlioxLKarZOLMqD-f1fLnb9WYOHYz4tZ9NtQzpHrKyzw/viewform?usp=sf_link).
 
 ## Partners
 
