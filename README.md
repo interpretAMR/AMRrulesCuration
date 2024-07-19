@@ -52,7 +52,7 @@ We are keen to partner with other allied organisations and initiatives, please [
 
 ***Enterococcus -*** *Francesc Coll*, Thomas Demuyser, Ana R. Freitas, Guido Werner, Precious Osadebamwen, Theo Gouliouris, Fiona Walsh, Valeria Bortolaia
 
-***Staphylococcus -*** *Natacha Couto/Guido Werner*, Birgitta Duim, Valeria Bortolaia, Sarah Baines, Sandra Reuter, Assaf Rokney, Holly Grace Espiriu, Manal AbuOun, Sankarganesh Jeyaraj
+***Staphylococcus -*** *Natacha Couto/Guido Werner*, Birgitta Duim, Valeria Bortolaia, Sarah Baines, Sandra Reuter, Assaf Rokney, Holly Grace Espiriu, Manal AbuOun, Sankarganesh Jeyaraj, Robert Kozak
 
 ***Acinetobacter baumannii -*** *Paul Higgins*, Rahul Garg, Mehrad Hamidian, Bogdan Iorga, Priyanka Khopkar-Kale, Margaret Lam, Bruno Silvester Lopes, Ignasi Roca, Varun Shamanna, Clement Tsui, David Wareham, Valeria Bortolaia
 
@@ -112,7 +112,7 @@ We are keen to partner with other allied organisations and initiatives, please [
 
 ***Neisseria meningitidis -*** *Célia Bettencourt*, Leonor Sanchez Buso
 
-***Proteus mirabilis -*** *Axel Hamprecht*
+***Proteus mirabilis -*** *Axel Hamprecht*, Janko Sattler, Elisenda Miro, Rémy Bonnin, Stephan Goettig
 
 ***Treponema -*** *Brian Alcock*
 
