@@ -45,3 +45,77 @@ We are keen to partner with other allied organisations and initiatives, please [
 * NCBI AST data submission: [[info]](https://www.ncbi.nlm.nih.gov/pathogens/submit-data/) [[submission format]](https://www.ncbi.nlm.nih.gov/biosample/docs/antibiogram/)
 * Introductory webinar slides: [[PDF]](https://github.com/interpretAMR/AMRrulesCuration/blob/main/slides/ESGEM-AMR%20Webinar.pdf)
 * Kickoff meeting slides: [[PDF]](https://github.com/interpretAMR/AMRrulesCuration/blob/main/slides/ESGEM-AMR%20Kickoff%20slides.pdf)
+
+## Member List (by subgroup)
+
+***Data & Tools -*** *Jane Hawkey/Kat Holt*, Andrew McArthur, Finlay Maguire, Michael Feldgarden, Brody Duncan, Kristy Horan, Leonid Chindelevitch, Kara Tsang, Amogelang Raphenya, Dag Harmsen, Emily Bordeleau, Mackenzie Wilke, Romain Pogorelcnik, Torsten Seemann, Yu Wan, Zoe Dyson, Bogdan Iorga, Derek Sarovich
+
+***Enterococcus -*** *Francesc Coll*, Thomas Demuyser, Ana R. Freitas, Guido Werner, Precious Osadebamwen, Theo Gouliouris, Fiona Walsh, Valeria Bortolaia
+
+***Staphylococcus -*** *Natacha Couto/Guido Werner*, Birgitta Duim, Valeria Bortolaia, Sarah Baines, Sandra Reuter, Assaf Rokney, Holly Grace Espiriu, Manal AbuOun, Sankarganesh Jeyaraj
+
+***Acinetobacter baumannii -*** *Paul Higgins*, Rahul Garg, Mehrad Hamidian, Bogdan Iorga, Priyanka Khopkar-Kale, Margaret Lam, Bruno Silvester Lopes, Ignasi Roca, Varun Shamanna, Clement Tsui, David Wareham, Valeria Bortolaia
+
+***Enterobacter -*** *Teresa Coque/Rafael Canton*, Paul Higgins, Fernando Lazaro Perona, Po-Yu Liu, Elena Martinez, Rietie Venter, Ana Budimir, Angela Novais, Patrick Harris, Valeria Bortolaia
+
+***Pseudomonas aeruginosa -*** *Antonio Oliver*, Adriana Cabal Rosel, Alasdair Hubbard, Bogdan Lorga, Xena Li, Carla Lopez Causape, Juliette Severin, David Wareham, Adam Witney, Ørjan Samuelsen, Bela Kocsis, Joana Moreira da Silva, Derek Sarovich, Fernando Lazaro Perona, Valeria Bortolaia 
+
+***Klebsiella pneumoniae -*** *Kat Holt/Kara Tsang*, Valeria Bortolaia, Adam Komorowski, Elisenda Miro, Jon Iredell, Ørjan Samuelsen, Sally Partridge, Manal AbuOun, Sandra Reuter, Sankarganesh Jeyaraj, Fernando Lazaro Perona, Richard Goodman, Teresa Conque, Bogdan Iorga, Clement Tsui, Margaret Lam, Priyanka Khopkar-Kale, Varum Shamanna, Adam Witney, Alasdair Hubbard, Nicole Stoesser, Sam Lipworth, Deepali Desai, +KlebNet Geno/Pheno Consortium
+
+***Escherichia coli/Shigella -*** *Kate Baker*, Pieter-Jan Ceyssens, Fiona Walsh, Carolina Silva Nodari, Soe Yu Naing, Richard Goodman, Abdurrahman Hassan Jibril, Jelalu Kemal Birmeka, Elena Martinez, Teresa Coque, Ramon Maluping, Ana Vale, Gultekin Unal, Axel Hamprecht, Valeria Bortolaia, Bogdan Lorga, Alasdair Hubbard, Manal AbuOun, Jon Iredell, Sally Partridge, Nicole Stoesser, Sam Lipworth, Florence Crombe
+
+***Salmonella enterica -*** *Kristy Horan/Pieter-Jan Ceyssans*, Anthony Smith, Gültekin Ünal, Abdurrahman Hassan Jibril, Manal AbuOun, Jelalu Kemal Birmeka, Varun Shamanna, Assaf Rokney, Malgorzata Ligowska-Marzeta, Megan Carey
+
+***Neisseria gonorrhoeae -*** *Leonor Sanchez Buso*, Yonatan Grad, Sheeba Manoharan-Basil, Martin McHugh, Tatum Mortimer, Anna Roditscheff, Faina Wehrli, Adam Witney
+
+***Mycobacterium tuberculosis -*** Leonid Chindelevitch, Iñaki Comas, Philip Fowler, Kristy Horan, Priyanka Khopkar-Kale, Mariana López, Conor Meehan, Adam Witney, Brian Alcock
+
+***Streptococcus -*** *Mario Ramirez*, Assaf Rokney, Holly Grace Espiriu
+
+***Campylobacter -*** *Birgitta Duim*, Bruno Silvester Lopes, Malgorzata Ligowska-Marzeta, Assaf Rokney, Jelalu Kemal Birmeka
+
+***Haemophilus influenzae -*** *Assaf Rokney*, Charlotte Michel, Priyanka Khopkar-Kale, Derek Sarovich
+
+***Anaerobes -*** *Trefor Morris*, Ulrik Stenz Justesen, Marcela Krutova, Linda Veloo, Kathleen Boiten
+
+***Stenotrophomonas maltophilia -*** *Jane Hawkey*, Derek Sarovich, David Wareham, Fiona Walsh, Rietie Venter, Kat Holt
+
+***Serratia -*** *Sandra Reuter*, Teresa Coque, Adam Komorowski
+
+***Achromobacter xylosoxidans -*** *Charlotte Michel*
+
+***Aeromonas -*** *Po-Yu Liu*
+
+***Shewanella -*** *Po-Yu Liu*
+
+***Bordetella -*** *Laurence Luu*, Carla Rodrigues
+
+***Brucella -*** *Jelalu Kemal Birmeka*
+
+***Listeria -*** *Jelalu Kemal Birmeka*
+
+***Edwardsiella -*** *Jelalu Kemal Birmeka*
+
+***Pasteurella -*** *Jelalu Kemal Birmeka*
+
+***Burkholderia cepacia complex -*** *Charlotte Michel*, David Wareham
+
+***Burkholderia pseudomallei -*** *Claire Chewapreecha*, Derek Sarovich, Jessica Webb
+
+***Chryseobacterium indologenes -*** *Rietie Venter*
+
+***Corynebacterium diphtheriae -*** *Sylvain Brisse*
+
+***Legionella -*** *Charlotte Michel*, Ghislaine Descours 
+
+***Mycoplasma pneumoniae -*** *Mike Beeton*
+
+***Neisseria meningitidis -*** *Célia Bettencourt*, Leonor Sanchez Buso
+
+***Proteus mirabilis -*** *Axel Hamprecht*
+
+***Treponema -*** *Brian Alcock*
+
+***Vibrio -*** *Assaf Rokney*
+
+***Yersinia -*** *Pieter-Jan Ceyssens*, Cyril Savin
