@@ -18,7 +18,7 @@ We have partnered with [ESGEM, the ESCMID Study Group on Epidemiological Markers
 
 The convenors of the ESGEM-AMR Working Group are Kat Holt (LSHTM), Natacha Couto (ESGEM Chair), and Jane Hawkey (Monash, leading bioinformatics development).
 
-A call for members was launched at the ESGEM General Meeting on April 29 and closed June 2. Over 120 applications were received and most of these have been invited to join organism-focused subgroups. The initial list of members is posted [below](member-list-by-subgroup).
+A call for members was launched at the ESGEM General Meeting on April 29 and closed June 2. Over 120 applications were received and most of these have been invited to join organism-focused subgroups. The initial list of members is posted [below](#member-list-by-subgroup).
 
 Additional requests to join ESGEM-AMR will be considered later in the year, once the subgroups are up and running and it is clear where additional help would be beneficial. In the meantime you may register your interest and let us know what organism/s you have expertise in, using [this form](https://docs.google.com/forms/d/e/1FAIpQLSeH96VlioxLKarZOLMqD-f1fLnb9WYOHYz4tZ9NtQzpHrKyzw/viewform?usp=sf_link).
 
