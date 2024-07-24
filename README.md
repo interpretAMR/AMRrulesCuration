@@ -50,9 +50,9 @@ We are keen to partner with other allied organisations and initiatives, please [
 
 ***Data & Tools -*** *Jane Hawkey/Kat Holt*, Andrew McArthur, Finlay Maguire, Michael Feldgarden, Brody Duncan, Kristy Horan, Leonid Chindelevitch, Kara Tsang, Amogelang Raphenya, Dag Harmsen, Emily Bordeleau, Mackenzie Wilke, Romain Pogorelcnik, Torsten Seemann, Yu Wan, Zoe Dyson, Bogdan Iorga, Derek Sarovich, John Rossen
 
-***Enterococcus -*** *Francesc Coll*, Thomas Demuyser, Ana R. Freitas, Guido Werner, Precious Osadebamwen, Theo Gouliouris, Fiona Walsh, Valeria Bortolaia
+***Enterococcus -*** *Francesc Coll*, Thomas Demuyser, Ana R. Freitas, Guido Werner, Precious Osadebamwen, Theo Gouliouris, Fiona Walsh, Valeria Bortolaia, Basil Britto Xavier
 
-***Staphylococcus -*** *Natacha Couto/Guido Werner*, Birgitta Duim, Valeria Bortolaia, Sarah Baines, Sandra Reuter, Assaf Rokney, Holly Grace Espiriu, Manal AbuOun, Sankarganesh Jeyaraj, Robert Kozak
+***Staphylococcus -*** *Natacha Couto/Guido Werner*, Birgitta Duim, Valeria Bortolaia, Sarah Baines, Sandra Reuter, Assaf Rokney, Holly Grace Espiriu, Manal AbuOun, Sankarganesh Jeyaraj, Robert Kozak, Basil Britto Xavier
 
 ***Acinetobacter baumannii -*** *Paul Higgins*, Rahul Garg, Mehrad Hamidian, Bogdan Iorga, Priyanka Khopkar-Kale, Margaret Lam, Bruno Silvester Lopes, Ignasi Roca, Varun Shamanna, Clement Tsui, David Wareham, Valeria Bortolaia
 
@@ -80,7 +80,7 @@ We are keen to partner with other allied organisations and initiatives, please [
 
 ***Stenotrophomonas maltophilia -*** *Jane Hawkey*, Derek Sarovich, David Wareham, Fiona Walsh, Rietie Venter, Kat Holt
 
-***Serratia -*** *Sandra Reuter*, Teresa Coque, Adam Komorowski
+***Serratia -*** *Sandra Reuter*, Teresa Coque, Adam Komorowski, Basil Britto Xavier
 
 ***Achromobacter xylosoxidans -*** *Charlotte Michel*
 
@@ -92,7 +92,7 @@ We are keen to partner with other allied organisations and initiatives, please [
 
 ***Brucella -*** *Jelalu Kemal Birmeka*
 
-***Listeria -*** *Jelalu Kemal Birmeka*
+***Listeria -*** *Jelalu Kemal Birmeka*, Basil Britto Xavier
 
 ***Edwardsiella -*** *Jelalu Kemal Birmeka*
 
@@ -108,7 +108,7 @@ We are keen to partner with other allied organisations and initiatives, please [
 
 ***Legionella -*** *Charlotte Michel*, Ghislaine Descours 
 
-***Mycoplasma pneumoniae -*** *Mike Beeton*
+***Mycoplasma pneumoniae -*** *Mike Beeton*, Anna	Roditscheff, Basil Britto Xavier
 
 ***Neisseria meningitidis -*** *Célia Bettencourt*, Leonor Sanchez Buso
 
