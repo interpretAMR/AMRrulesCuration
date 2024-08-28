@@ -92,7 +92,7 @@ We are keen to partner with other allied organisations and initiatives, please [
 
 ***Brucella -*** *Jelalu Kemal Birmeka*
 
-***Listeria -*** *Jelalu Kemal Birmeka*, Basil Britto Xavier
+***Listeria -*** *Jelalu Kemal Birmeka*, Basil Britto Xavier, Marc Lecuit, Alexandra Moura
 
 ***Edwardsiella -*** *Jelalu Kemal Birmeka*
 
