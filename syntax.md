@@ -1,18 +1,20 @@
-We need to be able to encode the following types of AMR variants:
-- Gene detected
+## Purpose
+Goal is to encode AMRrules for the following types of AMR variants:
+- Gene presence detected
 - Amino acid substitution or insertion
 - Nucleotide substitution or insertion
-- Gene truncated
-- Mutation in promoter region (substitution, deletion or insertion, including insertion sequences)
-- Allelic or gene copy number changes
-- Low frequency variants
+- Gene truncated (loss of function)
+- Mutation in promoter region (substitution, deletion or insertion, including IS)
+- Gene copy number changes
+- Mutations in multi-copy genes (e.g. 23S rRNA)
+- Low frequency variants (i.e. heterozygosity)
 
-Where possible we wish to encode the mutations in a HGVS compliant standard. 
+Where possible we aim to encode the mutations in a [HGVS]([https://hgvs-nomenclature.org/stable/](https://hgvs-nomenclature.org/stable/recommendations/general/)) compliant way.
 
 ## ‘mutation’ syntax and ‘variation type’
-It was considered that all examples submitted could be adequately addressed using a combination of ‘gene’, ‘mutation’ (based on HGVS [syntax](https://hgvs-nomenclature.org/stable/recommendations/summary/), with some modifications) and ‘variation type’ (based on hAMRonization field, with some additions).
+It was considered that all examples submitted could be adequately addressed using a combination of ‘gene’, ‘mutation’ (based on [HGVS syntax](https://hgvs-nomenclature.org/stable/recommendations/summary/), with some modifications) and ‘variation type’ (based on [hAMRonization](https://github.com/pha4ge/hAMRonization/tree/master/schema) field '[Genetic Variation Type](https://github.com/pha4ge/hAMRonization/blob/master/hAMRonization/constants.py)', with some additions).
 
-Specific examples of each AMR variant are shown below, with proposed mutation syntax and variation types for each:
+Specific examples of each AMR variant are shown below, with proposed mutation syntax and variation types for each (note that other fields required for rule definition, like organism, refseq accession, context, PMID are not included here for simplicity, as they are not essential to illustrate how to define a specific _kind_ of variation):
 
 
 | ID     | gene   | mutation           | variation type              | drug          | category  |
@@ -62,19 +64,30 @@ Specific examples of each AMR variant are shown below, with proposed mutation sy
 - In HGVS, the presence of multiple alleles (i.e. heterozygous) is specified as a colon-separated list of allelic variants e.g. `[allele1];[allele2]`. 
 - In AMRrules, rules that apply to variation in a multi-copy gene can be specified in this way, with each allele explicitly stated. 
   - Alternatively if the rule applies when a minimum of N copies of the gene carry the mutation (e.g. mutation in ≥3 copies of 23S rRNA resulting in resistance to azithromycin), this can be abbreviated using the `[N]` syntax to indicate the minimum repeat/copy number, as `c.[allele][N]` or `p.[allele][N]`, e.g. `c.[2045A>G][3]`.
-- In AMRrules, rules that apply to ‘low frequency variants’, i.e. when a minimum fraction of reads, P, support presence of the allelic variant in a sequenced population, the minimum fraction can be specified by extension of the syntax for copy number, as `[P]`. E.g. `p.[Ala94Gly][0.13]` ([example](https://www.atsjournals.org/doi/full/10.1164/rccm.201703-0556OC) from the _Mycobacterium tuberculosis gyrA_ gene).
+- In AMRrules, rules that apply to ‘low frequency variants’, i.e. when a minimum fraction of reads, P, support presence of the allelic variant in a sequenced population, the minimum fraction can be specified by extension of the syntax for copy number, as `[X]`. E.g. `p.[Ala94Gly][0.13]` ([example](https://www.atsjournals.org/doi/full/10.1164/rccm.201703-0556OC) from the _Mycobacterium tuberculosis gyrA_ gene).
   - To put another way, in AMRrules the repeat syntax `[X]` is interpreted as a minimum copy number if `X` is an integer, and as a minimum read fraction if `X` is a double/float between 0 and 1. 
 
 ## Examples of ‘mutation’ syntax relevant to known AMR variants
+
 `p.Ser83Tyr`: change to protein sequence from Ser to Tyr at codon 83
+
 `c.25C>T`: change to nucleotide coding region from C to T at nucleotide position 25
+
 `p.114_115insGlyAsp`: change to protein sequence, with an insertion of amino acids Gly and Asp between codons 114 and 115
+
 `p.(1_100)`: truncation (of any kind) anywhere in the first 100 amino acids of the protein sequence
+
 `c.-11C>T`: change to nucleotide sequence from C to T, 11 bases upstream of the start site for the gene.
+
 `c.-14_-13insGT`: insertion of nucleotides GT between positions -14 and -13, upstream of the start site of the gene
-`c.(-35_1)ins[ISAba125:inv]`: insertion of ISAba125, in reverse orientation (:inv), anywhere between 35 bases upstream of the start site, and the start of the gene coding sequence
+
+`c.(-35_1)ins[ISAba125:inv]`: insertion of ISAba125, in reverse orientation (:inv), anywhere between 35 bases upstream of the start 
+site, and the start of the gene coding sequence
+
 `c.[2045A>G][3]`: substitution of A to G at position 2045 of the gene. This mutation must occur in minimum 3 copies
+
 `c.[3]`: gene needs to be present with a minimum of 2 copies
+
 `p.[Ala94Gly][0.13]`: protein variant is present in >13% of reads 
 
 ## Combinatorial rules
