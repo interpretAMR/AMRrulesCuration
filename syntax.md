@@ -28,9 +28,9 @@ Specific examples of each AMR variant are shown below, with proposed mutation sy
 | KPN0007 | qnr    | -                  | Gene presence detected      | ciprofloxacin | nwt I     |
 | NGO0001 | mtrR   | -                  | Inactivating mutation detected    | macrolides    | nwt R     |
 | KPN0008 | mgrB    | p.Glu30*          | Protein variant detected    | colistin      | nwt R     |
-| ECO0001 | ampC   | c.-11C>T            | Promoter variant detected   | cephalosporin | nwt R     |
-| ECO0002 | ampC      | c.-14_-13insGT        | Promoter variant detected                      | cephalosporin           | nwt R  |
-| ACI0001 | blaOXA-58 | c.(-35_1)ins[ISAba125:inv] | Promoter variant detected                      | cephalosporin           | nwt R  |
+| ECO0001 | ampC   | c.-11C>T            | Promoter variant detected   | ceftriaxone | nwt R     |
+| ECO0002 | ampC      | c.-14_-13insGT        | Promoter variant detected                      | ceftriaxone           | nwt R  |
+| ACI0001 | blaOXA-58 | c.(-35_1)ins[ISAba125:inv] | Promoter variant detected                      | ceftriaxone           | nwt R  |
 | NGO0002 | 23S rDNA  | c.[2045A>G][3]           | Nucleotide variant detected in multi-copy gene | azithromycin            | nwt R  |
 | ECO0003 | blaTEM    | c.[3]                 | Gene copy number variant detected              | piperacillin+tazobactam | nwt R  |
 | MTC0001 | gyrA      | p.[Ala94Gly][0.13]    | Low frequency variant detected              | ciprofloxacin | nwt R  |
