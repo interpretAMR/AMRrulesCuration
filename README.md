@@ -11,7 +11,7 @@ An overview of the concept, with example data structures and code, is available 
 We have partnered with [ESGEM, the ESCMID Study Group on Epidemiological Markers](https://www.escmid.org/esgem/), to form an ESGEM-AMR Working Group to curate organism-specific rule sets. 
 * Slides from the introductory webinars held May 14/15 are available [here](https://github.com/interpretAMR/AMRrulesCuration/blob/main/slides/ESGEM-AMR%20Webinar.pdf).
 * A detailed description of the Working Group and the overall AMRrules approach is available [here](https://github.com/interpretAMR/AMRrulesCuration/blob/main/ESGEM-AMR%20Working%20Group.pdf), including scope, plans and timeline.
-* Technical guidance for curation of rule sets is available [here](https://github.com/interpretAMR/AMRrulesCuration/blob/main/ESGEM-AMR%20Technical%20Guidance%20v1.2.pdf), this is a work in progress and will be refined as we go.
+* Technical guidance for curation of rule sets is available [here](https://github.com/interpretAMR/AMRrulesCuration/blob/main/ESGEM-AMR%20Technical%20Guidance.pdf), this is a work in progress and will be refined as we go.
 * The rule specification template is [here (v0.2, under active development)](https://docs.google.com/spreadsheets/d/14fuGcn-29OpYNeIpsjQ1MsPB3pqo4iz044fc4HLQHZI/edit?usp=sharing).
 
 ## Membership
@@ -30,12 +30,13 @@ We are keen to partner with other allied organisations and initiatives, please [
 
 ## Member Resources
 
-* AMRrules Spec - v0.2 [[google sheet]](https://docs.google.com/spreadsheets/d/14fuGcn-29OpYNeIpsjQ1MsPB3pqo4iz044fc4HLQHZI/edit?usp=sharing)
-* AMRrules Technical Guidance - v1.2 [[PDF]](https://github.com/interpretAMR/AMRrulesCuration/blob/main/ESGEM-AMR%20Technical%20Guidance%20v1.2.pdf)
+* AMRrules Spec - v0.3 [[google sheet]](https://docs.google.com/spreadsheets/d/1YilSjMcAbZp1ehZjudr2SliGR838ice6b_Ebrc_Iz_M/edit?usp=sharing)
+* AMRrules Technical Guidance - v1.3 [[PDF]](https://github.com/interpretAMR/AMRrulesCuration/blob/main/ESGEM-AMR%20Technical%20Guidance.pdf)
 * GTDB taxonomy: [[browser]](https://gtdb.ecogenomic.org/) [[GTDBtk software]](https://github.com/Ecogenomics/GTDBTk)
 * CARD/Antimicrobial Resistance Ontology (ARO): [[browser]](https://card.mcmaster.ca/)
 * Drug class definitions: [ATC Index](https://atcddd.fhi.no/atc_ddd_index/)
 * Variant specification: [HGVS](https://hgvs-nomenclature.org/stable/)
+* AMR rules syntax: [[this repo]](https://github.com/interpretAMR/AMRrulesCuration/blob/main/syntax.md)
 * EUCAST: [[Breakpoints]](https://www.eucast.org/clinical_breakpoints) [[Expected Resistance]](https://www.eucast.org/expert_rules_and_expected_phenotypes/expected_phenotypes)
 * NCBI AMRfinderplus: [[software]](https://www.ncbi.nlm.nih.gov/pathogens/antimicrobial-resistance/AMRFinder/)
 * NCBI refgene (AMR Gene Catalog): [[browser]](https://www.ncbi.nlm.nih.gov/pathogens/refgene/)
