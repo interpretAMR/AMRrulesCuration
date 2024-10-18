@@ -109,7 +109,7 @@ We are keen to partner with other allied organisations and initiatives, please [
 
 ***Legionella -*** *Charlotte Michel*, Ghislaine Descours, Christophe	Ginevra, Stefano De Giorgi, Nancy Flountzi, Jarraud	Sophie
 
-***Mycoplasma pneumoniae -*** *Mike Beeton*, Anna	Roditscheff, Basil Britto Xavier
+***Mycoplasma pneumoniae -*** *Mike Beeton*, Anna	Roditscheff, Basil Britto Xavier, Sabine Pereyre
 
 ***Neisseria meningitidis -*** *Célia Bettencourt*, Leonor Sanchez Buso
 
