@@ -12,7 +12,7 @@ We have partnered with [ESGEM, the ESCMID Study Group on Epidemiological Markers
 * Slides from the introductory webinars held May 14/15 are available [here](https://github.com/interpretAMR/AMRrulesCuration/blob/main/slides/ESGEM-AMR%20Webinar.pdf).
 * A detailed description of the Working Group and the overall AMRrules approach is available [here](https://github.com/interpretAMR/AMRrulesCuration/blob/main/ESGEM-AMR%20Working%20Group.pdf), including scope, plans and timeline.
 * Technical guidance for curation of rule sets is available [here](https://github.com/interpretAMR/AMRrulesCuration/blob/main/ESGEM-AMR%20Technical%20Guidance.pdf), this is a work in progress and will be refined as we go.
-* The rule specification template is [here (v0.2, under active development)](https://docs.google.com/spreadsheets/d/14fuGcn-29OpYNeIpsjQ1MsPB3pqo4iz044fc4HLQHZI/edit?usp=sharing).
+* The rule specification template is [here (v0.4, under active development)](https://docs.google.com/spreadsheets/d/1qmJit-VzGSYDMNYY-VYpS0OGwSKHELMppnW_4I1pt2E/edit?usp=sharing).
 
 ## Membership
 
