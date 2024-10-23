@@ -30,8 +30,9 @@ We are keen to partner with other allied organisations and initiatives, please [
 
 ## Member Resources
 
-* AMRrules Spec - v0.3 [[google sheet]](https://docs.google.com/spreadsheets/d/1YilSjMcAbZp1ehZjudr2SliGR838ice6b_Ebrc_Iz_M/edit?usp=sharing)
+* AMRrules Spec - v0.4 [[google sheet]](https://docs.google.com/spreadsheets/d/1qmJit-VzGSYDMNYY-VYpS0OGwSKHELMppnW_4I1pt2E/edit?usp=sharing)
 * AMRrules Technical Guidance - v1.3 [[PDF]](https://github.com/interpretAMR/AMRrulesCuration/blob/main/ESGEM-AMR%20Technical%20Guidance.pdf)
+* Code and tools for accessing public AMRfinderplus + AST data [[datacuration repo]](https://github.com/interpretAMR/datacuration)
 * GTDB taxonomy: [[browser]](https://gtdb.ecogenomic.org/) [[GTDBtk software]](https://github.com/Ecogenomics/GTDBTk)
 * CARD/Antimicrobial Resistance Ontology (ARO): [[browser]](https://card.mcmaster.ca/)
 * Drug class definitions: [ATC Index](https://atcddd.fhi.no/atc_ddd_index/)
