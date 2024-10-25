@@ -12,7 +12,7 @@ We have partnered with [ESGEM, the ESCMID Study Group on Epidemiological Markers
 * Slides from the introductory webinars held May 14/15 are available [here](https://github.com/interpretAMR/AMRrulesCuration/blob/main/slides/ESGEM-AMR%20Webinar.pdf).
 * A detailed description of the Working Group and the overall AMRrules approach is available [here](https://github.com/interpretAMR/AMRrulesCuration/blob/main/ESGEM-AMR%20Working%20Group.pdf), including scope, plans and timeline.
 * Technical guidance for curation of rule sets is available [here](https://github.com/interpretAMR/AMRrulesCuration/blob/main/ESGEM-AMR%20Technical%20Guidance.pdf), this is a work in progress and will be refined as we go.
-* The rule specification template is [here (v0.2, under active development)](https://docs.google.com/spreadsheets/d/14fuGcn-29OpYNeIpsjQ1MsPB3pqo4iz044fc4HLQHZI/edit?usp=sharing).
+* The rule specification template is [here (v0.4, under active development)](https://docs.google.com/spreadsheets/d/1qmJit-VzGSYDMNYY-VYpS0OGwSKHELMppnW_4I1pt2E/edit?usp=sharing).
 
 ## Membership
 
@@ -30,8 +30,9 @@ We are keen to partner with other allied organisations and initiatives, please [
 
 ## Member Resources
 
-* AMRrules Spec - v0.3 [[google sheet]](https://docs.google.com/spreadsheets/d/1YilSjMcAbZp1ehZjudr2SliGR838ice6b_Ebrc_Iz_M/edit?usp=sharing)
+* AMRrules Spec - v0.4 [[google sheet]](https://docs.google.com/spreadsheets/d/1qmJit-VzGSYDMNYY-VYpS0OGwSKHELMppnW_4I1pt2E/edit?usp=sharing)
 * AMRrules Technical Guidance - v1.3 [[PDF]](https://github.com/interpretAMR/AMRrulesCuration/blob/main/ESGEM-AMR%20Technical%20Guidance.pdf)
+* Code and tools for accessing public AMRfinderplus + AST data [[datacuration repo]](https://github.com/interpretAMR/datacuration)
 * GTDB taxonomy: [[browser]](https://gtdb.ecogenomic.org/) [[GTDBtk software]](https://github.com/Ecogenomics/GTDBTk)
 * CARD/Antimicrobial Resistance Ontology (ARO): [[browser]](https://card.mcmaster.ca/)
 * Drug class definitions: [ATC Index](https://atcddd.fhi.no/atc_ddd_index/)
