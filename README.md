@@ -74,7 +74,7 @@ We are keen to partner with other allied organisations and initiatives, please [
 
 ***Streptococcus -*** *Mario Ramirez*, Assaf Rokney, Holly Grace Espiriu, Stefanie Desmet
 
-***Campylobacter -*** *Birgitta Duim*, Bruno Silvester Lopes, Malgorzata Ligowska-Marzeta, Assaf Rokney, Jelalu Kemal Birmeka, Monica Oleastro, Tee Keat Teoh, Bogdan Iorga, Diana Costa
+***Campylobacter -*** *Birgitta Duim*, Bruno Silvester Lopes, Malgorzata Ligowska-Marzeta, Monica Oleastro, Tee Keat Teoh, Bogdan Iorga, Diana Costa
 
 ***Haemophilus influenzae -*** *Assaf Rokney*, Charlotte Michel, Priyanka Khopkar-Kale, Derek Sarovich
 
