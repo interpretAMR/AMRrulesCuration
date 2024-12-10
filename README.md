@@ -12,7 +12,7 @@ We have partnered with [ESGEM, the ESCMID Study Group on Epidemiological Markers
 * Slides from the introductory webinars held May 14/15 are available [here](https://github.com/interpretAMR/AMRrulesCuration/blob/main/slides/ESGEM-AMR%20Webinar.pdf).
 * A detailed description of the Working Group and the overall AMRrules approach is available [here](https://github.com/interpretAMR/AMRrulesCuration/blob/main/ESGEM-AMR%20Working%20Group.pdf), including scope, plans and timeline.
 * Technical guidance for curation of rule sets is available [here](https://github.com/interpretAMR/AMRrulesCuration/blob/main/ESGEM-AMR%20Technical%20Guidance.pdf), this is a work in progress and will be refined as we go.
-* The rule specification template is [here (v0.4, under active development)](https://docs.google.com/spreadsheets/d/1qmJit-VzGSYDMNYY-VYpS0OGwSKHELMppnW_4I1pt2E/edit?usp=sharing).
+* The rule specification template is [here (v0.5, under active development)](https://docs.google.com/spreadsheets/d/1F-J-_8Kyo3W0Oh6eDYyd0N8ahqVwiddM2112-Fg1gKc/edit?usp=sharing).
 
 ## Membership
 
@@ -30,8 +30,8 @@ We are keen to partner with other allied organisations and initiatives, please [
 
 ## Member Resources
 
-* AMRrules Spec - v0.4 [[google sheet]](https://docs.google.com/spreadsheets/d/1qmJit-VzGSYDMNYY-VYpS0OGwSKHELMppnW_4I1pt2E/edit?usp=sharing)
-* AMRrules Technical Guidance - v1.3 [[PDF]](https://github.com/interpretAMR/AMRrulesCuration/blob/main/ESGEM-AMR%20Technical%20Guidance.pdf)
+* AMRrules Spec - v0.5 [[google sheet]](https://docs.google.com/spreadsheets/d/1F-J-_8Kyo3W0Oh6eDYyd0N8ahqVwiddM2112-Fg1gKc/edit?usp=sharing)
+* AMRrules Technical Guidance - v1.5 [[PDF]](https://github.com/interpretAMR/AMRrulesCuration/blob/main/ESGEM-AMR%20Technical%20Guidance.pdf)
 * Code and tools for accessing public AMRfinderplus + AST data [[datacuration repo]](https://github.com/interpretAMR/datacuration)
 * GTDB taxonomy: [[browser]](https://gtdb.ecogenomic.org/) [[GTDBtk software]](https://github.com/Ecogenomics/GTDBTk)
 * CARD/Antimicrobial Resistance Ontology (ARO): [[browser]](https://card.mcmaster.ca/)
@@ -54,11 +54,11 @@ We are keen to partner with other allied organisations and initiatives, please [
 
 ***Enterococcus -*** *Francesc Coll*, Thomas Demuyser, Ana R. Freitas, Guido Werner, Precious Osadebamwen, Theo Gouliouris, Fiona Walsh, Valeria Bortolaia, Basil Britto Xavier, Helena Seth-Smith
 
-***Staphylococcus -*** *Natacha Couto/Guido Werner*, Birgitta Duim, Valeria Bortolaia, Sarah Baines, Sandra Reuter, Assaf Rokney, Holly Grace Espiriu, Manal AbuOun, Sankarganesh Jeyaraj, Robert Kozak, Basil Britto Xavier, Nick Duggett, Birgit Strommenger
+***Staphylococcus -*** *Natacha Couto*, Birgitta Duim, Valeria Bortolaia, Sarah Baines, Sandra Reuter, Assaf Rokney, Holly Grace Espiriu, Manal AbuOun, Sankarganesh Jeyaraj, Robert Kozak, Basil Britto Xavier, Nick Duggett, Birgit Strommenger
 
 ***Acinetobacter baumannii -*** *Paul Higgins*, Rahul Garg, Mehrad Hamidian, Bogdan Iorga, Priyanka Khopkar-Kale, Margaret Lam, Bruno Silvester Lopes, Ignasi Roca, Varun Shamanna, Clement Tsui, David Wareham, Valeria Bortolaia
 
-***Enterobacter -*** *Teresa Coque/Rafael Canton*, Paul Higgins, Fernando Lazaro Perona, Po-Yu Liu, Elena Martinez, Rietie Venter, Ana Budimir, Angela Novais, Patrick Harris, Valeria Bortolaia
+***Enterobacter -*** *Teresa Coque/Rafael Canton*, Paul Higgins, Fernando Lazaro Perona, Po-Yu Liu, Elena Martinez, Rietie Venter, Ana Budimir, Angela Novais, Patrick Harris, Valeria Bortolaia, Val Fernandez
 
 ***Pseudomonas aeruginosa -*** *Antonio Oliver*, Adriana Cabal Rosel, Alasdair Hubbard, Bogdan Lorga, Xena Li, Carla Lopez Causape, Juliette Severin, David Wareham, Adam Witney, Ørjan Samuelsen, Bela Kocsis, Joana Moreira da Silva, Derek Sarovich, Fernando Lazaro Perona, Valeria Bortolaia 
 
@@ -66,15 +66,15 @@ We are keen to partner with other allied organisations and initiatives, please [
 
 ***Escherichia coli/Shigella -*** *Kate Baker/Ebenezer Foster-Nyarko* Pieter-Jan Ceyssens, Fiona Walsh, Carolina Silva Nodari, Soe Yu Naing, Richard Goodman, Abdurrahman Hassan Jibril, Jelalu Kemal Birmeka, Elena Martinez, Teresa Coque, Ramon Maluping, Ana Vale, Gultekin Unal, Axel Hamprecht, Valeria Bortolaia, Bogdan Lorga, Alasdair Hubbard, Manal AbuOun, Jon Iredell, Sally Partridge, Nicole Stoesser, Sam Lipworth, Etienne Rupée, Gherard Batisti Biffignandi
 
-***Salmonella enterica -*** *Kristy Horan/Pieter-Jan Ceyssans*, Anthony Smith, Gültekin Ünal, Abdurrahman Hassan Jibril, Manal AbuOun, Jelalu Kemal Birmeka, Varun Shamanna, Assaf Rokney, Malgorzata Ligowska-Marzeta, Megan Carey
+***Salmonella enterica -*** *Kristy Horan/Pieter-Jan Ceyssans*, Anthony Smith, Gültekin Ünal, Abdurrahman Hassan Jibril, Manal AbuOun, Jelalu Kemal Birmeka, Varun Shamanna, Assaf Rokney, Malgorzata Ligowska-Marzeta, Megan Carey, Regina Russanova
 
-***Neisseria gonorrhoeae -*** *Leonor Sanchez Buso*, Yonatan Grad, Sheeba Manoharan-Basil, Martin McHugh, Tatum Mortimer, Anna Roditscheff, Faina Wehrli, Adam Witney, Raffael Frei, Ala-Eddine Deghmane
+***Neisseria gonorrhoeae -*** *Leonor Sanchez Buso*, Yonatan Grad, Sheeba Manoharan-Basil, Martin McHugh, Tatum Mortimer, Anna Roditscheff, Faina Wehrli, Adam Witney, Raffael Frei
 
 ***Mycobacterium tuberculosis -*** *Leonid Chindelevitch*, Iñaki Comas, Philip Fowler, Kristy Horan, Priyanka Khopkar-Kale, Mariana López, Conor Meehan, Adam Witney, Brian Alcock
 
 ***Streptococcus -*** *Mario Ramirez*, Assaf Rokney, Holly Grace Espiriu, Stefanie Desmet
 
-***Campylobacter -*** *Birgitta Duim*, Bruno Silvester Lopes, Malgorzata Ligowska-Marzeta, Assaf Rokney, Jelalu Kemal Birmeka
+***Campylobacter -*** *Birgitta Duim*, Bruno Silvester Lopes, Malgorzata Ligowska-Marzeta, Monica Oleastro, Tee Keat Teoh, Bogdan Iorga, Diana Costa, Sangeeta Banerji
 
 ***Haemophilus influenzae -*** *Assaf Rokney*, Charlotte Michel, Priyanka Khopkar-Kale, Derek Sarovich
 
@@ -110,9 +110,9 @@ We are keen to partner with other allied organisations and initiatives, please [
 
 ***Legionella -*** *Charlotte Michel*, Ghislaine Descours, Christophe	Ginevra, Stefano De Giorgi, Nancy Flountzi, Jarraud	Sophie
 
-***Mycoplasma pneumoniae -*** *Mike Beeton*, Anna	Roditscheff, Basil Britto Xavier, Sabine Pereyre
+***Mycoplasma pneumoniae -*** *Mike Beeton*, Anna	Roditscheff, Basil Britto Xavier, Sabine Pereyre, Patrick Meyer Sauteur, Nick Duggett
 
-***Neisseria meningitidis -*** *Célia Bettencourt*, Leonor Sanchez Buso
+***Neisseria meningitidis -*** *Célia Bettencourt*, Leonor Sanchez Buso, Ala-Eddine Deghmane, Wesley Mattheus, Ana Filipa Vale
 
 ***Proteus mirabilis -*** *Axel Hamprecht*, Janko Sattler, Elisenda Miro, Rémy Bonnin, Stephan Goettig
 
@@ -120,4 +120,4 @@ We are keen to partner with other allied organisations and initiatives, please [
 
 ***Vibrio -*** *Assaf Rokney*
 
-***Yersinia -*** *Pieter-Jan Ceyssens*, Cyril Savin
+***Yersinia -*** *Pieter-Jan Ceyssens*, Cyril Savin, Regina Russanova
