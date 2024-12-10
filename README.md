@@ -12,7 +12,7 @@ We have partnered with [ESGEM, the ESCMID Study Group on Epidemiological Markers
 * Slides from the introductory webinars held May 14/15 are available [here](https://github.com/interpretAMR/AMRrulesCuration/blob/main/slides/ESGEM-AMR%20Webinar.pdf).
 * A detailed description of the Working Group and the overall AMRrules approach is available [here](https://github.com/interpretAMR/AMRrulesCuration/blob/main/ESGEM-AMR%20Working%20Group.pdf), including scope, plans and timeline.
 * Technical guidance for curation of rule sets is available [here](https://github.com/interpretAMR/AMRrulesCuration/blob/main/ESGEM-AMR%20Technical%20Guidance.pdf), this is a work in progress and will be refined as we go.
-* The rule specification template is [here (v0.4, under active development)](https://docs.google.com/spreadsheets/d/1qmJit-VzGSYDMNYY-VYpS0OGwSKHELMppnW_4I1pt2E/edit?usp=sharing).
+* The rule specification template is [here (v0.5, under active development)](https://docs.google.com/spreadsheets/d/1F-J-_8Kyo3W0Oh6eDYyd0N8ahqVwiddM2112-Fg1gKc/edit?usp=sharing).
 
 ## Membership
 
@@ -30,8 +30,8 @@ We are keen to partner with other allied organisations and initiatives, please [
 
 ## Member Resources
 
-* AMRrules Spec - v0.4 [[google sheet]](https://docs.google.com/spreadsheets/d/1qmJit-VzGSYDMNYY-VYpS0OGwSKHELMppnW_4I1pt2E/edit?usp=sharing)
-* AMRrules Technical Guidance - v1.3 [[PDF]](https://github.com/interpretAMR/AMRrulesCuration/blob/main/ESGEM-AMR%20Technical%20Guidance.pdf)
+* AMRrules Spec - v0.5 [[google sheet]](https://docs.google.com/spreadsheets/d/1F-J-_8Kyo3W0Oh6eDYyd0N8ahqVwiddM2112-Fg1gKc/edit?usp=sharing)
+* AMRrules Technical Guidance - v1.5 [[PDF]](https://github.com/interpretAMR/AMRrulesCuration/blob/main/ESGEM-AMR%20Technical%20Guidance.pdf)
 * Code and tools for accessing public AMRfinderplus + AST data [[datacuration repo]](https://github.com/interpretAMR/datacuration)
 * GTDB taxonomy: [[browser]](https://gtdb.ecogenomic.org/) [[GTDBtk software]](https://github.com/Ecogenomics/GTDBTk)
 * CARD/Antimicrobial Resistance Ontology (ARO): [[browser]](https://card.mcmaster.ca/)
