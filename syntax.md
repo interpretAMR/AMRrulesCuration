@@ -21,7 +21,7 @@ Specific examples of each AMR variant are shown below, with proposed mutation sy
 |--------|--------|--------------------|-----------------------------|---------------|-----------|
 | KPN0001 | blaSHV | -                  | Gene presence detected      | ampicillin    | wt R      |
 | KPN0002 | gyrA   | p.Ser83Tyr         | Protein variant detected    | ciprofloxacin | nwt I     |
-| KPN0003 | parC   | pSer80Ile          | Protein variant detected    | ciprofloxacin | nwt I     |
+| KPN0003 | parC   | p.Ser80Ile          | Protein variant detected    | ciprofloxacin | nwt I     |
 | KPN0004 | ompK36 | c.25C>T            | Nucleotide variant detected | meropenem     | nwt S     |
 | KPN0005 | ompK36 | p.114_115insGlyAsp | Protein variant detected    | meropenem     | nwt I     |
 | KPN0006 | mgrB   | p.(1_100)          | Gene truncation detected    | colistin      | nwt R     |
