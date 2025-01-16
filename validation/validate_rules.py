@@ -364,7 +364,7 @@ def main():
     args = parse_args()
 
     # read in the draft rules
-    print(f"\nValidating draft rules file: {args.rules}")
+    print(f"\nValidating rules file: {args.rules}")
     draftrules = pd.read_csv(args.rules, sep="\t")
 
     # grab the rule IDs and check
