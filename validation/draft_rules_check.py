@@ -21,9 +21,9 @@ import re
 # –	if evidence limitations has a value, check it is one of the allowable values
 
 def parse_args():
-    parser = ArgumentParser.ArgumentParser(description="Check the draft rules file for any errors")
+    parser = ArgumentParser.ArgumentParser(description="Perform auto validation of AMRrules file")
     
-    parser.add_argument("rules", help="Path to the draft rules file to check, must be a tab separated file")
+    parser.add_argument("rules", help="Path to the rules file to check, must be a tab separated file")
     
     return parser.parse_args()
 
