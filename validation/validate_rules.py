@@ -366,43 +366,102 @@ def main():
     # read in the draft rules
     print(f"\nValidating rules file: {args.rules}")
     draftrules = pd.read_csv(args.rules, sep="\t")
+    columns = draftrules.columns.tolist()
 
     # grab the rule IDs and check
-    rule_ids = draftrules["ruleID"].tolist()
-    check_ruleIDs(rule_ids)
+    try:
+        rule_ids = draftrules["ruleID"].tolist()
+        check_ruleIDs(rule_ids)
+    except:
+        print("\n❌ No ruleID column found in file. Spec v0.5 requires this column to be present. Continuing to validate other columns...")
+        rule_ids = None
 
     # check that the value in organism is always present (can't be blank, '-' or NA, must start with s__)
-    check_organism(draftrules["organism"].tolist())
+    try:
+        check_organism(draftrules["organism"].tolist())
+    except:
+        print("\n❌ No organism column found in file. Spec v0.5 requires this column to be present. Continuing to validate other columns...")
 
     # check that gene always has a value, and that this value is not '-' or NA or missing, as it should always be some kind of string
-    check_gene(draftrules["gene"].tolist(), rule_ids)
+    try:
+        check_gene(draftrules["gene"].tolist(), rule_ids)
+    except:
+        print("\n❌ No gene column found in file. Spec v0.5 requires this column to be present. Continuing to validate other columns...")
 
     # check that for columns nodeID, refseq accession, GenBank accession, and HMM accession, at least one of these columns has a value
-    check_id_accessions(draftrules["nodeID"].tolist(), draftrules["refseq accession"].tolist(), draftrules["GenBank accession"].tolist(), draftrules["HMM accession"].tolist())
+    try:
+        check_id_accessions(draftrules["nodeID"].tolist(), draftrules["refseq accession"].tolist(), draftrules["GenBank accession"].tolist(), draftrules["HMM accession"].tolist())
+    except:
+        for column in ["nodeID", "refseq accession", "GenBank accession", "HMM accession"]:
+            if column not in columns:
+                print(f"\n❌ {column} column not found in file.")
+        print("\n❌ Spec v0.5 requires all of nodeID, refseq accession, GenBank accession, and HMM accession columns to be present in order to validate. Continuing to validate other columns...")
 
-    check_aro(draftrules["ARO accession"].tolist())
+    try:
+        check_aro(draftrules["ARO accession"].tolist())
+    except:
+        print("\n❌ No ARO accession column found in file. Spec v0.5 requires this column to be present. Continuing to validate other columns...")
 
-    check_mutation(draftrules["mutation"].tolist())
+    try:
+        check_mutation(draftrules["mutation"].tolist())
+    except:
+        print("\n❌ No mutation column found in file. Spec v0.5 requires this column to be present. Continuing to validate other columns...")
+    
+    try:
+        check_variation_type(draftrules["variation type"].tolist())
+    except:
+        print("\n❌ No variation type column found in file. Spec v0.5 requires this column to be present. Continuing to validate other columns...")
 
-    check_variation_type(draftrules["variation type"].tolist())
+    try:
+        check_context(draftrules["context"].tolist())
+    except:
+        print("\n❌ No context column found in file. Spec v0.5 requires this column to be present. Continuing to validate other columns...")
 
-    check_context(draftrules["context"].tolist())
+    try:
+        check_drug_drugclass(draftrules["drug"].tolist(), draftrules["drug class"].tolist())
+    except:
+        for column in ["drug", "drug class"]:
+            if column not in columns:
+                print(f"\n❌ {column} column not found in file.")
+        print("\n❌ Spec v0.5 requires at least both drug and drug class columns to be present in order to validate. Continuing to validate other columns...")
 
-    check_drug_drugclass(draftrules["drug"].tolist(), draftrules["drug class"].tolist())
+    try:
+        check_phenotype(draftrules["phenotype"].tolist())
+    except:
+        print("\n❌ No phenotype column found in file. Spec v0.5 requires this column to be present. Continuing to validate other columns...")
 
-    check_phenotype(draftrules["phenotype"].tolist())
+    try:
+        check_sir(draftrules["clinical category"].tolist())
+    except:
+        print("\n❌ No clinical category column found in file. Spec v0.5 requires this column to be present. Continuing to validate other columns...")
 
-    check_sir(draftrules["clinical category"].tolist())
+    try:
+        check_breakpoint(draftrules["breakpoint"].tolist())
+    except:
+        print("\n❌ No breakpoint column found in file. Spec v0.5 requires this column to be present. Continuing to validate other columns...")
 
-    check_breakpoint(draftrules["breakpoint"].tolist())
+    try:
+        check_breakpoint_standard(draftrules["breakpoint standard"].tolist())
+    except:
+        print("\n❌ No breakpoint standard column found in file. Spec v0.5 requires this column to be present. Continuing to validate other columns...")
 
-    check_breakpoint_standard(draftrules["breakpoint standard"].tolist())
+    try:
+        check_pmid(draftrules["PMID"].tolist())
+    except:
+        print("\n❌ No PMID column found in file. Spec v0.5 requires this column to be present. Continuing to validate other columns...")
 
-    check_pmid(draftrules["PMID"].tolist())
+    try:
+        check_evidence_code(draftrules["evidence code"].tolist())
+    except:
+        print("\n❌ No evidence code column found in file. Spec v0.5 requires this column to be present. Continuing to validate other columns...")
 
-    check_evidence_code(draftrules["evidence code"].tolist())
-
-    check_evidence_grade_limitations(draftrules["evidence grade"].tolist(), draftrules["evidence limitations"].tolist())
+    try:
+        check_evidence_grade_limitations(draftrules["evidence grade"].tolist(), draftrules["evidence limitations"].tolist())
+    except:
+        for column in ["evidence grade", "evidence limitations"]:
+            if column not in columns:
+                print(f"\n❌ {column} column not found in file.")
+        print("\n❌ Both evidence grade and limitations columns required for spec v0.5.")
 
 if __name__ == "__main__":
     main()
