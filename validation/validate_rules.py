@@ -27,6 +27,34 @@ def parse_args():
     
     return parser.parse_args()
 
+def check_if_allowed_value(value_list, col_name, allowable_values):
+
+    print("\nChecking  " + col_name + " column...")
+
+    invalid_indices = [index for index, value in enumerate(value_list) if pd.isna(value) or value in ['NA', '-'] or value not in allowable_values]
+
+    if not invalid_indices:
+        print("✅ All " + col_name + " values are valid")
+    else:
+        print(f"❌ {len(invalid_indices)} rows have failed the check")
+        print(col_name + " column must contain one of the following values:\n" + ", ".join(allowable_values))
+        for index in invalid_indices:
+            print(f"Row {index + 1}: {value_list[index]}")
+
+def check_if_not_missing(value_list, col_name):
+
+    print("\nChecking  " + col_name + " column...")
+
+    invalid_indices = [index for index, value in enumerate(value_list) if pd.isna(value) or value in ['NA', '-']]
+
+    if not invalid_indices:
+        print("✅ All " + col_name + " values are valid")
+    else:
+        print(f"❌ {len(invalid_indices)} rows have failed the check")
+        print(col_name + " column must contain a value that is not NA or '-'")
+        for index in invalid_indices:
+            print(f"Row {index + 1}: {value_list[index]}")
+
 def check_ruleIDs(id_list):
     
     print("\nChecking ruleID column...")
@@ -172,43 +200,6 @@ def check_mutation(mutation_list):
         for index in invalid_indices:
             print(f"Row {index + 1}: {mutation_list[index]}")
 
-def check_variation_type(variation_list):
-    
-    print("\nChecking variation type column...")
-
-    # the allowable values for this column are:
-    allowable_values = ["Gene presence detected", "Protein variant detected", "Nucleotide variant detected", "Promoter variant detected", "Inactivating mutation detected", "Gene copy number variant detected", "Nucleotide variant detected in multi-copy gene", "Low frequency variant detected", "Combination"]
-
-    invalid_indices = []
-
-    for index, value in enumerate(variation_list):
-        if pd.isna(value) or value not in allowable_values:
-            invalid_indices.append(index)
-
-    if not invalid_indices:
-        print("✅ All variation type values are valid")
-    else:
-        print(f"❌ {len(invalid_indices)} rows have failed the check")
-        print("Variation type column must contain one of the following values: " + ", ".join(allowable_values))
-        for index in invalid_indices:
-            print(f"Row {index + 1}: {variation_list[index]}")
-
-def check_context(context_list):
-    
-    print("\nChecking context column...")
-
-    allowable_values = ["core", "acquired"]
-    # check that the value in this column is one of these
-    invalid_indices = [index for index, value in enumerate(context_list) if value not in allowable_values]
-
-    if not invalid_indices:
-        print("✅ All context values are valid")
-    else:
-        print(f"❌ {len(invalid_indices)} rows have failed the check")
-        print("Context column must contain either 'core' or 'acquired'")
-        for index in invalid_indices:
-            print(f"Row {index + 1}: {context_list[index]}")
-
 def check_drug_drugclass(drug_list, drug_class_list):
    
     print("\nChecking drug and drug class columns...")
@@ -223,81 +214,6 @@ def check_drug_drugclass(drug_list, drug_class_list):
         print("One of drug or drug class must contain a value that is not NA or '-'")
         for index in invalid_indices:
             print(f"Row {index + 1}")
-
-def check_phenotype(phenotype_list):
-    
-    print("\nChecking phenotype column...")
-
-    allowable_values = ["wildtype", "nonwildtype"]
-    # check that the value in this column is one of these
-    invalid_indices = [index for index, value in enumerate(phenotype_list) if value not in allowable_values]
-
-    if not invalid_indices:
-        print("✅ All phenotype values are valid")
-    else:
-        print(f"❌ {len(invalid_indices)} rows have failed the check")
-        print("Phenotype column must contain either 'wildtype' or 'nonwildtype'")
-        for index in invalid_indices:
-            print(f"Row {index + 1}: {phenotype_list[index]}")
-
-def check_sir(sir_list):
-    
-    print("\nChecking clinical category column...")
-
-    allowable_values = ["S", "I", "R"]
-    # check that the value in this column is one of these
-    invalid_indices = [index for index, value in enumerate(sir_list) if value not in allowable_values]
-
-    if not invalid_indices:
-        print("✅ All clinical category values are valid")
-    else:
-        print(f"❌ {len(invalid_indices)} rows have failed the check")
-        print("Clincal category column must contain either 'S', 'I' or 'R'")
-        for index in invalid_indices:
-            print(f"Row {index + 1}: {sir_list[index]}")
-
-def check_breakpoint(breakpoint_list):
-    
-    print("\nChecking breakpoint column...")
-
-    # check that there is a value in this column that isn't NA or '-'
-    invalid_indices = [index for index, value in enumerate(breakpoint_list) if pd.isna(value) or value in ['NA', '-']]
-
-    if not invalid_indices:
-        print("✅ All breakpoint values are valid")
-    else:
-        print(f"❌ {len(invalid_indices)} rows have failed the check")
-        print("Breakpoint column must contain a value that is not NA or '-'")
-        for index in invalid_indices:
-            print(f"Row {index + 1}: {breakpoint_list[index]}")
-
-def check_breakpoint_standard(breakpoint_std_list):
-
-    print("\nChecking breakpoint standard column...")
-
-    invalid_indices = [index for index, value in enumerate(breakpoint_std_list) if pd.isna(value) or value in ['NA', '-']]
-
-    if not invalid_indices:
-        print("✅ All breakpoint standard values are valid")
-    else:
-        print(f"❌ {len(invalid_indices)} rows have failed the check")
-        print("Breakpoint standard column must contain a value that is not NA or '-'")
-        for index in invalid_indices:
-            print(f"Row {index + 1}: {breakpoint_std_list[index]}")
-
-def check_pmid(pmid_list):
-
-    print("\nChecking PMID column...")
-
-    invalid_indices = [index for index, value in enumerate(pmid_list) if pd.isna(value) or value in ['NA', '-']]
-
-    if not invalid_indices:
-        print("✅ All PMID values are valid")
-    else:
-        print(f"❌ {len(invalid_indices)} rows have failed the check")
-        print("PMID column must contain a value that is not NA or '-'")
-        for index in invalid_indices:
-            print(f"Row {index + 1}: {pmid_list[index]}")
 
 def check_evidence_code(evidence_code_list):
     
@@ -408,12 +324,12 @@ def main():
         print("\n❌ No mutation column found in file. Spec v0.5 requires this column to be present. Continuing to validate other columns...")
     
     try:
-        check_variation_type(draftrules["variation type"].tolist())
+        check_if_allowed_value(draftrules["variation type"].tolist(), "variation type", ["Gene presence detected", "Protein variant detected", "Nucleotide variant detected", "Promoter variant detected", "Inactivating mutation detected", "Gene copy number variant detected", "Nucleotide variant detected in multi-copy gene", "Low frequency variant detected", "Combination"])
     except:
         print("\n❌ No variation type column found in file. Spec v0.5 requires this column to be present. Continuing to validate other columns...")
 
     try:
-        check_context(draftrules["context"].tolist())
+        check_if_allowed_value(draftrules["context"].tolist(), "context", ["core", "acquired"])
     except:
         print("\n❌ No context column found in file. Spec v0.5 requires this column to be present. Continuing to validate other columns...")
 
@@ -426,27 +342,27 @@ def main():
         print("\n❌ Spec v0.5 requires at least both drug and drug class columns to be present in order to validate. Continuing to validate other columns...")
 
     try:
-        check_phenotype(draftrules["phenotype"].tolist())
+        check_if_allowed_value(draftrules["phenotype"].tolist(), "phenotype", ["wildtype", "nonwildtype"])
     except:
         print("\n❌ No phenotype column found in file. Spec v0.5 requires this column to be present. Continuing to validate other columns...")
 
     try:
-        check_sir(draftrules["clinical category"].tolist())
+        check_if_allowed_value(draftrules["clinical category"].tolist(), "clinical category", ["S", "I", "R"])
     except:
         print("\n❌ No clinical category column found in file. Spec v0.5 requires this column to be present. Continuing to validate other columns...")
 
     try:
-        check_breakpoint(draftrules["breakpoint"].tolist())
+        check_if_not_missing(draftrules["breakpoint"].tolist(), "breakpoint")
     except:
         print("\n❌ No breakpoint column found in file. Spec v0.5 requires this column to be present. Continuing to validate other columns...")
 
     try:
-        check_breakpoint_standard(draftrules["breakpoint standard"].tolist())
+        check_if_not_missing(draftrules["breakpoint standard"].tolist(), "breakpoint standard")
     except:
         print("\n❌ No breakpoint standard column found in file. Spec v0.5 requires this column to be present. Continuing to validate other columns...")
 
     try:
-        check_pmid(draftrules["PMID"].tolist())
+        check_if_not_missing(draftrules["PMID"].tolist(), "PMID")
     except:
         print("\n❌ No PMID column found in file. Spec v0.5 requires this column to be present. Continuing to validate other columns...")
 
