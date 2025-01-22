@@ -171,21 +171,93 @@ def check_gene(gene_list, rule_list):
         for index, rule_id in invalid_indices_dict.items():
             print(f"Row {index}: ruleID {rule_id} is not present in the list of rules")
 
-def check_id_accessions(nodeID_list, refseq_list, genbank_list, hmm_list):
+def check_id_accessions(nodeID_list, refseq_list, genbank_list, hmm_list, refseq_file, refseq_nodes, hmm_file):
     
     print("\nChecking nodeID, refseq accession, GenBank accession and HMM accession columns...")
 
+    # parse the refseq file - get the refseq nucl and prot accessions, genbank accessions and hmm accessions to check against
+    # Combine the nucl and prot accessions together
+    refseq_accessions = [] 
+    genbank_accessions = []
+    refseq = csv.DictReader(open(refseq_file, newline=''), delimiter='\t')
+    for row in refseq:
+        if "RefSeq protein" in row:
+            refseq_accessions.append(row["RefSeq protein"])
+        if "RefSeq nucleotide" in row:
+            refseq_accessions.append(row["RefSeq nucleotide"])
+        if "GenBank protein" in row:
+            genbank_accessions.append(row["GenBank protein"])
+        if "GenBank nucleotide" in row:
+            genbank_accessions.append(row["GenBank nucleotide"])
+    # remove any empty strings
+    refseq_accessions = [value for value in refseq_accessions if value != ""]
+    genbank_accessions = [value for value in genbank_accessions if value != ""]
+
+    refseq_node_ids = []
+    refseq_hierarchy = csv.DictReader(open(refseq_nodes, newline=''), delimiter='\t')
+    for row in refseq_hierarchy:
+        if "parent_node_id" in row:
+            refseq_node_ids.append(row["parent_node_id"])
+    # remove any duplicates and empty strings
+    refseq_node_ids = set(refseq_node_ids)
+    refseq_node_ids = [value for value in refseq_node_ids if value != ""]
+
+    hmm_accessions = []
+    hmm_table = csv.DictReader(open(hmm_file, newline=''), delimiter='\t')
+    for row in hmm_table:
+        if "#Accession" in row:
+            hmm_accessions.append(row["#Accession"])
+    # remove any empty strings
+    hmm_accessions  = [value for value in hmm_accessions if value != ""]
+
+    # Check that in combination, at least one of these columns has a value
     invalid_indices = []
     for index, values in enumerate(zip(nodeID_list, refseq_list, genbank_list, hmm_list)):
         if all(value == '' or value in ['NA', '-'] for value in values):
             invalid_indices.append(index)
     
+    # now we need to assess each list individually against the relevant accession lists
+    # fine in the value is '-' as this is allowed in individual columns, just not all in combo
+    # store the output so we can easily print what rows and columns are the issues
+    invalid_node = []
+    for index, value in enumerate(nodeID_list):
+        if index not in invalid_indices and value not in refseq_node_ids and value != '-':
+            invalid_node.append(index)
+    invalid_refseq = []
+    for index, value in enumerate(refseq_list):
+        if index not in invalid_indices and value not in refseq_accessions and value != '-':
+            invalid_refseq.append(index)
+    invalid_gb = []
+    for index, value in enumerate(genbank_list):
+        if index not in invalid_indices and value not in genbank_accessions and value != '-':
+            invalid_gb.append(index)
+    invalid_hmm = []
+    for index, value in enumerate(hmm_list):
+        if index not in invalid_indices and value not in hmm_accessions and value != '-':
+            invalid_hmm.append(index)
+    
     if not invalid_indices:
-        print("✅ All rows contain at least one value in one of these columns")
+        print("✅ All rows contain at least one value in one of these columns.")
     else:
-        print(f"❌ {len(invalid_indices)} rows have failed the check,and must contain at least one value in either nodeID, refseq accession, GenBank accession and HMM accession")
+        print(f"❌ {len(invalid_indices)} rows have failed the check, and must contain at least one value in either nodeID, refseq accession, GenBank accession and HMM accession.")
         for index in invalid_indices:
             print(f"Row {index + 1}")
+    if invalid_node or invalid_refseq or invalid_gb or invalid_hmm:
+        print(f"❌ One or more accessions aren't present in either the NCBI Reference Gene Catalog (for nodeID, refseq accession and genbank accession) or the NCBI Reference HMM Catalog (for HMM accession).")
+        print("\nInvalid nodeID accessions:")
+        for index in invalid_node:
+            print(f"Row {index + 1}: {nodeID_list[index]}")
+        print("\nInvalid refseq accessions:")
+        for index in invalid_refseq:
+            print(f"Row {index + 1}: {refseq_list[index]}")
+        print("\nInvalid genbank accessions:")
+        for index in invalid_gb:
+            print(f"Row {index + 1}: {genbank_list[index]}")
+        print("\nInvalid HMM accessions:")
+        for index in invalid_hmm:
+            print(f"Row {index + 1}: {hmm_list[index]}")
+    else:
+        print("✅ All accessions are present in the relevant catalogues.")
 
 def check_aro(aro_list, aro_obo_file):
     
@@ -362,8 +434,12 @@ def main():
         print("\n❌ No gene column found in file. Spec v0.5 requires this column to be present. Continuing to validate other columns...")
 
     # check that for columns nodeID, refseq accession, GenBank accession, and HMM accession, at least one of these columns has a value
+    # TODO: Automate downloads of relevant files from AMRFP ftp server?
     if "nodeID" in columns and "refseq accession" in columns and "GenBank accession" in columns and "HMM accession" in columns:
-        check_id_accessions(get_column("nodeID", draftrules), get_column("refseq accession", draftrules), get_column("GenBank accession", draftrules), get_column("HMM accession", draftrules))
+        refseq_file = 'refgenes_2024-12-18.1.tsv'
+        hmm_file = 'hmms_amrfp_2024-12-18.1.tsv'
+        refseq_nodes_file = 'ReferenceGeneHierarchy_2024-12-18.1.txt'
+        check_id_accessions(get_column("nodeID", draftrules), get_column("refseq accession", draftrules), get_column("GenBank accession", draftrules), get_column("HMM accession", draftrules), refseq_file, refseq_nodes_file, hmm_file)
     else:
         for column in ["nodeID", "refseq accession", "GenBank accession", "HMM accession"]:
             if column not in columns:

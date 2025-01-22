@@ -1,0 +1,753 @@
+#Accession	MicroBIGG-E link	Gene symbol	Hierarchy node ID	HMM description	Length	TC1	TC2	Scope	Type	Subtype	Class	Subclass
+NF000004.1		vanH-D	vanH-D	D-lactate dehydrogenase VanH-D	323	550	550	core	AMR	AMR	GLYCOPEPTIDE	VANCOMYCIN
+NF000005.4		ble	ble_BLMT_gen	BLMT family bleomycin binding protein	117	210	210	core	AMR	AMR	BLEOMYCIN	BLEOMYCIN
+NF000006.2		dfrA26	dfrA26	trimethoprim-resistant dihydrofolate reductase DfrA26	183	350	350	core	AMR	AMR	TRIMETHOPRIM	TRIMETHOPRIM
+NF000007.1		rmtD	rmtD	RmtD family 16S rRNA (guanine(1405)-N(7))-methyltransferase	247	500	500	core	AMR	AMR	AMINOGLYCOSIDE	AMINOGLYCOSIDE
+NF000008.1		dfrA	dfr1_rpt	trimethoprim-resistant repeat-containing dihydrofolate reductase DfrA1	187	420	420	core	AMR	AMR	TRIMETHOPRIM	TRIMETHOPRIM
+NF000009.1		tcr3	tcr3	tetracycline efflux MFS transporter Tcr3	512	1000	1000	core	AMR	AMR	TETRACYCLINE	TETRACYCLINE
+NF000010.1		aac(2')-Ib	aac(2')-Ib	aminoglycoside N-acetyltransferase AAC(2')-Ib	195	400	400	core	AMR	AMR	AMINOGLYCOSIDE	GENTAMICIN/TOBRAMYCIN
+NF000011.2		aph(6)-Ic	aph(6)-Ic	aminoglycoside O-phosphotransferase APH(6)-Ic	280	500	500	core	AMR	AMR	AMINOGLYCOSIDE	STREPTOMYCIN
+NF000012.1		dfrI	dfrI	trimethoprim-resistant dihydrofolate reductase DfrI	191	400	400	core	AMR	AMR	TRIMETHOPRIM	TRIMETHOPRIM
+NF000013.1		tet(35)	tet(35)	tetracycline efflux Na+/H+ antiporter family transporter Tet(35)	369	750	750	core	AMR	AMR	TETRACYCLINE	TETRACYCLINE
+NF000014.1		tet(34)	tet(34)	oxytetracycline resistance phosphoribosyltransferase domain-containing protein Tet(34)	154	320	320	core	AMR	AMR	TETRACYCLINE	TETRACYCLINE
+NF000015.3		aph(2'')-IIa	aph(2'')-IIa	aminoglycoside O-phosphotransferase APH(2'')-IIa	299	625	625	core	AMR	AMR	AMINOGLYCOSIDE	AMIKACIN/GENTAMICIN/KANAMYCIN/TOBRAMYCIN
+NF000016.1		aac(6')-Im	aac(6')-Im	aminoglycoside N-acetyltransferase AAC(6')-Im	178	350	350	core	AMR	AMR	AMINOGLYCOSIDE	AMIKACIN/KANAMYCIN/TOBRAMYCIN
+NF000017.1		lnu(D)	lnu(D)	lincosamide nucleotidyltransferase Lnu(D)	164	325	325	core	AMR	AMR	LINCOSAMIDE	LINCOSAMIDE
+NF000018.2		dfrA10	dfrA10	trimethoprim-resistant dihydrofolate reductase DfrA10	187	400	400	core	AMR	AMR	TRIMETHOPRIM	TRIMETHOPRIM
+NF000019.2		dfrA3	dfrA3	trimethoprim-resistant dihydrofolate reductase DfrA3	162	350	350	core	AMR	AMR	TRIMETHOPRIM	TRIMETHOPRIM
+NF000020.1		vat(E)	vat(E)	streptogramin A O-acetyltransferase Vat(E)	214	450	450	core	AMR	AMR	STREPTOGRAMIN	STREPTOGRAMIN
+NF000021.4		aac(6')	aac(6')_Serra	aminoglycoside 6'-N-acetyltransferase	146	310	310	core	AMR	AMR	AMINOGLYCOSIDE	AMINOGLYCOSIDE
+NF000022.1		vgb(A)	vgb(A)	streptogramin B lyase Vgb(A)	299	600	600	core	AMR	AMR	STREPTOGRAMIN	STREPTOGRAMIN
+NF000023.1		qacC	qacC	quaternary ammonium compound efflux SMR transporter QacC	107	200	200	core	STRESS	BIOCIDE	QUATERNARY AMMONIUM	QUATERNARY AMMONIUM
+NF000024.1		erm(S)	erm(S)	23S rRNA (adenine(2058)-N(6))-methyltransferase Erm(S)	319	675	675	core	AMR	AMR	LINCOSAMIDE/MACROLIDE/STREPTOGRAMIN	CLINDAMYCIN/ERYTHROMYCIN/OSTREOGRYCIN/TYLOSIN
+NF000025.1		tcmA	tcmA	tetracenomycin C efflux MFS transporter	538	999	999	core	AMR	AMR	TETRACENOMYCIN	TETRACENOMYCIN
+NF000026.1		fosA	fos_A_A2	FosA/FosA2 family fosfomycin resistance glutathione transferase	141	275	275	core	AMR	AMR	FOSFOMYCIN	FOSFOMYCIN
+NF000027.1		bleO	bleO	bleomycin binding protein	134	275	275	core	AMR	AMR	BLEOMYCIN	BLEOMYCIN
+NF000028.1		ble	ble-Sv	BLMA family bleomycin binding protein	122	250	250	core	AMR	AMR	BLEOMYCIN	BLEOMYCIN
+NF000029.2		aph(9)-Ib	aph(9)-Ib	aminoglycoside O-phosphotransferase APH(9)-Ib	330	675	675	core	AMR	AMR	AMINOGLYCOSIDE	SPECTINOMYCIN
+NF000030.1		npmA	npmA	16S rRNA (adenine(1408)-N(1))-methyltransferase NpmA	219	450	450	core	AMR	AMR	AMINOGLYCOSIDE	AMINOGLYCOSIDE
+NF000032.1		vanL	vanL	D-alanine--D-serine ligase VanL	349	750	750	core	AMR	AMR	GLYCOPEPTIDE	VANCOMYCIN
+NF000033.1		vanTm	vanTm-L	serine racemase VanT-L membrane subunit	329	675	675	core	AMR	AMR	GLYCOPEPTIDE	VANCOMYCIN
+NF000034.1		aac(2')-Ic	aac(2')-Ic	aminoglycoside N-acetyltransferase AAC(2')-Ic	181	375	375	core	AMR	AMR	AMINOGLYCOSIDE	GENTAMICIN/TOBRAMYCIN
+NF000035.1		nshR	nshR	NshR family nosiheptide/thiostrepton resistance 23S rRNA methyltransferase	274	500	500	core	AMR	AMR	THIOSTREPTON	THIOSTREPTON
+NF000036.1		vanE	vanE	D-alanine--D-serine ligase VanE	352	700	700	core	AMR	AMR	GLYCOPEPTIDE	VANCOMYCIN
+NF000037.1		oqxB	oqxB	multidrug efflux RND transporter permease subunit OqxB	1050	2200	2200	core	AMR	AMR	PHENICOL/QUINOLONE	PHENICOL/QUINOLONE
+NF000039.1		dfrA18	dfrA18	trimethoprim-resistant dihydrofolate reductase DfrA18	184	375	375	core	AMR	AMR	TRIMETHOPRIM	TRIMETHOPRIM
+NF000041.1		dfrA19	dfrA19	trimethoprim-resistant dihydrofolate reductase DfrA19	189	400	400	core	AMR	AMR	TRIMETHOPRIM	TRIMETHOPRIM
+NF000042.1		aac(2')-Id	aac(2')-Id	aminoglycoside N-acetyltransferase AAC(2')-Id	210	400	400	core	AMR	AMR	AMINOGLYCOSIDE	GENTAMICIN/TOBRAMYCIN
+NF000043.1		tetA(P)	tetA(P)	tetracycline efflux MFS transporter TetA(P)	420	750	750	core	AMR	AMR	TETRACYCLINE	TETRACYCLINE
+NF000044.2		aph(2'')-IIIa	aph(2'')-IIIa	aminoglycoside O-phosphotransferase APH(2'')-IIIa	306	625	625	core	AMR	AMR	AMINOGLYCOSIDE	AMIKACIN/GENTAMICIN/KANAMYCIN/TOBRAMYCIN
+NF000047.1		erm(V)	erm(V)	23S rRNA (adenine(2058)-N(6))-methyltransferase Erm(V)	259	500	500	core	AMR	AMR	LINCOSAMIDE/MACROLIDE/STREPTOGRAMIN	CLINDAMYCIN/ERYTHROMYCIN/TYLOSIN/VERNAMYCIN B
+NF000048.1		aacA40	aacA40	aminoglycoside 6'-N-acetyltransferase AacA40	184	400	400	core	AMR	AMR	AMINOGLYCOSIDE	AMINOGLYCOSIDE
+NF000049.1		tet(40)	tet(40)	tetracycline efflux MFS transporter Tet(40)	406	800	800	core	AMR	AMR	TETRACYCLINE	TETRACYCLINE
+NF000050.2		aac(6')-29	aac(6')-29	aminoglycoside 6'-N-acetyltransferase AAC(6')-29	131	250	250	core	AMR	AMR	AMINOGLYCOSIDE	AMINOGLYCOSIDE
+NF000051.1		mef(B)	mef(B)	macrolide efflux MFS transporter Mef(B)	409	800	800	core	AMR	AMR	MACROLIDE	AZITHROMYCIN/ERYTHROMYCIN
+NF000052.4		aph(9)-Ia	aph(9)-Ia	aminoglycoside O-phosphotransferase APH(9)-Ia	330	680	680	core	AMR	AMR	AMINOGLYCOSIDE	SPECTINOMYCIN
+NF000053.2		dfrA12	dfrA12	trimethoprim-resistant dihydrofolate reductase DfrA12	165	360	360	core	AMR	AMR	TRIMETHOPRIM	TRIMETHOPRIM
+NF000054.1		aac(2')-Ie	aac(2')-Ie	aminoglycoside N-acetyltransferase AAC(2')-Ie	182	400	400	core	AMR	AMR	AMINOGLYCOSIDE	GENTAMICIN/TOBRAMYCIN
+NF000055.3		dfrA	dfrA12_A21	DfrA12/DfrA21 family trimethoprim-resistant dihydrofolate reductase	165	330	330	core	AMR	AMR	TRIMETHOPRIM	TRIMETHOPRIM
+NF000056.3		qnrS	qnrS	QnrS family quinolone resistance pentapeptide repeat protein	218	460	460	core	AMR	AMR	QUINOLONE	QUINOLONE
+NF000059.1		tet(37)	tet(37)	tetracycline resistance NADPH-dependent oxidoreductase Tet(37)	108	225	225	core	AMR	AMR	TETRACYCLINE	TETRACYCLINE
+NF000061.1		lnu(P)	lnu(P)	lincosamide nucleotidyltransferase Lnu(P)	166	300	300	core	AMR	AMR	LINCOSAMIDE	LINCOSAMIDE
+NF000062.1		str	str	streptomycin adenylyltransferase Str	282	500	500	core	AMR	AMR	AMINOGLYCOSIDE	STREPTOMYCIN
+NF000063.1		fosB	fosB-Sepi	FosB family fosfomycin resistance bacillithiol transferase	142	300	300	core	AMR	AMR	FOSFOMYCIN	FOSFOMYCIN
+NF000064.3		ant(2'')-Ia	ant(2'')-Ia	aminoglycoside nucleotidyltransferase ANT(2'')-Ia	177	350	350	core	AMR	AMR	AMINOGLYCOSIDE	GENTAMICIN/KANAMYCIN/TOBRAMYCIN
+NF000065.1		dfrA3b	dfrA3b	trimethoprim-resistant dihydrofolate reductase DfrA3b	159	320	320	core	AMR	AMR	TRIMETHOPRIM	TRIMETHOPRIM
+NF000066.1		arr	arr-2b	NAD(+)--rifampin ADP-ribosyltransferase	137	250	250	core	AMR	AMR	RIFAMYCIN	RIFAMYCIN
+NF000067.2		qac	qac_F_L	quaternary ammonium compound efflux SMR transporter QacL	110	205	205	core	STRESS	BIOCIDE	QUATERNARY AMMONIUM	QUATERNARY AMMONIUM
+NF000069.1		rmtE	rmtE	RmtE family 16S rRNA (guanine(1405)-N(7))-methyltransferase	273	525	525	core	AMR	AMR	AMINOGLYCOSIDE	AMINOGLYCOSIDE
+NF000071.4		qnrA	qnrA	QnrA family quinolone resistance pentapeptide repeat protein	218	450	450	core	AMR	AMR	QUINOLONE	QUINOLONE
+NF000072.1		pexA	pexA	phenicol efflux MFS transporter PexA	415	800	800	core	AMR	AMR	PHENICOL	PHENICOL
+NF000074.1		fosC2	fosC2	FosC2 family fosfomycin resistance glutathione transferase	132	250	250	core	AMR	AMR	FOSFOMYCIN	FOSFOMYCIN
+NF000075.1		fosA	fos_A3_A4	FosA3/FosA4 family fosfomycin resistance glutathione transferase	138	275	275	core	AMR	AMR	FOSFOMYCIN	FOSFOMYCIN
+NF000076.3		aph(2'')	aph-Ie-IVa	APH(2'')-Ie/IVa family aminoglycoside O-phosphotransferase	301	600	600	core	AMR	AMR	AMINOGLYCOSIDE	AMIKACIN/GENTAMICIN/KANAMYCIN/TOBRAMYCIN
+NF000077.1		erm(42)	erm(42)	23S rRNA (adenine(2058)-N(6))-methyltransferase Erm(42)	303	600	600	core	AMR	AMR	LINCOSAMIDE/MACROLIDE	CLINDAMYCIN/ERYTHROMYCIN
+NF000079.1		aadD2	ant(4')-Ib	aminoglycoside O-nucleotidyltransferase ANT(4')-Ib	256	500	500	core	AMR	AMR	AMINOGLYCOSIDE	AMIKACIN/KANAMYCIN/TOBRAMYCIN
+NF000084.1		apmA	apmA	aminocyclitol acetyltransferase ApmA	274	550	550	core	AMR	AMR	AMINOGLYCOSIDE	APRAMYCIN
+NF000085.1		fosB	fosB-Saur	FosB1/FosB3 family fosfomycin resistance bacillithiol transferase	139	260	260	core	AMR	AMR	FOSFOMYCIN	FOSFOMYCIN
+NF000086.1		vanY-N	vanY-N	D,D-peptidase/D,D-carboxypeptidase VanY-N	196	250	250	core	AMR	AMR	GLYCOPEPTIDE	VANCOMYCIN
+NF000087.1		erm(O)	erm(O)	23S rRNA (adenine(2058)-N(6))-methyltransferase Erm(O)	259	450	450	core	AMR	AMR	LINCOSAMIDE/MACROLIDE/STREPTOGRAMIN	ERYTHROMYCIN/LINCOMYCIN/PRISTINAMYCIN/TYLOSIN
+NF000088.1		vph	vph	viomycin phosphotransferase	293	400	400	core	AMR	AMR	TUBERACTINOMYCIN	VIOMYCIN
+NF000089.1		qac	MFS_efflux_qac	QacA/B family quaternary ammonium compound efflux MFS transporter	514	900	900	core	STRESS	BIOCIDE	QUATERNARY AMMONIUM	QUATERNARY AMMONIUM
+NF000090.1		vanU	vanU	glycopeptide resistance transcriptional regulator VanU	75	150	150	core	AMR	AMR	GLYCOPEPTIDE	VANCOMYCIN
+NF000091.3		vanG	vanG	D-alanine--D-serine ligase VanG	344	495	495	core	AMR	AMR	GLYCOPEPTIDE	VANCOMYCIN
+NF000092.1		vanA-Ao2	vanA-Ao2	D-alanine--(R)-lactate ligase VanA-Ao2	348	700	700	core	AMR	AMR	GLYCOPEPTIDE	VANCOMYCIN
+NF000093.1		vanN	vanN	D-alanine--D-serine ligase VanN	343	700	700	core	AMR	AMR	GLYCOPEPTIDE	VANCOMYCIN
+NF000094.1		fosA	fosA_PA1129	FosA family fosfomycin resistance glutathione transferase	135	275	275	core	AMR	AMR	FOSFOMYCIN	FOSFOMYCIN
+NF000095.1		otr(B)	otr(B)	oxytetracycline resistance efflux MFS transporter OtrB	563	999	999	core	AMR	AMR	TETRACYCLINE	TETRACYCLINE
+NF000096.1		vgb(B)	vgb(B)	streptogramin B lyase Vgb(B)	295	600	600	core	AMR	AMR	STREPTOGRAMIN	STREPTOGRAMIN
+NF000097.1		vat(C)	vat(C)	streptogramin A O-acetyltransferase Vat(C)	212	425	425	core	AMR	AMR	STREPTOGRAMIN	STREPTOGRAMIN
+NF000098.1		fosB	fosB-Bcer	FosB family fosfomycin resistance bacillithiol transferase	138	295	295	core	AMR	AMR	FOSFOMYCIN	FOSFOMYCIN
+NF000100.2		aac(2')-IIa	aac(2')-IIa	kasugamycin N-acetyltransferase AAC(2')-IIa	238	510	510	core	AMR	AMR	AMINOGLYCOSIDE	KASUGAMYCIN
+NF000101.1		vat(A)	vat(A)	streptogramin A O-acetyltransferase Vat(A)	219	450	450	core	AMR	AMR	STREPTOGRAMIN	STREPTOGRAMIN
+NF000103.1		tetB	tetAB_B	tetracycline efflux ABC transporter TetAB subunit B	528	999	999	core	AMR	AMR	TETRACYCLINE	TETRACYCLINE
+NF000107.2		aph(4)-Ia	aph(4)-Ia	aminoglycoside O-phosphotransferase APH(4)-Ia	341	725	725	core	AMR	AMR	AMINOGLYCOSIDE	HYGROMYCIN
+NF000108.1		aac(2')-Ia	aac(2')-Ia	aminoglycoside N-acetyltransferase AAC(2')-Ia	178	350	350	core	AMR	AMR	AMINOGLYCOSIDE	GENTAMICIN/TOBRAMYCIN
+NF000109.2		dfrA9	dfrA9	trimethoprim-resistant dihydrofolate reductase DfrA9	177	350	350	core	AMR	AMR	TRIMETHOPRIM	TRIMETHOPRIM
+NF000110.2		aac(6')-If	aac(6')-If	aminoglycoside N-acetyltransferase AAC(6')-If	144	300	300	core	AMR	AMR	AMINOGLYCOSIDE	AMIKACIN/KANAMYCIN/TOBRAMYCIN
+NF000111.1		vat(D)	vat(D)	streptogramin A O-acetyltransferase Vat(D)	209	400	400	core	AMR	AMR	STREPTOGRAMIN	STREPTOGRAMIN
+NF000112.1		vanH	vanH-Amyco	VanH-AOV family D-lactate dehydrogenase	348	625	625	core	AMR	AMR	GLYCOPEPTIDE	VANCOMYCIN
+NF000113.1		rmtF	rmtF	RmtF family 16S rRNA (guanine(1405)-N(7))-methyltransferase	259	500	500	core	AMR	AMR	AMINOGLYCOSIDE	AMINOGLYCOSIDE
+NF000114.1		rmtG	rmtG	RmtG family 16S rRNA (guanine(1405)-N(7))-methyltransferase	264	500	500	core	AMR	AMR	AMINOGLYCOSIDE	AMINOGLYCOSIDE
+NF000115.2		aac(6')-Iad	aac(6')-Iad	aminoglycoside N-acetyltransferase AAC(6')-Iad	144	275	275	core	AMR	AMR	AMINOGLYCOSIDE	AMIKACIN/TOBRAMYCIN
+NF000116.1		rmtH	rmtH	RmtH family 16S rRNA (guanine(1405)-N(7))-methyltransferase	252	500	500	core	AMR	AMR	AMINOGLYCOSIDE	AMINOGLYCOSIDE
+NF000118.3		aac(6')-31	aac(6')-31	aminoglycoside N-acetyltransferase AAC(6')-31	172	385	385	core	AMR	AMR	AMINOGLYCOSIDE	AMINOGLYCOSIDE
+NF000119.1		lnu(F)	lnu(F)	lincosamide nucleotidyltransferase Lnu(F)	273	450	450	core	AMR	AMR	LINCOSAMIDE	LINCOSAMIDE
+NF000120.3		otr(A)	otr(A)	tetracycline resistance ribosomal protection protein Otr(A)	608	900	900	core	AMR	AMR	TETRACYCLINE	TETRACYCLINE
+NF000122.1		fosC	fosC	fosfomycin resistance kinase FosC	182	350	350	core	AMR	AMR	FOSFOMYCIN	FOSFOMYCIN
+NF000123.2		aacA34	aacA34	aminoglycoside 6'-N-acetyltransferase AacA34	146	300	300	core	AMR	AMR	AMINOGLYCOSIDE	KANAMYCIN/TOBRAMYCIN
+NF000125.1		fos	fos_related	Fos family putative thiol transferase	129	250	250	core	AMR	AMR	FOSFOMYCIN	FOSFOMYCIN
+NF000126.2		dfrA8	dfrA8	trimethoprim-resistant dihydrofolate reductase DfrA8	169	325	325	core	AMR	AMR	TRIMETHOPRIM	TRIMETHOPRIM
+NF000127.2		dfrA20	dfrA20	trimethoprim-resistant dihydrofolate reductase DfrA20	169	325	325	core	AMR	AMR	TRIMETHOPRIM	TRIMETHOPRIM
+NF000128.1		vanH-Sc	vanH-Sc	D-lactate dehydrogenase VanH-Sc	337	650	650	core	AMR	AMR	GLYCOPEPTIDE	VANCOMYCIN
+NF000129.1		vanA-Sc	vanA-Sc	D-alanine--(R)-lactate ligase VanA-Sc	346	650	650	core	AMR	AMR	GLYCOPEPTIDE	VANCOMYCIN
+NF000131.1		mepA	mepA	multidrug efflux MATE transporter MepA	451	850	850	plus	AMR	AMR	TETRACYCLINE	TIGECYCLINE
+NF000132.2		aph(2'')-Ig	aph(2'')-Ig	aminoglycoside O-phosphotransferase APH(2'')-Ig	306	620	620	core	AMR	AMR	AMINOGLYCOSIDE	AMIKACIN/GENTAMICIN/KANAMYCIN/TOBRAMYCIN
+NF000133.1		erm(32)	erm(32)	23S rRNA (guanine(748)-N(1))-methyltransferase Erm(32)	280	550	550	core	AMR	AMR	LINCOSAMIDE/STREPTOGRAMIN	LINCOSAMIDE/STREPTOGRAMIN
+NF000134.2		dfrA23	dfrA23	trimethoprim-resistant dihydrofolate reductase DfrA23	186	375	375	core	AMR	AMR	TRIMETHOPRIM	TRIMETHOPRIM
+NF000135.2		aac(6')-IIc	aac(6')-IIc	aminoglycoside N-acetyltransferase AAC(6')-IIc	193	415	415	core	AMR	AMR	AMINOGLYCOSIDE	GENTAMICIN/KANAMYCIN/TOBRAMYCIN
+NF000137.2		aph(7'')-Ia	aph(7'')-Ia	aminoglycoside O-phosphotransferase APH(7'')-Ia	332	640	640	core	AMR	AMR	AMINOGLYCOSIDE	HYGROMYCIN
+NF000138.1		aac(6')-Iz	aac(6')-Iz	aminoglycoside N-acetyltransferase AAC(6')-Iz	153	320	320	core	AMR	AMR	AMINOGLYCOSIDE	TOBRAMYCIN
+NF000139.2		qnrD	qnrD	QnrD family quinolone resistance pentapeptide repeat protein	214	425	425	core	AMR	AMR	QUINOLONE	QUINOLONE
+NF000140.3		aac(6')	aac(6')_Salmo	cryptic aminoglycoside N-acetyltransferase AAC(6')-Iy/Iaa	145	270	270	non-reported	AMR	AMR	AMINOGLYCOSIDE	AMINOGLYCOSIDE
+NF000141.1		lnu(C)	lnu(C)	lincosamide nucleotidyltransferase Lnu(C)	164	300	300	core	AMR	AMR	LINCOSAMIDE	LINCOSAMIDE
+NF000142.1		vanZ-Pt	vanZ-Pt	glycopeptide resistance protein VanZ-Pt	143	260	260	core	AMR	AMR	GLYCOPEPTIDE	VANCOMYCIN
+NF000143.1		dfrG	dfrG	trimethoprim-resistant dihydrofolate reductase DfrG	165	365	365	core	AMR	AMR	TRIMETHOPRIM	TRIMETHOPRIM
+NF000144.1		vanF	vanF	D-alanine--(R)-lactate ligase VanF	343	750	750	core	AMR	AMR	GLYCOPEPTIDE	VANCOMYCIN
+NF000145.1		vanZ-F	vanZ-F	glycopeptide resistance protein VanZ-F	206	375	375	core	AMR	AMR	GLYCOPEPTIDE	VANCOMYCIN
+NF000146.2		dfrA24	dfrA24	trimethoprim-resistant dihydrofolate reductase DfrA24	185	375	375	core	AMR	AMR	TRIMETHOPRIM	TRIMETHOPRIM
+NF000147.1		vat(F)	vat(F)	streptogramin A O-acetyltransferase Vat(F)	221	400	400	core	AMR	AMR	STREPTOGRAMIN	STREPTOGRAMIN
+NF000148.1		qac	SMR_qac_pB8	Qac-pB8 family quaternary ammonium compound efflux SMR transporter	110	200	200	core	STRESS	BIOCIDE	QUATERNARY AMMONIUM	QUATERNARY AMMONIUM
+NF000149.1		vanXY	vanXY-G_fam	D-Ala-D-Ala dipeptidase/D-Ala-D-Ala carboxypeptidase VanXY-G	254	500	500	core	AMR	AMR	GLYCOPEPTIDE	VANCOMYCIN
+NF000150.1		rmtC	rmtC	RmtC family 16S rRNA (guanine(1405)-N(7))-methyltransferase	281	550	550	core	AMR	AMR	AMINOGLYCOSIDE	AMINOGLYCOSIDE
+NF000151.1		vanH-Ac1	vanH-Ac1	D-lactate dehydrogenase VanH-Ac1	351	750	750	core	AMR	AMR	GLYCOPEPTIDE	VANCOMYCIN
+NF000152.2		aacA37	aacA37	aminoglycoside 6'-N-acetyltransferase AacA37	133	250	250	core	AMR	AMR	AMINOGLYCOSIDE	AMINOGLYCOSIDE
+NF000153.1		lnu(AN2)	lnu(AN2)	lincosamide nucleotidyltransferase Lnu(AN2)	170	340	340	core	AMR	AMR	LINCOSAMIDE	LINCOSAMIDE
+NF000154.1		mef(En2)	mef(En2)	macrolide efflux MFS transporter Mef(En2)	401	800	800	core	AMR	AMR	MACROLIDE	MACROLIDE
+NF000157.1		fusH	fusH	fusidic acid esterase FusH	520	999	999	core	AMR	AMR	FUSIDIC ACID	FUSIDIC ACID
+NF000158.2		aac(6')-Il	aac(6')-Il	aminoglycoside N-acetyltransferase AAC(6')-Il	152	270	270	core	AMR	AMR	AMINOGLYCOSIDE	AMIKACIN/KANAMYCIN/TOBRAMYCIN
+NF000159.1		dfrD	dfrD	trimethoprim-resistant dihydrofolate reductase DfrD	166	350	350	core	AMR	AMR	TRIMETHOPRIM	TRIMETHOPRIM
+NF000165.3		aac(6')-I	aac(6')_Entco	aminoglycoside N-acetyltransferase AAC(6')-Ii	178	300	300	core	AMR	AMR	AMINOGLYCOSIDE	AMINOGLYCOSIDE
+NF000166.1		car(A)	car(A)	ABC-F type ribosomal protection protein Car(A)	556	1050	1050	core	AMR	AMR	MACROLIDE	MACROLIDE
+NF000167.2		lsa	lsa	Lsa family ABC-F type ribosomal protection protein	492	750	750	core	AMR	AMR	LINCOSAMIDE/STREPTOGRAMIN	LINCOSAMIDE/STREPTOGRAMIN
+NF000168.2		msr	msr	Msr family ABC-F type ribosomal protection protein	487	680	680	core	AMR	AMR	MACROLIDE	MACROLIDE
+NF000169.2		sal	sal	Sal family ABC-F type ribosomal protection protein	542	725	725	core	AMR	AMR	LINCOSAMIDE/PLEUROMUTILIN/STREPTOGRAMIN	LINCOSAMIDE/PLEUROMUTILIN/STREPTOGRAMIN
+NF000170.2		vga	vga	Vga family ABC-F type ribosomal protection protein	521	725	725	core	AMR	AMR	LINCOSAMIDE	LINCOSAMIDE
+NF000171.1		abc-f	abcf-produ	TlrC/CarA/OleB/SrmB family ABC-F type ribosomal protection protein	541	800	800	core	AMR	AMR	MACROLIDE	MACROLIDE
+NF000181.1		aadD1	ant(4')-Ia	aminoglycoside O-nucleotidyltransferase ANT(4')-Ia	253	500	500	core	AMR	AMR	AMINOGLYCOSIDE	KANAMYCIN/TOBRAMYCIN
+NF000185.2		blaEC	blaEC	BlaEC family class C beta-lactamase	377	850	850	plus	AMR	AMR	BETA-LACTAM	BETA-LACTAM
+NF000186.1		blaI	blaI_of_Z	penicillinase repressor BlaI	126	250	250	core	AMR	AMR	BETA-LACTAM	BETA-LACTAM
+NF000187.3		blaMIR	blaMIR	MIR family cephalosporin-hydrolyzing class C beta-lactamase	381	882	882	core	AMR	AMR	BETA-LACTAM	CEPHALOSPORIN
+NF000188.2		blaCARB	blaCARB	CARB family carbenicillin-hydrolyzing class A beta-lactamase	283	600	600	core	AMR	AMR	BETA-LACTAM	BETA-LACTAM
+NF000191.1		blaCMY	blaCMY	CMY-2 family class C beta-lactamase	381	800	800	core	AMR	AMR	BETA-LACTAM	CEPHALOSPORIN
+NF000206.1		vanA	vanA-all	D-alanine--(R)-lactate ligase	342	550	550	core	AMR	AMR	GLYCOPEPTIDE	VANCOMYCIN
+NF000207.3		vanC	vanC-all	D-alanine--D-serine ligase	342	520	520	core	AMR	AMR	GLYCOPEPTIDE	VANCOMYCIN
+NF000208.1		ere(A)	ere(A)	EreA family erythromycin esterase	408	750	750	core	AMR	AMR	MACROLIDE	ERYTHROMYCIN
+NF000209.1		ere(B)	ere(B)	EreB family erythromycin esterase	419	750	750	core	AMR	AMR	MACROLIDE	AZITHROMYCIN/ERYTHROMYCIN
+NF000216.2		blaFEZ	blaFEZ	FEZ family subclass B3 metallo-beta-lactamase	282	600	600	core	AMR	AMR	BETA-LACTAM	CARBAPENEM
+NF000218.1		fexA	fexA	chloramphenicol/florfenicol efflux MFS transporter FexA	475	900	900	core	AMR	AMR	PHENICOL	CHLORAMPHENICOL/FLORFENICOL
+NF000219.1		floR	floR	chloramphenicol/florfenicol efflux MFS transporter FloR	404	700	700	core	AMR	AMR	PHENICOL	CHLORAMPHENICOL/FLORFENICOL
+NF000221.4		fosA	fosA_gen	FosA family fosfomycin resistance glutathione transferase	137	250	250	core	AMR	AMR	FOSFOMYCIN	FOSFOMYCIN
+NF000222.1		fosX	fosX_gen	FosX/FosE/FosI family fosfomycin resistance hydrolase	127	170	170	core	AMR	AMR	FOSFOMYCIN	FOSFOMYCIN
+NF000224.3		aac(6')-I	aac(6')_Acine	AAC(6')-Ighjkrstuvwx family aminoglycoside N-acetyltransferase	146	225	225	core	AMR	AMR	AMINOGLYCOSIDE	AMIKACIN/KANAMYCIN/TOBRAMYCIN
+NF000225.3		aac(6')	aac(6')_Strep	aminoglycoside 6'-N-acetyltransferase	156	250	250	core	AMR	AMR	AMINOGLYCOSIDE	AMINOGLYCOSIDE
+NF000233.2		blaLEN	blaLEN	LEN family class A beta-lactamase	286	640	640	core	AMR	AMR	BETA-LACTAM	BETA-LACTAM
+NF000235.3		lnu(B)	lnu(B)	lincosamide nucleotidyltransferase Lnu(B)	267	525	525	core	AMR	AMR	LINCOSAMIDE	LINCOSAMIDE
+NF000236.1		lnu(A)	lnu(A)	lincosamide nucleotidyltransferase Lnu(A)	161	300	300	core	AMR	AMR	LINCOSAMIDE	LINCOSAMIDE
+NF000237.1		mec	mec_gen	PBP2a family beta-lactam-resistant peptidoglycan transpeptidase	668	750	750	core	AMR	AMR	BETA-LACTAM	METHICILLIN
+NF000239.3		blaMOX	blaMOX	CMY-1/MOX family class C beta-lactamase	383	770	770	core	AMR	AMR	BETA-LACTAM	CEPHALOSPORIN
+NF000240.1		mph(C)	mph(C)	Mph(C) family macrolide 2'-phosphotransferase	299	550	550	core	AMR	AMR	MACROLIDE	ERYTHROMYCIN/SPIRAMYCIN/TELITHROMYCIN
+NF000241.1		mph	mph_3	Mph(E)/Mph(G) family macrolide 2'-phosphotransferase	293	500	500	core	AMR	AMR	MACROLIDE	MACROLIDE
+NF000242.2		mph(B)	mph(B)	Mph(B) family macrolide 2'-phosphotransferase	299	615	615	core	AMR	AMR	MACROLIDE	ERYTHROMYCIN/SPIRAMYCIN/TELITHROMYCIN
+NF000243.1		mecI	mecI_of_mecA	mecA-type methicillin resistance repressor MecI	123	250	250	core	AMR	AMR	BETA-LACTAM	METHICILLIN
+NF000244.1		mecI	mecI_of_mecC	mecC-type methicillin resistance repressor MecI	125	250	250	core	AMR	AMR	BETA-LACTAM	METHICILLIN
+NF000245.1		mef(A)	mef(A)	macrolide efflux MFS transporter Mef(A)	405	675	675	core	AMR	AMR	MACROLIDE	AZITHROMYCIN/ERYTHROMYCIN
+NF000246.1		mef(C)	mef(C)	macrolide efflux MFS transporter Mef(C)	407	870	870	core	AMR	AMR	MACROLIDE	ERYTHROMYCIN
+NF000254.1		mph(A)	mph(A)	Mph(A) family macrolide 2'-phosphotransferase	293	550	550	core	AMR	AMR	MACROLIDE	AZITHROMYCIN/ERYTHROMYCIN/SPIRAMYCIN/TELITHROMYCIN
+NF000255.1		mph(F)	mph(F)	Mph(F) family macrolide 2'-phosphotransferase	299	650	650	core	AMR	AMR	MACROLIDE	ERYTHROMYCIN
+NF000256.1		msr(A)	msr(A)	ABC-F type ribosomal protection protein Msr(A)	488	1100	1100	core	AMR	AMR	MACROLIDE/STREPTOGRAMIN	ERYTHROMYCIN/STREPTOGRAMIN B
+NF000257.1		mupA	mupA	mupirocin-resistant isoleucine--tRNA ligase MupA	1024	1900	1900	core	AMR	AMR	MUPIROCIN	MUPIROCIN
+NF000258.1		mupB	mupB	mupirocin-resistant isoleucine--tRNA ligase MupB	1033	1900	1900	core	AMR	AMR	MUPIROCIN	MUPIROCIN
+NF000259.2		blaNDM	blaNDM	NDM family subclass B1 metallo-beta-lactamase	270	580	580	core	AMR	AMR	BETA-LACTAM	CARBAPENEM
+NF000261.1		nim	nimABCDEF	NimABCDEF family 5-nitroimidazole reductase	153	260	260	core	AMR	AMR	NITROIMIDAZOLE	NITROIMIDAZOLE
+NF000262.1		nimIJ	nimIJ	NimIJ family nitroimidazole resistance protein	151	270	270	core	AMR	AMR	NITROIMIDAZOLE	NITROIMIDAZOLE
+NF000263.1		norM	norM-NG	multidrug efflux MATE transporter NorM	459	950	950	plus	AMR	AMR	EFFLUX	EFFLUX
+NF000264.2		blaOCH	blaOCH	OCH family extended-spectrum class C beta-lactamase	390	800	800	core	AMR	AMR	BETA-LACTAM	CEPHALOSPORIN
+NF000265.2		blaOKP	blaOKP	OKP family broad-spectrum class A beta-lactamase	286	620	620	core	AMR	AMR	BETA-LACTAM	BETA-LACTAM
+NF000266.2		blaOXA	blaOXA-23_fam	OXA-23 family carbapenem-hydrolyzing class D beta-lactamase	273	600	600	core	AMR	AMR	BETA-LACTAM	CARBAPENEM
+NF000267.2		blaOXA	blaOXA-2_fam	OXA-2 family class D beta-lactamase	275	590	590	core	AMR	AMR	BETA-LACTAM	BETA-LACTAM
+NF000268.2		blaOXA	blaOXA-51_fam	OXA-51 family carbapenem-hydrolyzing class D beta-lactamase	274	600	600	core	AMR	AMR	BETA-LACTAM	CARBAPENEM
+NF000269.2		blaOXA	blaOXA-213_fam	OXA-213 family carbapenem-hydrolyzing class D beta-lactamase	273	560	560	core	AMR	AMR	BETA-LACTAM	CARBAPENEM
+NF000270.1		blaOXA	blaOXA-PR	class D beta-lactamase	240	280	280	core	AMR	AMR	BETA-LACTAM	BETA-LACTAM
+NF000271.2		blaOXY	blaOXY	OXY family extended-spectrum class A beta-lactamase	290	600	600	core	AMR	AMR	BETA-LACTAM	CEPHALOSPORIN
+NF000272.1		oqxA	oqxA	multidrug efflux RND transporter periplasmic adaptor subunit OqxA	391	875	875	core	AMR	AMR	PHENICOL/QUINOLONE	PHENICOL/QUINOLONE
+NF000275.2		bla	blaPLA-ORN-TER	PLA/ORN/TER family class A beta-lactamase	291	550	550	core	AMR	AMR	BETA-LACTAM	BETA-LACTAM
+NF000276.2		qacE	qacE_gen	quaternary ammonium compound efflux SMR transporter QacE	101	185	185	core	STRESS	BIOCIDE	QUATERNARY AMMONIUM	QUATERNARY AMMONIUM
+NF000277.1		qacG	qacG	quaternary ammonium compound efflux SMR transporter QacG	107	200	200	core	STRESS	BIOCIDE	QUATERNARY AMMONIUM	QUATERNARY AMMONIUM
+NF000278.1		qacG2	qacG2	quaternary ammonium compound efflux SMR transporter QacG2	110	220	220	core	STRESS	BIOCIDE	QUATERNARY AMMONIUM	QUATERNARY AMMONIUM
+NF000279.1		qacH	qacH	quaternary ammonium compound efflux SMR transporter QacH	107	205	205	core	STRESS	BIOCIDE	QUATERNARY AMMONIUM	QUATERNARY AMMONIUM
+NF000280.1		smr	SMR_efflux_smr	multidrug efflux SMR transporter Smr	105	200	200	core	STRESS	BIOCIDE	QUATERNARY AMMONIUM	QUATERNARY AMMONIUM
+NF000283.1		rph	rph	rifamycin-inactivating phosphotransferase Rph	865	1700	1700	core	AMR	AMR	RIFAMYCIN	RIFAMYCIN
+NF000284.1		blaRTG	blaRTG	RTG family carbenicillin-hydrolyzing class A beta-lactamase	298	600	600	core	AMR	AMR	BETA-LACTAM	BETA-LACTAM
+NF000285.3		blaSHV	blaSHV	SHV family class A beta-lactamase	285	640	640	core	AMR	AMR	BETA-LACTAM	BETA-LACTAM
+NF000287.1		blaSMB	blaSMB	SMB-1 family subclass B3 metallo-beta-lactamase	280	400	400	core	AMR	AMR	BETA-LACTAM	BETA-LACTAM
+NF000294.1		sul1	sul1	sulfonamide-resistant dihydropteroate synthase Sul1	278	600	600	core	AMR	AMR	SULFONAMIDE	SULFONAMIDE
+NF000295.1		sul2	sul2	sulfonamide-resistant dihydropteroate synthase Sul2	271	575	575	core	AMR	AMR	SULFONAMIDE	SULFONAMIDE
+NF000296.1		sul3	sul3	sulfonamide-resistant dihydropteroate synthase Sul3	263	475	475	core	AMR	AMR	SULFONAMIDE	SULFONAMIDE
+NF000298.2		blaTLA	blaTLA	TLA family extended-spectrum class A beta-lactamase	309	640	640	core	AMR	AMR	BETA-LACTAM	CEPHALOSPORIN
+NF000311.1		vat	vat	Vat family streptogramin A O-acetyltransferase	201	300	300	core	AMR	AMR	STREPTOGRAMIN	STREPTOGRAMIN
+NF000312.1		aadK	aadK	aminoglycoside 6-adenylyltransferase AadK	284	600	600	core	AMR	AMR	AMINOGLYCOSIDE	STREPTOMYCIN
+NF000318.1		arr	arr-Msmeg	NAD(+)--rifampin ADP-ribosyltransferase	143	250	250	core	AMR	AMR	RIFAMYCIN	RIFAMYCIN
+NF000320.3		blaPEN-bcc	blaPEN-bcc	PEN family class A beta-lactamase, Bcc-type	300	540	540	core	AMR	AMR	BETA-LACTAM	BETA-LACTAM
+NF000321.3		blaPEN-bpc	blaPEN-bpc	PEN family class A beta-lactamase, Bpc-type	295	580	580	core	AMR	AMR	BETA-LACTAM	BETA-LACTAM
+NF000322.2		cfiA	cfiA_fam	CfiA family subclass B1 metallo-beta-lactamase	249	550	550	core	AMR	AMR	BETA-LACTAM	CARBAPENEM
+NF000323.2		blaFONA	blaFONA	FONA family class A beta-lactamase	295	600	600	core	AMR	AMR	BETA-LACTAM	BETA-LACTAM
+NF000324.2		blaLUT	blaLUT	LUT family class A beta-lactamase	296	600	600	core	AMR	AMR	BETA-LACTAM	CEPHALOSPORIN
+NF000326.1		blaR1	blaR1_gen	BlaR1 family beta-lactam sensor/signal transducer	585	400	400	core	AMR	AMR	BETA-LACTAM	BETA-LACTAM
+NF000327.2		blaSCO	blaSCO	SCO family class A beta-lactamase	288	600	600	core	AMR	AMR	BETA-LACTAM	BETA-LACTAM
+NF000328.2		blaSED	blaSED	SED family class A beta-lactamase	294	570	570	core	AMR	AMR	BETA-LACTAM	BETA-LACTAM
+NF000329.2		cphA	cphA	CphA family subclass B2 metallo-beta-lactamase	253	500	500	core	AMR	AMR	BETA-LACTAM	CARBAPENEM
+NF000330.1		dfrA	dfrA	trimethoprim-resistant dihydrofolate reductase DfrA	157	250	250	core	AMR	AMR	TRIMETHOPRIM	TRIMETHOPRIM
+NF000331.2		dfrB	dfrB	trimethoprim-resistant dihydrofolate reductase DfrB	78	137	137	core	AMR	AMR	TRIMETHOPRIM	TRIMETHOPRIM
+NF000332.1		dfr	dfr_DGK	DfrD/DfrG/DfrK family trimethoprim-resistant dihydrofolate reductase	161	300	300	core	AMR	AMR	TRIMETHOPRIM	TRIMETHOPRIM
+NF000333.1		dfrF	dfrF	trimethoprim-resistant dihydrofolate reductase DfrF	164	320	320	core	AMR	AMR	TRIMETHOPRIM	TRIMETHOPRIM
+NF000337.1		erm	erm_SHROVE	ErmE/ErmH/ErmO/ErmR family 23S rRNA (adenine(2058)-N(6))-methyltransferase	248	320	320	core	AMR	AMR	MACROLIDE	MACROLIDE
+NF000338.1		fomA	fomA	fosfomycin resistance kinase FomA	266	550	550	core	AMR	AMR	FOSFOMYCIN	FOSFOMYCIN
+NF000339.2		fos	fos-Crono	FosA family fosfomycin resistance glutathione transferase	134	275	275	core	AMR	AMR	FOSFOMYCIN	FOSFOMYCIN
+NF000340.1		fusB	fusB_set	FusB family fusidic acid resistance EF-G-binding protein	213	375	375	core	AMR	AMR	FUSIDIC ACID	FUSIDIC ACID
+NF000341.1		fusC	fusC_set	FusC family fusidic acid resistance EF-G-binding protein	212	400	400	core	AMR	AMR	FUSIDIC ACID	FUSIDIC ACID
+NF000343.1		iri	iri	rifampin monooxygenase Iri	479	950	950	core	AMR	AMR	RIFAMYCIN	RIFAMPIN
+NF000354.1		rgt	rgt	rifamycin-inactivating glycosyltransferase Rgt	411	800	800	core	AMR	AMR	RIFAMYCIN	RIFAMYCIN
+NF000358.1		sat2	sat2_fam	streptothricin N-acetyltransferase Sat2	174	360	360	core	AMR	AMR	STREPTOTHRICIN	STREPTOTHRICIN
+NF000359.1		sat3	sat3	streptothricin N-acetyltransferase Sat3	180	360	360	core	AMR	AMR	STREPTOTHRICIN	STREPTOTHRICIN
+NF000360.1		sat4	sat4	streptothricin N-acetyltransferase Sat4	180	380	380	core	AMR	AMR	STREPTOTHRICIN	STREPTOTHRICIN
+NF000361.1		fomB	fomB	FomB family phosphonate monophosphate kinase	325	400	400	core	AMR	AMR	FOSFOMYCIN	FOSFOMYCIN
+NF000362.1		oleI	oleI	OleI family self-immunity macrolide glycosyltransferase	424	700	700	core	AMR	AMR	MACROLIDE	OLEANDOMYCIN
+NF000363.1		kamB	kamB	16S rRNA (adenine(1408)-N(1))-methyltransferase KamB	216	350	350	core	AMR	AMR	AMINOGLYCOSIDE	AMINOGLYCOSIDE
+NF000371.1		vanH	vanH_group_A_Pt	VanH-A/VanH-Pt family D-lactate dehydrogenase	322	700	700	core	AMR	AMR	GLYCOPEPTIDE	VANCOMYCIN
+NF000372.1		vanI	vanI	D-alanine--(R)-lactate ligase VanI	341	700	700	core	AMR	AMR	GLYCOPEPTIDE	VANCOMYCIN
+NF000373.1		vanJ	vanJ	teicoplanin resistance protein VanJ	330	700	700	core	AMR	AMR	GLYCOPEPTIDE	VANCOMYCIN
+NF000374.1		vanO	vanO	D-alanine--(R)-lactate ligase VanO	346	750	750	core	AMR	AMR	GLYCOPEPTIDE	VANCOMYCIN
+NF000380.1		vanXY	vanXY	D,D-carboxypeptidase/D,D-dipeptidase VanXY	179	250	250	core	AMR	AMR	GLYCOPEPTIDE	VANCOMYCIN
+NF000383.2		blaLAP	blaLAP	LAP family class A beta-lactamase	285	600	600	core	AMR	AMR	BETA-LACTAM	BETA-LACTAM
+NF000384.1		qac	qacCGHJ	QacCGHJ group quaternary ammonium compound efflux SMR transporter	107	160	160	core	STRESS	BIOCIDE	QUATERNARY AMMONIUM	QUATERNARY AMMONIUM
+NF000385.4		blaACT	blaACT	ACT family cephalosporin-hydrolyzing class C beta-lactamase	380	810	810	core	AMR	AMR	BETA-LACTAM	CEPHALOSPORIN
+NF000386.2		blaOXA	blaOXA-10_fam	OXA-10 family class D beta-lactamase	266	580	580	core	AMR	AMR	BETA-LACTAM	BETA-LACTAM
+NF000387.2		blaOXA	blaOXA-48_fam	OXA-48 family class D beta-lactamase	265	580	580	core	AMR	AMR	BETA-LACTAM	BETA-LACTAM
+NF000388.2		blaOXA	blaOXA-1_fam	OXA-1 family class D beta-lactamase	276	580	580	core	AMR	AMR	BETA-LACTAM	BETA-LACTAM
+NF000389.2		blaPER	blaPER	PER family extended-spectrum class A beta-lactamase	308	650	650	core	AMR	AMR	BETA-LACTAM	CEPHALOSPORIN
+NF000390.2		blaVEB	blaVEB	VEB family extended-spectrum class A beta-lactamase	299	670	670	core	AMR	AMR	BETA-LACTAM	CEPHALOSPORIN
+NF000395.3		blaOXA	blaOXA-60_fam	OXA-60 family carbapenem-hydrolyzing class D beta-lactamase	271	550	550	core	AMR	AMR	BETA-LACTAM	BETA-LACTAM
+NF000396.3		blaGIM	blaGIM	GIM family subclass B1 metallo-beta-lactamase	250	525	525	core	AMR	AMR	BETA-LACTAM	CARBAPENEM
+NF000397.2		blaACC	blaACC	ACC family cephalosporin-hydrolyzing class C beta-lactamase	385	850	850	core	AMR	AMR	BETA-LACTAM	CEPHALOSPORIN
+NF000398.2		blaBEL	blaBEL	BEL family extended-spectrum class A beta-lactamase	283	620	620	core	AMR	AMR	BETA-LACTAM	CEPHALOSPORIN
+NF000399.2		blaFOX	blaFOX	FOX family cephalosporin-hydrolyzing class C beta-lactamase	382	850	850	core	AMR	AMR	BETA-LACTAM	CEPHALOSPORIN
+NF000400.3		blaIMI	blaIMI	IMI family carbapenem-hydrolyzing class A beta-lactamase	292	600	600	core	AMR	AMR	BETA-LACTAM	CARBAPENEM
+NF000401.1		vanR-A	vanR-A	vancomycin resistance response regulator transcription factor VanR-A	231	500	500	core	AMR	AMR	GLYCOPEPTIDE	VANCOMYCIN
+NF000402.1		vanR-B	vanR-B	vancomycin resistance response regulator transcription factor VanR-B	219	480	480	core	AMR	AMR	GLYCOPEPTIDE	VANCOMYCIN
+NF000403.1		vanR-C	vanR-C	vancomycin resistance response regulator transcription factor VanR-C	231	480	480	core	AMR	AMR	GLYCOPEPTIDE	VANCOMYCIN
+NF000404.1		vanR-D	vanR-D	vancomycin resistance response regulator transcription factor VanR-D	232	500	500	core	AMR	AMR	GLYCOPEPTIDE	VANCOMYCIN
+NF000405.1			HARLDQ_not_B3	HARLDQ motif MBL-fold protein	267	350	350	non-reported	AMR	AMR		
+NF000406.1		mecB	mecB	PBP2a family beta-lactam-resistant peptidoglycan transpeptidase MecB	674	1450	1450	core	AMR	AMR	BETA-LACTAM	METHICILLIN
+NF000407.1		mecC	mecC	PBP2a family beta-lactam-resistant peptidoglycan transpeptidase MecC	665	1500	1500	core	AMR	AMR	BETA-LACTAM	METHICILLIN
+NF000408.1		mecA2	mecA2	PBP2a family beta-lactam-resistant peptidoglycan transpeptidase MecA2	668	1525	1525	core	AMR	AMR	BETA-LACTAM	METHICILLIN
+NF000409.1		mecA	mecA	PBP2a family beta-lactam-resistant peptidoglycan transpeptidase MecA	668	1490	1490	core	AMR	AMR	BETA-LACTAM	METHICILLIN
+NF000410.1		mecA1	mecA1	PBP2a family beta-lactam-resistant peptidoglycan transpeptidase MecA1	666	1480	1480	core	AMR	AMR	BETA-LACTAM	METHICILLIN
+NF000411.1		erm(45)	erm(45)	23S rRNA (adenine(2058)-N(6))-methyltransferase Erm(45)	245	525	525	core	AMR	AMR	LINCOSAMIDE/MACROLIDE/STREPTOGRAMIN	CLINDAMYCIN/ERYTHROMYCIN/PRISTINAMYCIN
+NF000412.1		erm(43)	erm(43)	23S rRNA (adenine(2058)-N(6))-methyltransferase Erm(43)	243	500	500	core	AMR	AMR	LINCOSAMIDE/MACROLIDE/STREPTOGRAMIN	CLINDAMYCIN/ERYTHROMYCIN/PRISTINAMYCIN
+NF000413.2		blaBKC	blaBKC	BKC family carbapenem-hydrolyzing class A beta-lactamase	313	650	650	core	AMR	AMR	BETA-LACTAM	CARBAPENEM
+NF000414.2		blaPME	blaPME	PME family extended-spectrum class A beta-lactamase	309	650	650	core	AMR	AMR	BETA-LACTAM	CEPHALOSPORIN
+NF000415.3		blaOXA	blaOXA-372_fam	OXA-372 family carbapenem-hydrolyzing class D beta-lactamase	257	535	535	core	AMR	AMR	BETA-LACTAM	CARBAPENEM
+NF000417.2		blaOXA	blaOXA-211_fam	OXA-211 family carbapenem-hydrolyzing class D beta-lactamase	274	575	575	core	AMR	AMR	BETA-LACTAM	BETA-LACTAM
+NF000418.2		blaOXA	blaOXA-214_fam	OXA-214 family carbapenem-hydrolyzing class D beta-lactamase	275	600	600	core	AMR	AMR	BETA-LACTAM	BETA-LACTAM
+NF000419.2		blaCMH	blaCMH	CMH family class C beta-lactamase	381	875	875	core	AMR	AMR	BETA-LACTAM	BETA-LACTAM
+NF000420.1		qnrB	qnrB	QnrB family quinolone resistance pentapeptide repeat protein	214	460	460	core	AMR	AMR	QUINOLONE	QUINOLONE
+NF000421.1		qnrVC	qnrVC	QnrVC family quinolone resistance pentapeptide repeat protein	218	460	460	core	AMR	AMR	QUINOLONE	QUINOLONE
+NF000422.6		blaPDC	blaPDC	PDC family class C beta-lactamase	397	865	500	core	AMR	AMR	BETA-LACTAM	CEPHALOSPORIN
+NF000423.2		blaSRT	blaSRT	SRT/SST family class C beta-lactamase	378	860	860	core	AMR	AMR	BETA-LACTAM	CEPHALOSPORIN
+NF000424.4		cfr	cfr_gen	Cfr family 23S rRNA (adenine(2503)-C(8))-methyltransferase	338	530	530	core	AMR	AMR	LINCOSAMIDE/MACROLIDE/STREPTOGRAMIN	LINCOSAMIDE/MACROLIDE/STREPTOGRAMIN
+NF000425.2		blaADC	blaADC	ADC family extended-spectrum class C beta-lactamase	383	800	800	core	AMR	AMR	BETA-LACTAM	CEPHALOSPORIN
+NF000426.2		blaSIM	blaSIM	SIM family subclass B1 metallo-beta-lactamase	246	560	560	core	AMR	AMR	BETA-LACTAM	CARBAPENEM
+NF000427.2		blaCAU	blaCAU/MBL1b	CAU/MBL1b family subclass B3 metallo-beta-lactamase	262	500	500	core	AMR	AMR	BETA-LACTAM	CARBAPENEM
+NF000428.4		blaFRI	blaFRI	FRI family carbapenem-hydrolyzing class A beta-lactamase	294	600	600	core	AMR	AMR	BETA-LACTAM	CARBAPENEM
+NF000429.2		blaOXA	blaOXA-63_fam	OXA-63 family oxacillin-hydrolyzing class D beta-lactamase	269	560	560	core	AMR	AMR	BETA-LACTAM	BETA-LACTAM
+NF000430.2		blaOXA	blaOXA-62_fam	OXA-62 family carbapenem-hydrolyzing class D beta-lactamase	286	560	560	core	AMR	AMR	BETA-LACTAM	CARBAPENEM
+NF000431.1		aac(6')-Ian	aac(6')-Ian	aminoglycoside N-acetyltransferase AAC(6')-Ian	190	400	400	core	AMR	AMR	AMINOGLYCOSIDE	AMIKACIN/KANAMYCIN/TOBRAMYCIN
+NF000432.2		blaOXA	blaOXA-50_fam	OXA-50 family oxacillin-hydrolyzing class D beta-lactamase	262	580	580	core	AMR	AMR	BETA-LACTAM	BETA-LACTAM
+NF000434.2		blaOXA	blaOXA-24_fam	OXA-24 family carbapenem-hydrolyzing class D beta-lactamase	275	615	615	core	AMR	AMR	BETA-LACTAM	CARBAPENEM
+NF000435.2		blaOXA	blaOXA-61_fam	OXA-61 family class D beta-lactamase	252	540	540	core	AMR	AMR	BETA-LACTAM	BETA-LACTAM
+NF000436.2		blaOXA	blaOXA-134_fam	OXA-134 family carbapenem-hydrolyzing class D beta-lactamase	276	570	570	core	AMR	AMR	BETA-LACTAM	BETA-LACTAM
+NF000437.2		blaFIM	blaFIM	FIM family subclass B1 metallo-beta-lactamase	262	590	590	core	AMR	AMR	BETA-LACTAM	CARBAPENEM
+NF000438.2		blaPOM	blaPOM	POM family subclass B3 metallo-beta-lactamase	286	610	610	core	AMR	AMR	BETA-LACTAM	CARBAPENEM
+NF000439.2		blaAIM	blaAIM	AIM family subclass B3 metallo-beta-lactamase	303	675	675	core	AMR	AMR	BETA-LACTAM	CARBAPENEM
+NF000440.2		blaTHIN	blaTHIN	THIN family subclass B3 metallo-beta-lactamase	316	700	700	core	AMR	AMR	BETA-LACTAM	CARBAPENEM
+NF000441.2		blaMUS	blaMUS	MUS family subclass B1 metallo-beta-lactamase	246	540	540	core	AMR	AMR	BETA-LACTAM	CARBAPENEM
+NF000442.2		blaTUS	blaTUS	TUS family subclass B1 metallo-beta-lactamase	248	550	550	core	AMR	AMR	BETA-LACTAM	CARBAPENEM
+NF000443.2		blaTMB	blaTMB	TMB family subclass B1 metallo-beta-lactamase	245	550	550	core	AMR	AMR	BETA-LACTAM	CARBAPENEM
+NF000444.3		blaEBR	blaEBR	EBR family subclass B1 metallo-beta-lactamase	234	475	475	core	AMR	AMR	BETA-LACTAM	CARBAPENEM
+NF000445.2		blaDIM	blaDIM	DIM family subclass B1 metallo-beta-lactamase	251	560	560	core	AMR	AMR	BETA-LACTAM	CARBAPENEM
+NF000446.2		blaCIA	blaCIA	CIA family extended-spectrum class A beta-lactamase	292	640	640	core	AMR	AMR	BETA-LACTAM	CEPHALOSPORIN
+NF000447.2		bla-A	bla-A_Chryseo	CGA/CIA family class A beta-lactamase	292	510	510	core	AMR	AMR	BETA-LACTAM	BETA-LACTAM
+NF000448.2		blaACI	blaACI	ACI family class A beta-lactamase	284	640	640	core	AMR	AMR	BETA-LACTAM	CEPHALOSPORIN
+NF000449.2		blaBIC	blaBIC	BIC family carbapenem-hydrolyzing class A beta-lactamase	294	640	640	core	AMR	AMR	BETA-LACTAM	CARBAPENEM
+NF000450.2		bla-B1-FLAV	bla-B1-FLAV	subclass B1 metallo-beta-lactamase	242	450	450	core	AMR	AMR	BETA-LACTAM	CARBAPENEM
+NF000451.2		blaBES	blaBES	BES family class A beta-lactamase	292	650	650	core	AMR	AMR	BETA-LACTAM	CEPHALOSPORIN
+NF000452.2		blaKLUC	blaKLUC	KLUC family extended-spectrum class A beta-lactamase	291	650	650	core	AMR	AMR	BETA-LACTAM	CEPHALOSPORIN
+NF000453.2		blaB1PEDO	blaPEDO-3_fam	PEDO-3 family subclass B1 metallo-beta-lactamase	237	400	400	core	AMR	AMR	BETA-LACTAM	CARBAPENEM
+NF000454.2		blaCPS	blaCPS	CPS family subclass B3 metallo-beta-lactamase	290	620	620	core	AMR	AMR	BETA-LACTAM	CARBAPENEM
+NF000455.2		blaESP	blaESP	ESP-1 family subclass B3 metallo-beta-lactamase	290	600	600	core	AMR	AMR	BETA-LACTAM	CARBAPENEM
+NF000456.2		blaMSI	blaMSI-1_fam	MSI-1 family subclass B3 metallo-beta-lactamase	289	550	550	core	AMR	AMR	BETA-LACTAM	CARBAPENEM
+NF000457.2		blaB3PEDO	blaPEDO-1_fam	PEDO-1 family subclass B3 metallo-beta-lactamase	286	550	550	core	AMR	AMR	BETA-LACTAM	CARBAPENEM
+NF000458.2		blaB3PEDO	blaPEDO-2_fam	PEDO-2 family subclass B3 metallo-beta-lactamase	285	550	550	core	AMR	AMR	BETA-LACTAM	CARBAPENEM
+NF000459.2		blaSPG	blaSPG-1_fam	SPG-1 family subclass B3 metallo-beta-lactamase	285	550	550	core	AMR	AMR	BETA-LACTAM	CARBAPENEM
+NF000460.1		fusD	fusD	FusD family fusidic acid resistance EF-G-binding protein	213	450	450	core	AMR	AMR	FUSIDIC ACID	FUSIDIC ACID
+NF000461.2		blaOXA	blaOXA-184_fam	OXA-184 family class D beta-lactamase	248	475	475	core	AMR	AMR	BETA-LACTAM	BETA-LACTAM
+NF000462.2		blaOXA	blaOXA-493_fam	OXA-493 family class D beta-lactamase	248	475	475	core	AMR	AMR	BETA-LACTAM	BETA-LACTAM
+NF000463.2		blaOXA	blaOXA_Campy	class D beta-lactamase	248	390	390	core	AMR	AMR	BETA-LACTAM	BETA-LACTAM
+NF000464.2		blaOXA	blaOXA-143_fam	OXA-143 family carbapenem-hydrolyzing class D beta-lactamase	275	610	610	core	AMR	AMR	BETA-LACTAM	BETA-LACTAM
+NF000465.1		mcr-1	mcr-1	MCR-1 family phosphoethanolamine--lipid A transferase	541	1100	1100	core	AMR	AMR	COLISTIN	COLISTIN
+NF000466.2		rmt	rmt	Rmt family 16S rRNA (guanine(1405)-N(7))-methyltransferase	254	250	250	core	AMR	AMR	AMINOGLYCOSIDE	AMINOGLYCOSIDE
+NF000467.1		fosG	fosG	FosG family fosfomycin resistance glutathione transferase	132	240	240	core	AMR	AMR	FOSFOMYCIN	FOSFOMYCIN
+NF000468.1		erm(37)	erm(37)	23S rRNA (adenine(2058)-N(6))-methyltransferase Erm(37)	179	350	350	core	AMR	AMR	LINCOSAMIDE/MACROLIDE	AZITHROMYCIN/CLARITHROMYCIN/CLINDAMYCIN/ERYTHROMYCIN/TELITHROMYCIN
+NF000469.2		blaCAR	bla-B3-CAR	CAR family subclass B3 metallo-beta-lactamase	311	500	500	core	AMR	AMR	BETA-LACTAM	CARBAPENEM
+NF000470.1		vanM	vanM	D-alanine--(R)-lactate ligase VanM	343	760	760	core	AMR	AMR	GLYCOPEPTIDE	VANCOMYCIN
+NF000471.1		vanY-D	vanY-D	transpeptidase-like D-Ala-D-Ala carboxypeptidase VanY-D	354	625	625	core	AMR	AMR	GLYCOPEPTIDE	VANCOMYCIN
+NF000472.1		vanY	vanY_AFMPt	VanY-A/VanY-F/VanY-M family D-Ala-D-Ala carboxypeptidase	283	425	425	core	AMR	AMR	GLYCOPEPTIDE	VANCOMYCIN
+NF000473.1		vanY	vanY_BG	VanY-B/VanY-G family D-Ala-D-Ala carboxypeptidase	274	400	400	core	AMR	AMR	GLYCOPEPTIDE	VANCOMYCIN
+NF000474.1		tetA(46)	tetA(46)	tetracycline efflux ABC transporter Tet(46) subunit A	574	1250	1250	core	AMR	AMR	TETRACYCLINE	TETRACYCLINE
+NF000475.1		tetB(46)	tetB(46)	tetracycline efflux ABC transporter Tet(46) subunit B	578	1250	1250	core	AMR	AMR	TETRACYCLINE	TETRACYCLINE
+NF000476.1		myrA	myrA	23S rRNA (guanine(748)-N(1))-methyltransferase MyrA	295	625	625	core	AMR	AMR	MACROLIDE	TYLOSIN
+NF000477.1		nshR	nshR_tsnR	NshR/TsnR family 23S rRNA methyltransferase	266	425	360	core	AMR	AMR	THIOSTREPTON	THIOSTREPTON
+NF000478.2		lnu(E)	lnu(E)	lincosamide nucleotidyltransferase Lnu(E)	160	350	350	core	AMR	AMR	LINCOSAMIDE	LINCOSAMIDE
+NF000479.1		zbmA	zbmA	zorbamycin binding protein ZbmA	132	280	280	core	AMR	AMR	BLEOMYCIN	ZORBAMYCIN
+NF000480.2		blaPSE	blaPSE	PSE family carbenicillin-hydrolyzing class A beta-lactamase	288	580	580	core	AMR	AMR	BETA-LACTAM	BETA-LACTAM
+NF000481.1		blaCARB	blaCARB_gen	CARB/PSE/RTG family carbenicillin-hydrolyzing class A beta-lactamase	284	430	400	core	AMR	AMR	BETA-LACTAM	BETA-LACTAM
+NF000482.1		aac(3)-XI	aac(3)-XI	aminoglycoside N-acetyltransferase AAC(3)-XI	148	300	300	core	AMR	AMR	AMINOGLYCOSIDE	AMINOGLYCOSIDE
+NF000483.1		blmB	blmB	bleomycin family antibiotic N-acetyltransferase BlmB	301	625	625	core	AMR	AMR	BLEOMYCIN	BLEOMYCIN
+NF000485.1		tlmB	tlmB	bleomycin family antibiotic N-acetyltransferase TlmB	292	625	625	core	AMR	AMR	BLEOMYCIN	BLEOMYCIN
+NF000486.1		aac(6')-Ip	aac(6')-Ip	aminoglycoside 6'-N-acetyltransferase AAC(6')-Ip	173	390	390	core	AMR	AMR	AMINOGLYCOSIDE	AMINOGLYCOSIDE
+NF000487.1		sta	sta	streptothricin N-acetyltransferase STAT	189	420	420	core	AMR	AMR	STREPTOTHRICIN	STREPTOTHRICIN
+NF000488.1		chrB	chrB_rRNA_meth	23S rRNA (guanine(748)-N(1))-methyltransferase ChrB	280	620	620	core	AMR	AMR	MACROLIDE	MACROLIDE
+NF000489.1		ble-Sh	ble-Sh	phleomycin/bleomycin binding protein Ble-Sh	124	260	260	core	AMR	AMR	BLEOMYCIN	BLEOMYCIN
+NF000490.1		catB	catB	type B chloramphenicol O-acetyltransferase	210	350	350	core	AMR	AMR	PHENICOL	CHLORAMPHENICOL
+NF000491.1		catA	catA	type A chloramphenicol O-acetyltransferase	208	270	270	core	AMR	AMR	PHENICOL	CHLORAMPHENICOL
+NF000492.1		vanH	vanH	D-lactate dehydrogenase VanH	312	540	500	core	AMR	AMR	GLYCOPEPTIDE	VANCOMYCIN
+NF000493.1		fosB	fosB_gen	FosB/FosD family fosfomycin resistance bacillithiol transferase	137	240	240	core	AMR	AMR	FOSFOMYCIN	FOSFOMYCIN
+NF000494.1		fosF	fosF	fosfomycin resistance glutathione transferase FosF	132	280	280	core	AMR	AMR	FOSFOMYCIN	FOSFOMYCIN
+NF000495.1		fosK	fosK	fosfomycin resistance glutathione transferase FosK	132	280	280	core	AMR	AMR	FOSFOMYCIN	FOSFOMYCIN
+NF000496.1		fos	fos_GT	fosfomycin resistance glutathione transferase	131	190	190	core	AMR	AMR	FOSFOMYCIN	FOSFOMYCIN
+NF000497.1		aac(6')-Iak	aac(6')-Iak	aminoglycoside N-acetyltransferase AAC(6')-Iak	153	325	325	core	AMR	AMR	AMINOGLYCOSIDE	AMINOGLYCOSIDE
+NF000498.2		aph(2'')-I	aph(2'')-If_h	APH(2'')-If/Ih family aminoglycoside O-phosphotransferase	297	600	600	core	AMR	AMR	AMINOGLYCOSIDE	AMIKACIN/GENTAMICIN/KANAMYCIN/TOBRAMYCIN
+NF000499.1		erm	erm-23S_rRNA	23S ribosomal RNA methyltransferase Erm	244	215	215	core	AMR	AMR	MACROLIDE	MACROLIDE
+NF000500.2		blaOXA	blaOXA-58_fam	OXA-58 family carbapenem-hydrolyzing class D beta-lactamase	280	625	625	core	AMR	AMR	BETA-LACTAM	CARBAPENEM
+NF000501.2		blaOXA	blaOXA-229_fam	OXA-229 family carbapenem-hydrolyzing class D beta-lactamase	276	625	625	core	AMR	AMR	BETA-LACTAM	BETA-LACTAM
+NF000502.2		blaOXA	blaOXA-85_fam	OXA-85 family oxacillin-hydrolyzing class D beta-lactamase	261	550	500	core	AMR	AMR	BETA-LACTAM	BETA-LACTAM
+NF000503.1		fusF	fusF	fusidic acid resistance EF-G-binding protein FusF	214	435	400	core	AMR	AMR	FUSIDIC ACID	FUSIDIC ACID
+NF000504.1		vat(H)	vat(H)	streptogramin A O-acetyltransferase Vat(H)	216	475	425	core	AMR	AMR	STREPTOGRAMIN	STREPTOGRAMIN
+NF000505.2		blaGIL	blaGIL	GIL family class A beta-lactamase	286	640	640	core	AMR	AMR	BETA-LACTAM	BETA-LACTAM
+NF000506.1		tetA	tetAB_A	tetracycline efflux ABC transporter TetAB subunit A	513	1025	1000	core	AMR	AMR	TETRACYCLINE	TETRACYCLINE
+NF000507.1		aac(6')-Ie	aac(6')-Ie	aminoglycoside N-acetyltransferase AAC(6')-Ie	201	450	420	core	AMR	AMR	AMINOGLYCOSIDE	AMIKACIN/KANAMYCIN/TOBRAMYCIN
+NF000508.1		aph(2'')-Ia	aph(2'')-Ia	aminoglycoside O-phosphotransferase APH(2'')-Ia	277	600	570	core	AMR	AMR	AMINOGLYCOSIDE	AMIKACIN/GENTAMICIN/KANAMYCIN/TOBRAMYCIN
+NF000509.1		cmlA	cmlA	CmlA family chloramphenicol efflux MFS transporter	419	875	835	core	AMR	AMR	PHENICOL	CHLORAMPHENICOL
+NF000510.1		cmx	cmx	chloramphenicol efflux MFS transporter Cmx	391	800	700	core	AMR	AMR	PHENICOL	CHLORAMPHENICOL
+NF000511.2		blaCME	blaCME	CME family extended-spectrum class A beta-lactamase	299	600	600	core	AMR	AMR	BETA-LACTAM	CEPHALOSPORIN
+NF000512.2		blaSGM	blaSGM	SGM family class A beta-lactamase	285	500	500	core	AMR	AMR	BETA-LACTAM	BETA-LACTAM
+NF000513.2		blaFTU	blaFTU	FTU family class A beta-lactamase	287	600	600	core	AMR	AMR	BETA-LACTAM	BETA-LACTAM
+NF000514.1		optrA	optrA	ABC-F type ribosomal protection protein OptrA	655	1450	1000	core	AMR	AMR	PHENICOL/OXAZOLIDINONE	FLORFENICOL/OXAZOLIDINONE
+NF000516.1		ere(D)	ere(D)	EreD family erythromycin esterase	408	800	600	core	AMR	AMR	MACROLIDE	AZITHROMYCIN/ERYTHROMYCIN
+NF000517.2		blaCBP	blaCBP	CBP family penicillin-hydrolyzing class A beta-lactamase	308	650	650	core	AMR	AMR	BETA-LACTAM	BETA-LACTAM
+NF000518.2		blaVCC	blaVCC	VCC family carbapenem-hydrolyzing class A beta-lactamase	284	625	625	core	AMR	AMR	BETA-LACTAM	CARBAPENEM
+NF000519.2		blaPDC	blaPDC_var	PDC variant family class C beta-lactamase	397	900	900	core	AMR	AMR	BETA-LACTAM	CEPHALOSPORIN
+NF000520.2		blaOXA	blaOXA-286_fam	OXA-286 family carbapenem-hydrolyzing class D beta-lactamase	278	570	570	core	AMR	AMR	BETA-LACTAM	CARBAPENEM
+NF000531.2		blaTEM	blaTEM	TEM family class A beta-lactamase	286	625	625	core	AMR	AMR	BETA-LACTAM	BETA-LACTAM
+NF000538.0		bla	bla-A_carba	carbapenem-hydrolyzing class A beta-lactamase	254	410	410	core	AMR	AMR	BETA-LACTAM	CARBAPENEM
+NF007456.1		arsC	arsC_gluta	glutaredoxin-dependent arsenate reductase	141	242	242	plus	STRESS	METAL	ARSENIC	ARSENATE
+NF010310.2		merE	merE	broad-spectrum mercury transporter MerE	76	80	80	plus	STRESS	METAL	MERCURY	MERCURY
+NF010315.0		merR	merR_Ps	Hg(II)-responsive transcriptional regulator	144	261	261	plus	STRESS	METAL	MERCURY	MERCURY
+NF012098.1		blaBPU	blaBPU	BPU family class D beta-lactamase	262	525	525	core	AMR	AMR	BETA-LACTAM	BETA-LACTAM
+NF012099.1		bla	bla-A2	class A beta-lactamase, subclass A2	275	320	320	core	AMR	AMR	BETA-LACTAM	BETA-LACTAM
+NF012100.0		blaVIM	blaVIM	VIM family subclass B1 metallo-beta-lactamase	266	500	500	core	AMR	AMR	BETA-LACTAM	CARBAPENEM
+NF012101.1		blaGOB	blaGOB	GOB family subclass B3 metallo-beta-lactamase	290	560	560	core	AMR	AMR	BETA-LACTAM	CARBAPENEM
+NF012102.1		blaDHA	blaDHA	DHA family class C beta-lactamase	379	800	800	core	AMR	AMR	BETA-LACTAM	CEPHALOSPORIN
+NF012103.0		blaGES	blaGES	GES family class A beta-lactamase	287	625	625	core	AMR	AMR	BETA-LACTAM	CEPHALOSPORIN
+NF012137.0		bla	blaMUS-TUS-MOC	MUS/TUS/MOC family subclass B1 metallo-beta-lactamase	246	400	400	core	AMR	AMR	BETA-LACTAM	BETA-LACTAM
+NF012140.0		blaBJP	blaBJP	BJP family subclass B3 metallo-beta-lactamase	294	600	600	core	AMR	AMR	BETA-LACTAM	CARBAPENEM
+NF012141.0		blaKPC	blaKPC	KPC family carbapenem-hydrolyzing class A beta-lactamase	293	625	625	core	AMR	AMR	BETA-LACTAM	CARBAPENEM
+NF012142.0		blaSME	blaSME	SME family carbapenem-hydrolyzing class A beta-lactamase	294	650	650	core	AMR	AMR	BETA-LACTAM	CARBAPENEM
+NF012143.0		blaSHV	blaSHV-LEN	SHV/LEN/OKP family class A beta-lactamase	285	535	535	core	AMR	AMR	BETA-LACTAM	BETA-LACTAM
+NF012145.1		blaDIM	blaDIM-SIM-IMP	DIM/SIM/IMP family subclass B1 metallo-beta-lactamase	209	288	288	core	AMR	AMR	BETA-LACTAM	CARBAPENEM
+NF012146.1		bla	blaB-IND-MUS	BlaB/IND/MUS family subclass B1 metallo-beta-lactamase	237	270	270	core	AMR	AMR	BETA-LACTAM	BETA-LACTAM
+NF012147.1		blaIMP	blaIMP	IMP family subclass B1 metallo-beta-lactamase	245	460	460	core	AMR	AMR	BETA-LACTAM	CARBAPENEM
+NF012148.0		blaKHM-HMB	blaKHM-HMB	KHM/HMB family subclass B1 metallo-beta-lactamase	238	450	450	core	AMR	AMR	BETA-LACTAM	CARBAPENEM
+NF012149.0		blaIND	blaIND	IND family subclass B1 metallo-beta-lactamase	239	430	430	core	AMR	AMR	BETA-LACTAM	CARBAPENEM
+NF012150.3		blaSPM	blaSPM	SPM family subclass B1 metallo-beta-lactamase	272	500	500	core	AMR	AMR	BETA-LACTAM	CARBAPENEM
+NF012151.0		qnrAS	qnrAS	QnrAS family quinolone resistance pentapeptide repeat protein	218	490	490	core	AMR	AMR	QUINOLONE	QUINOLONE
+NF012152.0		qnrC	qnrC	QnrC family quinolone resistance pentapeptide repeat protein	221	500	500	core	AMR	AMR	QUINOLONE	QUINOLONE
+NF012153.1		tet	tet_rib_protect	tetracycline resistance ribosomal protection protein	614	775	775	core	AMR	AMR	TETRACYCLINE	TETRACYCLINE
+NF012154.0		tet(Q)	tet(Q)	tetracycline resistance ribosomal protection protein Tet(Q)	638	1425	1425	core	AMR	AMR	TETRACYCLINE	TETRACYCLINE
+NF012155.1		tet(M)	tet(M)	tetracycline resistance ribosomal protection protein Tet(M)	639	1420	1420	core	AMR	AMR	TETRACYCLINE	TETRACYCLINE
+NF012156.1		blaP	blaP	class A beta-lactamase BlaP	307	660	660	core	AMR	AMR	BETA-LACTAM	BETA-LACTAM
+NF012157.0		ant(3'')	ant(3'')-I	AadA family aminoglycoside 3''-O-nucleotidyltransferase	256	375	375	core	AMR	AMR	AMINOGLYCOSIDE	SPECTINOMYCIN/STREPTOMYCIN
+NF012158.1		mph(E)	mph(E)	Mph(E) family macrolide 2'-phosphotransferase	294	640	640	core	AMR	AMR	MACROLIDE	ERYTHROMYCIN
+NF012159.0		mcr-2	mcr-2	MCR-2 family phosphoethanolamine--lipid A transferase	538	1200	1200	core	AMR	AMR	COLISTIN	COLISTIN
+NF012160.0		aph(6)	aph(6)-Smalt	APH(6) family putative aminoglycoside O-phosphotransferase	270	550	550	core	AMR	AMR	AMINOGLYCOSIDE	AMINOGLYCOSIDE
+NF012161.0		blaOXA	blaOXA	class D beta-lactamase	236	250	250	core	AMR	AMR	BETA-LACTAM	BETA-LACTAM
+NF012165.0		aac(6')	aac(6')-set_A	aminoglycoside 6'-N-acetyltransferase	177	280	280	core	AMR	AMR	AMINOGLYCOSIDE	AMINOGLYCOSIDE
+NF012167.0		bla	bla-A_firm	class A beta-lactamase	255	427	427	core	AMR	AMR	BETA-LACTAM	BETA-LACTAM
+NF012169.0		qepA	qepA	fluoroquinolone efflux MFS transporter QepA	511	1075	1075	core	AMR	AMR	QUINOLONE	QUINOLONE
+NF012170.0		qacJ	qacJ	quaternary ammonium compound efflux SMR transporter QacJ	107	210	210	core	STRESS	BIOCIDE	QUATERNARY AMMONIUM	QUATERNARY AMMONIUM
+NF012171.0		aph(6)-I	aph(6)-I	APH(6)-I family aminoglycoside O-phosphotransferase	270	325	325	core	AMR	AMR	AMINOGLYCOSIDE	STREPTOMYCIN
+NF012172.1		ampC	blaCMY-FOX	FOX/MOX family class C beta-lactamase	382	700	700	core	AMR	AMR	BETA-LACTAM	BETA-LACTAM
+NF012173.1		ampC	CMY2-MIR-ACT-EC	CMY2/MIR/ACT/EC family class C beta-lactamase	380	680	680	core	AMR	AMR	BETA-LACTAM	BETA-LACTAM
+NF012174.0		tet	tet_A_B_C_D	Tet(A)/Tet(B)/Tet(C) family tetracycline efflux MFS transporter	382	475	475	core	AMR	AMR	TETRACYCLINE	TETRACYCLINE
+NF012175.1		tet	tet_L_K_45	Tet(L)/Tet(K)/Tet(45) family tetracycline efflux MFS transporter	444	650	650	core	AMR	AMR	TETRACYCLINE	TETRACYCLINE
+NF012176.0		tet(38)	tet(38)	tetracycline efflux MFS transporter Tet(38)	450	925	925	core	AMR	AMR	TETRACYCLINE	TETRACYCLINE
+NF012177.1		tet(42)	tet(42)	tetracycline efflux MFS transporter Tet(42)	411	850	850	core	AMR	AMR	TETRACYCLINE	TETRACYCLINE
+NF012178.0		tet(V)	tet(V)	tetracycline efflux MFS transporter Tet(V)	409	640	640	core	AMR	AMR	TETRACYCLINE	TETRACYCLINE
+NF012180.1		tet(43)	tet(43)	tetracycline efflux MFS transporter Tet(43)	484	999	999	core	AMR	AMR	TETRACYCLINE	TETRACYCLINE
+NF012183.0		tet(K)	tet(K)	tetracycline efflux MFS transporter Tet(K)	459	925	925	core	AMR	AMR	TETRACYCLINE	TETRACYCLINE
+NF012184.0		tet(45)	tet(45)	tetracycline efflux MFS transporter Tet(45)	458	975	975	core	AMR	AMR	TETRACYCLINE	TETRACYCLINE
+NF012185.0		tet(L)	tet(L)	tetracycline efflux MFS transporter Tet(L)	457	925	925	core	AMR	AMR	TETRACYCLINE	TETRACYCLINE
+NF012186.0		tet(D)	tet(D)	tetracycline efflux MFS transporter Tet(D)	394	775	775	core	AMR	AMR	TETRACYCLINE	TETRACYCLINE
+NF012187.0		tet(E)	tet(E)	tetracycline efflux MFS transporter Tet(E)	405	820	820	core	AMR	AMR	TETRACYCLINE	TETRACYCLINE
+NF012188.1		tet(Y)	tet(Y)	tetracycline efflux MFS transporter Tet(Y)	391	820	820	core	AMR	AMR	TETRACYCLINE	TETRACYCLINE
+NF012190.1		tet(B)	tet(B)	tetracycline efflux MFS transporter Tet(B)	400	850	850	core	AMR	AMR	TETRACYCLINE	TETRACYCLINE
+NF012191.0		tet(C)	tet(C)	tetracycline efflux MFS transporter Tet(C)	396	850	850	core	AMR	AMR	TETRACYCLINE	TETRACYCLINE
+NF012192.0		tet(G)	tet(G)	tetracycline efflux MFS transporter Tet(G)	391	800	800	core	AMR	AMR	TETRACYCLINE	TETRACYCLINE
+NF012193.0		tet(A)	tet(A)	tetracycline efflux MFS transporter Tet(A)	394	840	840	core	AMR	AMR	TETRACYCLINE	TETRACYCLINE
+NF012194.0		tet(J)	tet(J)	tetracycline efflux MFS transporter Tet(J)	398	870	870	core	AMR	AMR	TETRACYCLINE	TETRACYCLINE
+NF012195.0		tet(H)	tet(H)	tetracycline efflux MFS transporter Tet(H)	392	840	840	core	AMR	AMR	TETRACYCLINE	TETRACYCLINE
+NF012199.0		cmlV	cmlV	chloramphenicol efflux MFS transporter CmlV	412	830	830	core	AMR	AMR	PHENICOL	CHLORAMPHENICOL
+NF012202.0		ble	ble-MBL	bleomycin binding protein Ble-MBL	121	250	250	core	AMR	AMR	BLEOMYCIN	BLEOMYCIN
+NF012203.0		cmlB1	cmlB1	chloramphenicol efflux MFS transporter CmlB1	407	900	900	core	AMR	AMR	PHENICOL	CHLORAMPHENICOL
+NF012207.0		tet(H-J)	tet(H-J)	Tet(H)/Tet(J) family tetracycline efflux MFS transporter	392	700	700	core	AMR	AMR	TETRACYCLINE	TETRACYCLINE
+NF012212.1		ant(9)	ant(9)	aminoglycoside nucleotidyltransferase ANT(9)	249	340	340	core	AMR	AMR	AMINOGLYCOSIDE	SPECTINOMYCIN
+NF012213.0		vanC1	vanC1	D-alanine--D-serine ligase VanC1	343	775	775	core	AMR	AMR	GLYCOPEPTIDE	VANCOMYCIN
+NF012214.1		vanC	vanC	D-alanine--D-serine ligase VanC	350	650	650	core	AMR	AMR	GLYCOPEPTIDE	VANCOMYCIN
+NF012215.1		vanD	vanD	D-alanine--(R)-lactate ligase VanD	343	700	700	core	AMR	AMR	GLYCOPEPTIDE	VANCOMYCIN
+NF012216.1		vanB	vanB	D-alanine--(R)-lactate ligase VanB	342	750	750	core	AMR	AMR	GLYCOPEPTIDE	VANCOMYCIN
+NF012217.1		vanA	vanA	D-alanine--(R)-lactate ligase VanA	343	775	775	core	AMR	AMR	GLYCOPEPTIDE	VANCOMYCIN
+NF012218.0		erm(38)	erm(38)	23S rRNA (adenine(2058)-N(6))-methyltransferase Erm(38)	386	800	800	core	AMR	AMR	LINCOSAMIDE/MACROLIDE	CLARITHROMYCIN/CLINDAMYCIN/ERYTHROMYCIN
+NF012219.1		erm(C)	erm(C)	23S rRNA (adenine(2058)-N(6))-methyltransferase Erm(C)	244	530	530	core	AMR	AMR	LINCOSAMIDE/MACROLIDE/STREPTOGRAMIN	CLINDAMYCIN/ERYTHROMYCIN/STREPTOGRAMIN B/TYLOSIN
+NF012220.1		erm(B)	erm(B)	23S rRNA (adenine(2058)-N(6))-methyltransferase Erm(B)	245	525	525	core	AMR	AMR	LINCOSAMIDE/MACROLIDE/STREPTOGRAMIN	CLINDAMYCIN/ERYTHROMYCIN/STREPTOGRAMIN B
+NF012222.1		erm(A)	erm(A)	23S rRNA (adenine(2058)-N(6))-methyltransferase Erm(A)	243	475	475	core	AMR	AMR	LINCOSAMIDE/MACROLIDE	AZITHROMYCIN/CLARITHROMYCIN/CLINDAMYCIN/ERYTHROMYCIN/TELITHROMYCIN
+NF012223.0		erm(F)	erm(F)	23S rRNA (adenine(2058)-N(6))-methyltransferase Erm(F)	266	575	575	core	AMR	AMR	LINCOSAMIDE/MACROLIDE/STREPTOGRAMIN	CLINDAMYCIN/MACROLIDE/STREPTOGRAMIN
+NF012224.1		blaSFH	blaSFH	SFH family subclass B2 metallo-beta-lactamase	250	550	550	core	AMR	AMR	BETA-LACTAM	CARBAPENEM
+NF012225.0		bla	blaSFH_gen	SFH-related subclass B2 metallo-beta-lactamase	252	440	440	core	AMR	AMR	BETA-LACTAM	BETA-LACTAM
+NF012229.1		bla	bla-B	metallo-beta-lactamase	139	100	100	core	AMR	AMR	BETA-LACTAM	BETA-LACTAM
+NF028535.0		ant(4')	ant(4')-II	ANT(4')-II family aminoglycoside nucleotidyltransferase	251	350	350	core	AMR	AMR	AMINOGLYCOSIDE	KANAMYCIN/TOBRAMYCIN
+NF032892.0		fosA7	fosA7_fam	FosA7 family fosfomycin resistance glutathione transferase	140	305	305	core	AMR	AMR	FOSFOMYCIN	FOSFOMYCIN
+NF032894.1		aph(3'')-Ia	aph(3'')-Ia	aminoglycoside O-phosphotransferase APH(3'')-Ia	272	600	600	core	AMR	AMR	AMINOGLYCOSIDE	STREPTOMYCIN
+NF032895.1		aph(3'')-Ib	aph(3'')-Ib	aminoglycoside O-phosphotransferase APH(3'')-Ib	267	600	600	core	AMR	AMR	AMINOGLYCOSIDE	STREPTOMYCIN
+NF032896.1		aph(3'')	aph(3'')	APH(3'') family aminoglycoside O-phosphotransferase	254	325	325	core	AMR	AMR	AMINOGLYCOSIDE	STREPTOMYCIN
+NF032897.1		aph(3')-V	aph(3')-V	APH(3')-V family aminoglycoside O-phosphotransferase	264	450	450	core	AMR	AMR	AMINOGLYCOSIDE	AMINOGLYCOSIDE
+NF032898.2		aph(3')-II	aph(3')-II	APH(3')-II family aminoglycoside O-phosphotransferase	256	360	360	core	AMR	AMR	AMINOGLYCOSIDE	KANAMYCIN
+NF033059.2		aph(3')-I	aph(3')-I	APH(3')-I family aminoglycoside O-phosphotransferase	267	400	400	core	AMR	AMR	AMINOGLYCOSIDE	GENTAMICIN/KANAMYCIN
+NF033060.0		blaBCL	blaBCL	BCL family class A beta-lactamase	301	600	600	core	AMR	AMR	BETA-LACTAM	BETA-LACTAM
+NF033061.1		ant(4')-I	ant(4')-I	ANT(4')-I family aminoglycoside nucleotidyltransferase	253	350	350	core	AMR	AMR	AMINOGLYCOSIDE	KANAMYCIN/TOBRAMYCIN
+NF033062.0		aph(3')-VI	aph(3')-VI	APH(3')-VI family aminoglycoside O-phosphotransferase	259	525	525	core	AMR	AMR	AMINOGLYCOSIDE	AMIKACIN/KANAMYCIN
+NF033063.0		aph(3')-XV	aph(3')-XV	aminoglycoside O-phosphotransferase APH(3')-XV	263	550	550	core	AMR	AMR	AMINOGLYCOSIDE	AMIKACIN/KANAMYCIN
+NF033064.0		aph(3')-IIIa	aph(3')-IIIa	aminoglycoside O-phosphotransferase APH(3')-IIIa	264	530	530	core	AMR	AMR	AMINOGLYCOSIDE	AMIKACIN/KANAMYCIN
+NF033065.0		aph(3')-IVa	aph(3')-IVa	aminoglycoside O-phosphotransferase APH(3')-IVa	262	530	530	core	AMR	AMR	AMINOGLYCOSIDE	KANAMYCIN
+NF033066.0		aph(3')-VIIIa	aph(3')-VIIIa	aminoglycoside O-phosphotransferase APH(3')-VIIIa	267	520	520	core	AMR	AMR	AMINOGLYCOSIDE	AMIKACIN/KANAMYCIN
+NF033067.1		aph(3')-VIIa	aph(3')-VIIa	aminoglycoside O-phosphotransferase APH(3')-VIIa	250	530	530	core	AMR	AMR	AMINOGLYCOSIDE	AMIKACIN/KANAMYCIN
+NF033068.1		aph(3')	aph(3')	APH(3') family aminoglycoside O-phosphotransferase	255	205	205	core	AMR	AMR	AMINOGLYCOSIDE	AMINOGLYCOSIDE
+NF033074.0		aac(6')-Ib	aac(6')-Ib	AAC(6')-Ib family aminoglycoside 6'-N-acetyltransferase	184	400	400	core	AMR	AMR	AMINOGLYCOSIDE	AMINOGLYCOSIDE
+NF033075.0		aac(6')	aac(6')_Steno	aminoglycoside 6'-N-acetyltransferase	148	290	290	core	AMR	AMR	AMINOGLYCOSIDE	AMINOGLYCOSIDE
+NF033076.0		aac(6')	aac(6')_Yersi	aminoglycoside 6'-N-acetyltransferase	140	290	290	core	AMR	AMR	AMINOGLYCOSIDE	AMINOGLYCOSIDE
+NF033077.0		aac(6')-30	aac(6')-30	aminoglycoside 6'-N-acetyltransferase AAC(6')-30	129	255	255	core	AMR	AMR	AMINOGLYCOSIDE	AMINOGLYCOSIDE
+NF033078.2		aac(6')	aac(6')_Ia_fam	AAC(6')-Ia family aminoglycoside 6'-N-acetyltransferase	181	265	265	core	AMR	AMR	AMINOGLYCOSIDE	AMINOGLYCOSIDE
+NF033080.0		aac(3)-II	aac(3)-II	AAC(3)-II family aminoglycoside N-acetyltransferase	268	480	480	core	AMR	AMR	AMINOGLYCOSIDE	GENTAMICIN
+NF033081.0		aac(3)-IV	aac(3)_IV_fam	AAC(3)-IV family aminoglycoside N-acetyltransferase	252	420	420	core	AMR	AMR	AMINOGLYCOSIDE	GENTAMICIN
+NF033082.0		aac(3)	aac(3)	aminoglycoside 3-N-acetyltransferase	262	270	270	core	AMR	AMR	AMINOGLYCOSIDE	GENTAMICIN
+NF033083.0		aac(3)-I	aac(3)-I	AAC(3)-I family aminoglycoside N-acetyltransferase	145	200	200	core	AMR	AMR	AMINOGLYCOSIDE	GENTAMICIN
+NF033084.2		ant(6)	ant(6)	aminoglycoside 6-adenylyltransferase	280	420	420	core	AMR	AMR	AMINOGLYCOSIDE	STREPTOMYCIN
+NF033085.1		ampC	bla-C	class C beta-lactamase	356	415	415	core	AMR	AMR	BETA-LACTAM	BETA-LACTAM
+NF033087.1		bla	bla-B2	subclass B2 metallo-beta-lactamase	221	240	240	core	AMR	AMR	BETA-LACTAM	BETA-LACTAM
+NF033088.2		bla	bla-B1	subclass B1 metallo-beta-lactamase	217	200	200	core	AMR	AMR	BETA-LACTAM	BETA-LACTAM
+NF033089.1		blaCTX-M	blaCTX-M	CTX-M family extended-spectrum class A beta-lactamase	291	570	570	core	AMR	AMR	BETA-LACTAM	CEPHALOSPORIN
+NF033090.1		vanS-B	vanS-B	vancomycin resistance histidine kinase VanS-B	447	920	920	core	AMR	AMR	GLYCOPEPTIDE	VANCOMYCIN
+NF033091.0		vanS	vanS_ACDEFG	vancomycin resistance histidine kinase VanS	293	400	400	core	AMR	AMR	GLYCOPEPTIDE	VANCOMYCIN
+NF033094.0		vanS-O	vanS-O	vancomycin resistance histidine kinase VanS-O	345	720	720	core	AMR	AMR	GLYCOPEPTIDE	VANCOMYCIN
+NF033095.1		bla2	BcII	BcII family subclass B1 metallo-beta-lactamase	255	500	500	core	AMR	AMR	BETA-LACTAM	CARBAPENEM
+NF033096.1		bla	bla1	class A beta-lactamase Bla1	307	630	630	core	AMR	AMR	BETA-LACTAM	BETA-LACTAM
+NF033098.1		cblA	cblA	CblA family class A beta-lactamase	296	625	625	core	AMR	AMR	BETA-LACTAM	CEPHALOSPORIN
+NF033099.1		bla2a	bla2a	Exo family class A beta-lactamase	312	650	650	core	AMR	AMR	BETA-LACTAM	BETA-LACTAM
+NF033100.1		cfxA	cfxA_fam	CfxA family broad-spectrum class A beta-lactamase	319	625	625	core	AMR	AMR	BETA-LACTAM	BETA-LACTAM
+NF033101.0		blaL	blaL	BlaL family class A beta-lactamase	325	650	650	core	AMR	AMR	BETA-LACTAM	BETA-LACTAM
+NF033102.1		cepA	cepA	CepA family extended-spectrum class A beta-lactamase	300	660	660	core	AMR	AMR	BETA-LACTAM	CEPHALOSPORIN
+NF033103.1		bla	bla-A	class A beta-lactamase	257	200	200	core	AMR	AMR	BETA-LACTAM	BETA-LACTAM
+NF033104.0		blaOXA	blaOXA-46_fam	OXA-46 family oxacillin-hydrolyzing class D beta-lactamase	266	600	600	core	AMR	AMR	BETA-LACTAM	BETA-LACTAM
+NF033105.1		bla	bla-B3	subclass B3 metallo-beta-lactamase	257	240	240	core	AMR	AMR	BETA-LACTAM	BETA-LACTAM
+NF033106.1		blaL1	blaL1	L1 family subclass B3 metallo-beta-lactamase	290	560	560	core	AMR	AMR	BETA-LACTAM	CARBAPENEM
+NF033107.1		blaB	blaB	BlaB family subclass B1 metallo-beta-lactamase	247	500	500	core	AMR	AMR	BETA-LACTAM	CARBAPENEM
+NF033108.1		blaR1	blaR1	beta-lactam sensor/signal transducer BlaR1	585	1200	1200	core	AMR	AMR	BETA-LACTAM	BETA-LACTAM
+NF033109.1		mecR1	mecR1	beta-lactam sensor/signal transducer MecR1	585	1200	1200	core	AMR	AMR	BETA-LACTAM	METHICILLIN
+NF033111.2		tet(X)	tet(X)	tetracycline-inactivating monooxygenase Tet(X)	378	750	750	core	AMR	AMR	TETRACYCLINE	TETRACYCLINE
+NF033112.0		aphA16	aphA16	aminoglycoside 3'-O-phosphotransferase AphA16	262	580	580	core	AMR	AMR	AMINOGLYCOSIDE	AMIKACIN/KANAMYCIN
+NF033114.1		cpt	cpt	chloramphenicol phosphotransferase CPT	171	250	250	core	AMR	AMR	PHENICOL	CHLORAMPHENICOL
+NF033115.1		vanX	vanX	D-Ala-D-Ala dipeptidase VanX	199	320	320	core	AMR	AMR	GLYCOPEPTIDE	VANCOMYCIN
+NF033117.2		vanR	vanR-ABDEGLN	VanR-ABDEGLN family response regulator transcription factor	226	350	350	core	AMR	AMR	GLYCOPEPTIDE	VANCOMYCIN
+NF033118.1		vanR-O	vanR-O	vancomycin resistance response regulator transcription factor VanR-O	233	505	505	core	AMR	AMR	GLYCOPEPTIDE	VANCOMYCIN
+NF033120.0		vanR	vanR-FM	vancomycin resistance response regulator transcription factor, VanR-F/VanR-M family	231	460	460	core	AMR	AMR	GLYCOPEPTIDE	VANCOMYCIN
+NF033122.1		vanW-B	vanW-B	glycopeptide resistance accessory protein VanW-B	275	610	610	core	AMR	AMR	GLYCOPEPTIDE	VANCOMYCIN
+NF033123.1		vanW-G	vanW-G	glycopeptide resistance accessory protein VanW-G	273	600	600	core	AMR	AMR	GLYCOPEPTIDE	VANCOMYCIN
+NF033125.2		vanZ-A	vanZ-A	glycopeptide resistance protein VanZ-A	164	250	250	core	AMR	AMR	GLYCOPEPTIDE	VANCOMYCIN
+NF033126.1		aadA1	aadA1	ANT(3'')-Ia family aminoglycoside nucleotidyltransferase AadA1	258	587	587	core	AMR	AMR	AMINOGLYCOSIDE	STREPTOMYCIN
+NF033127.1		aadA3	aadA3	ANT(3'')-Ia family aminoglycoside nucleotidyltransferase AadA3	258	595	595	core	AMR	AMR	AMINOGLYCOSIDE	STREPTOMYCIN
+NF033128.2		vanW	vanW	glycopeptide resistance accessory protein VanW	271	365	365	core	AMR	AMR	GLYCOPEPTIDE	VANCOMYCIN
+NF033129.1		mgt	mgt	macrolide-inactivating glycosyltransferase	393	700	700	core	AMR	AMR	MACROLIDE	ERYTHROMYCIN/TYLOSIN
+NF033130.1		aacA48	aac(6')-Iag	AacA48 family aminoglycoside 6'-N-acetyltransferase	147	300	300	core	AMR	AMR	AMINOGLYCOSIDE	AMIKACIN/KANAMYCIN/TOBRAMYCIN
+NF033131.1		vanT	vanT-G_fam	serine racemase VanT catalytic subunit	368	460	460	core	AMR	AMR	GLYCOPEPTIDE	VANCOMYCIN
+NF033132.1		vanT	vanT_CELN	membrane-bound serine racemase VanT	697	900	900	core	AMR	AMR	GLYCOPEPTIDE	VANCOMYCIN
+NF033133.1		vanTr	vanTr-L	serine racemase VanT-L catalytic subunit	366	750	750	core	AMR	AMR	GLYCOPEPTIDE	VANCOMYCIN
+NF033134.0		cml	cmlA_floR	CmlA/FloR family chloramphenicol efflux MFS transporter	388	450	450	core	AMR	AMR	PHENICOL	CHLORAMPHENICOL
+NF033135.1		cml	cmx_cmrA	Cmx/CmrA family chloramphenicol efflux MFS transporter	374	400	400	core	AMR	AMR	PHENICOL	CHLORAMPHENICOL
+NF033136.1		qacK	qacK	quaternary ammonium compound efflux SMR transporter QacK	110	205	205	core	STRESS	BIOCIDE	QUATERNARY AMMONIUM	QUATERNARY AMMONIUM
+NF033137.0		qac	SMR_qac_int	Qac family quaternary ammonium compound efflux SMR transporter	109	188	188	core	STRESS	BIOCIDE	QUATERNARY AMMONIUM	QUATERNARY AMMONIUM
+NF033139.1		blaZ	blaZ	penicillin-hydrolyzing class A beta-lactamase BlaZ	281	580	580	core	AMR	AMR	BETA-LACTAM	BETA-LACTAM
+NF033140.0		blaZ	blaZ-mecC	mecC-type penicillin-hydrolyzing class A beta-lactamase BlaZ	283	600	600	core	AMR	AMR	BETA-LACTAM	BETA-LACTAM
+NF033141.0		bla	blaZ_gen	BlaZ-like penicillin-hydrolyzing class A beta-lactamase	281	500	500	core	AMR	AMR	BETA-LACTAM	BETA-LACTAM
+NF033142.1		adeC	adeC	multidrug efflux RND transporter AdeABC outer membrane channel subunit AdeC	465	975	975	plus	AMR	AMR	EFFLUX	EFFLUX
+NF033144.1		arr	arr	NAD(+)--rifampin ADP-ribosyltransferase	131	130	130	core	AMR	AMR	RIFAMYCIN	RIFAMYCIN
+NF033145.1		rox	rox_gen	rifampin monooxygenase	472	800	800	core	AMR	AMR	RIFAMYCIN	RIFAMPIN
+NF033148.1		tet	tet(M-W-O-S)	TetM/TetW/TetO/TetS family tetracycline resistance ribosomal protection protein	639	1100	1100	core	AMR	AMR	TETRACYCLINE	TETRACYCLINE
+NF033149.0		estDL136	estDL136	chloramphenicol hydrolase	310	500	500	core	AMR	AMR	PHENICOL	CHLORAMPHENICOL/FLORFENICOL
+NF033150.1		aacA49	aacA49	aminoglycoside 6'-N-acetyltransferase AacA49	184	410	410	core	AMR	AMR	AMINOGLYCOSIDE	AMINOGLYCOSIDE
+NF033151.0		aacA10	aacA10	AAC(6')-I family aminoglycoside 6'-N-acetyltransferase	178	400	400	core	AMR	AMR	AMINOGLYCOSIDE	AMIKACIN/KANAMYCIN/TOBRAMYCIN
+NF033152.0		blaA	blaA_Yent	class A beta-lactamase BlaA	294	625	625	core	AMR	AMR	BETA-LACTAM	BETA-LACTAM
+NF033156.1		ble	ble	BLMA family bleomycin binding protein	121	140	140	core	AMR	AMR	BLEOMYCIN	BLEOMYCIN
+NF033159.0		blaPAC	blaPAC	PAC family class C beta-lactamase	380	850	850	core	AMR	AMR	BETA-LACTAM	CEPHALOSPORIN
+NF033174.0		blaPSV	blaPSV	PSV family class A beta-lactamase	283	550	550	core	AMR	AMR	BETA-LACTAM	BETA-LACTAM
+NF033180.1		aac(3)-VIII	aac(3)-VIII	aminoglycoside N-acetyltransferase AAC(3)-VIII	286	560	560	core	AMR	AMR	AMINOGLYCOSIDE	AMINOGLYCOSIDE
+NF033182.0		lnu(G)	lnu(G)	lincosamide nucleotidyltransferase Lnu(G)	267	525	525	core	AMR	AMR	LINCOSAMIDE	LINCOSAMIDE
+NF033186.1		inlK	inlK	class 1 internalin InlK	604	1100	1100	plus	VIRULENCE	VIRULENCE		
+NF033189.1		inlA	inlA	class 1 internalin InlA	799	1600	1600	plus	VIRULENCE	VIRULENCE		
+NF033201.1		vip	vip	cell invasion LPXTG protein Vip	414	600	400	plus	VIRULENCE	VIRULENCE		
+NF033204.1		blaRUB	blaRUB	RUB family broad-spectrum class A beta-lactamase	284	635	635	core	AMR	AMR	BETA-LACTAM	BETA-LACTAM
+NF033209.1		rmtB	rmtB	RmtB family 16S rRNA (guanine(1405)-N(7))-methyltransferase	251	525	525	core	AMR	AMR	AMINOGLYCOSIDE	AMINOGLYCOSIDE
+NF033211.1		blaCRH	blaCRH	CRH family carbapenem-hydrolyzing class A beta-lactamase	290	630	630	core	AMR	AMR	BETA-LACTAM	CARBAPENEM
+NF033220.1		ant(3'')-II	ant(3'')-II	ANT(3'')-II family aminoglycoside nucleotidyltransferase	258	400	400	core	AMR	AMR	AMINOGLYCOSIDE	SPECTINOMYCIN/STREPTOMYCIN
+NF033221.1		aadE-Cc	ant(6)-Ig	aminoglycoside nucleotidyltransferase ANT(6)-Ig	299	620	620	core	AMR	AMR	AMINOGLYCOSIDE	STREPTOMYCIN
+NF033374.6		aac(6')-Id	aac(6')-Id	aminoglycoside N-acetyltransferase AAC(6')-Id	149	320	320	core	AMR	AMR	AMINOGLYCOSIDE	AMINOGLYCOSIDE
+NF033375.2		qnrE	qnrE	QnrE family quinolone resistance pentapeptide repeat protein	214	480	480	core	AMR	AMR	QUINOLONE	QUINOLONE
+NF033378.1		mecD	mecD	PBP2a family beta-lactam-resistant peptidoglycan transpeptidase MecD	678	1450	1450	core	AMR	AMR	BETA-LACTAM	METHICILLIN
+NF033386.1		blaARL	blaARL	ARL family class A beta-lactamase	282	620	620	core	AMR	AMR	BETA-LACTAM	BETA-LACTAM
+NF033387.1		aadS	aadS_fam	AadS family aminoglycoside 6-adenylyltransferase	284	450	450	core	AMR	AMR	AMINOGLYCOSIDE	STREPTOMYCIN
+NF033398.1		emt	emtA_fam	EmtA family 23S rRNA (guanine(2470)) methyltransferase	336	625	625	core	AMR	AMR	AVILAMYCIN	AVILAMYCIN
+NF033405.1		fos	fosLL	fosfomycin resistance glutathione transferase FosLL	135	270	270	core	AMR	AMR	FOSFOMYCIN	FOSFOMYCIN
+NF033406.1		blaMCA	blaMCA	MCA family class C beta-lactamase	390	750	750	core	AMR	AMR	BETA-LACTAM	BETA-LACTAM
+NF033408.5		mcr-3	mcr-3	MCR-3 family phosphoethanolamine--lipid A transferase	540	1225	1225	core	AMR	AMR	COLISTIN	COLISTIN
+NF033409.0		mcr-3	mcr-3_set	MCR-3-related phosphoethanolamine--lipid A transferase	535	1075	1075	core	AMR	AMR	COLISTIN	COLISTIN
+NF033423.1		sinH	sinH	intimin-like inverse autotransporter SinH	730	999	999	plus	VIRULENCE	VIRULENCE		
+NF033462.1		mcr-4	mcr-4	MCR-4 family phosphoethanolamine--lipid A transferase	541	1225	1225	core	AMR	AMR	COLISTIN	COLISTIN
+NF033463.1		mcr-5	mcr-5	MCR-5 family phosphoethanolamine--lipid A transferase	547	1250	1250	core	AMR	AMR	COLISTIN	COLISTIN
+NF033466.0		blaRCP	blaRCP	RCP family class A beta-lactamase	293	600	600	core	AMR	AMR	BETA-LACTAM	BETA-LACTAM
+NF033467.0		blaAQU	blaAQU	AQU family class C beta-lactamase	380	815	815	core	AMR	AMR	BETA-LACTAM	BETA-LACTAM
+NF033468.1		vat(I)	vat(I)	streptogramin A O-acetyltransferase Vat(I)	208	415	415	core	AMR	AMR	STREPTOGRAMIN	STREPTOGRAMIN
+NF033469.1		bcrB	SMR_efflux_bcrB	quaternary ammonium compound efflux SMR transporter BcrB	105	205	205	core	STRESS	BIOCIDE	BACITRACIN	BACITRACIN
+NF033470.1		bcrC	SMR_efflux_bcrC	quaternary ammonium compound efflux SMR transporter BcrC	114	225	225	core	STRESS	BIOCIDE	BACITRACIN	BACITRACIN
+NF033472.1		aac(2')-IIb	aac(2')-IIb	kasugamycin N-acetyltransferase AAC(2')-IIb	228	390	390	core	AMR	AMR	AMINOGLYCOSIDE	KASUGAMYCIN
+NF033476.1		tet	tet_destruct	tetracycline destructase	386	550	550	core	AMR	AMR	TETRACYCLINE	TETRACYCLINE
+NF033478.1		yadA	yadA	trimeric autotransporter adhesin YadA	459	750	425	plus	VIRULENCE	VIRULENCE		
+NF033502.0		sul4	sul4	sulfonamide-resistant dihydropteroate synthase Sul4	277	600	600	core	AMR	AMR	SULFONAMIDE	SULFONAMIDE
+NF033509.1		blaOXA	blaOXA-22_fam	OXA-22 family class D beta-lactamase	275	575	575	core	AMR	AMR	BETA-LACTAM	BETA-LACTAM
+NF033555.1		merB	merB	organomercurial lyase MerB	181	200	200	plus	STRESS	METAL	MERCURY	ORGANOMERCURY
+NF033560.1		merT	merT_RC607	mercuric transport protein MerT	97	130	130	plus	STRESS	METAL	MERCURY	MERCURY
+NF033565.0		merF	merF	mercury resistance system transport protein MerF	59	50	50	plus	STRESS	METAL	MERCURY	MERCURY
+NF033568.1		blaROB	blaROB	ROB family class A beta-lactamase	305	675	675	core	AMR	AMR	BETA-LACTAM	CEPHALOSPORIN
+NF033569.1		blaLHK	blaLHK	LHK family class C beta-lactamase	390	850	850	core	AMR	AMR	BETA-LACTAM	BETA-LACTAM
+NF033574.1		varG	varG	VarG family subclass B1-like metallo-beta-lactamase	374	750	750	core	AMR	AMR	BETA-LACTAM	CARBAPENEM
+NF033575.1		blaRHO	blaRHO	RHO family class C beta-lactamase	380	825	825	core	AMR	AMR	BETA-LACTAM	BETA-LACTAM
+NF033582.2		blaALI	blaALI	ALI family subclass B1 metallo-beta-lactamase	245	450	450	core	AMR	AMR	BETA-LACTAM	CARBAPENEM
+NF033584.1		blaPST	blaPST	PST family subclass B1 metallo-beta-lactamase	242	525	525	core	AMR	AMR	BETA-LACTAM	CARBAPENEM
+NF033585.1		blaTTU	blaTTU	TTU family subclass B1 metallo-beta-lactamase	243	525	525	core	AMR	AMR	BETA-LACTAM	CARBAPENEM
+NF033606.1		clpK	clpK	heat shock survival AAA family ATPase ClpK	949	1900	1900	plus	STRESS	HEAT		
+NF033612.0		aac(3)-VIa	aac(3)-VIa	aminoglycoside N-acetyltransferase AAC(3)-VIa	298	675	675	core	AMR	AMR	AMINOGLYCOSIDE	GENTAMICIN
+NF033613.1		blaOXA	blaOXA-576_fam	OXA-576 family class D beta-lactamase	248	530	530	core	AMR	AMR	BETA-LACTAM	BETA-LACTAM
+NF033614.1		aph(6)-I	aph(6)-Ic_gen	APH(6)-I family aminoglycoside O-phosphotransferase	278	460	460	core	AMR	AMR	AMINOGLYCOSIDE	STREPTOMYCIN
+NF033626.2		bla	blaBKC_GPC	BKC/GPC family carbapenem-hydrolyzing class A beta-lactamase	297	575	575	core	AMR	AMR	BETA-LACTAM	BETA-LACTAM
+NF033627.3		eae	eae_typing_E._coli	intimin	939	1400	1400	plus	VIRULENCE	VIRULENCE	INTIMIN	INTIMIN
+NF033636.1		asr	asr	acid resistance repetitive basic protein Asr	119	50	40	plus	STRESS	ACID		
+NF033637.1		tir	tir	type III secretion system LEE translocated intimin receptor Tir	552	500	500	plus	VIRULENCE	VIRULENCE		
+NF033639.1		eae	alpha	intimin type alpha	940	2050	2050	plus	VIRULENCE	VIRULENCE	INTIMIN	ALPHA
+NF033646.1		astA	astA	heat-stable enterotoxin EAST1	38	80	80	plus	VIRULENCE	VIRULENCE		
+NF033648.1		blaOXA	blaOXA-274_fam	OXA-274 family carbapenem-hydrolyzing class D beta-lactamase	281	625	625	core	AMR	AMR	BETA-LACTAM	CARBAPENEM
+NF033653.1		blaOXA	blaOXA-266_fam	OXA-266 family class D beta-lactamase	277	600	600	core	AMR	AMR	BETA-LACTAM	BETA-LACTAM
+NF033658.2		stxA1	stxA1	Shiga toxin Stx1 subunit A	315	650	650	plus	VIRULENCE	VIRULENCE	STX1	stxA1
+NF033659.0		stxB1	stxB1	Shiga toxin Stx1 subunit B	89	175	175	plus	VIRULENCE	VIRULENCE	STX1	stxB1
+NF033660.0		stxB2	stxB2	Shiga toxin Stx2 subunit B	87	165	165	plus	VIRULENCE	VIRULENCE	STX2	stxB2
+NF033661.1		stxA2	stxA2	Shiga toxin Stx2 subunit A	319	600	600	plus	VIRULENCE	VIRULENCE	STX2	stxA2
+NF033666.1		blaOXA	blaOXA-727_fam	OXA-727 family class D beta-lactamase	283	600	600	core	AMR	AMR	BETA-LACTAM	BETA-LACTAM
+NF033667.1		blaOXA	blaOXA-55_fam	OXA-55 family carbapenem-hydrolyzing class D beta-lactamase	289	550	550	core	AMR	AMR	BETA-LACTAM	BETA-LACTAM
+NF033669.1		mcr-8	mcr-8	MCR-8 family phosphoethanolamine--lipid A transferase	565	1250	1250	core	AMR	AMR	COLISTIN	COLISTIN
+NF033670.1		mcr-6	mcr-6	MCR-6 family phosphoethanolamine--lipid A transferase	538	1235	1235	core	AMR	AMR	COLISTIN	COLISTIN
+NF033671.1		mcr-7	mcr-7	MCR-7 family phosphoethanolamine--lipid A transferase	539	1250	1250	core	AMR	AMR	COLISTIN	COLISTIN
+NF033692.1		aph(2'')-I	aph(2'')-I_a_f_h	APH(2'')-Ia/If/Ih family aminoglycoside O-phosphotransferase	290	475	475	core	AMR	AMR	AMINOGLYCOSIDE	AMIKACIN/GENTAMICIN/KANAMYCIN/TOBRAMYCIN
+NF033693.0		aac(6')-Ie	aac(6')-Ie_fam	AAC(6')-Ie family aminoglycoside N-acetyltransferase	179	340	340	core	AMR	AMR	AMINOGLYCOSIDE	AMIKACIN/KANAMYCIN/TOBRAMYCIN
+NF033698.1		blaCSA	blaCSA	CSA family class C beta-lactamase	375	884	884	core	AMR	AMR	BETA-LACTAM	CEPHALOTHIN
+NF033700.1		blaCMA	blaCMA	CMA family class C beta-lactamase	375	887	887	core	AMR	AMR	BETA-LACTAM	CEPHALOTHIN
+NF033702.0		blaOXA	blaOXA-12_fam	OXA-12 family class D beta-lactamase	264	595	595	core	AMR	AMR	BETA-LACTAM	BETA-LACTAM
+NF033714.1		blaBBI	blaBBI	BBI family class A beta-lactamase	304	625	625	core	AMR	AMR	BETA-LACTAM	BETA-LACTAM
+NF033727.1		arsD	arsD	arsenite efflux transporter metallochaperone ArsD	96	95	95	plus	STRESS	METAL	ARSENIC	ARSENITE
+NF033736.2		blaAFM	blaAFM	AFM family subclass B1 metallo-beta-lactamase	267	590	590	core	AMR	AMR	BETA-LACTAM	CARBAPENEM
+NF033781.1		copP	copP	copper-binding metallochaperone CopP	65	112	112	plus	STRESS	METAL	COPPER	COPPER
+NF033783.1		merD	merD	mercury resistance co-regulator MerD	121	170	170	plus	STRESS	METAL	MERCURY	MERCURY
+NF033784.1		merC	merC	organomercurial transporter MerC	123	140	140	plus	STRESS	METAL	MERCURY	ORGANOMERCURY
+NF033786.1		merG	merG	phenylmercury resistance protein MerG	217	350	350	plus	STRESS	METAL	MERCURY	PHENYLMERCURY
+NF033815.0		blaOXA	blaOXA-364_fam	OXA-364 family class D beta-lactamase	275	625	625	core	AMR	AMR	BETA-LACTAM	BETA-LACTAM
+NF033818.0		blaOXA	blaOXA-114_fam	OXA-114 family class D beta-lactamase	275	620	620	core	AMR	AMR	BETA-LACTAM	BETA-LACTAM
+NF033834.1		mexA	mexA	multidrug efflux RND transporter periplasmic adaptor subunit MexA	373	750	750	plus	AMR	AMR	EFFLUX	EFFLUX
+NF033836.1		mcr-9	mcr-9	MCR-9 family phosphoethanolamine--lipid A transferase	539	1240	1240	plus	AMR	AMR	COLISTIN	COLISTIN
+NF033851.1		dfrA35	dfrA35	trimethoprim-resistant dihydrofolate reductase DfrA35	170	360	360	core	AMR	AMR	TRIMETHOPRIM	TRIMETHOPRIM
+NF033862.2		mcr-10	mcr-10	MCR-10 family phosphoethanolamine--lipid A transferase	539	1250	1250	core	AMR	AMR	COLISTIN	COLISTIN
+NF033866.1		blaCDD	blaCDD	CDD family class D beta-lactamase	310	600	600	core	AMR	AMR	BETA-LACTAM	BETA-LACTAM
+NF033867.1		blaPAU	blaPAU	PAU family class A beta-lactamase	293	640	640	core	AMR	AMR	BETA-LACTAM	BETA-LACTAM
+NF033868.0		dfrA36	dfrA36	trimethoprim-resistant dihydrofolate reductase DfrA36	170	360	360	core	AMR	AMR	TRIMETHOPRIM	TRIMETHOPRIM
+NF033877.0		arsB	arsB_pI258	arsenite efflux transporter membrane subunit ArsB	429	760	760	plus	STRESS	METAL	ARSENIC	ARSENITE
+NF033895.2		blaCAM	blaCAM	CAM family subclass B1 metallo-beta-lactamase	241	535	535	core	AMR	AMR	BETA-LACTAM	CARBAPENEM
+NF033929.1		blaAXC	blaAXC	AXC family carbapenem-hydrolyzing class A beta-lactamase	296	650	650	core	AMR	AMR	BETA-LACTAM	CARBAPENEM
+NF033933.0		fosA8	fosA8_fam	FosA8 family fosfomycin resistance glutathione transferase	138	300	300	core	AMR	AMR	FOSFOMYCIN	FOSFOMYCIN
+NF037973.1		sslE	sslE	lipoprotein metalloprotease SslE	1519	3000	3000	plus	VIRULENCE	VIRULENCE		
+NF038003.1		blaPFM	blaPFM	PFM family subclass B2 metallo-beta-lactamase	253	555	555	core	AMR	AMR	BETA-LACTAM	CARBAPENEM
+NF038046.1		blaCVI	blaCVI	CVI family subclass B2 metallo-beta-lactamase	255	575	575	core	AMR	AMR	BETA-LACTAM	CARBAPENEM
+NF038056.1		mphM	mphM	macrolide 2'-phosphotransferase MphM	298	610	610	core	AMR	AMR	MACROLIDE	MACROLIDE
+NF038057.1		mphL	mphL	macrolide 2'-phosphotransferase MphL	298	612	612	core	AMR	AMR	MACROLIDE	MACROLIDE
+NF038069.1		blaIDC	blaIDC	IDC family class C beta-lactamase	395	850	850	core	AMR	AMR	BETA-LACTAM	BETA-LACTAM
+NF038089.1		blaYRC	blaYRC	YRC family class C beta-lactamase	381	870	870	core	AMR	AMR	BETA-LACTAM	CEPHALOSPORIN
+NF038102.1		aac(6')-III	aac(6')-III	tobramycin N-acetyltransferase AAC(6')-III	156	305	305	core	AMR	AMR	AMINOGLYCOSIDE	TOBRAMYCIN
+NF038103.1		blaGMB	blaGMB	GMB family subclass B1 metallo-beta-lactamase	270	580	580	core	AMR	AMR	BETA-LACTAM	CARBAPENEM
+NF038166.1		blaYEM	blaYEM	YEM family subclass B2 metallo-beta-lactamase	246	535	535	core	AMR	AMR	BETA-LACTAM	CARBAPENEM
+NF038183.1		blaOXA	blaOXA-919_fam	OXA-919 family class D beta-lactamase	275	575	575	core	AMR	AMR	BETA-LACTAM	BETA-LACTAM
+NF038184.1		blaVMB	blaVMB	VMB family subclass B1 metallo-beta-lactamase	242	500	500	core	AMR	AMR	BETA-LACTAM	CARBAPENEM
+NF038195.1		blaAAK	blaAAK	AAK family class A beta-lactamase	286	655	655	core	AMR	AMR	BETA-LACTAM	BETA-LACTAM
+NF038208.1		gar	garos_AAA	Gar/GrdA family gentamicin resistance ATP-binding protein	167	170	170	core	AMR	AMR	AMINOGLYCOSIDE	GENTAMICIN
+NF038217.2		blaOXA	blaOXA-427_fam	OXA-427 family carbapenem-hydrolyzing class D beta-lactamase	264	600	600	core	AMR	AMR	BETA-LACTAM	CARBAPENEM
+NF038238.1		blaBUT	blaBUT	BUT family class C beta-lactamase	383	850	850	core	AMR	AMR	BETA-LACTAM	BETA-LACTAM
+NF038306.1		fosM	fosM	FosM family fosfomycin resistance protein	137	255	255	core	AMR	AMR	FOSFOMYCIN	FOSFOMYCIN
+NF038311.1		fosU	fosU	FosU family fosfomycin resistance glutathione transferase	137	295	295	core	AMR	AMR	FOSFOMYCIN	FOSFOMYCIN
+NF038333.1		blaOXA	blaOXA-679_fam	OXA-679 family carbapenem-hydrolyzing class D beta-lactamase	276	570	570	core	AMR	AMR	BETA-LACTAM	CARBAPENEM
+NF038359.1		blaPRC	blaPRC	PRC family class C beta-lactamase	379	820	820	core	AMR	AMR	BETA-LACTAM	BETA-LACTAM
+NF038366.1		blaSFDC	blaSFDC	SFDC family class C beta-lactamase	382	840	840	core	AMR	AMR	BETA-LACTAM	CEPHALOSPORIN
+NF038386.1		blaOXA	blaOXA-294_fam	OXA-294 family class D beta-lactamase	278	580	580	core	AMR	AMR	BETA-LACTAM	BETA-LACTAM
+NF038398.1		blaPLA	blaPLA	PLA family class A beta-lactamase	291	670	670	core	AMR	AMR	BETA-LACTAM	BETA-LACTAM
+NF038400.1		blaTER	blaTER	TER family class A beta-lactamase	284	620	620	core	AMR	AMR	BETA-LACTAM	BETA-LACTAM
+NF038401.1		blaORN	blaORN	ORN family class A beta-lactamase	291	670	670	core	AMR	AMR	BETA-LACTAM	BETA-LACTAM
+NF040467.1		blaRAA	blaRAA	RAA family extended-spectrum beta-lactamase	290	590	590	core	AMR	AMR	BETA-LACTAM	CEPHALOSPORIN
+NF040468.1		blaECM	blaECM	ECM family subclass B3 metallo-beta-lactamase	303	640	640	core	AMR	AMR	BETA-LACTAM	CEPHALOSPORIN
+NF040469.1		blaEFM	blaEFM	EFM family subclass B3 metallo-beta-lactamase	302	610	610	core	AMR	AMR	BETA-LACTAM	CARBAPENEM
+NF040470.1		blaEAM	blaEAM	EAM family subclass B3 metallo-beta-lactamase	318	660	660	core	AMR	AMR	BETA-LACTAM	CEPHALOSPORIN
+NF040472.1		blaPAD	blaPAD	PAD family carbapenem-hydrolyzing class A beta-lactamase	297	575	575	core	AMR	AMR	BETA-LACTAM	CARBAPENEM
+NF040478.1		blaLAQ	blaLAQ	LAQ family class C beta-lactamase	380	850	850	core	AMR	AMR	BETA-LACTAM	BETA-LACTAM
+NF040501.1		arsN2	arsN2	arsenic resistance N-acetyltransferase ArsN2	133	125	125	plus	STRESS	METAL	ARSENIC	ARSENIC
+NF040503.1		arsN1	arsN1a	arsinothricin resistance N-acetyltransferase ArsN1 family A	159	170	170	plus	STRESS	METAL	ARSENIC	ARSENIC
+NF040504.1		arsN1	arsN1b	arsinothricin resistance N-acetyltransferase ArsN1 family B	159	210	210	plus	STRESS	METAL	ARSENIC	ARSENIC
+NF040527.2		blaOXA	blaOXA-5_fam	OXA-5 family class D beta-lactamase	267	574	574	core	AMR	AMR	BETA-LACTAM	BETA-LACTAM
+NF040529.1		blaOXA	blaOXA-1036_fam	OXA-1036 family carbapenem-hydrolyzing class D beta-lactamase	277	580	580	core	AMR	AMR	BETA-LACTAM	CARBAPENEM
+NF040530.1		blaOXA	blaOXA-548_fam	OXA-548 family class D beta-lactamase	295	620	620	core	AMR	AMR	BETA-LACTAM	BETA-LACTAM
+NF040531.1		blaOXA	blaOXA-42_fam	OXA-42 family class D beta-lactamase	269	540	540	core	AMR	AMR	BETA-LACTAM	BETA-LACTAM
+NF040532.1		blaOXA	blaOXA-9_fam	OXA-9 family oxacillin-hydrolyzing class D beta-lactamase	274	575	575	core	AMR	AMR	BETA-LACTAM	BETA-LACTAM
+NF040540.1		fosA	fosA5_fam	FosA5 family fosfomycin resistance glutathione transferase	139	310	310	core	AMR	AMR	FOSFOMYCIN	FOSFOMYCIN
+NF040541.1		dfrE	dfrE	trimethoprim-resistant dihydrofolate reductase DfrE	157	347	347	core	AMR	AMR	TRIMETHOPRIM	TRIMETHOPRIM
+NF040547.1		blaSFC	blaSFC	SFC family carbapenem-hydrolyzing class A beta-lactamase	309	680	680	core	AMR	AMR	BETA-LACTAM	CARBAPENEM
+NF040548.1		blaCRP	blaCRP	CRP family carbapenem-hydrolyzing class A beta-lactamase	293	630	630	core	AMR	AMR	BETA-LACTAM	CARBAPENEM
+NF040600.1		blaOXA	blaOXA-1043_fam	OXA-1043 family class D beta-lactamase	268	525	525	core	AMR	AMR	BETA-LACTAM	BETA-LACTAM
+NF040609.1		blaRASA	blaRASA	RASA family extended-spectrum class A beta-lactamase	295	600	600	core	AMR	AMR	BETA-LACTAM	CEPHALOSPORIN
+NF040632.1		yopJ	yopJ_gen	YopJ/YopP family T3SS effector serine/threonine acetyltransferase	288	610	610	plus	VIRULENCE	VIRULENCE		
+NF040634.1		npmB	npmB	16S rRNA (adenine(1408)-N(1))-methyltransferase NpmB	217	460	460	core	AMR	AMR	AMINOGLYCOSIDE	AMINOGLYCOSIDE
+NF040644.1		blaPAM	blaPAM	PAM family subclass B3 metallo-beta-lactamase	287	615	615	core	AMR	AMR	BETA-LACTAM	CARBAPENEM
+NF040659.1		blaBOR	blaBOR	BOR family class A beta-lactamase	305	620	620	core	AMR	AMR	BETA-LACTAM	BETA-LACTAM
+NF040678.1		entFM	entFM	enterotoxin EntFM	430	720	720	plus	VIRULENCE	VIRULENCE		
+NF040780.1		blaHBL	blaHBL	HBL family class A beta-lactamase	304	580	580	core	AMR	AMR	BETA-LACTAM	BETA-LACTAM
+NF040784.1		blaOXA	blaOXA-VL06	OXA-1090 family carbapenem-hydrolyzing class D beta-lactamase	268	400	400	core	AMR	AMR	BETA-LACTAM	CARBAPENEM
+NF040802.1		fosY	fosY	fosfomycin resistance bacillithiol transferase FosY	140	305	305	core	AMR	AMR	FOSFOMYCIN	FOSFOMYCIN
+NF040803.1		blaOXA	blaOXA-1091_fam	OXA-1091 family oxacillin-hydrolyzing class D beta-lactamase	272	570	570	core	AMR	AMR	BETA-LACTAM	BETA-LACTAM
+NF040804.1		blaOXA	blaOXA-1089_fam	OXA-1089 family carbapenem-hydrolyzing class D beta-lactamase	289	580	580	core	AMR	AMR	BETA-LACTAM	CARBAPENEM
+NF040805.1		blaOXA	blaOXA-732_fam	OXA-732 family class D beta-lactamase	261	585	585	core	AMR	AMR	BETA-LACTAM	BETA-LACTAM
+NF040806.1		blaOXA	blaOXA-198_fam	OXA-198 family carbapenem-hydrolyzing class D beta-lactamase	258	515	515	core	AMR	AMR	BETA-LACTAM	CARBAPENEM
+NF040807.1		espF	espF	type III secretion system LEE effector EspF	252	250	220	plus	VIRULENCE	VIRULENCE		
+NF040812.1		blaGMA	blaGMA	GMA family class A beta-lactamase	282	600	600	core	AMR	AMR	BETA-LACTAM	BETA-LACTAM
+NF040856.1		fexB	fexB	chloramphenicol/florfenicol efflux MFS transporter FexB	469	950	950	core	AMR	AMR	PHENICOL	CHLORAMPHENICOL/FLORFENICOL
+NF040860.1		blaWUS	blaWUS	WUS family subclass B1 metallo-beta-lactamase	246	540	540	core	AMR	AMR	BETA-LACTAM	CARBAPENEM
+NF040874.1		blaPJM	blaPJM	PJM family subclass B3 metallo-beta-lactamase	301	630	630	core	AMR	AMR	BETA-LACTAM	CARBAPENEM
+NF040934.1		blaRAHN	blaRAHN	RAHN family extended-spectrum class A beta-lactamase	295	590	590	core	AMR	AMR	BETA-LACTAM	CEPHALOSPORIN
+NF040940.1		blaHER	blaHER	HER family class A beta-lactamase	290	620	620	core	AMR	AMR	BETA-LACTAM	BETA-LACTAM
+NF040958.1		lnu(H)	lnu(H)	lincosamide nucleotidyltransferase Lnu(H)	256	540	540	core	AMR	AMR	LINCOSAMIDE	LINCOSAMIDE
+NF041113.1		blaMAB	blaMAB	MAB family class A beta-lactamase	289	575	575	core	AMR	AMR	BETA-LACTAM	CARBAPENEM
+NF041137.2		blaSPR	blaSPR	SPR family subclass B3 metallo-beta-lactamase	296	550	550	core	AMR	AMR	BETA-LACTAM	BETA-LACTAM
+NF041138.1		blaPEN-B	blaPEN-B	PEN-B family class A beta-lactamase	312	685	685	core	AMR	AMR	BETA-LACTAM	BETA-LACTAM
+NF041143.1		blaPEN-A	blaPEN-A	PEN-A family class A beta-lactamase	302	640	640	core	AMR	AMR	BETA-LACTAM	BETA-LACTAM
+NF041154.1		blaC	blaC	class A beta-lactamase BlaC	307	685	685	core	AMR	AMR	BETA-LACTAM	BETA-LACTAM
+NF041161.1		blaHMB	blaHMB	HMB family subclass B1 metallo-beta-lactamase	238	500	500	core	AMR	AMR	BETA-LACTAM	CARBAPENEM
+NF041187.1		blaRAD	blaRAD	RAD family carbapenem-hydrolyzing class D beta-lactamase	258	570	570	core	AMR	AMR	BETA-LACTAM	CARBAPENEM
+NF041189.1		blaKBL	blaKBL	KBL family class A beta-lactamase	286	600	600	core	AMR	AMR	BETA-LACTAM	BETA-LACTAM
+NF041253.1		blaPEN-N	blaPEN-N	PEN-N family class A beta-lactamase	304	600	600	core	AMR	AMR	BETA-LACTAM	BETA-LACTAM
+NF041254.1		helR	helR	RNA polymerase recycling motor ATPase HelR	706	750	750	plus	AMR	AMR	RIFAMYCIN	RIFAMYCIN
+NF041268.1		cph	cph	capreomycin phosphotransferase	285	390	390	plus	AMR	AMR	TUBERACTINOMYCIN	CAPREOMYCIN/VIOMYCIN
+NF041269.1		bla	bla-B1_long	subclass B1 metallo-beta-lactamase, long type	334	350	350	core	AMR	AMR	BETA-LACTAM	CARBAPENEM
+NF041270.1		blaIII	blaIII	class A beta-lactamase BlaIII	314	670	670	core	AMR	AMR	BETA-LACTAM	BETA-LACTAM
+NF041441.1		blaCIB	blaCIM	CIM family subclass B1 metallo-beta-lactamase	250	490	490	core	AMR	AMR	BETA-LACTAM	CARBAPENEM
+NF041445.1		blaRATA	blaRATA	RATA family class A beta-lactamase	302	660	660	core	AMR	AMR	BETA-LACTAM	CEPHALOSPORIN
+NF041446.1		aph(2'')-Ii	aph(2'')-Ii	aminoglycoside O-phosphotransferase APH(2'')-Ii	297	625	625	core	AMR	AMR	AMINOGLYCOSIDE	AMIKACIN/GENTAMICIN/KANAMYCIN/TOBRAMYCIN
+NF041541.1		fosB	fosBx1-fam	FosBx1 family fosfomycin resistance bacillithiol transferase	138	290	290	core	AMR	AMR	FOSFOMYCIN	FOSFOMYCIN
+NF041542.1		fosXCC	fosXCC	fosfomycin resistance hydrolase FosXCC	130	270	270	core	AMR	AMR	FOSFOMYCIN	FOSFOMYCIN
+NF041590.1		blaCAE	blaCAE	CAE family broad-spectrum class A beta-lactamase	300	625	625	core	AMR	AMR	BETA-LACTAM	CEPHALOSPORIN
+NF041632.1		blaKHM	blaKHM	KHM family subclass B1 metallo-beta-lactamase	237	480	480	core	AMR	AMR	BETA-LACTAM	CARBAPENEM
+NF041662.1		ampC	ampC_Kaer	CMY2-MIR-ACT-EC family cephalosporin-hydrolyzing class C beta-lactamase	381	825	825	core	AMR	AMR	BETA-LACTAM	CEPHALOSPORIN
+NF041663.1		ampC	ampC_Sliq	cephalosporin-hydrolyzing class C beta-lactamase	378	860	860	core	AMR	AMR	BETA-LACTAM	CEPHALOSPORIN
+NF041665.1		blaPSZ	blaPSZ	PSZ family class C beta-lactamase	379	850	850	core	AMR	AMR	BETA-LACTAM	BETA-LACTAM
+NF041666.1		ampC	ampC_Ecan	CMY2-MIR-ACT-EC family cephalosporin-hydrolyzing class C beta-lactamase	381	860	860	core	AMR	AMR	BETA-LACTAM	CEPHALOSPORIN
+NF041668.1		dfrL	dfrL	trimethoprim-resistant dihydrofolate reductase DfrL	176	370	370	core	AMR	AMR	TRIMETHOPRIM	TRIMETHOPRIM
+NF041687.1		stxA2	stxA2f	Shiga toxin Stx2f subunit A	319	715	715	plus	VIRULENCE	VIRULENCE	STX2	stxA2f
+NF041688.1		stxA2	stxA2b	Shiga toxin Stx2b subunit A	318	733	733	plus	VIRULENCE	VIRULENCE	STX2	stxA2b
+NF041689.1		stxA2	stxA2j	Shiga toxin Stx2j subunit A	315	720	720	plus	VIRULENCE	VIRULENCE	STX2	stxA2j
+NF041690.1		stxA2	stxA2g	Shiga toxin Stx2g subunit A	317	736	736	plus	VIRULENCE	VIRULENCE	STX2	stxA2g
+NF041691.1		stxB2	stxB2b	Shiga toxin Stx2b subunit B	87	201	201	plus	VIRULENCE	VIRULENCE	STX2	stxB2b
+NF041692.1		stxB2	stxB2f	Shiga toxin Stx2f subunit B	87	201	201	plus	VIRULENCE	VIRULENCE	STX2	stxB2f
+NF041693.1		stxA1	stxA1c	Shiga toxin Stx1c subunit A	310	718	718	plus	VIRULENCE	VIRULENCE	STX1	stxA1c
+NF041694.1		stxA1	stxA1a	Shiga toxin Stx1a subunit A	313	718	718	plus	VIRULENCE	VIRULENCE	STX1	stxA1a
+NF041695.1		stxA1	stxA1d	Shiga toxin Stx1d subunit A	314	725	725	plus	VIRULENCE	VIRULENCE	STX1	stxA1d
+NF041696.1		stxA1	stxA1e	Shiga toxin Stx1e subunit A	315	730	730	plus	VIRULENCE	VIRULENCE	STX1	stxA1e
+NF041697.1		stxB1	stxB1a	Shiga toxin Stx1a subunit B	89	204	204	plus	VIRULENCE	VIRULENCE	STX1	stxB1a
+NF041698.1		stxB1	stxB1c	Shiga toxin Stx1c subunit B	89	201	201	plus	VIRULENCE	VIRULENCE	STX1	stxB1c
+NF041699.1		stxB1	stxB1d	Shiga toxin Stx1d subunit B	89	199	199	plus	VIRULENCE	VIRULENCE	STX1	stxB1d
+NF041700.1		stxB1	stxB1e	Shiga toxin Stx1e subunit B	89	203	203	plus	VIRULENCE	VIRULENCE	STX1	stxB1e
+NF041701.1		stxB2	stxB2o	Shiga toxin Stx2o subunit B	87	204	204	plus	VIRULENCE	VIRULENCE	STX2	stxB2o
+NF041702.1		stxA2	stxA2_acd	Shiga toxin Stx2 subunit A, a/c/d subtype	319	736	736	plus	VIRULENCE	VIRULENCE	STX2	stxA2
+NF041703.1		stxA2	stxA2_eilk	Shiga toxin Stx2 subunit A, e/i/l/k subtype	319	736	736	plus	VIRULENCE	VIRULENCE	STX2	stxA2
+NF041704.1		stxB2	stxB2e	Shiga toxin Stx2e subunit B	87	203	203	plus	VIRULENCE	VIRULENCE	STX2	stxB2e
+NF041741.1		blaAMZ	blaAMZ	AMZ family class C beta-lactamase	396	825	825	core	AMR	AMR	BETA-LACTAM	CEPHALOSPORIN
+NF041758.1		blaCHM	blaCHM	CHM family subclass B1 metallo-beta-lactamase	246	475	475	core	AMR	AMR	BETA-LACTAM	CARBAPENEM
+NF041759.1		estT	estT	macrolide hydrolase EstT	278	450	450	core	AMR	AMR	MACROLIDE	TYLOSIN
+NF041846.1		blaBIM	blaBIM	BIM family subclass B1 metallo-beta-lactamase	245	535	535	core	AMR	AMR	BETA-LACTAM	CARBAPENEM
+NF042938.1		erm(55)	erm(55)	23S rRNA (adenine(2058)-N(6))-methyltransferase Erm(55)	270	525	525	core	AMR	AMR	MACROLIDE	CLARITHROMYCIN
+NF042983.1		blaOXA	blaOXA-837_fam	OXA-837 family class D beta-lactamase	301	575	575	core	AMR	AMR	BETA-LACTAM	BETA-LACTAM
+NF042984.1		emrE	SMR_efflux_emrE	multidrug efflux SMR transporter EmrE	110	226	226	plus	STRESS	BIOCIDE	EFFLUX	EFFLUX
+NF042988.1		erm(46)	erm(46)	23S rRNA (adenine(2058)-N(6))-methyltransferase Erm(46)	255	503	503	core	AMR	AMR	LINCOSAMIDE/MACROLIDE/STREPTOGRAMIN	AZITHROMYCIN/CLINDAMYCIN/ERYTHROMYCIN/STREPTOGRAMIN B/VIRGINIAMYCIN
+NF043038.1		cplR	cplR	ABC-F type ribosomal protection protein CplR	544	780	780	plus	AMR	AMR	LINCOSAMIDE/PLEUROMUTILIN/STREPTOGRAMIN	CLINDAMYCIN/LINCOMYCIN/RETAPAMULIN/VIRGINIAMYCIN
+NF043067.1		aac(6')	aac(6')_E	aminoglycoside 6'-N-acetyltransferase	140	140	140	core	AMR	AMR	AMINOGLYCOSIDE	AMINOGLYCOSIDE
+NF045486.1		tet(30)	tet(30)	tetracycline efflux MFS transporter Tet(30)	392	730	730	core	AMR	AMR	TETRACYCLINE	TETRACYCLINE
+NF045488.1		tet(62)	tet(62)	tetracycline efflux MFS transporter Tet(62)	385	775	775	core	AMR	AMR	TETRACYCLINE	TETRACYCLINE
+NF045543.1		erm(G)	erm(G)	23S rRNA (adenine(2058)-N(6))-methyltransferase Erm(G)	244	515	515	core	AMR	AMR	LINCOSAMIDE/MACROLIDE/STREPTOGRAMIN	ERYTHROMYCIN/LINCOSAMIDE/STREPTOGRAMIN/TYLOSIN
+NF045651.1		blaMUN	blaMUN	MUN family extended-spectrum class A beta-lactamase	290	640	640	core	AMR	AMR	BETA-LACTAM	CEPHALOSPORIN
+NF045671.1		blaPNC	blaPNC	PNC family class C beta-lactamase	401	750	750	core	AMR	AMR	BETA-LACTAM	CEPHALOSPORIN
+NF045684.1		tet(65)	tet(65)	tetracycline efflux MFS transporter Tet(65)	383	800	800	core	AMR	AMR	TETRACYCLINE	TETRACYCLINE
+NF045691.1		vga(F)	vga(F)	ABC-F type ribosomal protection protein Vga(F)	459	975	975	core	AMR	AMR	LINCOSAMIDE	LINCOSAMIDE
+NF045721.1		blaBMHC	blaBMHC	BMHC family subclass B1 metallo-beta-lactamase	253	550	550	core	AMR	AMR	BETA-LACTAM	CARBAPENEM
+NF045731.1		blaDYB	blaDYB	DYB family subclass B1 metallo-beta-lactamase	250	550	550	core	AMR	AMR	BETA-LACTAM	CARBAPENEM
+NF045795.1		blaOXA	blaOXA-258_fam	OXA-258 family class D beta-lactamase	274	600	600	core	AMR	AMR	BETA-LACTAM	BETA-LACTAM
+NF045801.1		cxpE	cxpE	chloramphenicol efflux transporter CxpE	392	675	675	plus	AMR	AMR	PHENICOL	CHLORAMPHENICOL
+NF045807.1		blaOXA	blaOXA-1238_fam	OXA-1238 family class D beta-lactamase	276	600	600	core	AMR	AMR	BETA-LACTAM	BETA-LACTAM
+NF045839.1		blaOXA	blaOXA-18_fam	OXA-18 family class D beta-lactamase	269	540	540	core	AMR	AMR	BETA-LACTAM	CEPHALOSPORIN
+NF045904.1		mexE	mexE	multidrug efflux RND transporter periplasmic adaptor subunit MexE	390	714	714	plus	AMR	AMR	EFFLUX	EFFLUX
+NF045909.1		ant(9)-Ic	ant(9)-Ic	aminoglycoside nucleotidyltransferase ANT(9)-Ic	259	505	505	core	AMR	AMR	AMINOGLYCOSIDE	SPECTINOMYCIN
+NF046045.1		ipaH	ipaH_Shig	T3SS effector E3 ubiquitin-protein ligase, IpaH family	247	550	550	plus	VIRULENCE	VIRULENCE		
+NF047323.1		dfrA50	dfrA50	trimethoprim-resistant dihydrofolate reductase DfrA50	158	355	355	core	AMR	AMR	TRIMETHOPRIM	TRIMETHOPRIM
+NF047324.1		dfrA51	dfrA51	trimethoprim-resistant dihydrofolate reductase DfrA51	158	322	322	core	AMR	AMR	TRIMETHOPRIM	TRIMETHOPRIM
+NF047361.1		blaASDC	blaASDC	ASDC family class C beta-lactamase	394	850	850	core	AMR	AMR	BETA-LACTAM	BETA-LACTAM
+NF047460.1		blaOXA	blaOXA-1258_fam	OXA-1258 family class D beta-lactamase	279	600	600	core	AMR	AMR	BETA-LACTAM	BETA-LACTAM
+NF047495.1		blaOXA	blaOXA-50-var	OXA-50-var family class D beta-lactamase	262	600	600	core	AMR	AMR	BETA-LACTAM	BETA-LACTAM
+NF047753.1		blaSPI	blaSPI	SPI family subclass B1 metallo-beta-lactamase	239	500	500	core	AMR	AMR	BETA-LACTAM	CARBAPENEM
+NF047782.1		blaOXA	blaOXA-1327_fam	OXA-1327 family class D beta-lactamase	285	590	590	core	AMR	AMR	BETA-LACTAM	BETA-LACTAM
+TIGR02052.1		merP	MerP_Gneg	mercury resistance system periplasmic binding protein MerP	92	92	92	plus	STRESS	METAL	MERCURY	MERCURY
+TIGR02053.1		merA	merA	mercury(II) reductase	465	454	454	plus	STRESS	METAL	MERCURY	MERCURY
