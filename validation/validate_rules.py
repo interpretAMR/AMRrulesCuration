@@ -1,6 +1,8 @@
 import argparse as ArgumentParser
 import csv
 import re
+# required for reading in the OBO onotology files
+import obonet
 
 # Validation checks (automatic)
 # - check that columns are present as per current version of spec
@@ -10,7 +12,7 @@ import re
 # –	does gene always have a value
 # - if the gene value specifies a combo rule, are all those rule IDs present in the file?
 # –	check that one of nodeID/refseq accession/GenBank accession/HMM accession are entered
-# –	check ARO accession is either ‘-‘ or a value starting with ARO:
+# –	check ARO accession is either ‘-‘ or a value starting with ARO:, if starts with ARO:, checks it's a valid accession using latest CARD ontology
 # –	check mutation always has a value
 # –	check variation type always has a value, and it is one of the allowable variation types
 # –	check context always has a value and is either core/acquired
@@ -18,16 +20,16 @@ import re
 # –	check phenotype is either wildtype/nonwildtype
 # –	check clinical category is S/I/R
 # –	check there is a value in breakpoint, breakpoint standard, PMID and that these values aren’t ‘NA’ or ‘-‘
-# –	check evidence code has a value, and it is one or more of the allowable values
+# –	check evidence code has a value, and it is one or more of the suggested values. If it's a new ECO code, print that to console as we may want to add it to the list of suggested values/check it's a valid code.
 # –	if evidence limitations has a value, check it is one of the allowable values
 
 ##TODO:
-# - check accessions actually exist
-# - check variation type and mutation in combination, eg if its a gene presence detected, mutation should be '-', otherwise if it's dna it shoold be c. etc
+# - check accessions actually exist (aro, refseq, genbank, hmm)
+# - check variation type and mutation in combination, eg if its a gene presence detected, mutation should be '-', otherwise if it's dna it should be c. etc
 # drug or drug class must be approved value
 # list the unique values of breakpoint standards
 # logic for checking the breakpoints... MIC < or <= for sensitive, MIC > for resistant, disk zone > for sensitive, disk zone < for resistant
-# if ECO code isn't one in the list, then flag it and list it, so we know we should check if it's a valid code
+# check that certain columns have only a single value, not multiple (eg mutation)
 # is it possible to download allowable values directly from a google sheet in google drive?
 # summarise at the end which checks have failures
 # Kara has some example rules that I can test on
@@ -112,7 +114,7 @@ def check_organism(organism_list):
     for index, value in enumerate(organism_list):
         if index not in invalid_indices and not value.startswith("s__"):
             invalid_indices.append(index)
-            print(f"Organism must start with s__ to denote species. Invalid name at {index + 1}: {value}")
+            #print(f"Organism must start with s__ to denote species. Invalid name at {index + 1}: {value}")
     # now check that all values start with s__, skip any invalid indices
     for index, value in enumerate(organism_list):
         if index not in invalid_indices:
@@ -185,18 +187,40 @@ def check_id_accessions(nodeID_list, refseq_list, genbank_list, hmm_list):
         for index in invalid_indices:
             print(f"Row {index + 1}")
 
-def check_aro(aro_list):
+def check_aro(aro_list, aro_obo_file):
     
     print("\nChecking ARO accession column...")
 
+    # grab all the ARO accessions from the ARO ontology
+    # Load the OBO file
+    aro_obo = obonet.read_obo(aro_obo_file)
+
+    # Extract all ARO terms
+    aro_terms = [node for node in aro_obo.nodes if node.startswith('ARO:')]
+
     # value is invalid if doesn't start with ARO or isn't '-'
-    invalid_indices = [index for index, value in enumerate(aro_list) if value == '' or value != '-' and not value.startswith("ARO")]
+    # need to expand this as well to check if the ARO accessions in the list are actually ones that exist in the CARD ontology.
+    invalid_indices = []
+    for index, value in enumerate(aro_list):
+        # a dash is fine
+        if value == '-':
+            continue
+        # if the value is an accession, check it
+        if value.startswith("ARO:"):
+            if value not in aro_terms:
+                invalid_indices.append(index)
+        # the cell can't be empty, if it's empty it must be '-' (checked above)
+        elif value == '' or value == 'NA':
+            invalid_indices.append(index)
+        # if it's anything else then it's invalid
+        else:
+            invalid_indices.append(index)
 
     if not invalid_indices:
-        print("✅ All ARO accession values are valid")
+        print("✅ All ARO accession values are valid and exist in the CARD ontology")
     else:
         print(f"❌ {len(invalid_indices)} rows have failed the check")
-        print("ARO accession column must contain either '-' (if no ARO accession) or start with 'ARO:'")
+        print("ARO accession column must contain a valid ARO accession, and cannot be empty. The following rows contain invalid or empty accessions:")
         for index in invalid_indices:
             print(f"Row {index + 1}: {aro_list[index]}")
 
@@ -238,22 +262,29 @@ def check_evidence_code(evidence_code_list):
 
     # can be more than one of those values in this column, so need to split on the , separating them
     invalid_indices = []
+    invalid_codes = []
     for index, value in enumerate(evidence_code_list):
         if value == '' or value in ['NA', '-']:
             invalid_indices.append(index)
-            break
+            continue
         codes = [code.strip() for code in value.split(',')]
         for code in codes:
             if code not in allowable_values:
                 invalid_indices.append(index)
-                break
-    
+                # only add the code to the list if it's got an eco code prefix
+                if code.startswith("ECO:"):
+                    invalid_codes.append(code)
+
     if not invalid_indices:
         print("✅ All evidence codes are valid")
+    # otherwise we want to check if the ECO code still starts with "ECO:" but is a code that we haven't got in our suggested list
+    # users can have other ECO codes but we want to flag these for potential inclusion in the allowable values
     else:
-        print(f"❌ {len(invalid_indices)} rows have failed the check")
-        print("Evidence code column must contain one or more of the following values:\n" + ", ".join(allowable_values))
-        print("Please ensure all evidence codes match one of the allowable codes")
+        if invalid_codes:
+            unique_codes = set(invalid_codes)
+            print("The following evidence codes are new and not currently in the list of suggested values:")
+            print(f"{', '.join(unique_codes)}")
+        print(f"\n❌ {len(invalid_indices)} rows have failed the check. Each rule must have an evidence code and not be empty. Please check all evidence codes are ECO codes.")
         for index in invalid_indices:
             print(f"Row {index + 1}: {evidence_code_list[index]}")
 
@@ -301,7 +332,12 @@ def main():
         columns = reader.fieldnames
         draftrules = list(reader)
     
-    print(columns)
+    expected_columns = ["ruleID", "organism", "gene", "nodeID", "refseq accession", "GenBank accession", "HMM accession", "ARO accession", "mutation", "variation type", "context", "drug", "drug class", "phenotype", "clinical category", "breakpoint", "breakpoint standard", "PMID", "evidence code", "evidence grade", "evidence limitations"]
+    print("\nChecking that all required columns for spec v0.5 are present...")
+    for column in expected_columns:
+        if column not in columns:
+            print(f"❌ {column} column not found in file.")
+    print("\nContinuting to validate values in each column...")
 
     # grab the rule IDs and check
     if "ruleID" in columns:
@@ -335,7 +371,9 @@ def main():
         print("\n❌ Spec v0.5 requires all of nodeID, refseq accession, GenBank accession, and HMM accession columns to be present in order to validate. Continuing to validate other columns...")
 
     if "ARO accession" in columns:
-        check_aro(get_column("ARO accession", draftrules))
+        # TODO: Replace this with URL to obo file
+        aro_obo_file = 'card-ontology/aro.obo'
+        check_aro(get_column("ARO accession", draftrules), aro_obo_file)
     else:
         print("\n❌ No ARO accession column found in file. Spec v0.5 requires this column to be present. Continuing to validate other columns...")
 
@@ -355,6 +393,8 @@ def main():
     else:
         print("\n❌ No context column found in file. Spec v0.5 requires this column to be present. Continuing to validate other columns...")
 
+    # NOTE: we want child terms under ARO:1000003 (antibiotic molecule) to get our drugs and drug classes
+    # We will also need child terms under ARO:3000042 (beta-lactamase inhibitor) to get our inhibitor classes and names
     if "drug" in columns and "drug class" in columns:
         check_drug_drugclass(get_column("drug", draftrules), get_column("drug class", draftrules))
     else:
