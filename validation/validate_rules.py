@@ -11,26 +11,25 @@ import obonet
 # –	does organism always have a value
 # –	does gene always have a value
 # - if the gene value specifies a combo rule, are all those rule IDs present in the file?
-# –	check that one of nodeID/refseq accession/GenBank accession/HMM accession are entered
+# –	check that one of nodeID/refseq accession/GenBank accession/HMM accession are entered, checks these are valid accessions in latest refSeq and HMM catalogues
 # –	check ARO accession is either ‘-‘ or a value starting with ARO:, if starts with ARO:, checks it's a valid accession using latest CARD ontology
 # –	check mutation always has a value
 # –	check variation type always has a value, and it is one of the allowable variation types
+# - check variation type and mutation are compatible
 # –	check context always has a value and is either core/acquired
 # –	check that one of drug/drug class always has a value that isn’t ‘-‘
 # –	check phenotype is either wildtype/nonwildtype
 # –	check clinical category is S/I/R
 # –	check there is a value in breakpoint, breakpoint standard, PMID and that these values aren’t ‘NA’ or ‘-‘
+# - check clincal category and breakpoint are compatible
 # –	check evidence code has a value, and it is one or more of the suggested values. If it's a new ECO code, print that to console as we may want to add it to the list of suggested values/check it's a valid code.
 # –	if evidence limitations has a value, check it is one of the allowable values
 
 ##TODO:
-# - check variation type and mutation in combination, eg if its a gene presence detected, mutation should be '-', otherwise if it's dna it should be c. etc
 # drug or drug class must be approved value
-# logic for checking the breakpoints... MIC < or <= for sensitive, MIC > for resistant, disk zone > for sensitive, disk zone < for resistant
 # check that certain columns have only a single value, not multiple (eg mutation)
 # is it possible to download allowable values directly from a google sheet in google drive?
 # summarise at the end which checks have failures
-# Kara has some example rules that I can test on
 
 def parse_args():
     parser = ArgumentParser.ArgumentParser(description="Perform auto validation of AMRrules file")
@@ -77,11 +76,13 @@ def check_if_allowed_value(value_list, col_name, allowable_values):
 
     if not invalid_indices:
         print("✅ All " + col_name + " values are valid")
+        return True
     else:
         print(f"❌ {len(invalid_indices)} rows have failed the check")
         print(col_name + " column must contain one of the following values:\n" + ", ".join(allowable_values))
         for index in invalid_indices:
             print(f"Row {index + 1}: {value_list[index]}")
+        return False
 
 def check_if_not_missing(value_list, col_name, list_unique=False):
 
@@ -99,6 +100,11 @@ def check_if_not_missing(value_list, col_name, list_unique=False):
     if list_unique:
         unique_values = set(value_list)
         print(f"\nUnique {col_name} values: {', '.join(map(str, unique_values))}")
+    # now return check value
+    if not invalid_indices:
+        return True
+    else:
+        return False
 
 def check_ruleIDs(id_list):
     
@@ -128,9 +134,11 @@ def check_ruleIDs(id_list):
         for index in invalid_indices:
             print(f"Row {index + 1}: {id_list[index]}")
         print(f"Multiple rule ID prefixes: " + ", ".join(prefix_options))
-
-    # return this for later   
-    return(prefix_options)
+    
+    if not invalid_indices:
+        return True
+    else:
+        return False
 
 def check_organism(organism_list):
     
@@ -160,6 +168,11 @@ def check_organism(organism_list):
     unique_organisms = set(organism_list)
     unique_organisms_str = ', '.join(map(str, unique_organisms))
     print(f"\nUnique organism names: {unique_organisms_str}")
+
+    if not invalid_indices:
+        return True
+    else:
+        return False
 
 def check_gene(gene_list, rule_list):
     
@@ -198,6 +211,11 @@ def check_gene(gene_list, rule_list):
         print(f"❌ {len(invalid_indices_dict)} rows have failed the check")
         for index, rule_id in invalid_indices_dict.items():
             print(f"Row {index}: ruleID {rule_id} is not present in the list of rules")
+    
+    if not invalid_indices and not invalid_indices_dict:
+        return True
+    else:
+        return False
 
 def check_id_accessions(nodeID_list, refseq_list, genbank_list, hmm_list, refseq_file, refseq_nodes, hmm_file):
     
@@ -287,6 +305,11 @@ def check_id_accessions(nodeID_list, refseq_list, genbank_list, hmm_list, refseq
     else:
         print("✅ All accessions are present in the relevant catalogues.")
 
+    if not invalid_indices and not invalid_node and not invalid_refseq and not invalid_gb and not invalid_hmm:
+        return True
+    else:
+        return False
+
 def check_aro(aro_list, aro_terms):
     
     print("\nChecking ARO accession column...")
@@ -311,11 +334,13 @@ def check_aro(aro_list, aro_terms):
 
     if not invalid_indices:
         print("✅ All ARO accession values are valid and exist in the CARD ontology")
+        return True
     else:
         print(f"❌ {len(invalid_indices)} rows have failed the check")
         print("ARO accession column must contain a valid ARO accession, and cannot be empty. The following rows contain invalid or empty accessions:")
         for index in invalid_indices:
             print(f"Row {index + 1}: {aro_list[index]}")
+        return False
 
 def check_mutation(mutation_list):
     
@@ -326,11 +351,13 @@ def check_mutation(mutation_list):
 
     if not invalid_indices:
         print("✅ All mutation values are valid")
+        return True
     else:
         print(f"❌ {len(invalid_indices)} rows have failed the check")
         print("Mutation column must contain either a value or '-' if no mutation required.")
         for index in invalid_indices:
             print(f"Row {index + 1}: {mutation_list[index]}")
+        return False
 
 def check_mutation_variation(mutation_list, variation_list):
     
@@ -362,10 +389,12 @@ def check_mutation_variation(mutation_list, variation_list):
 
     if not invalid_indices_dict:
         print("✅ All mutation and variation type values are compatible")
+        return True
     else:
         print(f"❌ {len(invalid_indices_dict)} rows have failed the check")
         for index, reason in invalid_indices_dict.items():
             print(f"Row {index}: {reason}")
+        return False
 
 def check_drug_drugclass(drug_list, drug_class_list):
    
@@ -376,11 +405,37 @@ def check_drug_drugclass(drug_list, drug_class_list):
     
     if not invalid_indices:
         print("✅ All drug and drug class values are valid")
+        return True
     else:
         print(f"❌ {len(invalid_indices)} rows have failed the check")
         print("One of drug or drug class must contain a value that is not NA or '-'")
         for index in invalid_indices:
             print(f"Row {index + 1}")
+        return False
+
+def check_sir_breakpoint(clinical_category_list, breakpoint_list):
+    
+    print("\nChecking clinical category and breakpoint columns...")
+
+    invalid_indices_dict = {}
+
+    for index, (category, breakpoint) in enumerate(zip(clinical_category_list, breakpoint_list)):
+        reason = None
+        if category == 'S' and not any(breakpoint.startswith(prefix) for prefix in ['MIC <', 'MIC <=', 'disk >']):
+            reason = "If clinical category is 'S', breakpoint should contain a value of 'MIC <', 'MIC <=', or 'disk >'"
+        if category == 'R' and not any(breakpoint.startswith(prefix) for prefix in ['MIC >', 'MIC >=', 'disk <']):
+            reason = "If clinical category is 'R', breakpoint should contain a value of 'MIC >', 'MIC >=', or 'disk <'"
+        if reason:
+            invalid_indices_dict[index + 1] = reason
+
+    if not invalid_indices_dict:
+        print("✅ All clinical category and breakpoint values are concordant")
+        return True
+    else:
+        print(f"❌ {len(invalid_indices_dict)} rows have failed the check")
+        for index, reason in invalid_indices_dict.items():
+            print(f"Row {index}: {reason}")
+        return False
 
 def check_evidence_code(evidence_code_list):
     
@@ -405,6 +460,7 @@ def check_evidence_code(evidence_code_list):
 
     if not invalid_indices:
         print("✅ All evidence codes are valid")
+        return True
     # otherwise we want to check if the ECO code still starts with "ECO:" but is a code that we haven't got in our suggested list
     # users can have other ECO codes but we want to flag these for potential inclusion in the allowable values
     else:
@@ -415,6 +471,7 @@ def check_evidence_code(evidence_code_list):
         print(f"\n❌ {len(invalid_indices)} rows have failed the check. Each rule must have an evidence code and not be empty. Please check all evidence codes are ECO codes.")
         for index in invalid_indices:
             print(f"Row {index + 1}: {evidence_code_list[index]}")
+        return False
 
 def check_evidence_grade_limitations(evidence_grade_list, evidence_limitations_list):
 
@@ -449,9 +506,17 @@ def check_evidence_grade_limitations(evidence_grade_list, evidence_limitations_l
             print("If evidence grade is 'moderate' or 'weak', evidence limitations column must contain one of the following values: " + ", ".join(allowable_limitations))
             for index in invalid_indices_limitations:
                 print(f"Row {index + 1}: {evidence_limitations_list[index]}")
+    
+    if not invalid_indices_grades and not invalid_indices_limitations:
+        return True
+    else:
+        return False
 
 def main():
     args = parse_args()
+
+    # set up dict to capture which checks pass or fail
+    summary_checks = {}
 
     # read in the draft rules
     print(f"\nValidating rules file: {args.rules}")
@@ -475,24 +540,28 @@ def main():
     # grab the rule IDs and check
     if "ruleID" in columns:
         rule_ids = get_column("ruleID", draftrules)
-        check_ruleIDs(rule_ids)
+        summary_checks["ruleID"] = check_ruleIDs(rule_ids)
     else:
         print("\n❌ No ruleID column found in file. Spec v0.5 requires this column to be present. Continuing to validate other columns...")
         rule_ids = None
+        summary_checks["ruleID"] = False
 
     # check that the value in organism is always present (can't be blank, '-' or NA, must start with s__)
     if "organism" in columns:
-        check_organism(get_column("organism", draftrules))
+        summary_checks["organism"] = check_organism(get_column("organism", draftrules))
     else:
         print("\n❌ No organism column found in file. Spec v0.5 requires this column to be present. Continuing to validate other columns...")
+        summary_checks["organism"] = False
 
     # check that gene always has a value, and that this value is not '-' or NA or missing, as it should always be some kind of string
     if "gene" in columns and "ruleID" in columns:
-        check_gene(get_column("gene", draftrules), rule_ids)
+        summary_checks["gene"] = check_gene(get_column("gene", draftrules), rule_ids)
     if "gene" in columns and not "ruleID" in columns:
         print("\n❌ No ruleID column found in file. Spec v0.5 requires this column to be present, and cannot validate gene without it. Continuing to validate other columns...")
+        summary_checks["gene"] = False
     else:
         print("\n❌ No gene column found in file. Spec v0.5 requires this column to be present. Continuing to validate other columns...")
+        summary_checks["gene"] = False
 
     # check that for columns nodeID, refseq accession, GenBank accession, and HMM accession, at least one of these columns has a value
     # TODO: Automate downloads of relevant files from AMRFP ftp server?
@@ -501,86 +570,119 @@ def main():
         refseq_file = 'refgenes_2024-12-18.1.tsv'
         hmm_file = 'hmms_amrfp_2024-12-18.1.tsv'
         refseq_nodes_file = 'ReferenceGeneHierarchy_2024-12-18.1.txt'
-        check_id_accessions(get_column("nodeID", draftrules), get_column("refseq accession", draftrules), get_column("GenBank accession", draftrules), get_column("HMM accession", draftrules), refseq_file, refseq_nodes_file, hmm_file)
+        summary_checks["gene accessions"] = check_id_accessions(get_column("nodeID", draftrules), get_column("refseq accession", draftrules), get_column("GenBank accession", draftrules), get_column("HMM accession", draftrules), refseq_file, refseq_nodes_file, hmm_file)
     else:
         for column in ["nodeID", "refseq accession", "GenBank accession", "HMM accession"]:
             if column not in columns:
                 print(f"\n❌ {column} column not found in file.")
         print("\n❌ Spec v0.5 requires all of nodeID, refseq accession, GenBank accession, and HMM accession columns to be present in order to validate. Continuing to validate other columns...")
+        summary_checks["gene accessions"] = False
 
     if "ARO accession" in columns:
-        check_aro(get_column("ARO accession", draftrules), aro_terms)
+        summary_checks["ARO accession"] = check_aro(get_column("ARO accession", draftrules), aro_terms)
     else:
         print("\n❌ No ARO accession column found in file. Spec v0.5 requires this column to be present. Continuing to validate other columns...")
+        summary_checks["ARO accession"] = False
     
     if "mutation" in columns:
-        check_mutation(get_column("mutation", draftrules))
+        summary_checks["mutation"] = check_mutation(get_column("mutation", draftrules))
     else:
         print("\n❌ No mutation column found in file. Spec v0.5 requires this column to be present. Continuing to validate other columns...")
+        summary_checks["mutation"] = False
     
     if "variation type" in columns:
         variation_allowed_types = ["Gene presence detected", "Protein variant detected", "Nucleotide variant detected", "Promoter variant detected", "Inactivating mutation detected", "Gene copy number variant detected", "Nucleotide variant detected in multi-copy gene", "Low frequency variant detected", "Combination"]
-        check_if_allowed_value(get_column("variation type", draftrules), "variation type", variation_allowed_types)
+        summary_checks["variation type"] = check_if_allowed_value(get_column("variation type", draftrules), "variation type", variation_allowed_types)
     else:
         print("\n❌ No variation type column found in file. Spec v0.5 requires this column to be present. Continuing to validate other columns...")
+        summary_checks["variation type"] = False
 
     # check mutation and variation type are compatible
     # if variation type is gene presence detected, mutation should be '-', otherwise if it's dna it should be c. etc
     if "variation type" in columns and "mutation" in columns:
-        check_mutation_variation(get_column("mutation", draftrules), get_column("variation type", draftrules))
+        summary_checks["variation type mutation concordance"] = check_mutation_variation(get_column("mutation", draftrules), get_column("variation type", draftrules))
+    else:
+        summary_checks["variation type mutation concordance"] = False
 
     if "context" in columns:
-        check_if_allowed_value(get_column("context", draftrules), "context", ["core", "acquired"])
+        summary_checks["context"] = check_if_allowed_value(get_column("context", draftrules), "context", ["core", "acquired"])
     else:
         print("\n❌ No context column found in file. Spec v0.5 requires this column to be present. Continuing to validate other columns...")
+        summary_checks["context"] = False
 
     # NOTE: we want child terms under ARO:1000003 (antibiotic molecule) to get our drugs and drug classes
     # We will also need child terms under ARO:3000042 (beta-lactamase inhibitor) to get our inhibitor classes and names
     if "drug" in columns and "drug class" in columns:
-        check_drug_drugclass(get_column("drug", draftrules), get_column("drug class", draftrules))
+        summary_checks["drug and drug class"] = check_drug_drugclass(get_column("drug", draftrules), get_column("drug class", draftrules))
     else:
         for column in ["drug", "drug class"]:
             if column not in columns:
                 print(f"\n❌ {column} column not found in file.")
         print("\n❌ Spec v0.5 requires at least both drug and drug class columns to be present in order to validate. Continuing to validate other columns...")
+        summary_checks["drug and drug class"] = False
 
     if "phenotype" in columns:
-        check_if_allowed_value(get_column("phenotype", draftrules), "phenotype", ["wildtype", "nonwildtype"])
+        summary_checks["phenotype"] = check_if_allowed_value(get_column("phenotype", draftrules), "phenotype", ["wildtype", "nonwildtype"])
     else:
         print("\n❌ No phenotype column found in file. Spec v0.5 requires this column to be present. Continuing to validate other columns...")
+        summary_checks["phenotype"] = False
 
     if "clinical category" in columns:
-        check_if_allowed_value(get_column("clinical category", draftrules), "clinical category", ["S", "I", "R"])
+        summary_checks["clinical category"] = check_if_allowed_value(get_column("clinical category", draftrules), "clinical category", ["S", "I", "R"])
     else:
         print("\n❌ No clinical category column found in file. Spec v0.5 requires this column to be present. Continuing to validate other columns...")
+        summary_checks["clinical category"] = False
 
     if "breakpoint" in columns:
-        check_if_not_missing(get_column("breakpoint", draftrules), "breakpoint")
+        summary_checks["breakpoint"] = check_if_not_missing(get_column("breakpoint", draftrules), "breakpoint")
     else:
         print("\n❌ No breakpoint column found in file. Spec v0.5 requires this column to be present. Continuing to validate other columns...")
+        summary_checks["breakpoint"] = False
+
+    # check clinical category in combination with breakpoint
+    if "clinical category" in columns and "breakpoint" in columns:
+        summary_checks["clinical category and breakpoint concordance"] = check_sir_breakpoint(get_column("clinical category", draftrules), get_column("breakpoint", draftrules))
+    else:
+        summary_checks["clinical category and breakpoint concordance"] = False
 
     if "breakpoint standard" in columns:
-        check_if_not_missing(get_column("breakpoint standard", draftrules), "breakpoint standard", list_unique=True)
+        summary_checks["breakpoint standard"] = check_if_not_missing(get_column("breakpoint standard", draftrules), "breakpoint standard", list_unique=True)
     else:
         print("\n❌ No breakpoint standard column found in file. Spec v0.5 requires this column to be present. Continuing to validate other columns...")
+        summary_checks["breakpoint standard"] = False
 
     if "PMID" in columns:
-        check_if_not_missing(get_column("PMID", draftrules), "PMID")
+        summary_checks["PMID"] = check_if_not_missing(get_column("PMID", draftrules), "PMID")
     else:
         print("\n❌ No PMID column found in file. Spec v0.5 requires this column to be present. Continuing to validate other columns...")
+        summary_checks["PMID"] = False
 
     if "evidence code" in columns:
-        check_evidence_code(get_column("evidence code", draftrules))
+        summary_checks["evidence code"] = check_evidence_code(get_column("evidence code", draftrules))
     else:
         print("\n❌ No evidence code column found in file. Spec v0.5 requires this column to be present. Continuing to validate other columns...")
+        summary_checks["evidence code"] = False
 
     if "evidence grade" in columns and "evidence limitations" in columns:
-        check_evidence_grade_limitations(get_column("evidence grade", draftrules), get_column("evidence limitations", draftrules))
+        summary_checks["evidence grade and limitations"] = check_evidence_grade_limitations(get_column("evidence grade", draftrules), get_column("evidence limitations", draftrules))
     else:
         for column in ["evidence grade", "evidence limitations"]:
             if column not in columns:
                 print(f"\n❌ {column} column not found in file.")
         print("\n❌ Both evidence grade and limitations columns required for spec v0.5.")
+        summary_checks["evidence grade and limitations"] = False
+
+    # Print summary of checks
+    passed_checks = [check for check, status in summary_checks.items() if status]
+    failed_checks = [check for check, status in summary_checks.items() if not status]
+
+    print("\nSummary of checks:")
+    print(f"✅ Passed: {len(passed_checks)}")
+    for check in passed_checks:
+        print(f" - {check}")
+    print(f"❌ Failed: {len(failed_checks)}")
+    for check in failed_checks:
+        print(f"  - {check}")
 
 if __name__ == "__main__":
     main()
