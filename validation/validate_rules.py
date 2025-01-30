@@ -24,10 +24,8 @@ import obonet
 # –	if evidence limitations has a value, check it is one of the allowable values
 
 ##TODO:
-# - check accessions actually exist (aro, refseq, genbank, hmm)
 # - check variation type and mutation in combination, eg if its a gene presence detected, mutation should be '-', otherwise if it's dna it should be c. etc
 # drug or drug class must be approved value
-# list the unique values of breakpoint standards
 # logic for checking the breakpoints... MIC < or <= for sensitive, MIC > for resistant, disk zone > for sensitive, disk zone < for resistant
 # check that certain columns have only a single value, not multiple (eg mutation)
 # is it possible to download allowable values directly from a google sheet in google drive?
@@ -44,6 +42,33 @@ def parse_args():
 def get_column(column_name, draftrules):
         return [row[column_name] for row in draftrules if column_name in row]
 
+def parse_obo_file(obo_file):
+    # Load the OBO file
+    aro_obo = obonet.read_obo(obo_file)
+
+    # Extract all ARO terms
+    aro_terms = [node for node in aro_obo.nodes if node.startswith('ARO:')]
+
+    # extract all drug names
+    #drug_names = get_child_terms(aro_obo, 'ARO:1000003')
+    #inhibitor_names = get_child_terms(aro_obo, 'ARO:3000042')
+
+    #all_drug_names = drug_names + inhibitor_names
+
+    #return aro_terms, all_drug_names
+    return aro_terms
+
+# TODO: Function to get all child terms of a parent term in OBO file - slow and not working properly
+def get_child_terms(graph, parent_term):
+    child_terms = set()
+    for child, parent in graph.edges():
+        if parent == parent_term and 'is_a' in graph[child]:
+            # Check if the child term has no other relationships
+            if all(rel == 'is_a' for rel in graph[child]):
+                child_terms.add(child)
+                child_terms.update(get_child_terms(graph, child))
+    return child_terms
+
 def check_if_allowed_value(value_list, col_name, allowable_values):
 
     print("\nChecking  " + col_name + " column...")
@@ -58,7 +83,7 @@ def check_if_allowed_value(value_list, col_name, allowable_values):
         for index in invalid_indices:
             print(f"Row {index + 1}: {value_list[index]}")
 
-def check_if_not_missing(value_list, col_name):
+def check_if_not_missing(value_list, col_name, list_unique=False):
 
     print("\nChecking  " + col_name + " column...")
 
@@ -71,6 +96,9 @@ def check_if_not_missing(value_list, col_name):
         print(col_name + " column must contain a value that is not NA or '-'")
         for index in invalid_indices:
             print(f"Row {index + 1}: {value_list[index]}")
+    if list_unique:
+        unique_values = set(value_list)
+        print(f"\nUnique {col_name} values: {', '.join(map(str, unique_values))}")
 
 def check_ruleIDs(id_list):
     
@@ -259,16 +287,9 @@ def check_id_accessions(nodeID_list, refseq_list, genbank_list, hmm_list, refseq
     else:
         print("✅ All accessions are present in the relevant catalogues.")
 
-def check_aro(aro_list, aro_obo_file):
+def check_aro(aro_list, aro_terms):
     
     print("\nChecking ARO accession column...")
-
-    # grab all the ARO accessions from the ARO ontology
-    # Load the OBO file
-    aro_obo = obonet.read_obo(aro_obo_file)
-
-    # Extract all ARO terms
-    aro_terms = [node for node in aro_obo.nodes if node.startswith('ARO:')]
 
     # value is invalid if doesn't start with ARO or isn't '-'
     # need to expand this as well to check if the ARO accessions in the list are actually ones that exist in the CARD ontology.
@@ -310,6 +331,41 @@ def check_mutation(mutation_list):
         print("Mutation column must contain either a value or '-' if no mutation required.")
         for index in invalid_indices:
             print(f"Row {index + 1}: {mutation_list[index]}")
+
+def check_mutation_variation(mutation_list, variation_list):
+    
+    # check that the mutation and variation type are compatible
+    print("\nChecking mutation and variation type columns are compatible...")
+
+    invalid_indices_dict = {}
+
+    for index, (mutation, variation) in enumerate(zip(mutation_list, variation_list)):
+        reason = None
+        if variation == "Gene presence detected" and mutation != '-':
+            reason = "Mutation must be '-' if variation type is 'Gene presence detected'"
+        if variation != "Gene presence detected" and mutation == '-':
+            reason = "Mutation must not be '-' if variation type is not 'Gene presence detected'"
+        if variation == "Nucleotide variant detected" and not mutation.startswith("c."):
+            reason = "Mutation must start with 'c.' if variation type is 'Nucleotide variant detected'"
+        if variation == "Protein variant detected" and not mutation.startswith("p."):
+            reason = "Mutation must start with 'p.' if variation type is 'Protein variant detected'"
+        if variation == "Promoter variant detected" and not re.match(r"^c\.\[-?|\(-?|-", mutation):
+            reason = "Mutation must start with 'c.-', 'c.(-', or 'c.[-' if variation type is 'Promoter variant detected'. The - symbol indicates the position before the start of the gene where the mutation occurs."
+        if variation == "Nucleotide variant detected in multi-copy gene" and not mutation.startswith("c."):
+            reason = "Mutation must start with 'c.' if variation type is 'Nucleotide variant detected in multi-copy gene'"
+        if variation == "Gene copy number variant detected" and not re.match(r"^c\.\[\d+\]", mutation):
+            reason = "Mutation must be in the format 'c.[X]' where X is any number if variation type is 'Gene copy number variant detected'"
+        if variation == "Low frequency variant detected" and not re.match(r"^(c\.|p\.)", mutation):
+            reason = "Mutation must start with either 'c.' (for nucleotide variant) or 'p.' (protein variant) if variation type is 'Low frequency variant detected'"
+        if reason:
+            invalid_indices_dict[index + 1] = reason
+
+    if not invalid_indices_dict:
+        print("✅ All mutation and variation type values are compatible")
+    else:
+        print(f"❌ {len(invalid_indices_dict)} rows have failed the check")
+        for index, reason in invalid_indices_dict.items():
+            print(f"Row {index}: {reason}")
 
 def check_drug_drugclass(drug_list, drug_class_list):
    
@@ -403,6 +459,11 @@ def main():
         reader = csv.DictReader(csvfile, delimiter='\t')
         columns = reader.fieldnames
         draftrules = list(reader)
+
+    # parse the ARO ontology file to get all ARO accessions, drugs and drug classes
+    # TODO: Replace this with URL to obo file
+    aro_obo_file = 'card-ontology/aro.obo'
+    aro_terms = parse_obo_file(aro_obo_file)
     
     expected_columns = ["ruleID", "organism", "gene", "nodeID", "refseq accession", "GenBank accession", "HMM accession", "ARO accession", "mutation", "variation type", "context", "drug", "drug class", "phenotype", "clinical category", "breakpoint", "breakpoint standard", "PMID", "evidence code", "evidence grade", "evidence limitations"]
     print("\nChecking that all required columns for spec v0.5 are present...")
@@ -435,6 +496,7 @@ def main():
 
     # check that for columns nodeID, refseq accession, GenBank accession, and HMM accession, at least one of these columns has a value
     # TODO: Automate downloads of relevant files from AMRFP ftp server?
+    # TODO: print what version of the AMRFP database we're checking in case things are removed and no longer present
     if "nodeID" in columns and "refseq accession" in columns and "GenBank accession" in columns and "HMM accession" in columns:
         refseq_file = 'refgenes_2024-12-18.1.tsv'
         hmm_file = 'hmms_amrfp_2024-12-18.1.tsv'
@@ -447,12 +509,10 @@ def main():
         print("\n❌ Spec v0.5 requires all of nodeID, refseq accession, GenBank accession, and HMM accession columns to be present in order to validate. Continuing to validate other columns...")
 
     if "ARO accession" in columns:
-        # TODO: Replace this with URL to obo file
-        aro_obo_file = 'card-ontology/aro.obo'
-        check_aro(get_column("ARO accession", draftrules), aro_obo_file)
+        check_aro(get_column("ARO accession", draftrules), aro_terms)
     else:
         print("\n❌ No ARO accession column found in file. Spec v0.5 requires this column to be present. Continuing to validate other columns...")
-
+    
     if "mutation" in columns:
         check_mutation(get_column("mutation", draftrules))
     else:
@@ -463,6 +523,11 @@ def main():
         check_if_allowed_value(get_column("variation type", draftrules), "variation type", variation_allowed_types)
     else:
         print("\n❌ No variation type column found in file. Spec v0.5 requires this column to be present. Continuing to validate other columns...")
+
+    # check mutation and variation type are compatible
+    # if variation type is gene presence detected, mutation should be '-', otherwise if it's dna it should be c. etc
+    if "variation type" in columns and "mutation" in columns:
+        check_mutation_variation(get_column("mutation", draftrules), get_column("variation type", draftrules))
 
     if "context" in columns:
         check_if_allowed_value(get_column("context", draftrules), "context", ["core", "acquired"])
@@ -495,7 +560,7 @@ def main():
         print("\n❌ No breakpoint column found in file. Spec v0.5 requires this column to be present. Continuing to validate other columns...")
 
     if "breakpoint standard" in columns:
-        check_if_not_missing(get_column("breakpoint standard", draftrules), "breakpoint standard")
+        check_if_not_missing(get_column("breakpoint standard", draftrules), "breakpoint standard", list_unique=True)
     else:
         print("\n❌ No breakpoint standard column found in file. Spec v0.5 requires this column to be present. Continuing to validate other columns...")
 
