@@ -65,7 +65,7 @@ Results will be printed to stdout. The script will list each each and provide an
 * *organism*: checks that all values start with `s__`. Will print all unique organism names to stdout out
 * *gene*: checks all rows have a value that is not 'NA' or '-'
 * *combinatorial rules*: if the gene column contains a combinatorial rule, checks that all ruleIDs are already defined in the rules file
-* *nodeID, refseq accession, GenBank accession, HMM accession*: checks that each row contains a value in at least one of these columns. If accessions are present, compares to the current versions of those catalogues to ensure the accessions exist
+* *nodeID, refseq accession, GenBank accession, HMM accession*: checks that each row contains a value in at least one of these columns. If accessions are present, compares to the current versions of those catalogues to ensure the accessions exist. Note that for `refseq accession` and `GenBank accession`, the validation script is only comparing to accessions listed in the AMRFinderPlus ReferenceGeneHierarchy. Therefore it will flag accessions that aren't present in the AMRFinderPlus table, but do in fact exist in the NCBI databases.
 * *ARO accession*: checks the value starts with `ARO:` and that the accession is a valid ARO accession according to the latest CARD ontology
 * *mutation*: checks that the row isn't empty or NA for this column (must be '-' if no mutation needs to be specified)
 * *variation type*: checks the value is one of the allowable values according to the spec
@@ -75,7 +75,7 @@ Results will be printed to stdout. The script will list each each and provide an
 * *phenotype*: checks that the value is either `wildtype` or `nonwildtype`, cannot be empty, NA, or `-`
 * *clinical category*: checks that the value is either `S`, `I`, or `R`
 * *breakpoint*: checks that there is a value that isn't empty, NA, or `-`
-* *clinical category and breakpoint*: checks if clinical category is `S`, then breakpoint must start with `MIC <`, `MIC <=` or `disk >`. Reverse is applicable for clinical category of `R`
+* *clinical category and breakpoint*: checks if clinical category is `S`, then breakpoint must start with `MIC <`, `MIC <=` or `disk >`. Reverse is applicable for clinical category of `R`. `not applicable` is also a permitted value in breakpoint, if the rule is associated with an expected resistance.
 * *breakpoint standard*: checks the value isn't empty, NA, or `-`. Will print all unique values in this column to stdout
 * *PMID*: checks the value isn't empty, NA, or `-`, must contain a PMID
 * *evidence code*: checks that the value is one of the current suggested ECO codes. If it isn't, will print a list of new ECO codes. Value cannot be NA, `-` or empty. If multiple evidence codes are present, they must be separated by a `,`. All evidence codes must start with `ECO:`
