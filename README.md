@@ -50,7 +50,7 @@ We are keen to partner with other allied organisations and initiatives, please [
 
 ### Automatic validation of rules
 
-`validate_rules.py`, found in the `validation` folder, is a simple python script that will quickly perform a number of automatic checks on draft rulesets, to quickly identify typos or invalid entries.
+`validate_rules.py`, found in the `validation` folder, is a simple python script that will perform a number of automatic checks on draft rulesets, to quickly identify typos or invalid entries.
 
 In order to run this code, your rules file needs to be in **tab-delimited format**. Ensure that the first row in the file lists the column names, as per the [latest version of the specification](https://docs.google.com/spreadsheets/d/1F-J-_8Kyo3W0Oh6eDYyd0N8ahqVwiddM2112-Fg1gKc/edit?usp=sharing). The validation script will notify you if it is unable to find the columns it's expecting, and skip those columns when performing the automatic checks.
 
