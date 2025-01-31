@@ -4,14 +4,18 @@
 
 In order to run this code, your rules file needs to be in **tab-delimited format**. Ensure that the first row in the file lists the column names, as per the [latest version of the specification](https://docs.google.com/spreadsheets/d/1F-J-_8Kyo3W0Oh6eDYyd0N8ahqVwiddM2112-Fg1gKc/edit?usp=sharing). The validation script will notify you if it is unable to find the columns it's expecting, and skip those columns when performing the automatic checks.
 
-To use, download this GitHub repository. Navigate to the `validation` folder, and run:
-```
-./validate_rules.py /path/to/your/rules_file.txt
-```
-
 The script uses the OBOnet package, this can be installed via pip, by running:
 ```
 pip install obonet
+```
+
+To use the script, clone this GitHub repository, then navigate to the `validation` folder, and run the script:
+```
+git clone https://github.com/interpretAMR/AMRrulesCuration
+
+cd AMRrulesCuration/validation
+
+./validate_rules.py /path/to/your/rules_file.txt
 ```
 
 **Note that the script MUST be run from within its home directory (AMRrulesCuration/validation) as it depends on other files present in this location.**
