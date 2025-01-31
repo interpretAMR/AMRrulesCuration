@@ -83,7 +83,7 @@ def check_if_allowed_value(value_list, col_name, allowable_values):
         print(f"❌ {len(invalid_indices)} rows have failed the check")
         print(col_name + " column must contain one of the following values:\n" + ", ".join(allowable_values))
         for index in invalid_indices:
-            print(f"Row {index + 1}: {value_list[index]}")
+            print(f"Row {index + 2}: {value_list[index]}")
         return False
 
 def check_if_not_missing(value_list, col_name, list_unique=False):
@@ -98,7 +98,7 @@ def check_if_not_missing(value_list, col_name, list_unique=False):
         print(f"❌ {len(invalid_indices)} rows have failed the check")
         print(col_name + " column must contain a value that is not NA or '-'")
         for index in invalid_indices:
-            print(f"Row {index + 1}: {value_list[index]}")
+            print(f"Row {index + 2}: {value_list[index]}")
     if list_unique:
         unique_values = set(value_list)
         print(f"\nUnique {col_name} values: {', '.join(map(str, unique_values))}")
@@ -134,7 +134,7 @@ def check_ruleIDs(id_list):
     else:
         print(f"{len(invalid_indices)} rows have failed the check. Rule IDs must be unique and have the same prefix.")
         for index in invalid_indices:
-            print(f"Row {index + 1}: {id_list[index]}")
+            print(f"Row {index + 2}: {id_list[index]}")
         print(f"Multiple rule ID prefixes: " + ", ".join(prefix_options))
     
     if not invalid_indices:
@@ -165,7 +165,7 @@ def check_organism(organism_list):
         print(f"❌ {len(invalid_indices)} rows have failed the check")
         print("Organism names must be present, not 'NA' or '-', and start with 's__'")
         for index in invalid_indices:
-            print(f"Row {index + 1}: {organism_list[index]}")
+            print(f"Row {index + 2}: {organism_list[index]}")
     
     unique_organisms = set(organism_list)
     unique_organisms_str = ', '.join(map(str, unique_organisms))
@@ -189,7 +189,7 @@ def check_gene(gene_list, rule_list):
         print(f"❌ {len(invalid_indices)} rows have failed the check")
         print("Gene names must be present, not 'NA' or '-'")
         for index in invalid_indices:
-            print(f"Row {index + 1}: {gene_list[index]}")
+            print(f"Row {index + 2}: {gene_list[index]}")
 
     # now we want to check for gene names that are actually combo rules - if there are any, we want to check that any rule IDs mentioned here are present in the file already
     # if there is a value in gene list that follows the format of three capital letters followed by a string of four numbers, this is one to compare against rule ids
@@ -246,6 +246,8 @@ def check_id_accessions(nodeID_list, refseq_list, genbank_list, hmm_list, refseq
     for row in refseq_hierarchy:
         if "parent_node_id" in row:
             refseq_node_ids.append(row["parent_node_id"])
+        if "node_id" in row:
+            refseq_node_ids.append(row["node_id"])
     # remove any duplicates and empty strings
     refseq_node_ids = set(refseq_node_ids)
     refseq_node_ids = [value for value in refseq_node_ids if value != ""]
@@ -293,21 +295,21 @@ def check_id_accessions(nodeID_list, refseq_list, genbank_list, hmm_list, refseq
     else:
         print(f"❌ {len(invalid_indices)} rows have failed the check, and must contain at least one value in either nodeID, refseq accession, GenBank accession and HMM accession.")
         for index in invalid_indices:
-            print(f"Row {index + 1}")
+            print(f"Row {index + 2}")
     if invalid_node or invalid_refseq or invalid_gb or invalid_hmm:
-        print(f"❌ One or more accessions aren't present in either the NCBI Reference Gene Catalog (for nodeID, refseq accession and genbank accession) or the NCBI Reference HMM Catalog (for HMM accession).")
-        print("\nInvalid nodeID accessions:")
+        print(f"❌ One or more accessions aren't present in either the NCBI Reference Gene Catalog (for nodeID, refseq accession and genbank accession) or the NCBI Reference HMM Catalog (for HMM accession). Empty cells must be specified by '-'.")
+        print("\nInvalid nodeID accessions values:")
         for index in invalid_node:
-            print(f"Row {index + 1}: {nodeID_list[index]}")
-        print("\nInvalid refseq accessions:")
+            print(f"Row {index + 2}: {nodeID_list[index]}")
+        print("\nInvalid refseq accessions values:")
         for index in invalid_refseq:
-            print(f"Row {index + 1}: {refseq_list[index]}")
-        print("\nInvalid genbank accessions:")
+            print(f"Row {index + 2}: {refseq_list[index]}")
+        print("\nInvalid genbank accessions values:")
         for index in invalid_gb:
-            print(f"Row {index + 1}: {genbank_list[index]}")
-        print("\nInvalid HMM accessions:")
+            print(f"Row {index + 2}: {genbank_list[index]}")
+        print("\nInvalid HMM accessions values:")
         for index in invalid_hmm:
-            print(f"Row {index + 1}: {hmm_list[index]}")
+            print(f"Row {index + 2}: {hmm_list[index]}")
     else:
         print("✅ All accessions are present in the relevant catalogues.")
 
@@ -346,7 +348,7 @@ def check_aro(aro_list, aro_terms):
         print(f"❌ {len(invalid_indices)} rows have failed the check")
         print("ARO accession column must contain a valid ARO accession, and cannot be empty. The following rows contain invalid or empty accessions:")
         for index in invalid_indices:
-            print(f"Row {index + 1}: {aro_list[index]}")
+            print(f"Row {index + 2}: {aro_list[index]}")
         return False
 
 def check_mutation(mutation_list):
@@ -363,7 +365,7 @@ def check_mutation(mutation_list):
         print(f"❌ {len(invalid_indices)} rows have failed the check")
         print("Mutation column must contain either a value or '-' if no mutation required.")
         for index in invalid_indices:
-            print(f"Row {index + 1}: {mutation_list[index]}")
+            print(f"Row {index + 2}: {mutation_list[index]}")
         return False
 
 def check_mutation_variation(mutation_list, variation_list):
@@ -394,7 +396,7 @@ def check_mutation_variation(mutation_list, variation_list):
         if variation == "Low frequency variant detected" and not re.match(r"^(c\.|p\.)", mutation):
             reason = "Mutation must start with either 'c.' (for nucleotide variant) or 'p.' (protein variant) if variation type is 'Low frequency variant detected'"
         if reason:
-            invalid_indices_dict[index + 1] = reason
+            invalid_indices_dict[index + 2] = reason
 
     if not invalid_indices_dict:
         print("✅ All mutation and variation type values are compatible")
@@ -419,7 +421,7 @@ def check_drug_drugclass(drug_list, drug_class_list):
         print(f"❌ {len(invalid_indices)} rows have failed the check")
         print("One of drug or drug class must contain a value that is not NA or '-'")
         for index in invalid_indices:
-            print(f"Row {index + 1}")
+            print(f"Row {index + 2}")
         return False
 
 def check_sir_breakpoint(clinical_category_list, breakpoint_list):
@@ -437,7 +439,7 @@ def check_sir_breakpoint(clinical_category_list, breakpoint_list):
         if category == 'R' and not any(breakpoint.startswith(prefix) for prefix in ['MIC >', 'MIC >=', 'disk <']):
             reason = "If clinical category is 'R', breakpoint should contain a value of 'MIC >', 'MIC >=', or 'disk <'"
         if reason:
-            invalid_indices_dict[index + 1] = reason
+            invalid_indices_dict[index + 2] = reason
 
     if not invalid_indices_dict:
         print("✅ All clinical category and breakpoint values are concordant")
@@ -482,7 +484,7 @@ def check_evidence_code(evidence_code_list):
             print(f"{', '.join(unique_codes)}")
         print(f"\n❌ {len(invalid_indices)} rows have failed the check. Each rule must have an evidence code and not be empty. Please check all evidence codes are ECO codes.")
         for index in invalid_indices:
-            print(f"Row {index + 1}: {evidence_code_list[index]}")
+            print(f"Row {index + 2}: {evidence_code_list[index]}")
         return False
 
 def check_evidence_grade_limitations(evidence_grade_list, evidence_limitations_list):
@@ -515,11 +517,11 @@ def check_evidence_grade_limitations(evidence_grade_list, evidence_limitations_l
         if invalid_indices_grades:
             print("Evidence grade column must contain one of the following values:\n" + ", ".join(allowable_grades))
             for index in invalid_indices_grades:
-                print(f"Row {index + 1}: {evidence_grade_list[index]}")
+                print(f"Row {index + 2}: {evidence_grade_list[index]}")
         if invalid_indices_limitations:
             print("If evidence grade is 'moderate' or 'weak', evidence limitations column must contain one of the following values: " + ", ".join(allowable_limitations))
             for index in invalid_indices_limitations:
-                print(f"Row {index + 1}: {evidence_limitations_list[index]}")
+                print(f"Row {index + 2}: {evidence_limitations_list[index]}")
     
     if not invalid_indices_grades and not invalid_indices_limitations:
         return True
