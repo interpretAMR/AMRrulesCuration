@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 import argparse as ArgumentParser
 import csv
 import re
@@ -267,18 +269,22 @@ def check_id_accessions(nodeID_list, refseq_list, genbank_list, hmm_list, refseq
     # store the output so we can easily print what rows and columns are the issues
     invalid_node = []
     for index, value in enumerate(nodeID_list):
+        value = value.strip()
         if index not in invalid_indices and value not in refseq_node_ids and value != '-':
             invalid_node.append(index)
     invalid_refseq = []
     for index, value in enumerate(refseq_list):
+        value = value.strip()
         if index not in invalid_indices and value not in refseq_accessions and value != '-':
             invalid_refseq.append(index)
     invalid_gb = []
     for index, value in enumerate(genbank_list):
+        value = value.strip()
         if index not in invalid_indices and value not in genbank_accessions and value != '-':
             invalid_gb.append(index)
     invalid_hmm = []
     for index, value in enumerate(hmm_list):
+        value = value.strip()
         if index not in invalid_indices and value not in hmm_accessions and value != '-':
             invalid_hmm.append(index)
     
@@ -318,6 +324,7 @@ def check_aro(aro_list, aro_terms):
     # need to expand this as well to check if the ARO accessions in the list are actually ones that exist in the CARD ontology.
     invalid_indices = []
     for index, value in enumerate(aro_list):
+        value = value.strip()
         # a dash is fine
         if value == '-':
             continue
@@ -347,7 +354,7 @@ def check_mutation(mutation_list):
     print("\nChecking mutation column...")
     
     # check that there is either a value or '-' in this column
-    invalid_indices = [index for index, value in enumerate(mutation_list) if value == '']
+    invalid_indices = [index for index, value in enumerate(mutation_list) if value.strip() == '']
 
     if not invalid_indices:
         print("✅ All mutation values are valid")
@@ -368,6 +375,8 @@ def check_mutation_variation(mutation_list, variation_list):
 
     for index, (mutation, variation) in enumerate(zip(mutation_list, variation_list)):
         reason = None
+        mutation = mutation.strip()
+        variation = variation.strip()
         if variation == "Gene presence detected" and mutation != '-':
             reason = "Mutation must be '-' if variation type is 'Gene presence detected'"
         if variation != "Gene presence detected" and mutation == '-':
@@ -401,7 +410,7 @@ def check_drug_drugclass(drug_list, drug_class_list):
     print("\nChecking drug and drug class columns...")
     
     # one of these columns must have a value in it
-    invalid_indices = [index for index, values in enumerate(zip(drug_list, drug_class_list)) if all(value == '' or value in ['NA', '-'] for value in values)]
+    invalid_indices = [index for index, values in enumerate(zip(drug_list, drug_class_list)) if all(value.strip() == '' or value.strip() in ['NA', '-'] for value in values)]
     
     if not invalid_indices:
         print("✅ All drug and drug class values are valid")
@@ -421,6 +430,8 @@ def check_sir_breakpoint(clinical_category_list, breakpoint_list):
 
     for index, (category, breakpoint) in enumerate(zip(clinical_category_list, breakpoint_list)):
         reason = None
+        category = category.strip()
+        breakpoint = breakpoint.strip()
         if category == 'S' and not any(breakpoint.startswith(prefix) for prefix in ['MIC <', 'MIC <=', 'disk >']):
             reason = "If clinical category is 'S', breakpoint should contain a value of 'MIC <', 'MIC <=', or 'disk >'"
         if category == 'R' and not any(breakpoint.startswith(prefix) for prefix in ['MIC >', 'MIC >=', 'disk <']):
@@ -447,6 +458,7 @@ def check_evidence_code(evidence_code_list):
     invalid_indices = []
     invalid_codes = []
     for index, value in enumerate(evidence_code_list):
+        value = value.strip()
         if value == '' or value in ['NA', '-']:
             invalid_indices.append(index)
             continue
@@ -484,6 +496,8 @@ def check_evidence_grade_limitations(evidence_grade_list, evidence_limitations_l
     invalid_indices_limitations = []
 
     for index, (grade, limitations) in enumerate(zip(evidence_grade_list, evidence_limitations_list)):
+        grade = grade.strip()
+        limitations = limitations.strip()
         if grade not in allowable_grades:
             invalid_indices_grades.append(index)
             #print(f"Invalid evidence grade at row {index + 1}: {grade}")
@@ -522,7 +536,7 @@ def main():
     print(f"\nValidating rules file: {args.rules}")
     with open(args.rules, newline='') as csvfile:
         reader = csv.DictReader(csvfile, delimiter='\t')
-        columns = reader.fieldnames
+        columns = [col.strip() for col in reader.fieldnames]
         draftrules = list(reader)
 
     # parse the ARO ontology file to get all ARO accessions, drugs and drug classes
