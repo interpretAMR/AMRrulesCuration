@@ -78,7 +78,7 @@ Results will be printed to stdout. The script will list each each and provide an
 * *clinical category and breakpoint*: checks if clinical category is `S`, then breakpoint must start with `MIC <`, `MIC <=` or `disk >`. Reverse is applicable for clinical category of `R`
 * *breakpoint standard*: checks the value isn't empty, NA, or `-`. Will print all unique values in this column to stdout
 * *PMID*: checks the value isn't empty, NA, or `-`, must contain a PMID
-* *evidence code*: checks that the value is one of the current suggested ECO codes. If it isn't, will print a list of new ECO codes. Value cannot be NA, `-` or empty.
+* *evidence code*: checks that the value is one of the current suggested ECO codes. If it isn't, will print a list of new ECO codes. Value cannot be NA, `-` or empty. If multiple evidence codes are present, they must be separated by a `,`. All evidence codes must start with `ECO:`
 * *evidence grade and limitations*: checks that evidence grade has a value, cannot be NA, `-` or empty. Evidence grade must be either `strong`, `moderate`, or `weak`. If `moderate` or `weak`, then evidence limitations must be filled in with one of the allowable values as per the specification
 
 ## Member List (by subgroup)
