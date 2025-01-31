@@ -9,6 +9,11 @@ To use, download this GitHub repository. Navigate to the `validation` folder, an
 ./validate_rules.py /path/to/your/rules_file.txt
 ```
 
+The script uses the OBOnet package, this can be installed via pip, by running:
+```
+pip install obonet
+```
+
 **Note that the script MUST be run from within its home directory (AMRrulesCuration/validation) as it depends on other files present in this location.**
 
 Results will be printed to stdout. The script will list each each and provide an explanation for why particular rows have failed the check. The final summary lists the checks that have been passed or failed.
