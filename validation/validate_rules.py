@@ -72,7 +72,7 @@ def check_if_allowed_value(value_list, col_name, allowable_values):
 
     print("\nChecking  " + col_name + " column...")
 
-    invalid_indices = [index for index, value in enumerate(value_list) if value == '' or value in ['NA', '-'] or value not in allowable_values]
+    invalid_indices = [index for index, value in enumerate(value_list) if value.strip() == '' or value.strip() in ['NA', '-'] or value.strip() not in allowable_values]
 
     if not invalid_indices:
         print("✅ All " + col_name + " values are valid")
@@ -88,7 +88,7 @@ def check_if_not_missing(value_list, col_name, list_unique=False):
 
     print("\nChecking  " + col_name + " column...")
 
-    invalid_indices = [index for index, value in enumerate(value_list) if value == '' or value in ['NA', '-']]
+    invalid_indices = [index for index, value in enumerate(value_list) if value.strip() == '' or value.strip() in ['NA', '-']]
 
     if not invalid_indices:
         print("✅ All " + col_name + " values are valid")
@@ -556,7 +556,7 @@ def main():
     # check that gene always has a value, and that this value is not '-' or NA or missing, as it should always be some kind of string
     if "gene" in columns and "ruleID" in columns:
         summary_checks["gene"] = check_gene(get_column("gene", draftrules), rule_ids)
-    if "gene" in columns and not "ruleID" in columns:
+    elif "gene" in columns and not "ruleID" in columns:
         print("\n❌ No ruleID column found in file. Spec v0.5 requires this column to be present, and cannot validate gene without it. Continuing to validate other columns...")
         summary_checks["gene"] = False
     else:
