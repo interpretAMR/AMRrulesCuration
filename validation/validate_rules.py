@@ -545,7 +545,15 @@ def main():
     with open(args.rules, newline='') as csvfile:
         reader = csv.DictReader(csvfile, delimiter='\t')
         columns = [col.strip() for col in reader.fieldnames]
-        draftrules = list(reader)
+        #draftrules = list(reader)
+        # Filter out rows where all values are empty
+        draftrules = [row for row in reader if any(value.strip() for value in row.values())]
+
+        # Remove the second row if the first column contains "required". Note this is index 0
+        # because we're using the DictReader which reads the first row as the header
+        if len(draftrules) > 1 and draftrules[0][columns[0]].strip().lower() == "required":
+            print("\nRemoving second row as it contains the 'required' and 'optional' call-outs for columns.")
+            del draftrules[0]
 
     # parse the ARO ontology file to get all ARO accessions, drugs and drug classes
     # TODO: Replace this with URL to obo file
