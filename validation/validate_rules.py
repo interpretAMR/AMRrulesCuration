@@ -346,7 +346,7 @@ def check_aro(aro_list, aro_terms):
         return True
     else:
         print(f"❌ {len(invalid_indices)} rows have failed the check")
-        print("ARO accession column must contain a valid ARO accession, and cannot be empty. The following rows contain invalid or empty accessions:")
+        print("ARO accession column must contain a valid ARO accession, starting with 'ARO:', and cannot be empty. The following rows contain invalid or empty accessions:")
         for index in invalid_indices:
             print(f"Row {index + 2}: {aro_list[index]}")
         return False
