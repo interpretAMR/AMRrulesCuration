@@ -503,9 +503,15 @@ def check_evidence_grade_limitations(evidence_grade_list, evidence_limitations_l
         if grade not in allowable_grades:
             invalid_indices_grades.append(index)
             #print(f"Invalid evidence grade at row {index + 1}: {grade}")
-        elif grade in ["moderate", "weak"] and (limitations == '' or limitations == '-' or limitations not in allowable_limitations):
-            invalid_indices_limitations.append(index)
-            #print(f"Evidence grade {grade} at row {index + 1} requires valid limitations: {limitations}")
+        
+        if grade in ["moderate", "weak"]:
+            if limitations == '' or limitations == '-':
+                invalid_indices_limitations.append(index)
+            else:
+                # Split limitations by comma and check each one
+                limitation_values = [lim.strip() for lim in limitations.split(',')]
+                if not all(lim in allowable_limitations for lim in limitation_values):
+                    invalid_indices_limitations.append(index)
 
     if not invalid_indices_grades:
         print("✅ All evidence grades are valid")
