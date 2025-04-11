@@ -1,0 +1,168 @@
+
+Validating rules file: /Users/ipmbkhot/Library/CloudStorage/GoogleDrive-drkatholt@gmail.com/My Drive/OrgSpecAMR/AMR rules/CurationWG/drafts/Pseudomonas/Pseudomonas_aeruginosa_v0.1.txt
+
+Checking that all required columns for spec v0.5 are present...
+
+Continuting to validate values in each column...
+
+Checking ruleID column...
+All rule IDs have passed auto validation
+✅ All values are valid
+Rule prefix: PSA
+
+Checking organism column...
+✅ All organism names passed auto validation
+
+Unique organism names: s__Pseudomonas aeruginosa
+
+Checking gene column...
+✅ All gene values are valid
+
+Now checking for combinatorial rules in gene column...
+✅ All gene combinatorial rule IDs are valid
+
+Checking nodeID, refseq accession, GenBank accession and HMM accession columns...
+✅ All rows contain at least one value in one of these columns.
+❌ One or more accessions aren't present in either the NCBI Reference Gene Catalog (for nodeID, refseq accession and genbank accession) or the NCBI Reference HMM Catalog (for HMM accession). Empty cells must be specified by '-'.
+
+Invalid nodeID accessions values:
+
+Invalid refseq accessions values:
+Row 19: WP_003084633.1
+Row 20: WP_003084633.1
+Row 21: WP_003084633.1
+Row 22: WP_003084633.1
+Row 23: WP_003084633.1
+Row 24: WP_003084633.1
+Row 60: WP_003084633.1
+Row 61: WP_003084633.1
+Row 62: WP_003084633.1
+Row 63: WP_003084633.1
+Row 64: WP_003084633.1
+Row 65: WP_003084633.1
+Row 66: WP_003084633.1
+Row 67: WP_003084633.1
+Row 68: WP_003084633.1
+Row 69: WP_003084633.1
+Row 70: WP_003084633.1
+Row 93: WP_003084633.1
+
+Invalid genbank accessions values:
+Row 13: AAA74437.1
+Row 14: AAA74437.1
+Row 15: AAA74437.1
+Row 16: AAA74437.1
+Row 17: AAA74437.1
+Row 18: AAA74437.1
+Row 19: AAG03816.1
+Row 20: AAG03816.1
+Row 21: AAG03816.1
+Row 22: AAG03816.1
+Row 23: AAG03816.1
+Row 24: AAG03816.1
+Row 25: BAA34300.1
+Row 30: AAG05882.1
+Row 31: AAG05883.1
+Row 49: AAA74437.1
+Row 50: AAA74437.1
+Row 51: AAA74437.1
+Row 52: AAA74437.1
+Row 53: AAA74437.1
+Row 54: AAA74437.1
+Row 55: AAA74437.1
+Row 56: AAA74437.1
+Row 57: AAA74437.1
+Row 58: AAA74437.1
+Row 59: AAA74437.1
+Row 60: AAG03816.1
+Row 61: AAG03816.1
+Row 62: AAG03816.1
+Row 63: AAG03816.1
+Row 64: AAG03816.1
+Row 65: AAG03816.1
+Row 66: AAG03816.1
+Row 67: AAG03816.1
+Row 68: AAG03816.1
+Row 69: AAG03816.1
+Row 70: AAG03816.1
+Row 74: BAA34300.1
+Row 75: BAA34300.1
+Row 76: BAA34300.1
+Row 77: BAA34300.1
+Row 84: AAG05882.1
+Row 85: AAG05882.1
+Row 86: AAG05883.1
+Row 87: AAG05883.1
+Row 92: AAA74437.1
+Row 93: AAG03816.1
+Row 95: BAA34300.1
+Row 96: BAA34300.1
+
+Invalid HMM accessions values:
+
+Checking ARO accession column...
+✅ All ARO accession values are valid and exist in the CARD ontology
+
+Checking mutation column...
+✅ All mutation values are valid
+
+Checking  variation type column...
+✅ All variation type values are valid
+
+Checking mutation and variation type columns are compatible...
+✅ All mutation and variation type values are compatible
+
+Checking  context column...
+✅ All context values are valid
+
+Checking drug and drug class columns...
+✅ All drug and drug class values are valid
+
+Checking  phenotype column...
+✅ All phenotype values are valid
+
+Checking  clinical category column...
+✅ All clinical category values are valid
+
+Checking  breakpoint column...
+✅ All breakpoint values are valid
+
+Checking clinical category and breakpoint columns...
+✅ All clinical category and breakpoint values are concordant
+
+Checking  breakpoint standard column...
+✅ All breakpoint standard values are valid
+
+Unique breakpoint standard values: EUCAST v14.0 (2024), ECOFF (January 2024), Expected resistant phenotypes v1.2 (13 January, 2023)
+
+Checking  PMID column...
+✅ All PMID values are valid
+
+Checking evidence code column...
+✅ All evidence codes are valid
+
+Checking evidence grade and limitations columns...
+✅ All evidence grades are valid
+✅ All evidence limitations are valid
+
+Summary of checks:
+✅ Passed: 17
+ - ruleID
+ - organism
+ - gene
+ - ARO accession
+ - mutation
+ - variation type
+ - variation type mutation concordance
+ - context
+ - drug and drug class
+ - phenotype
+ - clinical category
+ - breakpoint
+ - clinical category and breakpoint concordance
+ - breakpoint standard
+ - PMID
+ - evidence code
+ - evidence grade and limitations
+❌ Failed: 1
+  - gene accessions

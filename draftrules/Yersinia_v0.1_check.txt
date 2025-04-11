@@ -1,0 +1,204 @@
+
+Validating rules file: /Users/ipmbkhot/Library/CloudStorage/GoogleDrive-drkatholt@gmail.com/My Drive/OrgSpecAMR/AMR rules/CurationWG/drafts/Yersinia/Yersinia_v0.1.txt
+
+Checking that all required columns for spec v0.5 are present...
+
+Continuting to validate values in each column...
+
+Checking ruleID column...
+All rule IDs have passed auto validation
+✅ All values are valid
+Rule prefix: YER
+
+Checking organism column...
+✅ All organism names passed auto validation
+
+Unique organism names: s__Yersinia enterocolitica, s__Yersinia pseudotuberculosis
+
+Checking gene column...
+✅ All gene values are valid
+
+Now checking for combinatorial rules in gene column...
+✅ All gene combinatorial rule IDs are valid
+
+Checking nodeID, refseq accession, GenBank accession and HMM accession columns...
+✅ All rows contain at least one value in one of these columns.
+❌ One or more accessions aren't present in either the NCBI Reference Gene Catalog (for nodeID, refseq accession and genbank accession) or the NCBI Reference HMM Catalog (for HMM accession). Empty cells must be specified by '-'.
+
+Invalid nodeID accessions values:
+
+Invalid refseq accessions values:
+Row 21: WP_013650157.1
+Row 22: WP_013650157.1
+Row 23: WP_013650157.1
+Row 24: WP_013650157.1
+Row 25: WP_013650157.1
+Row 26: WP_013650157.1
+Row 27: WP_013650157.1
+Row 28: WP_013650157.1
+Row 29: WP_013650157.1
+Row 45: AAR25033.1
+Row 46: AAR25033.1
+
+Invalid genbank accessions values:
+Row 4: CBY26916.1
+Row 52: CAD57192.1
+Row 53: AAL75563.1
+
+Invalid HMM accessions values:
+
+Checking ARO accession column...
+❌ 2 rows have failed the check
+ARO accession column must contain a valid ARO accession, starting with 'ARO:', and cannot be empty. The following rows contain invalid or empty accessions:
+Row 17: ARO: 39292
+Row 34: ARO: 3000413
+
+Checking mutation column...
+✅ All mutation values are valid
+
+Checking  variation type column...
+✅ All variation type values are valid
+
+Checking mutation and variation type columns are compatible...
+✅ All mutation and variation type values are compatible
+
+Checking  context column...
+✅ All context values are valid
+
+Checking drug and drug class columns...
+✅ All drug and drug class values are valid
+
+Checking  phenotype column...
+✅ All phenotype values are valid
+
+Checking  clinical category column...
+✅ All clinical category values are valid
+
+Checking  breakpoint column...
+✅ All breakpoint values are valid
+
+Checking clinical category and breakpoint columns...
+❌ 18 rows have failed the check
+Row 2: If clinical category is 'R', breakpoint should contain a value of 'MIC >', 'MIC >=', or 'disk <'. 'not applicable' is an allowed value if no breakpoint is available due to expected resistances.
+Row 3: If clinical category is 'R', breakpoint should contain a value of 'MIC >', 'MIC >=', or 'disk <'. 'not applicable' is an allowed value if no breakpoint is available due to expected resistances.
+Row 5: If clinical category is 'R', breakpoint should contain a value of 'MIC >', 'MIC >=', or 'disk <'. 'not applicable' is an allowed value if no breakpoint is available due to expected resistances.
+Row 6: If clinical category is 'R', breakpoint should contain a value of 'MIC >', 'MIC >=', or 'disk <'. 'not applicable' is an allowed value if no breakpoint is available due to expected resistances.
+Row 7: If clinical category is 'R', breakpoint should contain a value of 'MIC >', 'MIC >=', or 'disk <'. 'not applicable' is an allowed value if no breakpoint is available due to expected resistances.
+Row 10: If clinical category is 'S', breakpoint should contain a value of 'MIC <', 'MIC <=', or 'disk >'. 'not applicable' is an allowed value if no breakpoint is available due to expected resistances.
+Row 20: If clinical category is 'R', breakpoint should contain a value of 'MIC >', 'MIC >=', or 'disk <'. 'not applicable' is an allowed value if no breakpoint is available due to expected resistances.
+Row 31: If clinical category is 'R', breakpoint should contain a value of 'MIC >', 'MIC >=', or 'disk <'. 'not applicable' is an allowed value if no breakpoint is available due to expected resistances.
+Row 32: If clinical category is 'R', breakpoint should contain a value of 'MIC >', 'MIC >=', or 'disk <'. 'not applicable' is an allowed value if no breakpoint is available due to expected resistances.
+Row 33: If clinical category is 'R', breakpoint should contain a value of 'MIC >', 'MIC >=', or 'disk <'. 'not applicable' is an allowed value if no breakpoint is available due to expected resistances.
+Row 34: If clinical category is 'R', breakpoint should contain a value of 'MIC >', 'MIC >=', or 'disk <'. 'not applicable' is an allowed value if no breakpoint is available due to expected resistances.
+Row 40: If clinical category is 'R', breakpoint should contain a value of 'MIC >', 'MIC >=', or 'disk <'. 'not applicable' is an allowed value if no breakpoint is available due to expected resistances.
+Row 41: If clinical category is 'R', breakpoint should contain a value of 'MIC >', 'MIC >=', or 'disk <'. 'not applicable' is an allowed value if no breakpoint is available due to expected resistances.
+Row 42: If clinical category is 'R', breakpoint should contain a value of 'MIC >', 'MIC >=', or 'disk <'. 'not applicable' is an allowed value if no breakpoint is available due to expected resistances.
+Row 43: If clinical category is 'R', breakpoint should contain a value of 'MIC >', 'MIC >=', or 'disk <'. 'not applicable' is an allowed value if no breakpoint is available due to expected resistances.
+Row 46: If clinical category is 'R', breakpoint should contain a value of 'MIC >', 'MIC >=', or 'disk <'. 'not applicable' is an allowed value if no breakpoint is available due to expected resistances.
+Row 50: If clinical category is 'R', breakpoint should contain a value of 'MIC >', 'MIC >=', or 'disk <'. 'not applicable' is an allowed value if no breakpoint is available due to expected resistances.
+Row 51: If clinical category is 'R', breakpoint should contain a value of 'MIC >', 'MIC >=', or 'disk <'. 'not applicable' is an allowed value if no breakpoint is available due to expected resistances.
+
+Checking  breakpoint standard column...
+✅ All breakpoint standard values are valid
+
+Unique breakpoint standard values: Expected resistant phenotypes v1.2 (13 January, 2023), EUCAST v14.0 (2024)
+
+Checking  PMID column...
+❌ 21 rows have failed the check
+PMID column must contain a value that is not NA or '-'
+Row 2: -
+Row 3: -
+Row 5: -
+Row 6: -
+Row 7: -
+Row 14: -
+Row 15: -
+Row 16: -
+Row 18: -
+Row 19: -
+Row 22: -
+Row 30: -
+Row 31: -
+Row 32: -
+Row 33: -
+Row 35: -
+Row 36: -
+Row 37: -
+Row 38: -
+Row 39: -
+Row 44: -
+
+Checking evidence code column...
+✅ All evidence codes are valid
+
+Checking evidence grade and limitations columns...
+✅ All evidence grades are valid
+❌ 45 rows have failed the check
+If evidence grade is 'moderate' or 'weak', evidence limitations column must contain one of the following values: lacks evidence for this species, lacks evidence for this genus, lacks evidence for this allele, lacks evidence of the degree to which MIC is affected, low clinical relevance, unknown clinical relevance, statistical geno/pheno evidence but no experimental evidence
+Row 2: 
+Row 3: 
+Row 5: 
+Row 6: 
+Row 7: 
+Row 14: 
+Row 15: 
+Row 16: 
+Row 17: 
+Row 18: 
+Row 19: 
+Row 20: 
+Row 21: 
+Row 22: 
+Row 23: 
+Row 24: 
+Row 25: 
+Row 26: 
+Row 27: 
+Row 28: 
+Row 29: 
+Row 30: 
+Row 31: 
+Row 32: 
+Row 33: 
+Row 34: 
+Row 35: 
+Row 36: 
+Row 37: 
+Row 38: 
+Row 39: 
+Row 40: 
+Row 41: 
+Row 42: 
+Row 43: 
+Row 44: 
+Row 45: 
+Row 46: 
+Row 47: 
+Row 48: 
+Row 49: 
+Row 50: 
+Row 51: 
+Row 52: 
+Row 53: 
+
+Summary of checks:
+✅ Passed: 13
+ - ruleID
+ - organism
+ - gene
+ - mutation
+ - variation type
+ - variation type mutation concordance
+ - context
+ - drug and drug class
+ - phenotype
+ - clinical category
+ - breakpoint
+ - breakpoint standard
+ - evidence code
+❌ Failed: 5
+  - gene accessions
+  - ARO accession
+  - clinical category and breakpoint concordance
+  - PMID
+  - evidence grade and limitations
