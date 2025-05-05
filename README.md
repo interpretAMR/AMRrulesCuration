@@ -20,7 +20,7 @@ The convenors of the ESGEM-AMR Working Group are Kat Holt (LSHTM), Natacha Couto
 
 A call for members was launched at the ESGEM General Meeting on April 29, 2024 and closed June 2. Over 120 applications were received and most of these have been invited to join organism-focused subgroups. The initial list of members is posted [below](#member-list-by-subgroup).
 
-Additional requests to join ESGEM-AMR will be considered later in the year, once the initial subgroups are up and running and it is clear where additional input would be beneficial. In the meantime you may register your interest and let us know what organism/s you have expertise in, using [this form](https://docs.google.com/forms/d/e/1FAIpQLSeH96VlioxLKarZOLMqD-f1fLnb9WYOHYz4tZ9NtQzpHrKyzw/viewform?usp=sf_link).
+Additional requests to join ESGEM-AMR will be considered in mid 2025, once an initial release has been made and it is clear where additional input would be beneficial. In the meantime you may register your interest and let us know what organism/s you have expertise in, using [this form](https://docs.google.com/forms/d/e/1FAIpQLSeH96VlioxLKarZOLMqD-f1fLnb9WYOHYz4tZ9NtQzpHrKyzw/viewform?usp=sf_link).
 
 ## Partners
 
@@ -32,6 +32,7 @@ We are keen to partner with other allied organisations and initiatives, please [
 
 * AMRrules Spec - v0.5 [[google sheet]](https://docs.google.com/spreadsheets/d/1F-J-_8Kyo3W0Oh6eDYyd0N8ahqVwiddM2112-Fg1gKc/edit?usp=sharing)
 * AMRrules Technical Guidance - v1.5 [[PDF]](https://github.com/interpretAMR/AMRrulesCuration/blob/main/ESGEM-AMR%20Technical%20Guidance.pdf)
+* AMRgen R package for analysing matched genotype/phenotype data [[AMRgen repo]](https://github.com/interpretAMR/AMRgen)
 * Code and tools for accessing public AMRfinderplus + AST data [[datacuration repo]](https://github.com/interpretAMR/datacuration)
 * GTDB taxonomy: [[browser]](https://gtdb.ecogenomic.org/) [[GTDBtk software]](https://github.com/Ecogenomics/GTDBTk)
 * CARD/Antimicrobial Resistance Ontology (ARO): [[browser]](https://card.mcmaster.ca/)
