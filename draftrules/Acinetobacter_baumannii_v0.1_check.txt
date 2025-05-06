@@ -1,4 +1,5 @@
-Validating rules file: Acinetobacter_baumannii_v0.1.txt
+
+Validating rules file: ../draftrules/Acinetobacter_baumannii_v0.1.txt
 
 Checking that all required columns for spec v0.5 are present...
 
@@ -59,7 +60,7 @@ Checking clinical category and breakpoint columns...
 Checking  breakpoint standard column...
 ✅ All breakpoint standard values are valid
 
-Unique breakpoint standard values: ECOFF (May 2025), EUCAST v15.0 (2025), EUCAST v14.0 (2024)
+Unique breakpoint standard values: EUCAST v14.0 (2024), ECOFF (May 2025), EUCAST v15.0 (2025)
 
 Checking  PMID column...
 ❌ 81 rows have failed the check
@@ -174,4 +175,3 @@ Summary of checks:
 ❌ Failed: 2
   - variation type mutation concordance
   - PMID
-
