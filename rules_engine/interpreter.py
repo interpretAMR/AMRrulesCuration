@@ -1,7 +1,12 @@
 import argparse
 import csv
 import urllib.request
-import io
+import io, re
+
+#TODO: probably put this sort of thing in a utils file that we import
+aa_conversion = {'G': 'Gly', 'A': 'Ala', 'S': 'Ser', 'P': 'Pro', 'T': 'Thr', 'C': 'Cys', 'V': 'Val', 'L': 'Leu', 'I': 'Ile', 
+                 'M': 'Met', 'N': 'Asn', 'Q': 'Gln', 'K': 'Lys', 'R': 'Arg', 'H': 'His', 'D': 'Asp', 'E': 'Glu', 'W': 'Trp', 
+                 'Y': 'Tyr', 'F': 'Phe', '*': 'STOP'}
 
 def parse_args():
     parser = argparse.ArgumentParser(description="Interpreter for AMRrules.")
@@ -38,33 +43,82 @@ def download_and_parse_reference_gene_hierarchy(url):
     return amrfp_nodes
 
 def parse_rules_file(rules_file, tool):
-    rules = {} # key: relevant ID for geno method, value: values for this rule
-    if tool == 'amrfp':
-        key_value = 'nodeID'
+    rules = []
+    #if tool == 'amrfp':
+    #    key_value = 'nodeID'
     with open(rules_file, 'r') as f:
         reader = csv.DictReader(f, delimiter='\t')
         for row in reader:
-            rules[row.get(key_value)] = row
+            rules.append(row)
     return rules
 
-def check_rules(hierarchy_id, rules, amrfp_nodes):
-    # check if the hierarchy ID is in the rules
-    if hierarchy_id in rules.keys():
-        # then we have a match, so we can extract the rule
-        rule = rules[hierarchy_id]
-        return rule   
-    else:
-        # no match, so we need to check the parent nodes
-        parent_node = amrfp_nodes.get(hierarchy_id)
-        while parent_node is not None and parent_node != 'AMR':
-            if parent_node in rules:
-                rule = rules[parent_node]
-                break
-            parent_node = amrfp_nodes.get(parent_node)
+def extract_mutation(row):
+    # deal with either header option from amrfp uggghhhh
+    gene_or_element_symbol = row.get('Gene symbol') or row.get('Element symbol')
+    # if we've got point mutations, we need to extract the actual mutation
+    # and convert it to the AMRrules syntax so we can identify the correct rule
+    gene_symbol, mutation = gene_or_element_symbol.rsplit("_", 1)
+
+    _, ref, pos, alt, _ = re.split(r"(\D+)(\d+)(\D+)", mutation)
+    # this means it is a protein mutation
+    if row.get('Method') in ["POINTX", "POINTP"]:
+        # convert the single letter AA code to the 3 letter code
+        ref = aa_conversion.get(ref)
+        alt = aa_conversion.get(alt)
+        return(f"p.{ref}{pos}{alt}", "Protein variant detected")
+    elif row.get('Method') == "POINTN":
+        # e.g., 23S_G2032T -> c.2032G>T
+        return(f"c.{pos}{ref}>{alt}", "Nucleotide variant detected")
+
+def check_rules(hierarchy_id, row, rules, amrfp_nodes):
+
+    # if the row is a point mutation, we need to extract that info and look only for those rules
+    if row.get('Element subtype') or row.get('Subtype') == "POINT":
+        amrrules_mutation, type = extract_mutation(row)
+    elif row.get('Element subtype') or row.get('Subtype') == "AMR":
+        amrrules_mutation = None
+        type = 'Gene presence detected'
+
+    # select rules that match our variation type
+    rules_to_check = []
+    for rule in rules:
+            if rule['variation type'] == type:
+                rules_to_check.append(rule)
+
+    if type == 'Gene presence detected':
+        # check if the hierarchy ID is in the rules, and extract the matching rules
+        matching_rules = [rule for rule in rules_to_check if rule.get('nodeID') == hierarchy_id]
+        if len(matching_rules) > 0:
+            return(matching_rules)
         else:
-            # no match found in parent nodes
+            # no match, so we need to check the parent nodes
+            parent_node = amrfp_nodes.get(hierarchy_id)
+            while parent_node is not None and parent_node != 'AMR':
+                matching_rules = [rule for rule in rules_to_check if rule.get('nodeID') == parent_node]
+                if len(matching_rules) > 0:
+                    return(matching_rules)
+                parent_node = amrfp_nodes.get(parent_node)
+            else:
+                # no match found in parent nodes
+                return None
+    elif type == "Protein variant detected":
+        # check if the hierarchy ID is in the rules, and extract the matching rules
+        matching_rules = []
+        for rule in rules_to_check:
+            if rule.get('nodeID') == hierarchy_id:
+                    matching_rules.append(rule)
+        # if we've got values in here, then we can check the mutations and extract the relevant rule
+        if len(matching_rules) > 0:
+            final_matching_rules = []
+            # now we need to check the mutation, extracting any matching rules
+            for rule in matching_rules:
+                if rule['mutation'] == amrrules_mutation:
+                    final_matching_rules.append(rule)
+            return final_matching_rules
+        # otherwise we had no matching rules for this mutation
+        else:
             return None
-        return rule
+
 
 def annotate_rule(row, rule, annot_opts):
     minimal_columns = ['ruleID', 'context', 'drug', 'drug class', 'phenotype', 'clinical category', 'evidence grade']
@@ -108,7 +162,7 @@ if __name__ == "__main__":
     # 1. hierarchyID exatch match to nodeID = extract rule and apply
     # 2. no exact match to hierarchyID, lookup parent ID (all the way to 'AMR' root) and check if there is an exact match with a parent nodeID
     # 3. otherwise no match so do not apply a rule
-    matched_hits = []
+    matched_hits = {} # key is the hierarchy ID, value is set of rules
     unmatched_hits = []
     output_rows = []
     with open(args.input, 'r') as f:
@@ -116,23 +170,27 @@ if __name__ == "__main__":
         # Check that the input file has the heirarchy column otherwise return an error and ask user to re-run
         if 'Hierarchy node' not in reader.fieldnames:
             raise ValueError("Input file does not contain 'Hierarchy node' column. Please re-run AMRFinderPlus with the --print_node option to ensure this column is in the output file.")
+        
+        row_count = 1
         for row in reader:
             hierarchy_id = row.get('Hierarchy node')
-            matched_rule = check_rules(hierarchy_id, rules, amrfp_nodes)
-            if matched_rule is not None:
+            # now check to see if it's AMR or POINT
+            matched_rules = check_rules(hierarchy_id, row, rules, amrfp_nodes)
+            if matched_rules is not None:
                 # annotate the row with the rule info, based on whether we're using minimal or full annotation
-                new_row = annotate_rule(row, matched_rule, args.annot_opts)
-                matched_hits.append(hierarchy_id)
+                #new_row = annotate_rule(row, matched_rule, args.annot_opts)
+                matched_hits[row_count] = matched_rules
             else:
-                new_row = annotate_rule(row, None, args.annot_opts)
+                #new_row = annotate_rule(row, None, args.annot_opts)
                 unmatched_hits.append(hierarchy_id)
-            output_rows.append(new_row)
+            row_count += 1
+            #output_rows.append(new_row)
     # write the output file
-    with open(args.output, 'w', newline='') as f:
-        writer = csv.DictWriter(f, fieldnames=reader.fieldnames + ['ruleID', 'context', 'drug', 'drug class', 'phenotype', 'clinical category', 'evidence grade'], delimiter='\t')
-        writer.writeheader()
-        writer.writerows(output_rows)
+    #with open(args.output, 'w', newline='') as f:
+    #    writer = csv.DictWriter(f, fieldnames=reader.fieldnames + ['ruleID', 'context', 'drug', 'drug class', 'phenotype', 'clinical category', 'evidence grade'], delimiter='\t')
+    #    writer.writeheader()
+    #    writer.writerows(output_rows)
     print(f"Matched {len(matched_hits)} hits and {len(unmatched_hits)} unmatched hits.")
-    print(f"Output written to {args.output}.")
+    #print(f"Output written to {args.output}.")
     
         
