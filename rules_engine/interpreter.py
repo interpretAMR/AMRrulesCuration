@@ -73,9 +73,9 @@ def extract_mutation(row):
 def check_rules(hierarchy_id, row, rules, amrfp_nodes):
 
     # if the row is a point mutation, we need to extract that info and look only for those rules
-    if row.get('Element subtype') or row.get('Subtype') == "POINT":
+    if row.get('Element subtype') == "POINT" or row.get('Subtype') == "POINT":
         amrrules_mutation, type = extract_mutation(row)
-    elif row.get('Element subtype') or row.get('Subtype') == "AMR":
+    elif row.get('Element subtype') == "AMR" or row.get('Subtype') == "AMR":
         amrrules_mutation = None
         type = 'Gene presence detected'
 
@@ -120,11 +120,11 @@ def check_rules(hierarchy_id, row, rules, amrfp_nodes):
             return None
 
 
-def annotate_rule(row, rule, annot_opts):
+def annotate_rule(row, rules, annot_opts):
     minimal_columns = ['ruleID', 'context', 'drug', 'drug class', 'phenotype', 'clinical category', 'evidence grade']
     full_columns = ['breakpoint', 'breakpoint standard', 'evidence code', 'evidence limitations', 'PMID', 'rule curation note']
 
-    if rule is None:
+    if rules is None:
         # if we didn't find a matching rule, then we need to add new columns for each of the options but using '-' as the value
         if annot_opts == 'minimal':
             for col in minimal_columns:
@@ -132,15 +132,30 @@ def annotate_rule(row, rule, annot_opts):
         elif annot_opts == 'full':
             for col in full_columns:
                 row[col] = '-'
-        return row
+        return [row]
+    # if we found multiple rules, we want to return each rule as its own row in the output file
+    if len(rules) > 1:
+        # we need to create a new row for each rule
+        output_rows = []
+        for rule in rules:
+            new_row = row.copy()
+            if annot_opts == 'minimal':
+                for col in minimal_columns:
+                    new_row[col] = rule.get(col)
+            elif annot_opts == 'full':
+                for col in full_columns:
+                    new_row[col] = rule.get(col)
+            output_rows.append(new_row)
+        return output_rows
+    # if we found a single rule, we want to annotate the row with the rule info
     else:
         if annot_opts == 'minimal':
             for col in minimal_columns:
-                row[col] = rule.get(col)
+                row[col] = rules[0].get(col)
         elif annot_opts == 'full':
             for col in full_columns:
-                row[col] = rule.get(col)
-        return row
+                row[col] = rules[0].get(col)
+        return [row]
 
 if __name__ == "__main__":
     args = parse_args()
@@ -178,19 +193,24 @@ if __name__ == "__main__":
             matched_rules = check_rules(hierarchy_id, row, rules, amrfp_nodes)
             if matched_rules is not None:
                 # annotate the row with the rule info, based on whether we're using minimal or full annotation
-                #new_row = annotate_rule(row, matched_rule, args.annot_opts)
+                new_rows = annotate_rule(row, matched_rules, args.annot_opts)
                 matched_hits[row_count] = matched_rules
             else:
-                #new_row = annotate_rule(row, None, args.annot_opts)
+                new_rows = annotate_rule(row, None, args.annot_opts)
                 unmatched_hits.append(hierarchy_id)
             row_count += 1
-            #output_rows.append(new_row)
+            #if len(new_rows) > 1:
+            #    for new_row in new_rows:
+            #        output_rows.append(new_row)
+            #else:
+            #    output_rows.append(new_rows)
+            output_rows.extend(new_rows)
     # write the output file
-    #with open(args.output, 'w', newline='') as f:
-    #    writer = csv.DictWriter(f, fieldnames=reader.fieldnames + ['ruleID', 'context', 'drug', 'drug class', 'phenotype', 'clinical category', 'evidence grade'], delimiter='\t')
-    #    writer.writeheader()
-    #    writer.writerows(output_rows)
+    with open(args.output, 'w', newline='') as f:
+        writer = csv.DictWriter(f, fieldnames=reader.fieldnames + ['ruleID', 'context', 'drug', 'drug class', 'phenotype', 'clinical category', 'evidence grade'], delimiter='\t')
+        writer.writeheader()
+        writer.writerows(output_rows)
     print(f"Matched {len(matched_hits)} hits and {len(unmatched_hits)} unmatched hits.")
-    #print(f"Output written to {args.output}.")
+    print(f"Output written to {args.output}.")
     
         
