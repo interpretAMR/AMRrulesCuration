@@ -1,0 +1,97 @@
+
+Validating rules file: ../draftrules/Campylobacter_jejuni_v0.1.txt
+
+Checking that all required columns for spec v0.5 are present...
+
+Continuting to validate values in each column...
+
+Checking ruleID column...
+All rule IDs have passed auto validation
+✅ All values are valid
+Rule prefix: CAM
+
+Checking organism column...
+✅ All organism names passed auto validation
+
+Unique organism names: s__Campylobacter jejuni
+
+Checking gene column...
+✅ All gene values are valid
+
+Now checking for combinatorial rules in gene column...
+✅ All gene combinatorial rule IDs are valid
+
+Checking nodeID, refseq accession, GenBank accession and HMM accession columns...
+✅ All rows contain at least one value in one of these columns.
+✅ All accessions are present in the relevant catalogues.
+
+Checking ARO accession column...
+✅ All ARO accession values are valid and exist in the CARD ontology
+
+Checking mutation column...
+✅ All mutation values are valid
+
+Checking  variation type column...
+✅ All variation type values are valid
+
+Checking mutation and variation type columns are compatible...
+❌ 1 rows have failed the check
+Row 56: Mutation must start with 'c.-', 'c.(-', or 'c.[-' if variation type is 'Promoter variant detected'. The - symbol indicates the position before the start of the gene where the mutation occurs.
+
+Checking  context column...
+✅ All context values are valid
+
+Checking drug and drug class columns...
+✅ All drug and drug class values are valid
+
+Checking  phenotype column...
+✅ All phenotype values are valid
+
+Checking  clinical category column...
+✅ All clinical category values are valid
+
+Checking  breakpoint column...
+✅ All breakpoint values are valid
+
+Checking clinical category and breakpoint columns...
+✅ All clinical category and breakpoint values are concordant
+
+Checking  breakpoint standard column...
+✅ All breakpoint standard values are valid
+
+Unique breakpoint standard values: EUCAST v15.0 (2025), ECOFF (May 2025)
+
+Checking  PMID column...
+❌ 2 rows have failed the check
+PMID column must contain a value that is not NA or '-'
+Row 18: -
+Row 33: -
+
+Checking evidence code column...
+✅ All evidence codes are valid
+
+Checking evidence grade and limitations columns...
+✅ All evidence grades are valid
+✅ All evidence limitations are valid
+
+Summary of checks:
+✅ Passed: 16
+ - ruleID
+ - organism
+ - gene
+ - gene accessions
+ - ARO accession
+ - mutation
+ - variation type
+ - context
+ - drug and drug class
+ - phenotype
+ - clinical category
+ - breakpoint
+ - clinical category and breakpoint concordance
+ - breakpoint standard
+ - evidence code
+ - evidence grade and limitations
+❌ Failed: 2
+  - variation type mutation concordance
+  - PMID
