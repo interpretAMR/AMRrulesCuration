@@ -105,7 +105,7 @@ def check_rules(row, rules, amrfp_nodes):
         if type == 'Gene presence detected':
             # just return these rules
             return matching_rules
-        elif type == 'Protein variant detected':
+        elif type == 'Protein variant detected' or type == 'Nucleotide variant detected':
             # only return rules with the appropriate mutation
             final_matching_rules = []
             # now we need to check the mutation, extracting any matching rules
@@ -128,7 +128,17 @@ def check_rules(row, rules, amrfp_nodes):
     # Okay so using the nodeID didn't work, so now we need to check the sequence accession
     matching_rules = [rule for rule in rules_to_check if rule.get('refseq accession') == seq_acc]
     if len(matching_rules) > 0:
-        return matching_rules
+        if type == 'Gene presence detected':
+            # just return these rules
+            return matching_rules
+        elif type == 'Protein variant detected' or type == 'Nucleotide variant detected':
+            # only return rules with the appropriate mutation
+            final_matching_rules = []
+            # now we need to check the mutation, extracting any matching rules
+            for rule in matching_rules:
+                if rule['mutation'] == amrrules_mutation:
+                    final_matching_rules.append(rule)
+            return final_matching_rules
 
     #TODO: HMM accession check
 
@@ -271,21 +281,23 @@ if __name__ == "__main__":
             # add the new rows to the output row list
             output_rows.extend(new_rows)
     
-    # write the output file
-    with open(args.output_prefix + '_interpreted.tsv', 'w', newline='') as f:
+    # write the output files
+    interpreted_output_file = os.path.join(args.output_dir, args.output_prefix + '_interpreted.tsv')
+    summary_output_file = os.path.join(args.output_dir, args.output_prefix + '_summary.tsv')
+    with open(interpreted_output_file, 'w', newline='') as f:
         writer = csv.DictWriter(f, fieldnames=reader.fieldnames + ['ruleID', 'context', 'drug', 'drug class', 'phenotype', 'clinical category', 'evidence grade'], delimiter='\t')
         writer.writeheader()
         writer.writerows(output_rows)
     print(f"{len(matched_hits)} hits matched a rule and {len(unmatched_hits)} hits did not match a rule.")
-    print(f"Output written to {args.output_prefix + '_annotated.tsv'}.")
+    print(f"Output written to {interpreted_output_file}.")
 
     summary_output = write_summary(output_rows)
 
-    with open(args.output_prefix + '_summary.tsv', 'w', newline='') as f:
+    with open(summary_output_file, 'w', newline='') as f:
         writer = csv.DictWriter(f, fieldnames=['drug_or_class', 'category', 'phenotype', 'markers', 'ruleIDs'], delimiter='\t')
         writer.writeheader()
         writer.writerows(summary_output)
-    print(f"Summary output written to {args.output_prefix + '_summary.tsv'}.")
+    print(f"Summary output written to {summary_output_file}.")
 
 
 
