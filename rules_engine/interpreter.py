@@ -14,11 +14,11 @@ def parse_args():
     parser.add_argument('--input', type=str, required=True, help='Path to the input file.')
     parser.add_argument('--output_prefix', type=str, required=True, help='Prefix name for the output files.')
     parser.add_argument('--output_dir', type=str, default=os.getcwd(), help='Directory to write the output files to. Default is current directory.')
-    parser.add_argument('--rules', '-r', type=str, required=True, help='Path to the rules file.')
+    parser.add_argument('--rules', '-r', type=str, required=True, help='Path to the rules file, in tab-delimited format.')
     #TODO: implement card and resfinder options, currently only amrfp is supported
     parser.add_argument('--amr_tool', '-t', type=str, default='amrfp', help='AMR tool used to detect genotypes: options are amrfp, card, resfinder. Currently only amrfp is supported.')
     parser.add_argument('--hamronized', '-H', action='store_true', help='Input file has been hamronized')
-    parser.add_argument('--amrfp_db_version', type=str, default='latest', help='Version of the AMRFP database used. Default is latest.')
+    parser.add_argument('--amrfp_db_version', type=str, default='latest', help='Version of the AMRFP database used. Default is latest. NOTE STILL TO BE IMPLEMENTED')
     parser.add_argument('--annot_opts', '-a', type=str, default='minimal', help='Annotation options: minimal (context, drug, phenotype, category, evidence grade), full (everything including breakpoints, standards, etc)')
     
     return parser.parse_args()
@@ -209,6 +209,7 @@ def write_summary(output_rows):
         if len(matching_rows) == 1:
             summarised['category'] = matching_rows[0].get('clinical category')
             summarised['phenotype'] = matching_rows[0].get('phenotype')
+            summarised['evidence grade'] = matching_rows[0].get('evidence grade')
             summarised['markers'] = matching_rows[0].get('Gene symbol') or matching_rows[0].get('Element symbol')
             summarised['ruleIDs'] = matching_rows[0].get('ruleID')
             summary_rows.append(summarised)
@@ -223,6 +224,10 @@ def write_summary(output_rows):
             # get the highest phenotype
             highest_phenotype = max(phenotypes, key=lambda x: ['-', 'wildtype', 'nonwildtype'].index(x))
             summarised['phenotype'] = highest_phenotype
+            # get the highest evidence grade
+            evidence_grades = [row.get('evidence grade') for row in matching_rows]
+            highest_evidence_grade = max(evidence_grades, key=lambda x: ['-', 'weak', 'moderate', 'strong'].index(x))
+            summarised['evidence grade'] = highest_evidence_grade
             # combine all the markers into a single string
             markers = []
             for row in matching_rows:
@@ -294,7 +299,7 @@ if __name__ == "__main__":
     summary_output = write_summary(output_rows)
 
     with open(summary_output_file, 'w', newline='') as f:
-        writer = csv.DictWriter(f, fieldnames=['drug_or_class', 'category', 'phenotype', 'markers', 'ruleIDs'], delimiter='\t')
+        writer = csv.DictWriter(f, fieldnames=['drug_or_class', 'category', 'phenotype', 'evidence grade', 'markers', 'ruleIDs'], delimiter='\t')
         writer.writeheader()
         writer.writerows(summary_output)
     print(f"Summary output written to {summary_output_file}.")
