@@ -10,7 +10,7 @@ import obonet
 # - check that columns are present as per current version of spec
 # –	are all gene rule IDs unique
 # –	are all gene rule IDs using the same prefix 
-# –	does organism always have a value
+# –	does organism always have a value, validate against GTDB list of organisms (version r220)
 # –	does gene always have a value
 # - if the gene value specifies a combo rule, are all those rule IDs present in the file?
 # –	check that one of nodeID/refseq accession/GenBank accession/HMM accession are entered, checks these are valid accessions in latest refSeq and HMM catalogues
@@ -19,7 +19,7 @@ import obonet
 # –	check variation type always has a value, and it is one of the allowable variation types
 # - check variation type and mutation are compatible
 # –	check context always has a value and is either core/acquired
-# –	check that one of drug/drug class always has a value that isn’t ‘-‘
+# –	check that one of drug/drug class always has a value that isn’t ‘-‘. Validate against CARD ontology for drug and drug class names
 # –	check phenotype is either wildtype/nonwildtype
 # –	check clinical category is S/I/R
 # –	check there is a value in breakpoint, breakpoint standard, PMID and that these values aren’t ‘NA’ or ‘-‘
@@ -28,10 +28,8 @@ import obonet
 # –	if evidence limitations has a value, check it is one of the allowable values
 
 ##TODO:
-# drug or drug class must be approved value
 # check that certain columns have only a single value, not multiple (eg mutation)
 # is it possible to download allowable values directly from a google sheet in google drive?
-# summarise at the end which checks have failures
 
 def parse_args():
     parser = ArgumentParser.ArgumentParser(description="Perform auto validation of AMRrules file")
@@ -127,29 +125,47 @@ def check_ruleIDs(id_list):
 def check_organism(organism_list):
     
     print("\nChecking organism column...")
+
+    # read in the valid GTDB organism names
+    with open('gtdb_species_r220.txt', 'r') as f:
+        gtdb_organism_names = [line.strip() for line in f.readlines()]
     
-    # want to check if any values are missing, NA, or '-', and return which index number in the list where that's the case
-    invalid_indices = [index for index, value in enumerate(organism_list) if value in ['NA', '-'] or value == '']
+    # Initialize a dictionary to store invalid rows and reasons
+    invalid_indices = {}
+    invalid_org_names = []
     
+    # Check for empty, NA, or '-' values, and that the organism name is in the GTDB organism names list
     for index, value in enumerate(organism_list):
-        if index not in invalid_indices and not value.startswith("s__"):
-            invalid_indices.append(index)
-            #print(f"Organism must start with s__ to denote species. Invalid name at {index + 1}: {value}")
-    # now check that all values start with s__, skip any invalid indices
-    for index, value in enumerate(organism_list):
-        if index not in invalid_indices:
-            if not value.startswith("s__"):
-                invalid_indices.append(index)
+        value = value.strip()
+        if value in ['NA', '-', '']:
+            invalid_indices[index] = "Value is empty, 'NA', or '-'"
+        elif value not in gtdb_organism_names:
+            invalid_indices[index] = "Organism name " + value + " is not in the GTDB organism names list"
+            invalid_org_names.append(value)
     
     if not invalid_indices:
-        print("✅ All organism names passed auto validation")
+        print("✅ All organism names passed validation")
     else:
         print(f"❌ {len(invalid_indices)} rows have failed the check")
-        print("Organism names must be present, not 'NA' or '-', and start with 's__'")
+        print("Organism names must be present, not 'NA' or '-'. They should start with 's__' and be in the GTDB organism names list, as per file gtdb_species_r220.txt.")
         for index in invalid_indices:
             print(f"Row {index + 2}: {organism_list[index]}")
     
     unique_organisms = set(organism_list)
+    # if we have some invalid organism names that aren't because the value is empty, and instead
+    # becase the value isn't in the GTDB list, go through the GTDB list and extract anything
+    # where the genus is the same, and provide those as options for the user to consider
+    if invalid_org_names:
+        print("\nThe following organism names are not in the GTDB list:")
+        for org_name in invalid_org_names:
+            # extract the genus from the name
+            genus = org_name.split(' ')[0]
+            # find all the GTDB organism names that start with this genus
+            matching_organisms = [name for name in gtdb_organism_names if name.startswith(genus)]
+    if matching_organisms:
+        unique_matching_organisms = set(matching_organisms)
+        print(f"Possible matches from the same genera in GTDB list: {'\n'.join(unique_matching_organisms)}")
+
     unique_organisms_str = ', '.join(map(str, unique_organisms))
     print(f"\nUnique organism names: {unique_organisms_str}")
 
@@ -416,14 +432,14 @@ def check_drug_drugclass(drug_list, drug_class_list):
         drug = drug.strip()
         drug_class = drug_class.strip()
         if (drug == '' or drug == '-') and (drug_class == '' or drug_class == '-'):
-            invalid_indices_dict[index + 2] = "Both drug and drug class are empty. At least one of these columns must contain a valid CARD drug or drug class name."
+            invalid_indices_dict[index] = "Both drug and drug class are empty. At least one of these columns must contain a valid CARD drug or drug class name."
             continue
         if drug != '-' and drug not in card_drugs:
             reason = 'Drug name ' + drug + ' is not a valid CARD drug name.'
-            invalid_indices_dict[index + 2] = reason
+            invalid_indices_dict[index] = reason
         if drug_class != '-' and drug_class not in card_drug_classes:
             reason = 'Drug class ' + drug_class + ' is not a valid CARD drug class name.'
-            invalid_indices_dict[index + 2] = reason
+            invalid_indices_dict[index] = reason
     
     if not invalid_indices_dict:
         print("✅ All drug and drug class values are valid and listed in the CARD drug name ontology.")
@@ -432,7 +448,7 @@ def check_drug_drugclass(drug_list, drug_class_list):
         print(f"❌ {len(invalid_indices_dict)} rows have failed the check")
         print("One of drug or drug class must contain a value that is not empty, NA or '-'. Values must be listed in the CARD drug name ontology, as per card_drug_names.tsv. Drugs and their classes should be given in all lower case.")
         for index, reason in invalid_indices_dict.items():
-            print(f"Row {index}: {reason}")
+            print(f"Row {index + 2}: {reason}")
         return False
 
 def check_sir_breakpoint(clinical_category_list, breakpoint_list):
