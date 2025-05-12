@@ -50,25 +50,7 @@ def parse_obo_file(obo_file):
     # Extract all ARO terms
     aro_terms = [node for node in aro_obo.nodes if node.startswith('ARO:')]
 
-    # extract all drug names
-    #drug_names = get_child_terms(aro_obo, 'ARO:1000003')
-    #inhibitor_names = get_child_terms(aro_obo, 'ARO:3000042')
-
-    #all_drug_names = drug_names + inhibitor_names
-
-    #return aro_terms, all_drug_names
     return aro_terms
-
-# TODO: Function to get all child terms of a parent term in OBO file - slow and not working properly
-def get_child_terms(graph, parent_term):
-    child_terms = set()
-    for child, parent in graph.edges():
-        if parent == parent_term and 'is_a' in graph[child]:
-            # Check if the child term has no other relationships
-            if all(rel == 'is_a' for rel in graph[child]):
-                child_terms.add(child)
-                child_terms.update(get_child_terms(graph, child))
-    return child_terms
 
 def check_if_allowed_value(value_list, col_name, allowable_values):
 
@@ -407,21 +389,50 @@ def check_mutation_variation(mutation_list, variation_list):
             print(f"Row {index}: {reason}")
         return False
 
+def extract_card_drug_names():
+    # read in the file that lists all the drugs and drug classes that are in the current version of the CARD ontology
+    drug_names_card = []
+    drug_classes_card = []
+    with open('card_drug_names.tsv', newline='') as card_drugs_file:
+        reader = csv.DictReader(card_drugs_file, delimiter='\t')
+        for row in reader:
+            if row['Drug Name'] not in drug_names_card:
+                drug_names_card.append(row['Drug Name'])
+            if row['Drug Class'] not in drug_classes_card:
+                drug_classes_card.append(row['Drug Class'])
+    return drug_names_card, drug_classes_card
+
 def check_drug_drugclass(drug_list, drug_class_list):
    
     print("\nChecking drug and drug class columns...")
+
+    # read in the file that lists all the drugs and drug classes that are in the current version of the CARD ontology
+    card_drugs, card_drug_classes = extract_card_drug_names()
     
-    # one of these columns must have a value in it
-    invalid_indices = [index for index, values in enumerate(zip(drug_list, drug_class_list)) if all(value.strip() == '' or value.strip() in ['NA', '-'] for value in values)]
+    # want to check that there is at least one value in either drug or drug class
+    # need to check that if the value isn't '-', its a valid drug or drug class name as per card_drugs and card_drug_classes
+    invalid_indices_dict = {}
+    for index, (drug, drug_class) in enumerate(zip(drug_list, drug_class_list)):
+        drug = drug.strip()
+        drug_class = drug_class.strip()
+        if (drug == '' or drug == '-') and (drug_class == '' or drug_class == '-'):
+            invalid_indices_dict[index + 2] = "Both drug and drug class are empty. At least one of these columns must contain a valid CARD drug or drug class name."
+            continue
+        if drug != '-' and drug not in card_drugs:
+            reason = 'Drug name ' + drug + ' is not a valid CARD drug name.'
+            invalid_indices_dict[index + 2] = reason
+        if drug_class != '-' and drug_class not in card_drug_classes:
+            reason = 'Drug class ' + drug_class + ' is not a valid CARD drug class name.'
+            invalid_indices_dict[index + 2] = reason
     
-    if not invalid_indices:
-        print("✅ All drug and drug class values are valid")
+    if not invalid_indices_dict:
+        print("✅ All drug and drug class values are valid and listed in the CARD drug name ontology.")
         return True
     else:
-        print(f"❌ {len(invalid_indices)} rows have failed the check")
-        print("One of drug or drug class must contain a value that is not NA or '-'")
-        for index in invalid_indices:
-            print(f"Row {index + 2}")
+        print(f"❌ {len(invalid_indices_dict)} rows have failed the check")
+        print("One of drug or drug class must contain a value that is not empty, NA or '-'. Values must be listed in the CARD drug name ontology, as per card_drug_names.tsv. Drugs and their classes should be given in all lower case.")
+        for index, reason in invalid_indices_dict.items():
+            print(f"Row {index}: {reason}")
         return False
 
 def check_sir_breakpoint(clinical_category_list, breakpoint_list):
@@ -565,7 +576,7 @@ def main():
     for column in expected_columns:
         if column not in columns:
             print(f"❌ {column} column not found in file.")
-    print("\nContinuting to validate values in each column...")
+    print("\nContinuing to validate values in each column...")
 
     # grab the rule IDs and check
     if "ruleID" in columns:
