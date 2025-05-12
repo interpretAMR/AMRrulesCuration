@@ -264,8 +264,12 @@ def check_id_accessions(nodeID_list, refseq_list, genbank_list, hmm_list, variat
         if all(value == '' or value in ['NA', '-'] for value in values):
             # if all the values are empty, check if variation type is 'Combination' for this row
             # if variation type is 'Combination', then this is a valid value
-            if variation_type_list[index].strip() == 'Combination':
-                continue
+            # only applies if we have the variation type column
+            if variation_type_list is not None:
+                if variation_type_list[index].strip() == 'Combination':
+                    continue
+                else:
+                    invalid_indices.append(index)
             else:
                 invalid_indices.append(index)
     
@@ -296,7 +300,7 @@ def check_id_accessions(nodeID_list, refseq_list, genbank_list, hmm_list, variat
     if not invalid_indices:
         print("✅ All rows contain at least one value in one of these columns.")
     else:
-        print(f"❌ {len(invalid_indices)} rows have failed the check, and must contain at least one value in either nodeID, refseq accession, GenBank accession and HMM accession.")
+        print(f"❌ {len(invalid_indices)} rows have failed the check because at least one of either nodeID, refseq accession, GenBank accession and HMM accession must contain a value. The only exception to this is if the variation type is 'Combination', in which case all of these columns can be '-'.")
         for index in invalid_indices:
             print(f"Row {index + 2}")
     if invalid_node or invalid_refseq or invalid_gb or invalid_hmm:
@@ -707,11 +711,16 @@ def main():
     # check that for columns nodeID, refseq accession, GenBank accession, and HMM accession, at least one of these columns has a value
     # TODO: Automate downloads of relevant files from AMRFP ftp server?
     # TODO: print what version of the AMRFP database we're checking in case things are removed and no longer present
-    if "nodeID" in columns and "refseq accession" in columns and "GenBank accession" in columns and "HMM accession" in columns and "variation type" in columns:
+    if "nodeID" in columns and "refseq accession" in columns and "GenBank accession" in columns and "HMM accession" in columns:
         refseq_file = 'refgenes_2024-12-18.1.tsv'
         hmm_file = 'hmms_amrfp_2024-12-18.1.tsv'
         refseq_nodes_file = 'ReferenceGeneHierarchy_2024-12-18.1.txt'
-        summary_checks["gene accessions"] = check_id_accessions(get_column("nodeID", draftrules), get_column("refseq accession", draftrules), get_column("GenBank accession", draftrules), get_column("HMM accession", draftrules), get_column("variation type", draftrules), refseq_file, refseq_nodes_file, hmm_file)
+        # check this column in combo with variation type, but if that col doesn't exist, just set to None and check the rest
+        if "variation type" in columns:
+            summary_checks["gene accessions"] = check_id_accessions(get_column("nodeID", draftrules), get_column("refseq accession", draftrules), get_column("GenBank accession", draftrules), get_column("HMM accession", draftrules), get_column("variation type", draftrules), refseq_file, refseq_nodes_file, hmm_file)
+        else:
+            summary_checks["gene accessions"] = check_id_accessions(get_column("nodeID", draftrules), get_column("refseq accession", draftrules), get_column("GenBank accession", draftrules), get_column("HMM accession", draftrules), None, refseq_file, refseq_nodes_file, hmm_file)
+
     else:
         for column in ["nodeID", "refseq accession", "GenBank accession", "HMM accession"]:
             if column not in columns:
