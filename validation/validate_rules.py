@@ -155,16 +155,16 @@ def check_organism(organism_list):
     # if we have some invalid organism names that aren't because the value is empty, and instead
     # becase the value isn't in the GTDB list, go through the GTDB list and extract anything
     # where the genus is the same, and provide those as options for the user to consider
-    if invalid_org_names:
+    if len(invalid_org_names) > 0:
         print("\nThe following organism names are not in the GTDB list:")
         for org_name in invalid_org_names:
             # extract the genus from the name
             genus = org_name.split(' ')[0]
             # find all the GTDB organism names that start with this genus
             matching_organisms = [name for name in gtdb_organism_names if name.startswith(genus)]
-    if matching_organisms:
-        unique_matching_organisms = set(matching_organisms)
-        print(f"Possible matches from the same genera in GTDB list: {'\n'.join(unique_matching_organisms)}")
+        if matching_organisms:
+            unique_matching_organisms = set(matching_organisms)
+            print(f"Possible matches from the same genera in GTDB list: {'\n'.join(unique_matching_organisms)}")
 
     unique_organisms_str = ', '.join(map(str, unique_organisms))
     print(f"\nUnique organism names: {unique_organisms_str}")
@@ -217,7 +217,7 @@ def check_gene(gene_list, rule_list):
     else:
         return False
 
-def check_id_accessions(nodeID_list, refseq_list, genbank_list, hmm_list, refseq_file, refseq_nodes, hmm_file):
+def check_id_accessions(nodeID_list, refseq_list, genbank_list, hmm_list, variation_type_list, refseq_file, refseq_nodes, hmm_file):
     
     print("\nChecking nodeID, refseq accession, GenBank accession and HMM accession columns...")
 
@@ -262,7 +262,12 @@ def check_id_accessions(nodeID_list, refseq_list, genbank_list, hmm_list, refseq
     invalid_indices = []
     for index, values in enumerate(zip(nodeID_list, refseq_list, genbank_list, hmm_list)):
         if all(value == '' or value in ['NA', '-'] for value in values):
-            invalid_indices.append(index)
+            # if all the values are empty, check if variation type is 'Combination' for this row
+            # if variation type is 'Combination', then this is a valid value
+            if variation_type_list[index].strip() == 'Combination':
+                continue
+            else:
+                invalid_indices.append(index)
     
     # now we need to assess each list individually against the relevant accession lists
     # fine in the value is '-' as this is allowed in individual columns, just not all in combo
@@ -349,6 +354,40 @@ def check_aro(aro_list, aro_terms):
             print(f"Row {index + 2}: {aro_list[index]}")
         return False
 
+def check_context(context_list, variation_type_list):
+    # valid values are core or acquired
+    # if variation_type_list isn't None, make sure we check that context is either
+    #core or acquired if validation_type isn't 'Combination'
+    print("\nChecking context column...")
+
+    invalid_indices = {}
+    if variation_type_list is not None:
+        for index, (context, variation) in enumerate(zip(context_list, variation_type_list)):
+            context = context.strip()
+            variation = variation.strip()
+            if context not in ['core', 'acquired'] and variation != 'Combination':
+                reason = "Context must be 'core' or 'acquired' if variation type is not 'Combination'."
+                invalid_indices[index] = reason
+            if context != '-' and variation == 'Combination':
+                reasion = 'If variation type is "Combination", context must be "-".'
+                invalid_indices[index] = reason
+    if not variation_type_list:
+        for index, context in enumerate(context_list):
+            context = context.strip()
+            if context not in ['core', 'acquired']:
+                reason = "Context must be 'core' or 'acquired'."
+                invalid_indices[index] = reason
+    
+    if not invalid_indices:
+        print("✅ All context values are valid")
+        return True
+    else:
+        print(f"❌ {len(invalid_indices)} rows have failed the check")
+        print("Context column must contain either 'core' or 'acquired' and cannot be empty. If variation type is 'Combination', context can be '-")
+        for index in invalid_indices:
+            print(f"Row {index + 2}: {context_list[index]}")
+        return False
+
 def check_mutation(mutation_list):
     
     print("\nChecking mutation column...")
@@ -400,19 +439,19 @@ def check_mutation_variation(mutation_list, variation_list):
         variation = variation.strip()
         if variation == "Gene presence detected" and mutation != '-':
             reason = "Mutation must be '-' if variation type is 'Gene presence detected'"
-        if variation != "Gene presence detected" and mutation == '-':
-            reason = "Mutation must not be '-' if variation type is not 'Gene presence detected'"
-        if variation == "Nucleotide variant detected" and not mutation.startswith("c."):
+        elif variation == "Combination" and mutation != '-':
+            reason = "Mutation must be '-' if variation type is 'Combination'"
+        elif variation == "Nucleotide variant detected" and not mutation.startswith("c."):
             reason = "Mutation must start with 'c.' if variation type is 'Nucleotide variant detected'"
-        if variation == "Protein variant detected" and not mutation.startswith("p."):
+        elif variation == "Protein variant detected" and not mutation.startswith("p."):
             reason = "Mutation must start with 'p.' if variation type is 'Protein variant detected'"
-        if variation == "Promoter variant detected" and not re.match(r"^c\.\[-?|\(-?|-", mutation):
+        elif variation == "Promoter variant detected" and not re.match(r"^c\.\[-?|\(-?|-", mutation):
             reason = "Mutation must start with 'c.-', 'c.(-', or 'c.[-' if variation type is 'Promoter variant detected'. The - symbol indicates the position before the start of the gene where the mutation occurs."
-        if variation == "Nucleotide variant detected in multi-copy gene" and not mutation.startswith("c."):
+        elif variation == "Nucleotide variant detected in multi-copy gene" and not mutation.startswith("c."):
             reason = "Mutation must start with 'c.' if variation type is 'Nucleotide variant detected in multi-copy gene'"
-        if variation == "Gene copy number variant detected" and not re.match(r"^c\.\[\d+\]", mutation):
+        elif variation == "Gene copy number variant detected" and not re.match(r"^c\.\[\d+\]", mutation):
             reason = "Mutation must be in the format 'c.[X]' where X is any number if variation type is 'Gene copy number variant detected'"
-        if variation == "Low frequency variant detected" and not re.match(r"^(c\.|p\.)", mutation):
+        elif variation == "Low frequency variant detected" and not re.match(r"^(c\.|p\.)", mutation):
             reason = "Mutation must start with either 'c.' (for nucleotide variant) or 'p.' (protein variant) if variation type is 'Low frequency variant detected'"
         if reason:
             invalid_indices_dict[index + 2] = reason
@@ -668,16 +707,16 @@ def main():
     # check that for columns nodeID, refseq accession, GenBank accession, and HMM accession, at least one of these columns has a value
     # TODO: Automate downloads of relevant files from AMRFP ftp server?
     # TODO: print what version of the AMRFP database we're checking in case things are removed and no longer present
-    if "nodeID" in columns and "refseq accession" in columns and "GenBank accession" in columns and "HMM accession" in columns:
+    if "nodeID" in columns and "refseq accession" in columns and "GenBank accession" in columns and "HMM accession" in columns and "variation type" in columns:
         refseq_file = 'refgenes_2024-12-18.1.tsv'
         hmm_file = 'hmms_amrfp_2024-12-18.1.tsv'
         refseq_nodes_file = 'ReferenceGeneHierarchy_2024-12-18.1.txt'
-        summary_checks["gene accessions"] = check_id_accessions(get_column("nodeID", draftrules), get_column("refseq accession", draftrules), get_column("GenBank accession", draftrules), get_column("HMM accession", draftrules), refseq_file, refseq_nodes_file, hmm_file)
+        summary_checks["gene accessions"] = check_id_accessions(get_column("nodeID", draftrules), get_column("refseq accession", draftrules), get_column("GenBank accession", draftrules), get_column("HMM accession", draftrules), get_column("variation type", draftrules), refseq_file, refseq_nodes_file, hmm_file)
     else:
         for column in ["nodeID", "refseq accession", "GenBank accession", "HMM accession"]:
             if column not in columns:
                 print(f"\n❌ {column} column not found in file.")
-        print("\n❌ Spec v0.5 requires all of nodeID, refseq accession, GenBank accession, and HMM accession columns to be present in order to validate. Continuing to validate other columns...")
+        print("\n❌ Spec v0.5 requires all of nodeID, refseq accession, GenBank accession, HMM accession and variation type columns to be present in order to validate. Continuing to validate other columns...")
         summary_checks["gene accessions"] = False
 
     if "ARO accession" in columns:
@@ -707,7 +746,11 @@ def main():
         summary_checks["variation type mutation concordance"] = False
 
     if "context" in columns:
-        summary_checks["context"] = check_if_allowed_value(get_column("context", draftrules), "context", ["core", "acquired"])
+        # when checking context, if the rule is a combination rule, the context value will be blank
+        if "variation type" not in columns:
+            summary_checks["context"] = check_context(get_column("context", draftrules), None)
+        else:
+            summary_checks["context"] = check_context(get_column("context", draftrules), get_column("variation type", draftrules))
         # check context and mutation are concordant
         if "mutation" in columns:
             summary_checks["context and mutation concordance"] = check_context_mutation(get_column("mutation", draftrules), get_column("context", draftrules))
