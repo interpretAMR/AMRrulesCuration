@@ -1,0 +1,157 @@
+
+Validating rules file: ../draftrules/Staphylococcus_aureus_v0.1.txt
+
+Removing second row as it contains the 'required' and 'optional' call-outs for columns.
+
+Checking that all required columns for spec v0.5 are present...
+
+Continuing to validate values in each column...
+
+Checking ruleID column...
+All rule IDs have passed auto validation
+✅ All values are valid
+Rule prefix: STA
+
+Checking organism column...
+✅ All organism names passed auto validation
+
+Unique organism names: s__Staphylococcus aureus
+
+Checking gene column...
+✅ All gene values are valid
+
+Now checking for combinatorial rules in gene column...
+✅ All gene combinatorial rule IDs are valid
+
+Checking nodeID, refseq accession, GenBank accession and HMM accession columns...
+❌ 1 rows have failed the check, and must contain at least one value in either nodeID, refseq accession, GenBank accession and HMM accession.
+Row 2
+❌ One or more accessions aren't present in either the NCBI Reference Gene Catalog (for nodeID, refseq accession and genbank accession) or the NCBI Reference HMM Catalog (for HMM accession). Empty cells must be specified by '-'.
+
+Invalid nodeID accessions values:
+
+Invalid refseq accessions values:
+Row 24: --
+
+Invalid genbank accessions values:
+Row 5: BAA14147.1
+Row 6: BAA14147.1
+Row 7: BAA14147.1
+Row 8: CCQ22388.1
+Row 9: CCQ22388.1
+Row 10: CCQ22388.1
+Row 11: CCQ22388.1
+Row 12: CCQ22388.1
+Row 13: CCQ22388.1
+Row 14: AGP27106.1
+Row 15: AGP27106.1
+Row 16: AGP27106.1
+Row 17: WP_002289367.1
+Row 18: WP_002289367.1
+Row 19: WP_002289367.1
+Row 20: BAB41874.1
+Row 21: BAB41874.1
+Row 22: BAB41874.1
+Row 23: BAB41874.1
+Row 24: BAB41874.1
+Row 25: BAB41874.1
+Row 26: BAB41874.1
+Row 27: BAB41874.1
+Row 28: BAB41874.1
+Row 29: BAB41874.1
+Row 30: BAB43261.1
+Row 31: BAB43261.1
+Row 32: BAB56495.1
+Row 33: BAB56495.1
+Row 34: ATC67679.1
+Row 35: ATC67679.1
+Row 36: ATC67679.1
+Row 37: CYF42523.1
+
+Invalid HMM accessions values:
+
+Checking ARO accession column...
+✅ All ARO accession values are valid and exist in the CARD ontology
+
+Checking mutation column...
+✅ All mutation values are valid
+
+Checking  variation type column...
+❌ 1 rows have failed the check
+variation type column must contain one of the following values:
+Gene presence detected, Protein variant detected, Nucleotide variant detected, Promoter variant detected, Inactivating mutation detected, Gene copy number variant detected, Nucleotide variant detected in multi-copy gene, Low frequency variant detected, Combination
+Row 2: 
+
+Checking mutation and variation type columns are compatible...
+❌ 1 rows have failed the check
+Row 2: Mutation must not be '-' if variation type is not 'Gene presence detected'
+
+Checking  context column...
+✅ All context values are valid
+
+Checking drug and drug class columns...
+✅ All drug and drug class values are valid
+
+Checking  phenotype column...
+✅ All phenotype values are valid
+
+Checking  clinical category column...
+❌ 7 rows have failed the check
+clinical category column must contain one of the following values:
+S, I, R
+Row 7: 
+Row 19: 
+Row 21: 
+Row 31: 
+Row 35: 
+Row 41: 
+Row 47: 
+
+Checking  breakpoint column...
+✅ All breakpoint values are valid
+
+Checking clinical category and breakpoint columns...
+✅ All clinical category and breakpoint values are concordant
+
+Checking  breakpoint standard column...
+✅ All breakpoint standard values are valid
+
+Unique breakpoint standard values: Expected resistant phenotypes v1.2 (13 January, 2023); ECOFF (2025-4-17); CLSI M100Ed35E, Expected resistant phenotypes v1.2 (13 January, 2023); EUCAST v15.0 (2025-01-01), Expected resistant phenotypes v1.2 (13 January, 2023); ECOFF (2025-4-17), Expected resistant phenotypes v1.2 (13 January, 2023); EUCAST v15.0 (2025-01-01) + ECOFF (2025-4-17); CLSI M100Ed35E, Expected resistant phenotypes v1.2 (13 January, 2023); EUCAST v15.0 (2025-01-01); CLSI M100Ed35E, Expected resistant phenotypes v1.2 (13 January, 2023); CLSI M100Ed35E, Expected resistant phenotypes v1.2 (13 January, 2023)
+EUCAST v14.0 (2024-01-01)
+
+Checking  PMID column...
+✅ All PMID values are valid
+
+Checking evidence code column...
+
+❌ 1 rows have failed the check. Each rule must have an evidence code and not be empty. If there are mulptile evidence codes for a row, they must be separated by a ',', not by a new line. Evidence codes must start with 'ECO:'.
+Row 2: 
+
+Checking evidence grade and limitations columns...
+✅ All evidence limitations are valid
+❌ 1 rows have failed the check
+Evidence grade column must contain one of the following values:
+strong, moderate, weak
+Row 2: 
+
+Summary of checks:
+✅ Passed: 12
+ - ruleID
+ - organism
+ - gene
+ - ARO accession
+ - mutation
+ - context
+ - drug and drug class
+ - phenotype
+ - breakpoint
+ - clinical category and breakpoint concordance
+ - breakpoint standard
+ - PMID
+❌ Failed: 6
+  - gene accessions
+  - variation type
+  - variation type mutation concordance
+  - clinical category
+  - evidence code
+  - evidence grade and limitations

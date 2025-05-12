@@ -1,0 +1,434 @@
+ARO Accession	Drug Name	Drug Class
+ARO:3007090	albendazole	albendazole-like antibiotic
+ARO:3007506	naftifine	allylamine antibiotic
+ARO:3007507	terbinafine	allylamine antibiotic
+ARO:3000111	novobiocin	aminocoumarin antibiotic
+ARO:3000132	clorobiocin	aminocoumarin antibiotic
+ARO:3000150	coumermycin A1	aminocoumarin antibiotic
+ARO:3004716	Vanillobiocin	aminocoumarin antibiotic
+ARO:3004717	Isovanillobiocin	aminocoumarin antibiotic
+ARO:3004718	Declovanillobiocin	aminocoumarin antibiotic
+ARO:3007679	chrysomycin A	aminocoumarin antibiotic
+ARO:0000003	astromicin	aminoglycoside antibiotic
+ARO:0000005	neomycin	aminoglycoside antibiotic
+ARO:0000007	dibekacin	aminoglycoside antibiotic
+ARO:0000013	amikacin	aminoglycoside antibiotic
+ARO:0000021	ribostamycin	aminoglycoside antibiotic
+ARO:0000024	butirosin	aminoglycoside antibiotic
+ARO:0000035	sisomicin	aminoglycoside antibiotic
+ARO:0000037	apramycin	aminoglycoside antibiotic
+ARO:0000038	netilmicin	aminoglycoside antibiotic
+ARO:0000039	spectinomycin	aminoglycoside antibiotic
+ARO:0000040	streptomycin	aminoglycoside antibiotic
+ARO:0000049	kanamycin A	aminoglycoside antibiotic
+ARO:0000052	tobramycin	aminoglycoside antibiotic
+ARO:3000214	hygromycin B	aminoglycoside antibiotic
+ARO:3000652	isepamicin	aminoglycoside antibiotic
+ARO:3000653	G418	aminoglycoside antibiotic
+ARO:3000654	arbekacin	aminoglycoside antibiotic
+ARO:3000657	paromomycin	aminoglycoside antibiotic
+ARO:3000658	lividomycin	aminoglycoside antibiotic
+ARO:3000700	lividomycin A	aminoglycoside antibiotic
+ARO:3000701	lividomycin B	aminoglycoside antibiotic
+ARO:3001294	verdamicin	aminoglycoside antibiotic
+ARO:3001295	vertilimicin	aminoglycoside antibiotic
+ARO:3001296	kasugamycin	aminoglycoside antibiotic
+ARO:3003675	plazomicin	aminoglycoside antibiotic
+ARO:3003993	capreomycin	aminoglycoside antibiotic
+ARO:3007377	6'-N-ethylnetilmicin	aminoglycoside antibiotic
+ARO:3007378	2'-N-ethylnetilmicin	aminoglycoside antibiotic
+ARO:3007379	5-episisomicin	aminoglycoside antibiotic
+ARO:3007382	gentamicin	aminoglycoside antibiotic
+ARO:3003957	palmitic acid	antibacterial free fatty acids
+ARO:3003958	oleic acid	antibacterial free fatty acids
+ARO:3003959	linoleic acid	antibacterial free fatty acids
+ARO:0000055	bicyclomycin	bicyclomycin-like antibiotic
+ARO:3007774	dragmacidin A	bis-indole alkaloid with antibiotic activity
+ARO:3007775	dragmacidin B	bis-indole alkaloid with antibiotic activity
+ARO:3007776	dragmacidin D	bis-indole alkaloid with antibiotic activity
+ARO:3007777	dragmacidin E	bis-indole alkaloid with antibiotic activity
+ARO:3007778	dragmacidin F	bis-indole alkaloid with antibiotic activity
+ARO:0000070	ertapenem	carbapenem
+ARO:0000073	meropenem	carbapenem
+ARO:3000170	imipenem	carbapenem
+ARO:3000640	doripenem	carbapenem
+ARO:3003708	panipenem	carbapenem
+ARO:3004473	tebipenem	carbapenem
+ARO:3007083	biapenem	carbapenem
+ARO:3007143	sulopenem	carbapenem
+ARO:3009105	first-generation cephalosporin	cephalosporin
+ARO:3009106	second-generation cephalosporin	cephalosporin
+ARO:3009107	third-generation cephalosporin	cephalosporin
+ARO:3009108	fourth-generation cephalosporin	cephalosporin
+ARO:3009109	other cephalosporins and penems	cephalosporin
+ARO:3007541	cyclomarin A	cyclomarin antibiotics
+ARO:3007542	cyclomarin B	cyclomarin antibiotics
+ARO:3007543	cyclomarin C	cyclomarin antibiotics
+ARO:3000760	cycloserine	cycloserine-like antibiotic
+ARO:3000188	trimethoprim	diaminopyrimidine antibiotic
+ARO:3000269	brodimoprim	diaminopyrimidine antibiotic
+ARO:3000284	tetroxoprim	diaminopyrimidine antibiotic
+ARO:3000337	iclaprim	diaminopyrimidine antibiotic
+ARO:3004492	bedaquiline	diarylquinoline antibiotic
+ARO:0000045	acriflavine	disinfecting agents and antiseptics
+ARO:3000870	triclosan	disinfecting agents and antiseptics
+ARO:3003823	benzalkonium chloride	disinfecting agents and antiseptics
+ARO:3005174	thiacalixarene derivatives	disinfecting agents and antiseptics
+ARO:3007039	chlorhexidine	disinfecting agents and antiseptics
+ARO:3007532	proflavine	disinfecting agents and antiseptics
+ARO:3007501	caspofungin	echinocandin antibiotic
+ARO:3007502	micafungin	echinocandin antibiotic
+ARO:3007503	anidulafungin	echinocandin antibiotic
+ARO:3000586	pulvomycin	elfamycin antibiotic
+ARO:3001242	enacyloxin IIa	elfamycin antibiotic
+ARO:3001309	cyclic thiazolyl peptide elfamycin	elfamycin antibiotic
+ARO:3001310	kirromycin-like antibiotics	elfamycin antibiotic
+ARO:0000023	enoxacin	fluoroquinolone antibiotic
+ARO:0000036	ciprofloxacin	fluoroquinolone antibiotic
+ARO:0000071	levofloxacin	fluoroquinolone antibiotic
+ARO:0000074	moxifloxacin	fluoroquinolone antibiotic
+ARO:3000659	gatifloxacin	fluoroquinolone antibiotic
+ARO:3000660	lomefloxacin	fluoroquinolone antibiotic
+ARO:3000661	nalidixic acid	fluoroquinolone antibiotic
+ARO:3000662	norfloxacin	fluoroquinolone antibiotic
+ARO:3000663	ofloxacin	fluoroquinolone antibiotic
+ARO:3000664	trovafloxacin	fluoroquinolone antibiotic
+ARO:3000665	grepafloxacin	fluoroquinolone antibiotic
+ARO:3000666	sparfloxacin	fluoroquinolone antibiotic
+ARO:3000762	pefloxacin	fluoroquinolone antibiotic
+ARO:3003690	sitafloxacin	fluoroquinolone antibiotic
+ARO:3004010	cinoxacin	fluoroquinolone antibiotic
+ARO:3004011	clinafloxacin	fluoroquinolone antibiotic
+ARO:3004012	clofazimine	fluoroquinolone antibiotic
+ARO:3004013	fleroxacin	fluoroquinolone antibiotic
+ARO:3004130	balofloxacin	fluoroquinolone antibiotic
+ARO:3004462	delafloxacin	fluoroquinolone antibiotic
+ARO:3004499	Tosufloxacin	fluoroquinolone antibiotic
+ARO:3004731	Zabofloxacin	fluoroquinolone antibiotic
+ARO:3004732	Finafloxacin	fluoroquinolone antibiotic
+ARO:3004733	Nemonoxacin	fluoroquinolone antibiotic
+ARO:3005120	levonadifloxacin	fluoroquinolone antibiotic
+ARO:3007022	Prulifloxacin	fluoroquinolone antibiotic
+ARO:3007024	Lascufloxacin	fluoroquinolone antibiotic
+ARO:3007045	enrofloxacin	fluoroquinolone antibiotic
+ARO:3007046	marbofloxacin	fluoroquinolone antibiotic
+ARO:3007165	gemifloxacin	fluoroquinolone antibiotic
+ARO:3007521	flumequine	fluoroquinolone antibiotic
+ARO:3007611	sarafloxacin	fluoroquinolone antibiotic
+ARO:3000759	fusidic acid	fusidane antibiotic
+ARO:0000028	vancomycin	glycopeptide antibiotic
+ARO:0000029	teicoplanin	glycopeptide antibiotic
+ARO:0000053	bleomycin	glycopeptide antibiotic
+ARO:3000022	ristocetin	glycopeptide antibiotic
+ARO:3000117	antibiotic A47934	glycopeptide antibiotic
+ARO:3000120	balhimycin	glycopeptide antibiotic
+ARO:3000184	chloroeremomycin	glycopeptide antibiotic
+ARO:3000189	oritavancin	glycopeptide antibiotic
+ARO:3000466	dalbavancin	glycopeptide antibiotic
+ARO:3000488	telavancin	glycopeptide antibiotic
+ARO:3000525	antibiotic A40926	glycopeptide antibiotic
+ARO:3000690	bleomycinic acid	glycopeptide antibiotic
+ARO:3000691	bleomycin A2	glycopeptide antibiotic
+ARO:3000692	bleomycin B2	glycopeptide antibiotic
+ARO:3000767	avoparcin	glycopeptide antibiotic
+ARO:3004120	CBP C1-aminomethylene vancomycin	glycopeptide antibiotic
+ARO:3004477	eremomycin pyrrolidide	glycopeptide antibiotic
+ARO:3005070	complestatin	glycopeptide antibiotic
+ARO:3005071	corbomycin	glycopeptide antibiotic
+ARO:3007525	norvancomycin	glycopeptide antibiotic
+ARO:0000030	tigecycline	glycylcycline
+ARO:3007516	clotrimazole	imidazole antibiotic
+ARO:3007517	ketoconazole	imidazole antibiotic
+ARO:3007518	miconazole	imidazole antibiotic
+ARO:3007519	econazole	imidazole antibiotic
+ARO:3007520	oxiconazole	imidazole antibiotic
+ARO:3007471	narasin	ionophore with antibiotic activity
+ARO:3007484	monensin	ionophore with antibiotic activity
+ARO:3007485	nigericin	ionophore with antibiotic activity
+ARO:3007547	salinomycin	ionophore with antibiotic activity
+ARO:3007615	pyrrolomycin antibiotic	ionophore with antibiotic activity
+ARO:3007755	Calcimycin	ionophore with antibiotic activity
+ARO:3007768	tetronomycin	ionophore with antibiotic activity
+ARO:3007769	cezomycin	ionophore with antibiotic activity
+ARO:3007772	valinomycin	ionophore with antibiotic activity
+ARO:3000520	isoniazid	isoniazid-like antibiotic
+ARO:0000046	lincomycin	lincosamide antibiotic
+ARO:0000066	clindamycin	lincosamide antibiotic
+ARO:3001231	celesticetin	lincosamide antibiotic
+ARO:3007169	pirlimycin	lincosamide antibiotic
+ARO:3007636	iboxamycin	lincosamide antibiotic
+ARO:3001319	fidaxomicin	macrocyclic antibiotic
+ARO:3007689	selamectin	macrocyclic antibiotic
+ARO:0000006	erythromycin	macrolide antibiotic
+ARO:0000027	roxithromycin	macrolide antibiotic
+ARO:0000057	telithromycin	macrolide antibiotic
+ARO:0000065	clarithromycin	macrolide antibiotic
+ARO:3000145	tylosin	macrolide antibiotic
+ARO:3000156	spiramycin	macrolide antibiotic
+ARO:3000158	azithromycin	macrolide antibiotic
+ARO:3000176	dirithromycin	macrolide antibiotic
+ARO:3000867	oleandomycin	macrolide antibiotic
+ARO:3001221	josamycin	macrolide antibiotic
+ARO:3001222	chalcomycin	macrolide antibiotic
+ARO:3001223	midecamycin	macrolide antibiotic
+ARO:3001224	mycinamicin	macrolide antibiotic
+ARO:3001225	megalomycin	macrolide antibiotic
+ARO:3001226	narbomycin	macrolide antibiotic
+ARO:3001227	kitasamycin	macrolide antibiotic
+ARO:3001228	carbomycin	macrolide antibiotic
+ARO:3001229	rosaramicin	macrolide antibiotic
+ARO:3001230	niddamycin	macrolide antibiotic
+ARO:3001232	methymycin	macrolide antibiotic
+ARO:3001233	pikromycin	macrolide antibiotic
+ARO:3003701	rokitamycin	macrolide antibiotic
+ARO:3003972	Solithromycin	macrolide antibiotic
+ARO:3007455	cethromycin	macrolide antibiotic
+ARO:3007457	carrimycin	macrolide antibiotic
+ARO:3007472	tilmicosin	macrolide antibiotic
+ARO:3007570	Mycaminosyltylonolide	macrolide antibiotic
+ARO:3007760	tulathromycin	macrolide antibiotic
+ARO:3007761	gamithromycin	macrolide antibiotic
+ARO:3007762	tildipirosin	macrolide antibiotic
+ARO:3007763	Marinomycin	macrolide antibiotic
+ARO:3007786	Tartrolon	macrolide antibiotic
+ARO:3007792	aplasmomycin	macrolide antibiotic
+ARO:3007793	boromycin	macrolide antibiotic
+ARO:3007795	Azalomycin F	macrolide antibiotic
+ARO:3007796	tylvalosin	macrolide antibiotic
+ARO:3000550	aztreonam	monobactam
+ARO:3003821	BAL30072	monobactam
+ARO:3004728	carumonam	monobactam
+ARO:3004729	LYS228	monobactam
+ARO:3000554	mupirocin	mupirocin-like antibiotic
+ARO:0000075	nitrofurantoin	nitrofuran antibiotic
+ARO:3000688	furazolidone	nitrofuran antibiotic
+ARO:3007655	nifuroxazide	nitrofuran antibiotic
+ARO:3007677	furazidin	nitrofuran antibiotic
+ARO:3007685	nifuratel	nitrofuran antibiotic
+ARO:3000689	metronidazole	nitroimidazole antibiotic
+ARO:3004026	tinidazole	nitroimidazole antibiotic
+ARO:3004490	delamanid	nitroimidazole antibiotic
+ARO:3007114	ornidazole	nitroimidazole antibiotic
+ARO:3007176	TNP-2198	nitroimidazole antibiotic
+ARO:3007535	pretomanid	nitroimidazole antibiotic
+ARO:0000009	tunicamycin	nucleoside antibiotic
+ARO:0000012	streptothricin	nucleoside antibiotic
+ARO:3000080	aminonucleoside antibiotic	nucleoside antibiotic
+ARO:3007139	cordycepin	nucleoside antibiotic
+ARO:3007479	caprazamycin	nucleoside antibiotic
+ARO:3007481	pseudouridimycin	nucleoside antibiotic
+ARO:3007687	zidovudine	nucleoside antibiotic
+ARO:3003780	nybomycin	nybomycin-like antibiotic
+ARO:3000552	arsphenamine	organoarsenic antibiotic
+ARO:3007534	arsinothricin	organoarsenic antibiotic
+ARO:3007167	evernimicin	orthosomycin antibiotic
+ARO:3007168	avalimycin	orthosomycin antibiotic
+ARO:0000072	linezolid	oxazolidinone antibiotic
+ARO:3003897	tedizolid	oxazolidinone antibiotic
+ARO:3007474	contezolid	oxazolidinone antibiotic
+ARO:3007480	TBI-223	oxazolidinone antibiotic
+ARO:3003975	pactamycin	pactamycin-like antibiotic
+ARO:3009123	penicillin with extended spectrum	penicillin beta-lactam
+ARO:3009124	beta-lactamase sensitive penicillin	penicillin beta-lactam
+ARO:3009125	beta-lactamase resistant penicillin	penicillin beta-lactam
+ARO:0000018	viomycin	peptide antibiotic
+ARO:0000041	bacitracin	peptide antibiotic
+ARO:3000035	lipopeptide antibiotic	peptide antibiotic
+ARO:3000119	edeine	peptide antibiotic
+ARO:3000123	gramicidin	peptide antibiotic
+ARO:3000130	edeine A	peptide antibiotic
+ARO:3000134	edeine B	peptide antibiotic
+ARO:3000135	edeine D	peptide antibiotic
+ARO:3000136	edeine F	peptide antibiotic
+ARO:3000490	tuberactinomycin	peptide antibiotic
+ARO:3000686	thiostrepton	peptide antibiotic
+ARO:3000693	defensin	peptide antibiotic
+ARO:3000694	magainin	peptide antibiotic
+ARO:3000695	actinomycin	peptide antibiotic
+ARO:3003241	teixobactin	peptide antibiotic
+ARO:3003898	lugdunin	peptide antibiotic
+ARO:3003903	thusin	peptide antibiotic
+ARO:3003904	formicin	peptide antibiotic
+ARO:3003919	lysocin	peptide antibiotic
+ARO:3003951	microcin J25	peptide antibiotic
+ARO:3004121	BPI	peptide antibiotic
+ARO:3007086	epinecidin-1	peptide antibiotic
+ARO:3007093	klebsidin	peptide antibiotic
+ARO:3007197	enramycin	peptide antibiotic
+ARO:3007478	darobactin A	peptide antibiotic
+ARO:3007658	albicidin	peptide antibiotic
+ARO:3007686	mutanobactin	peptide antibiotic
+ARO:3007748	oncocin	peptide antibiotic
+ARO:3007779	halolitoralin	peptide antibiotic
+ARO:3007783	macrocyclic peptide antibiotics	peptide antibiotic
+ARO:3007785	nocardamine	peptide antibiotic
+ARO:3000382	azidamfenicol	phenicol antibiotic
+ARO:3000385	chloramphenicol	phenicol antibiotic
+ARO:3000456	thiamphenicol	phenicol antibiotic
+ARO:3000461	florfenicol	phenicol antibiotic
+ARO:0000025	fosfomycin	phosphonic acid antibiotic
+ARO:3000758	fosmidomycin	phosphonic acid antibiotic
+ARO:3000671	tiamulin	pleuromutilin antibiotic
+ARO:3001314	retapamulin	pleuromutilin antibiotic
+ARO:3001315	valnemulin	pleuromutilin antibiotic
+ARO:3001316	azamulin	pleuromutilin antibiotic
+ARO:3001317	pleuromutilin	pleuromutilin antibiotic
+ARO:3004088	lefamulin	pleuromutilin antibiotic
+ARO:3000497	ethambutol	polyamine antibiotic
+ARO:3007504	amphotericin B	polyene antibiotic
+ARO:3007505	nystatin	polyene antibiotic
+ARO:3007486	wychimicin	polyketide with antibiotic activity
+ARO:3007573	fasamycin	polyketide with antibiotic activity
+ARO:3007574	formicamycin	polyketide with antibiotic activity
+ARO:3007600	cervimycin	polyketide with antibiotic activity
+ARO:3007680	"2,4-diacetylphloroglucinol"	polyketide with antibiotic activity
+ARO:3007754	Lasalocid A	polyketide with antibiotic activity
+ARO:3007088	murepavadin	protegrin-1-like antibiotic
+ARO:3003413	pyrazinamide	pyrazine antibiotic
+ARO:3007558	5-flucytosine	pyrimidine antifungal drug
+ARO:3000169	rifampin	rifamycin antibiotic
+ARO:3000517	rifaximin	rifamycin antibiotic
+ARO:3000530	rifabutin	rifamycin antibiotic
+ARO:3000534	rifapentine	rifamycin antibiotic
+ARO:3004295	lassomycin	rifamycin antibiotic
+ARO:3004566	Rifalazil	rifamycin antibiotic
+ARO:3007176	TNP-2198	rifamycin antibiotic
+ARO:3004019	para-aminosalicylic acid	salicylic acid antibiotic
+ARO:3007091	diflunisal	salicylic acid antibiotic
+ARO:3000669	virginiamycin M1	streptogramin A antibiotic
+ARO:3000672	madumycin II	streptogramin A antibiotic
+ARO:3000673	griseoviridin	streptogramin A antibiotic
+ARO:3000674	dalfopristin	streptogramin A antibiotic
+ARO:0000034	streptogramin A antibiotic	streptogramin antibiotic
+ARO:0000050	streptogramin B antibiotic	streptogramin antibiotic
+ARO:3000583	pristinamycin IA	streptogramin B antibiotic
+ARO:3000584	quinupristin	streptogramin B antibiotic
+ARO:3000675	pristinamycin IB	streptogramin B antibiotic
+ARO:3000677	virginiamycin S2	streptogramin B antibiotic
+ARO:3000678	pristinamycin IC	streptogramin B antibiotic
+ARO:3000679	vernamycin C	streptogramin B antibiotic
+ARO:3000680	patricin A	streptogramin B antibiotic
+ARO:3000681	patricin B	streptogramin B antibiotic
+ARO:3000682	ostreogrycin B3	streptogramin B antibiotic
+ARO:3000324	sulfadiazine	sulfonamide antibiotic
+ARO:3000325	sulfadimidine	sulfonamide antibiotic
+ARO:3000327	sulfadoxine	sulfonamide antibiotic
+ARO:3000329	sulfamethoxazole	sulfonamide antibiotic
+ARO:3000330	sulfisoxazole	sulfonamide antibiotic
+ARO:3000683	sulfacetamide	sulfonamide antibiotic
+ARO:3000684	mafenide	sulfonamide antibiotic
+ARO:3000698	sulfasalazine	sulfonamide antibiotic
+ARO:3000699	sulfamethizole	sulfonamide antibiotic
+ARO:3007468	sulfanilamide	sulfonamide antibiotic
+ARO:3007469	sulfamerazine	sulfonamide antibiotic
+ARO:3003412	dapsone	sulfone antibiotic
+ARO:3007660	clerocidin	terpene with antibiotic activity
+ARO:3007756	ophiobolin A	terpene with antibiotic activity
+ARO:3007757	sphaeropsidin A	terpene with antibiotic activity
+ARO:3007035	tetracenomycin C	tetracenomycin antibiotic
+ARO:3007036	tetracenomycin X	tetracenomycin antibiotic
+ARO:3007037	tetracenomycin A2	tetracenomycin antibiotic
+ARO:0000042	glycylcycline	tetracycline antibiotic
+ARO:0000051	tetracycline	tetracycline antibiotic
+ARO:0000069	doxycycline	tetracycline antibiotic
+ARO:3000152	minocycline	tetracycline antibiotic
+ARO:3000528	chlortetracycline	tetracycline antibiotic
+ARO:3000667	demeclocycline	tetracycline antibiotic
+ARO:3000668	oxytetracycline	tetracycline antibiotic
+ARO:3003936	Omadacycline	tetracycline antibiotic
+ARO:3003979	Eravacycline	tetracycline antibiotic
+ARO:3007025	Sarecycline	tetracycline antibiotic
+ARO:3007178	nitazoxanide	thiazolide antibiotic
+ARO:3003474	ethionamide	thioamide antibiotic
+ARO:3004025	prothionamide	thioamide antibiotic
+ARO:3004952	thioacetazone	thiosemicarbazone antibiotic
+ARO:3005175	perchlozone	thiosemicarbazone antibiotic
+ARO:3007092	gepotidacin	triazaacenaphthylene antibiotic
+ARO:3007508	fluconazole	triazole antibiotic
+ARO:3007511	itraconazole	triazole antibiotic
+ARO:3007512	voriconazole	triazole antibiotic
+ARO:3007513	posaconazole	triazole antibiotic
+ARO:3007514	isavuconazole	triazole antibiotic
+ARO:3004858	Zoliflodacin	zoliflodacin-like antibiotic
+ARO:0000058	cefazolin	first-generation cephalosporin
+ARO:3000641	cefalexin	first-generation cephalosporin
+ARO:3000642	cefadroxil	first-generation cephalosporin
+ARO:3000704	cefalotin	first-generation cephalosporin
+ARO:3004008	cephapirin	first-generation cephalosporin
+ARO:3004009	cefradine	first-generation cephalosporin
+ARO:3004129	cephaloridine	first-generation cephalosporin
+ARO:3009110	cefazedone	first-generation cephalosporin
+ARO:3009111	cefatrizine	first-generation cephalosporin
+ARO:3009112	cefacetrile	first-generation cephalosporin
+ARO:3009113	cefroxadine	first-generation cephalosporin
+ARO:3009114	ceftezole	first-generation cephalosporin
+ARO:0000008	cefoxitin	second-generation cephalosporin
+ARO:0000063	cefuroxime	second-generation cephalosporin
+ARO:3000643	cefotiam	second-generation cephalosporin
+ARO:3000644	cefaclor	second-generation cephalosporin
+ARO:3003999	cefamandole	second-generation cephalosporin
+ARO:3004001	cefmetazole	second-generation cephalosporin
+ARO:3004002	cefonicid	second-generation cephalosporin
+ARO:3004004	cefotetan	second-generation cephalosporin
+ARO:3004005	cefprozil	second-generation cephalosporin
+ARO:3004014	flomoxef	second-generation cephalosporin
+ARO:3004016	loracarbef	second-generation cephalosporin
+ARO:3009115	ceforanide	second-generation cephalosporin
+ARO:3009116	cefminox	second-generation cephalosporin
+ARO:3009117	cefbuperazone	second-generation cephalosporin
+ARO:0000060	ceftazidime	third-generation cephalosporin
+ARO:0000062	ceftriaxone	third-generation cephalosporin
+ARO:3000645	cefotaxime	third-generation cephalosporin
+ARO:3000646	cefixime	third-generation cephalosporin
+ARO:3000647	cefpodoxime	third-generation cephalosporin
+ARO:3000648	ceftibuten	third-generation cephalosporin
+ARO:3000649	cefditoren	third-generation cephalosporin
+ARO:3000650	cefdinir	third-generation cephalosporin
+ARO:3004000	cefetamet	third-generation cephalosporin
+ARO:3004003	cefoperazone	third-generation cephalosporin
+ARO:3004006	ceftiofur	third-generation cephalosporin
+ARO:3004007	ceftizoxime	third-generation cephalosporin
+ARO:3004017	moxalactam	third-generation cephalosporin
+ARO:3004727	cefsulodin	third-generation cephalosporin
+ARO:3007458	cefovecin	third-generation cephalosporin
+ARO:3007475	cefcapene	third-generation cephalosporin
+ARO:3009118	cefmenoxime	third-generation cephalosporin
+ARO:3009119	cefodizime	third-generation cephalosporin
+ARO:3009120	cefpiramide	third-generation cephalosporin
+ARO:3009121	cefteram	third-generation cephalosporin
+ARO:0000059	cefepime	fourth-generation cephalosporin
+ARO:3004726	cefpirome	fourth-generation cephalosporin
+ARO:3007571	cefquinome	fourth-generation cephalosporin
+ARO:3009122	cefozopran	fourth-generation cephalosporin
+ARO:0000061	ceftobiprole	other cephalosporins and penems
+ARO:3000651	ceftaroline	other cephalosporins and penems
+ARO:3003707	faropenem	other cephalosporins and penems
+ARO:3003927	ceftolozane	other cephalosporins and penems
+ARO:3004474	cefiderocol	other cephalosporins and penems
+ARO:0000043	carbenicillin	penicillin with extended spectrum
+ARO:0000064	amoxicillin	penicillin with extended spectrum
+ARO:0000078	piperacillin	penicillin with extended spectrum
+ARO:3000637	ampicillin	penicillin with extended spectrum
+ARO:3000638	azlocillin	penicillin with extended spectrum
+ARO:3000639	mezlocillin	penicillin with extended spectrum
+ARO:3000761	mecillinam	penicillin with extended spectrum
+ARO:3003831	temocillin	penicillin with extended spectrum
+ARO:3003832	ticarcillin	penicillin with extended spectrum
+ARO:3007529	pivmecillinam	penicillin with extended spectrum
+ARO:3009130	pivampicillin	penicillin with extended spectrum
+ARO:3009131	epicillin	penicillin with extended spectrum
+ARO:3009132	hetacillin	penicillin with extended spectrum
+ARO:3009133	aspoxicillin	penicillin with extended spectrum
+ARO:3000632	benzylpenicillin	beta-lactamase sensitive penicillin
+ARO:3000633	phenoxymethylpenicillin	beta-lactamase sensitive penicillin
+ARO:3000634	propicillin	beta-lactamase sensitive penicillin
+ARO:3009126	azidocillin	beta-lactamase sensitive penicillin
+ARO:3009127	Phenethicillin	beta-lactamase sensitive penicillin
+ARO:3009128	penamecillin	beta-lactamase sensitive penicillin
+ARO:3009129	clometocillin	beta-lactamase sensitive penicillin
+ARO:0000011	cloxacillin	beta-lactamase resistant penicillin
+ARO:0000015	methicillin	beta-lactamase resistant penicillin
+ARO:0000056	oxacillin	beta-lactamase resistant penicillin
+ARO:3000635	dicloxacillin	beta-lactamase resistant penicillin
+ARO:3000636	flucloxacillin	beta-lactamase resistant penicillin
+ARO:3004018	nafcillin	beta-lactamase resistant penicillin
