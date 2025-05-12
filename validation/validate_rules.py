@@ -366,6 +366,27 @@ def check_mutation(mutation_list):
             print(f"Row {index + 2}: {mutation_list[index]}")
         return False
 
+def check_context_mutation(context_list, mutation_list):
+    # check that if context is core, and mutation is not '-', then provide a warning
+    invalid_indices = []
+    for index, (context, mutation) in enumerate(zip(context_list, mutation_list)):
+        context = context.strip()
+        mutation = mutation.strip()
+        if context == 'core' and mutation != '-':
+            invalid_indices.append(index)
+    if not invalid_indices:
+        print("✅ All context and mutation values are concordant")
+        return True
+    else:
+        print(f"⚠️ Warning: {len(invalid_indices)} rows may have incorrect values.")
+        print("If the gene context is a 'core' gene, the expected mutation should generally be '-' unless the rule " \
+        "refers to a specific variant of the core gene for which there is evidence of a nonwildtype mutation. "
+        "Note that a resistance-associated mutation in a core gene (e.g. Ser83Phe in GyrA) should be coded as context 'acquired', " \
+        "since the variant the rule applies to is not itself 'core'.")
+        for index in invalid_indices:
+            print(f"Row {index + 2}: {context_list[index]} and {mutation_list[index]}")
+        return False
+
 def check_mutation_variation(mutation_list, variation_list):
     
     # check that the mutation and variation type are compatible
@@ -449,6 +470,30 @@ def check_drug_drugclass(drug_list, drug_class_list):
         print("One of drug or drug class must contain a value that is not empty, NA or '-'. Values must be listed in the CARD drug name ontology, as per card_drug_names.tsv. Drugs and their classes should be given in all lower case.")
         for index, reason in invalid_indices_dict.items():
             print(f"Row {index + 2}: {reason}")
+        return False
+
+def check_phenotype_context(phenotype_list, context_list):
+    
+    print("\nChecking phenotype and context columns are concordant...")
+
+    # check that if context is core, phenotype must be wildtype
+    invalid_indices = []
+    for index, (phenotype, context) in enumerate(zip(phenotype_list, context_list)):
+        phenotype = phenotype.strip()
+        context = context.strip()
+        if context == 'core' and phenotype != 'wildtype':
+            invalid_indices.append(index)
+    
+    if not invalid_indices:
+        print("✅ All phenotype and context values are concordant")
+        return True
+    else:
+        print(f"❌ {len(invalid_indices)} rows have failed the check")
+        print("If the gene context is a 'core' gene, the expected phenotype should generally be 'wildtype', " \
+        "unless the rule refers to a specific variant of the core gene for which there is evidence of a nonwildtype " \
+        "phenotype (in which case the variant should be coded as 'acquired' not core)")
+        for index in invalid_indices:
+            print(f"Row {index + 2}: {phenotype_list[index]} and {context_list[index]}")
         return False
 
 def check_sir_breakpoint(clinical_category_list, breakpoint_list):
@@ -663,11 +708,14 @@ def main():
 
     if "context" in columns:
         summary_checks["context"] = check_if_allowed_value(get_column("context", draftrules), "context", ["core", "acquired"])
+        # check context and mutation are concordant
+        if "mutation" in columns:
+            summary_checks["context and mutation concordance"] = check_context_mutation(get_column("mutation", draftrules), get_column("context", draftrules))
+
     else:
         print("\n❌ No context column found in file. Spec v0.5 requires this column to be present. Continuing to validate other columns...")
         summary_checks["context"] = False
 
-    # NOTE: we want child terms under ARO:1000003 (antibiotic molecule) to get our drugs and drug classes
     # We will also need child terms under ARO:3000042 (beta-lactamase inhibitor) to get our inhibitor classes and names
     if "drug" in columns and "drug class" in columns:
         summary_checks["drug and drug class"] = check_drug_drugclass(get_column("drug", draftrules), get_column("drug class", draftrules))
@@ -680,6 +728,9 @@ def main():
 
     if "phenotype" in columns:
         summary_checks["phenotype"] = check_if_allowed_value(get_column("phenotype", draftrules), "phenotype", ["wildtype", "nonwildtype"])
+        # check phenotype and context are concordant
+        if "context" in columns:
+            summary_checks["phenotype and context concordance"] = check_phenotype_context(get_column("phenotype", draftrules), get_column("context", draftrules))
     else:
         print("\n❌ No phenotype column found in file. Spec v0.5 requires this column to be present. Continuing to validate other columns...")
         summary_checks["phenotype"] = False
