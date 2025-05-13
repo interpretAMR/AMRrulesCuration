@@ -3,6 +3,7 @@
 import argparse as ArgumentParser
 import csv
 import re
+import subprocess
 # required for reading in the OBO onotology files
 import obonet
 
@@ -37,6 +38,33 @@ def parse_args():
     parser.add_argument("rules", help="Path to the rules file to check, must be a tab separated file")
     
     return parser.parse_args()
+
+def detect_encoding(file_path):
+    """
+    Detect the encoding of a file using the `file -I` command.
+    Args:
+        file_path (str): Path to the file.
+    Returns:
+        str: Detected encoding or None if the encoding cannot be determined.
+    """
+    try:
+        # Run the `file -I` command
+        result = subprocess.run(['file', '-I', file_path], capture_output=True, text=True, check=True)
+        output = result.stdout.strip()
+
+        # Extract the charset from the output
+        for part in output.split():
+            if "charset=" in part:
+                return part.split("=")[1]
+
+        print("❌ Unable to determine encoding from `file -I` output.")
+        return None
+    except subprocess.CalledProcessError as e:
+        print(f"❌ Error running `file -I` command: {e}")
+        return None
+    except Exception as e:
+        print(f"❌ Unexpected error: {e}")
+        return None
 
 def get_column(column_name, draftrules):
         return [row[column_name] for row in draftrules if column_name in row]
@@ -373,7 +401,7 @@ def check_context(context_list, variation_type_list):
                 reason = "Context must be 'core' or 'acquired' if variation type is not 'Combination'."
                 invalid_indices[index] = reason
             if context != '-' and variation == 'Combination':
-                reasion = 'If variation type is "Combination", context must be "-".'
+                reason = 'If variation type is "Combination", context must be "-".'
                 invalid_indices[index] = reason
     if not variation_type_list:
         for index, context in enumerate(context_list):
@@ -657,9 +685,10 @@ def main():
 
     # read in the draft rules
     print(f"\nValidating rules file: {args.rules}")
-    with open(args.rules, newline='') as csvfile:
+    encoding_type = detect_encoding(args.rules)
+    with open(args.rules, newline='', encoding=encoding_type) as csvfile:
         reader = csv.DictReader(csvfile, delimiter='\t')
-        columns = [col.strip() for col in reader.fieldnames]
+        columns = [col.rstrip() for col in reader.fieldnames]
         #draftrules = list(reader)
         # Filter out rows where all values are empty
         draftrules = [row for row in reader if any(value.strip() for value in row.values())]
