@@ -184,15 +184,24 @@ def check_organism(organism_list):
     # becase the value isn't in the GTDB list, go through the GTDB list and extract anything
     # where the genus is the same, and provide those as options for the user to consider
     if len(invalid_org_names) > 0:
-        print("\nThe following organism names are not in the GTDB list:")
-        for org_name in invalid_org_names:
+        print("\nThe following organism names are not in the GTDB list:\n")
+        unique_invalid_org_names = set(invalid_org_names)
+        matching_organisms_genus = []
+        matching_organisms_spp = []
+        for org_name in unique_invalid_org_names:
+            print(org_name)
             # extract the genus from the name
             genus = org_name.split(' ')[0]
-            # find all the GTDB organism names that start with this genus
-            matching_organisms = [name for name in gtdb_organism_names if name.startswith(genus)]
-        if matching_organisms:
-            unique_matching_organisms = set(matching_organisms)
-            print(f"Possible matches from the same genera in GTDB list: {'\n'.join(unique_matching_organisms)}")
+            # first try and find any GTDB organism names which are very close to this species
+            # eg they have an _D or something at the end
+            matching_organisms_spp = matching_organisms_spp + [name for name in gtdb_organism_names if name.startswith(org_name) and name != org_name]
+            # if we don't find any, try and find any GTDB organism names which are the same genus
+            matching_organisms_genus = matching_organisms_genus + [name for name in gtdb_organism_names if name.startswith(genus)]
+        if matching_organisms_spp or matching_organisms_genus:
+            unique_matching_spp = set(matching_organisms_spp)
+            unique_matching_genus = set(matching_organisms_genus)
+            print(f"\nPossible matches from the same species in GTDB list:\n{'\n'.join(unique_matching_spp)}")
+            print(f"\nPossible matches from the same genera in GTDB list:\n{'\n'.join(unique_matching_genus)}")
 
     unique_organisms_str = ', '.join(map(str, unique_organisms))
     print(f"\nUnique organism names: {unique_organisms_str}")
