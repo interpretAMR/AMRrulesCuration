@@ -1,9 +1,9 @@
 
-Validating rules file: /Users/ipmbkhot/Library/CloudStorage/GoogleDrive-drkatholt@gmail.com/My Drive/OrgSpecAMR/AMR rules/CurationWG/drafts/Acinetobacter/Acinetobacter_baumannii_v0.1_KH.txt
+Validating rules file: ../draftrules/Acinetobacter_baumannii_v0.2.txt
 
 Checking that all required columns for spec v0.5 are present...
 
-Continuting to validate values in each column...
+Continuing to validate values in each column...
 
 Checking ruleID column...
 All rule IDs have passed auto validation
@@ -11,7 +11,7 @@ All rule IDs have passed auto validation
 Rule prefix: ACI
 
 Checking organism column...
-✅ All organism names passed auto validation
+✅ All organism names passed validation
 
 Unique organism names: s__Acinetobacter baumannii
 
@@ -22,9 +22,7 @@ Now checking for combinatorial rules in gene column...
 ✅ All gene combinatorial rule IDs are valid
 
 Checking nodeID, refseq accession, GenBank accession and HMM accession columns...
-❌ 2 rows have failed the check, and must contain at least one value in either nodeID, refseq accession, GenBank accession and HMM accession.
-Row 149
-Row 152
+✅ All rows contain at least one value in one of these columns.
 ✅ All accessions are present in the relevant catalogues.
 
 Checking ARO accession column...
@@ -37,20 +35,82 @@ Checking  variation type column...
 ✅ All variation type values are valid
 
 Checking mutation and variation type columns are compatible...
-❌ 4 rows have failed the check
+❌ 2 rows have failed the check
 Row 147: Mutation must start with 'c.-', 'c.(-', or 'c.[-' if variation type is 'Promoter variant detected'. The - symbol indicates the position before the start of the gene where the mutation occurs.
-Row 149: Mutation must not be '-' if variation type is not 'Gene presence detected'
 Row 150: Mutation must start with 'c.-', 'c.(-', or 'c.[-' if variation type is 'Promoter variant detected'. The - symbol indicates the position before the start of the gene where the mutation occurs.
-Row 152: Mutation must not be '-' if variation type is not 'Gene presence detected'
 
-Checking  context column...
-✅ All context values are valid
+Checking context column...
+❌ 2 rows have failed the check
+Context column must contain either 'core' or 'acquired' and cannot be empty. If variation type is 'Combination', context must be '-'.
+Row 149: acquired; If variation type is "Combination", context must be "-".
+Row 152: acquired; If variation type is "Combination", context must be "-".
+✅ All context and mutation values are concordant
 
 Checking drug and drug class columns...
-✅ All drug and drug class values are valid
+❌ 53 rows have failed the check
+One of drug or drug class must contain a value that is not empty, NA or '-'. Values must be listed in the CARD drug name ontology, as per card_drug_names.tsv. Drugs and their classes should be given in all lower case.
+Row 2: Drug class carbapenems is not a valid CARD drug class name.
+Row 5: Drug class carbapenems is not a valid CARD drug class name.
+Row 8: Drug class carbapenems is not a valid CARD drug class name.
+Row 11: Drug class carbapenems is not a valid CARD drug class name.
+Row 14: Drug class carbapenems is not a valid CARD drug class name.
+Row 17: Drug class carbapenems is not a valid CARD drug class name.
+Row 20: Drug class carbapenems is not a valid CARD drug class name.
+Row 23: Drug class carbapenems is not a valid CARD drug class name.
+Row 26: Drug class carbapenems is not a valid CARD drug class name.
+Row 29: Drug class carbapenems is not a valid CARD drug class name.
+Row 32: Drug class carbapenems is not a valid CARD drug class name.
+Row 35: Drug class carbapenems is not a valid CARD drug class name.
+Row 38: Drug class carbapenems is not a valid CARD drug class name.
+Row 41: Drug class carbapenems is not a valid CARD drug class name.
+Row 44: Drug class carbapenems is not a valid CARD drug class name.
+Row 47: Drug class carbapenems is not a valid CARD drug class name.
+Row 50: Drug class carbapenems is not a valid CARD drug class name.
+Row 53: Drug class carbapenems is not a valid CARD drug class name.
+Row 56: Drug class carbapenems is not a valid CARD drug class name.
+Row 59: Drug class carbapenems is not a valid CARD drug class name.
+Row 62: Drug class carbapenems is not a valid CARD drug class name.
+Row 65: Drug class carbapenems is not a valid CARD drug class name.
+Row 68: Drug class carbapenems is not a valid CARD drug class name.
+Row 71: Drug class carbapenems is not a valid CARD drug class name.
+Row 74: Drug class carbapenems is not a valid CARD drug class name.
+Row 77: Drug class carbapenems is not a valid CARD drug class name.
+Row 80: Drug class carbapenems is not a valid CARD drug class name.
+Row 83: Drug class carbapenems is not a valid CARD drug class name.
+Row 86: Drug class carbapenems is not a valid CARD drug class name.
+Row 89: Drug class carbapenems is not a valid CARD drug class name.
+Row 92: Drug class carbapenems is not a valid CARD drug class name.
+Row 95: Drug class carbapenems is not a valid CARD drug class name.
+Row 98: Drug class carbapenems is not a valid CARD drug class name.
+Row 101: Drug class carbapenems is not a valid CARD drug class name.
+Row 104: Drug class carbapenems is not a valid CARD drug class name.
+Row 107: Drug class carbapenems is not a valid CARD drug class name.
+Row 110: Drug class carbapenems is not a valid CARD drug class name.
+Row 113: Drug class carbapenems is not a valid CARD drug class name.
+Row 116: Drug class carbapenems is not a valid CARD drug class name.
+Row 119: Drug class carbapenems is not a valid CARD drug class name.
+Row 122: Drug class carbapenems is not a valid CARD drug class name.
+Row 125: Drug class carbapenems is not a valid CARD drug class name.
+Row 128: Drug class carbapenems is not a valid CARD drug class name.
+Row 131: Drug class carbapenems is not a valid CARD drug class name.
+Row 134: Drug class carbapenems is not a valid CARD drug class name.
+Row 137: Drug class carbapenems is not a valid CARD drug class name.
+Row 140: Drug class carbapenems is not a valid CARD drug class name.
+Row 143: Drug class carbapenems is not a valid CARD drug class name.
+Row 161: Drug class fluoroquinolone is not a valid CARD drug class name.
+Row 162: Drug class fluoroquinolone is not a valid CARD drug class name.
+Row 163: Drug class fluoroquinolone is not a valid CARD drug class name.
+Row 164: Drug class fluoroquinolone is not a valid CARD drug class name.
+Row 165: Drug class aminoglycoside is not a valid CARD drug class name.
 
 Checking  phenotype column...
 ✅ All phenotype values are valid
+
+Checking phenotype and context columns are concordant...
+❌ 2 rows have failed the check
+If the gene context is a 'core' gene, the expected phenotype should generally be 'wildtype', unless the rule refers to a specific variant of the core gene for which there is evidence of a nonwildtype phenotype (in which case the variant should be coded as 'acquired' not core)
+Row 162: nonwildtype and core
+Row 164: nonwildtype and core
 
 Checking  clinical category column...
 ✅ All clinical category values are valid
@@ -64,7 +124,7 @@ Checking clinical category and breakpoint columns...
 Checking  breakpoint standard column...
 ✅ All breakpoint standard values are valid
 
-Unique breakpoint standard values: EUCAST v15.0 (2025), EUCAST v14.0 (2024), ECOFF (May 2025)
+Unique breakpoint standard values: EUCAST v15.0 (2025), ECOFF (May 2025), EUCAST v14.0 (2024)
 
 Checking  PMID column...
 ❌ 81 rows have failed the check
@@ -163,11 +223,11 @@ Summary of checks:
  - ruleID
  - organism
  - gene
+ - gene accessions
  - ARO accession
  - mutation
  - variation type
- - context
- - drug and drug class
+ - context and mutation concordance
  - phenotype
  - clinical category
  - breakpoint
@@ -175,7 +235,9 @@ Summary of checks:
  - breakpoint standard
  - evidence code
  - evidence grade and limitations
-❌ Failed: 3
-  - gene accessions
+❌ Failed: 5
   - variation type mutation concordance
+  - context
+  - drug and drug class
+  - phenotype and context concordance
   - PMID

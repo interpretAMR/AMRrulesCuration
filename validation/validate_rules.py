@@ -424,9 +424,9 @@ def check_context(context_list, variation_type_list):
         return True
     else:
         print(f"❌ {len(invalid_indices)} rows have failed the check")
-        print("Context column must contain either 'core' or 'acquired' and cannot be empty. If variation type is 'Combination', context can be '-")
+        print("Context column must contain either 'core' or 'acquired' and cannot be empty. If variation type is 'Combination', context must be '-'.")
         for index in invalid_indices:
-            print(f"Row {index + 2}: {context_list[index]}")
+            print(f"Row {index + 2}: {context_list[index]}; {invalid_indices[index]}")
         return False
 
 def check_mutation(mutation_list):
