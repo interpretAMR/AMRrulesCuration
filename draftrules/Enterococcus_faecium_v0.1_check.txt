@@ -1,5 +1,5 @@
 
-Validating rules file: /Users/ipmbkhot/Library/CloudStorage/GoogleDrive-drkatholt@gmail.com/My Drive/OrgSpecAMR/AMR rules/CurationWG/drafts/Enterococcus/AMR Rules Spec v0.5.enterococci.v0.4.Efm.txt
+Validating rules file: /Users/ipmbkhot/Library/CloudStorage/GoogleDrive-drkatholt@gmail.com/My Drive/OrgSpecAMR/AMR rules/CurationWG/drafts/Enterococcus/Enterococcus_faecium_v0.1.txt
 
 Checking that all required columns for spec v0.5 are present...
 
@@ -42,11 +42,11 @@ Row 15: AFC64749.1
 Row 16: AZV36500.1
 Row 17: AZV36500.1
 Row 18: AZV36500.1
-Row 19: AFC64635.1
+Row 19: AZV36123.1
 Row 20: AFC64635.1
-Row 21: AFC63082.1
+Row 21: AFC64635.1
 Row 22: AFC63082.1
-Row 23: AZV36123.1
+Row 23: AFC63082.1
 
 Invalid HMM accessions values:
 
@@ -83,14 +83,14 @@ Checking  breakpoint column...
 
 Checking clinical category and breakpoint columns...
 ❌ 3 rows have failed the check
-Row 9: If clinical category is 'R', breakpoint should contain a value of 'MIC >', 'MIC >=', or 'disk <'. 'not applicable' is an allowed value if no breakpoint is available due to expected resistances.
+Row 7: If clinical category is 'R', breakpoint should contain a value of 'MIC >', 'MIC >=', or 'disk <'. 'not applicable' is an allowed value if no breakpoint is available due to expected resistances.
 Row 10: If clinical category is 'R', breakpoint should contain a value of 'MIC >', 'MIC >=', or 'disk <'. 'not applicable' is an allowed value if no breakpoint is available due to expected resistances.
-Row 16: If clinical category is 'S', breakpoint should contain a value of 'MIC <', 'MIC <=', or 'disk >'. 'not applicable' is an allowed value if no breakpoint is available due to expected resistances.
+Row 17: If clinical category is 'S', breakpoint should contain a value of 'MIC <', 'MIC <=', or 'disk >'. 'not applicable' is an allowed value if no breakpoint is available due to expected resistances.
 
 Checking  breakpoint standard column...
 ✅ All breakpoint standard values are valid
 
-Unique breakpoint standard values: ECOFF, ECOFF ID, not applicable
+Unique breakpoint standard values: ECOFF ID, ECOFF, not applicable
 
 Checking  PMID column...
 ✅ All PMID values are valid
@@ -100,14 +100,14 @@ The following evidence codes are new and not currently in the list of suggested 
 ECO:0001583 small interfering RNA knockdown evidence
 
 ❌ 1 rows have failed the check. Each rule must have an evidence code and not be empty. If there are multiplegit  evidence codes for a row, they must be separated by a ',', not by a new line. Evidence codes must start with 'ECO:'.
-Row 23: ECO:0001583 small interfering RNA knockdown evidence
+Row 19: ECO:0001583 small interfering RNA knockdown evidence
 
 Checking evidence grade and limitations columns...
 ✅ All evidence grades are valid
 ❌ 2 rows have failed the check
 If evidence grade is 'moderate' or 'weak', evidence limitations column must contain one of the following values: lacks evidence for this species, lacks evidence for this genus, lacks evidence for this allele, lacks evidence of the degree to which MIC is affected, low clinical relevance, unknown clinical relevance, statistical geno/pheno evidence but no experimental evidence
-Row 9: no netilmicin MIC change in knockout strain compared to WT, no evidence of contribution to intrinsic resistance
-Row 10: no amikacin MIC change in knockout strain compared to WT, no evidence of contribution to intrinsic resistance
+Row 7: no amikacin MIC change in knockout strain compared to WT, no evidence of contribution to intrinsic resistance
+Row 10: no netilmicin MIC change in knockout strain compared to WT, no evidence of contribution to intrinsic resistance
 
 Summary of checks:
 ✅ Passed: 16
