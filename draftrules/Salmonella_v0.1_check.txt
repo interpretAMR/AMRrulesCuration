@@ -1,9 +1,9 @@
 
-Validating rules file: /Users/ipmbkhot/Documents/GitHub/AMRrulesCuration/draftrules/Salmonella_v0.1.txt
+Validating rules file: ../draftrules/Salmonella_v0.1.txt
 
 Checking that all required columns for spec v0.5 are present...
 
-Continuting to validate values in each column...
+Continuing to validate values in each column...
 
 Checking ruleID column...
 All rule IDs have passed auto validation
@@ -11,7 +11,7 @@ All rule IDs have passed auto validation
 Rule prefix: SAL
 
 Checking organism column...
-✅ All organism names passed auto validation
+✅ All organism names passed validation
 
 Unique organism names: s__Salmonella enterica
 
@@ -37,14 +37,18 @@ Checking  variation type column...
 Checking mutation and variation type columns are compatible...
 ✅ All mutation and variation type values are compatible
 
-Checking  context column...
+Checking context column...
 ✅ All context values are valid
+✅ All context and mutation values are concordant
 
 Checking drug and drug class columns...
-✅ All drug and drug class values are valid
+✅ All drug and drug class values are valid and listed in the CARD drug name ontology.
 
 Checking  phenotype column...
 ✅ All phenotype values are valid
+
+Checking phenotype and context columns are concordant...
+✅ All phenotype and context values are concordant
 
 Checking  clinical category column...
 ✅ All clinical category values are valid
@@ -71,7 +75,7 @@ Checking evidence grade and limitations columns...
 ✅ All evidence limitations are valid
 
 Summary of checks:
-✅ Passed: 18
+✅ Passed: 20
  - ruleID
  - organism
  - gene
@@ -81,8 +85,10 @@ Summary of checks:
  - variation type
  - variation type mutation concordance
  - context
+ - context and mutation concordance
  - drug and drug class
  - phenotype
+ - phenotype and context concordance
  - clinical category
  - breakpoint
  - clinical category and breakpoint concordance
