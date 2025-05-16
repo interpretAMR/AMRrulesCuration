@@ -72,11 +72,7 @@ Checking context column...
 ✅ All context and mutation values are concordant
 
 Checking drug and drug class columns...
-❌ 3 rows have failed the check
-One of drug or drug class must contain a value that is not empty, NA or '-'. Values must be listed in the CARD drug name ontology, as per card_drug_names.tsv. Drugs and their classes should be given in all lower case.
-Row 82: Drug class  is not a valid CARD drug class name.
-Row 83: Drug class  is not a valid CARD drug class name.
-Row 84: Drug class  is not a valid CARD drug class name.
+✅ All drug and drug class values are valid and listed in the CARD drug name ontology.
 
 Checking  phenotype column...
 ✅ All phenotype values are valid
@@ -145,7 +141,7 @@ Checking clinical category and breakpoint columns...
 Checking  breakpoint standard column...
 ✅ All breakpoint standard values are valid
 
-Unique breakpoint standard values: ECOFF (May 2025), EUCAST v15.0 (2025), EUCAST v14.0 (2024)
+Unique breakpoint standard values: EUCAST v14.0 (2024), EUCAST v15.0 (2025), ECOFF (May 2025)
 
 Checking  PMID column...
 ✅ All PMID values are valid
@@ -158,7 +154,7 @@ Checking evidence grade and limitations columns...
 ✅ All evidence limitations are valid
 
 Summary of checks:
-✅ Passed: 17
+✅ Passed: 18
  - ruleID
  - organism
  - gene
@@ -168,6 +164,7 @@ Summary of checks:
  - variation type mutation concordance
  - context
  - context and mutation concordance
+ - drug and drug class
  - phenotype
  - clinical category
  - breakpoint
@@ -176,7 +173,6 @@ Summary of checks:
  - PMID
  - evidence code
  - evidence grade and limitations
-❌ Failed: 3
+❌ Failed: 2
   - gene accessions
-  - drug and drug class
   - phenotype and context concordance
