@@ -1,9 +1,9 @@
 
-Validating rules file: /Users/ipmbkhot/Library/CloudStorage/GoogleDrive-drkatholt@gmail.com/My Drive/OrgSpecAMR/AMR rules/CurationWG/drafts/Ecoli/Ecoli_v0.1.txt
+Validating rules file: ../draftrules/Ecoli_v0.1.txt
 
 Checking that all required columns for spec v0.5 are present...
 
-Continuting to validate values in each column...
+Continuing to validate values in each column...
 
 Checking ruleID column...
 All rule IDs have passed auto validation
@@ -11,7 +11,7 @@ All rule IDs have passed auto validation
 Rule prefix: ECO
 
 Checking organism column...
-✅ All organism names passed auto validation
+✅ All organism names passed validation
 
 Unique organism names: s__Escherichia coli
 
@@ -67,14 +67,71 @@ Checking  variation type column...
 Checking mutation and variation type columns are compatible...
 ✅ All mutation and variation type values are compatible
 
-Checking  context column...
+Checking context column...
 ✅ All context values are valid
+✅ All context and mutation values are concordant
 
 Checking drug and drug class columns...
-✅ All drug and drug class values are valid
+❌ 3 rows have failed the check
+One of drug or drug class must contain a value that is not empty, NA or '-'. Values must be listed in the CARD drug name ontology, as per card_drug_names.tsv. Drugs and their classes should be given in all lower case.
+Row 82: Drug class  is not a valid CARD drug class name.
+Row 83: Drug class  is not a valid CARD drug class name.
+Row 84: Drug class  is not a valid CARD drug class name.
 
 Checking  phenotype column...
 ✅ All phenotype values are valid
+
+Checking phenotype and context columns are concordant...
+❌ 48 rows have failed the check
+If the gene context is a 'core' gene, the expected phenotype should generally be 'wildtype', unless the rule refers to a specific variant of the core gene for which there is evidence of a nonwildtype phenotype (in which case the variant should be coded as 'acquired' not core)
+Row 20: nonwildtype and core
+Row 21: nonwildtype and core
+Row 22: nonwildtype and core
+Row 23: nonwildtype and core
+Row 24: nonwildtype and core
+Row 25: nonwildtype and core
+Row 26: nonwildtype and core
+Row 27: nonwildtype and core
+Row 28: nonwildtype and core
+Row 29: nonwildtype and core
+Row 30: nonwildtype and core
+Row 31: nonwildtype and core
+Row 32: nonwildtype and core
+Row 33: nonwildtype and core
+Row 35: nonwildtype and core
+Row 36: nonwildtype and core
+Row 40: nonwildtype and core
+Row 42: nonwildtype and core
+Row 43: nonwildtype and core
+Row 44: nonwildtype and core
+Row 45: nonwildtype and core
+Row 46: nonwildtype and core
+Row 47: nonwildtype and core
+Row 48: nonwildtype and core
+Row 49: nonwildtype and core
+Row 50: nonwildtype and core
+Row 51: nonwildtype and core
+Row 52: nonwildtype and core
+Row 53: nonwildtype and core
+Row 54: nonwildtype and core
+Row 55: nonwildtype and core
+Row 58: nonwildtype and core
+Row 59: nonwildtype and core
+Row 61: nonwildtype and core
+Row 62: nonwildtype and core
+Row 63: nonwildtype and core
+Row 64: nonwildtype and core
+Row 65: nonwildtype and core
+Row 66: nonwildtype and core
+Row 68: nonwildtype and core
+Row 69: nonwildtype and core
+Row 70: nonwildtype and core
+Row 71: nonwildtype and core
+Row 72: nonwildtype and core
+Row 73: nonwildtype and core
+Row 75: nonwildtype and core
+Row 77: nonwildtype and core
+Row 78: nonwildtype and core
 
 Checking  clinical category column...
 ✅ All clinical category values are valid
@@ -88,7 +145,7 @@ Checking clinical category and breakpoint columns...
 Checking  breakpoint standard column...
 ✅ All breakpoint standard values are valid
 
-Unique breakpoint standard values: EUCAST v14.0 (2024), EUCAST v15.0 (2025), ECOFF (May 2025)
+Unique breakpoint standard values: ECOFF (May 2025), EUCAST v15.0 (2025), EUCAST v14.0 (2024)
 
 Checking  PMID column...
 ✅ All PMID values are valid
@@ -110,7 +167,7 @@ Summary of checks:
  - variation type
  - variation type mutation concordance
  - context
- - drug and drug class
+ - context and mutation concordance
  - phenotype
  - clinical category
  - breakpoint
@@ -119,5 +176,7 @@ Summary of checks:
  - PMID
  - evidence code
  - evidence grade and limitations
-❌ Failed: 1
+❌ Failed: 3
   - gene accessions
+  - drug and drug class
+  - phenotype and context concordance
