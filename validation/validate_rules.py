@@ -634,7 +634,7 @@ def check_evidence_code(evidence_code_list):
             unique_codes = set(invalid_codes)
             print("The following evidence codes are new and not currently in the list of suggested values:")
             print(f"{', '.join(unique_codes)}")
-        print(f"\n❌ {len(invalid_indices)} rows have failed the check. Each rule must have an evidence code and not be empty. If there are mulptile evidence codes for a row, they must be separated by a ',', not by a new line. Evidence codes must start with 'ECO:'.")
+        print(f"\n❌ {len(invalid_indices)} rows have failed the check. Each rule must have an evidence code and not be empty. If there are multiple evidence codes for a row, they must be separated by a ',', not by a new line. Evidence codes must start with 'ECO:'.")
         for index in invalid_indices:
             print(f"Row {index + 2}: {evidence_code_list[index]}")
         return False
