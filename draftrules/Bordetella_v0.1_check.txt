@@ -1,2 +1,0 @@
-
-Validating rules file: ../draftrules/Bordetella_v0.1.txt

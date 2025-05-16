@@ -1,0 +1,191 @@
+
+Validating rules file: ../draftrules/Bordetella_v0.2.txt
+
+Checking that all required columns for spec v0.5 are present...
+
+Continuing to validate values in each column...
+
+Checking ruleID column...
+All rule IDs have passed auto validation
+✅ All values are valid
+Rule prefix: BOR
+
+Checking organism column...
+❌ 22 rows have failed the check
+Organism names must be present, not 'NA' or '-'. They should start with 's__' and be in the GTDB organism names list, as per file gtdb_species_r220.txt.
+Row 2: s__Bordetella bronchiseptica
+Row 3: s__Bordetella bronchiseptica
+Row 4: s__Bordetella bronchiseptica
+Row 5: s__Bordetella bronchiseptica
+Row 6: s__Bordetella bronchiseptica
+Row 7: s__Bordetella bronchiseptica
+Row 8: s__Bordetella bronchiseptica
+Row 9: s__Bordetella bronchiseptica
+Row 10: s__Bordetella bronchiseptica
+Row 11: s__Bordetella bronchiseptica
+Row 12: s__Bordetella bronchiseptica
+Row 13: s__Bordetella bronchiseptica
+Row 14: s__Bordetella bronchiseptica
+Row 15: s__Bordetella bronchiseptica
+Row 16: s__Bordetella bronchiseptica
+Row 17: s__Bordetella bronchiseptica
+Row 18: s__Bordetella bronchiseptica
+Row 19: s__Bordetella bronchiseptica
+Row 20: s__Bordetella bronchiseptica
+Row 21: s__Bordetella bronchiseptica
+Row 22: s__Bordetella bronchiseptica
+Row 26: s__Bordetella parapertussis
+
+The following organism names are not in the GTDB list:
+
+s__Bordetella bronchiseptica
+s__Bordetella parapertussis
+
+Possible matches from the same species in GTDB list:
+s__Bordetella bronchiseptica_F
+
+Possible matches from the same genera in GTDB list:
+s__Bordetella_C sp002261225
+s__Bordetella_C sp002209485
+s__Bordetella sp002261475
+s__Bordetella_A petrii_C
+s__Bordetella_A sp009763255
+s__Bordetella_A sp019218885
+s__Bordetella_A sp002261345
+s__Bordetella sp002261355
+s__Bordetella_C flabilis
+s__Bordetella_B ansorpii
+s__Bordetella_A petrii_D
+s__Bordetella_A sp002261265
+s__Bordetella sp023386765
+s__Bordetella_A petrii
+s__Bordetella_B sp007679965
+s__Bordetella_B ansorpii_A
+s__Bordetella avium
+s__Bordetella trematum
+s__Bordetella_C bronchialis
+s__Bordetella_B sp002119665
+s__Bordetella_B sp000382185
+s__Bordetella_B sp937881145
+s__Bordetella_C sp021325795
+s__Bordetella holmesii
+s__Bordetella_A sp002261185
+s__Bordetella_C sp002261215
+s__Bordetella bronchiseptica_F
+s__Bordetella_A petrii_E
+s__Bordetella_C sp002119725
+s__Bordetella_C aloeverae
+s__Bordetella_B sp027450125
+s__Bordetella sp002261335
+s__Bordetella_C sp002261425
+s__Bordetella_C sp002119685
+s__Bordetella_C sp001433395
+s__Bordetella hinzii
+s__Bordetella pertussis
+s__Bordetella_C sp001704295
+s__Bordetella pseudohinzii
+
+Unique organism names: s__Bordetella parapertussis, s__Bordetella bronchiseptica, s__Bordetella hinzii, s__Bordetella pertussis, s__Bordetella holmesii
+
+Checking gene column...
+✅ All gene values are valid
+
+Now checking for combinatorial rules in gene column...
+✅ All gene combinatorial rule IDs are valid
+
+Checking nodeID, refseq accession, GenBank accession and HMM accession columns...
+✅ All rows contain at least one value in one of these columns.
+❌ One or more accessions aren't present in either the NCBI Reference Gene Catalog (for nodeID, refseq accession and genbank accession) or the NCBI Reference HMM Catalog (for HMM accession). Empty cells must be specified by '-'.
+
+Invalid nodeID accessions values:
+
+Invalid refseq accessions values:
+Row 9: WP_080700690.1
+Row 13: WP_63844474.1
+Row 14: WP_63844476.1
+Row 27: NR_103973.1:1-2882
+Row 28: NR_103973.1:1-2882
+Row 29: NR_103973.1:1-2882
+
+Invalid genbank accessions values:
+Row 20: AJS10312.1
+
+Invalid HMM accessions values:
+
+Checking ARO accession column...
+✅ All ARO accession values are valid and exist in the CARD ontology
+
+Checking mutation column...
+✅ All mutation values are valid
+
+Checking  variation type column...
+✅ All variation type values are valid
+
+Checking mutation and variation type columns are compatible...
+✅ All mutation and variation type values are compatible
+
+Checking context column...
+❌ 1 rows have failed the check
+Context column must contain either 'core' or 'acquired' and cannot be empty. If variation type is 'Combination', context must be '-'.
+Row 15: acquired; If variation type is "Combination", context must be "-".
+✅ All context and mutation values are concordant
+
+Checking drug and drug class columns...
+✅ All drug and drug class values are valid and listed in the CARD drug name ontology.
+
+Checking  phenotype column...
+✅ All phenotype values are valid
+
+Checking phenotype and context columns are concordant...
+✅ All phenotype and context values are concordant
+
+Checking  clinical category column...
+✅ All clinical category values are valid
+
+Checking  breakpoint column...
+✅ All breakpoint values are valid
+
+Checking clinical category and breakpoint columns...
+✅ All clinical category and breakpoint values are concordant
+
+Checking  breakpoint standard column...
+✅ All breakpoint standard values are valid
+
+Unique breakpoint standard values: PMID:12624047, PMID: 26275219, ECOFF (August 2024), ECOFF (April 2025), Expected resistant phenotype (PMID:15917575), PMID: 16046466, PMID: 17224413, 2021 EUCAST PK/PD (nonspecies related) breakpoints, Inferred from EUCAST distribution and PMID:26275219, PMID: 19914850, ECOFF (May 2025), PMID:19914850, none
+
+Checking  PMID column...
+❌ 2 rows have failed the check
+PMID column must contain a value that is not NA or '-'
+Row 9: -
+Row 24: -
+
+Checking evidence code column...
+✅ All evidence codes are valid
+
+Checking evidence grade and limitations columns...
+✅ All evidence grades are valid
+✅ All evidence limitations are valid
+
+Summary of checks:
+✅ Passed: 16
+ - ruleID
+ - gene
+ - ARO accession
+ - mutation
+ - variation type
+ - variation type mutation concordance
+ - context and mutation concordance
+ - drug and drug class
+ - phenotype
+ - phenotype and context concordance
+ - clinical category
+ - breakpoint
+ - clinical category and breakpoint concordance
+ - breakpoint standard
+ - evidence code
+ - evidence grade and limitations
+❌ Failed: 4
+  - organism
+  - gene accessions
+  - context
+  - PMID

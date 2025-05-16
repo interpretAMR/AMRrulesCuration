@@ -1,0 +1,186 @@
+
+Validating rules file: /Users/ipmbkhot/Library/CloudStorage/GoogleDrive-drkatholt@gmail.com/My Drive/OrgSpecAMR/AMR rules/CurationWG/drafts/Enterococcus/AMR Rules Spec v0.5.enterococci.v0.4.Efc.tsv
+
+Removing second row as it contains the 'required' and 'optional' call-outs for columns.
+
+Checking that all required columns for spec v0.5 are present...
+
+Continuing to validate values in each column...
+
+Checking ruleID column...
+All rule IDs have passed auto validation
+✅ All values are valid
+Rule prefix: EFC
+
+Checking organism column...
+✅ All organism names passed validation
+
+Unique organism names: s__Enterococcus faecalis
+
+Checking gene column...
+✅ All gene values are valid
+
+Now checking for combinatorial rules in gene column...
+✅ All gene combinatorial rule IDs are valid
+
+Checking nodeID, refseq accession, GenBank accession and HMM accession columns...
+✅ All rows contain at least one value in one of these columns.
+❌ One or more accessions aren't present in either the NCBI Reference Gene Catalog (for nodeID, refseq accession and genbank accession) or the NCBI Reference HMM Catalog (for HMM accession). Empty cells must be specified by '-'.
+
+Invalid nodeID accessions values:
+
+Invalid refseq accessions values:
+
+Invalid genbank accessions values:
+Row 2: AEA94594.1
+Row 3: AEA94594.1
+Row 4: AEA94594.1
+Row 5: AEA94594.1
+Row 6: AEA94845.1
+Row 7: AEA94845.1
+Row 8: AEA94845.1
+Row 9: AEA94845.1
+Row 10: AAO80501.1
+Row 11: AAO80948.1
+Row 12: AAO82800.1
+Row 16: HG970098.1
+Row 17: HG970103.1
+Row 18: HG970098.1
+Row 19: HG970103.1
+Row 20: HG970098.1
+Row 21: HG970103.1
+Row 22: HG970098.1
+Row 23: HG970103.1
+Row 24: HG970098.1
+Row 25: HG970103.1
+Row 26: HG970098.1
+Row 27: HG970103.1
+Row 28: HG970098.1
+Row 29: HG970103.1
+Row 30: HG970098.1
+Row 31: HG970103.1
+Row 32: AAO80603.1
+Row 33: AAO80604.1
+Row 34: AAO80603.1
+Row 35: AAO80604.1
+Row 36: AAO80603.1
+Row 37: AAO80604.1
+Row 38: AAO80603.1
+Row 39: AAO80604.1
+Row 40: AAO80603.1
+Row 41: AAO80604.1
+Row 42: AAO80603.1
+Row 43: AAO80604.1
+Row 44: AAO80603.1
+Row 45: AAO80604.1
+Row 46: AAO80603.1
+Row 47: AAO80604.1
+Row 48: AB091338.1
+Row 49: AB091338.1
+Row 50: AF028811.1
+
+Invalid HMM accessions values:
+
+Checking ARO accession column...
+✅ All ARO accession values are valid and exist in the CARD ontology
+
+Checking mutation column...
+✅ All mutation values are valid
+
+Checking  variation type column...
+✅ All variation type values are valid
+
+Checking mutation and variation type columns are compatible...
+✅ All mutation and variation type values are compatible
+
+Checking context column...
+✅ All context values are valid
+✅ All context and mutation values are concordant
+
+Checking drug and drug class columns...
+❌ 1 rows have failed the check
+One of drug or drug class must contain a value that is not empty, NA or '-'. Values must be listed in the CARD drug name ontology, as per card_drug_names.tsv. Drugs and their classes should be given in all lower case.
+Row 15: Drug class streptogramins is not a valid CARD drug class name.
+
+Checking  phenotype column...
+✅ All phenotype values are valid
+
+Checking phenotype and context columns are concordant...
+✅ All phenotype and context values are concordant
+
+Checking  clinical category column...
+✅ All clinical category values are valid
+
+Checking  breakpoint column...
+✅ All breakpoint values are valid
+
+Checking clinical category and breakpoint columns...
+❌ 9 rows have failed the check
+Row 24: If clinical category is 'S', breakpoint should contain a value of 'MIC <', 'MIC <=', or 'disk >'. 'not applicable' is an allowed value if no breakpoint is available due to expected resistances.
+Row 25: If clinical category is 'S', breakpoint should contain a value of 'MIC <', 'MIC <=', or 'disk >'. 'not applicable' is an allowed value if no breakpoint is available due to expected resistances.
+Row 30: If clinical category is 'S', breakpoint should contain a value of 'MIC <', 'MIC <=', or 'disk >'. 'not applicable' is an allowed value if no breakpoint is available due to expected resistances.
+Row 31: If clinical category is 'S', breakpoint should contain a value of 'MIC <', 'MIC <=', or 'disk >'. 'not applicable' is an allowed value if no breakpoint is available due to expected resistances.
+Row 40: If clinical category is 'S', breakpoint should contain a value of 'MIC <', 'MIC <=', or 'disk >'. 'not applicable' is an allowed value if no breakpoint is available due to expected resistances.
+Row 41: If clinical category is 'S', breakpoint should contain a value of 'MIC <', 'MIC <=', or 'disk >'. 'not applicable' is an allowed value if no breakpoint is available due to expected resistances.
+Row 46: If clinical category is 'S', breakpoint should contain a value of 'MIC <', 'MIC <=', or 'disk >'. 'not applicable' is an allowed value if no breakpoint is available due to expected resistances.
+Row 47: If clinical category is 'S', breakpoint should contain a value of 'MIC <', 'MIC <=', or 'disk >'. 'not applicable' is an allowed value if no breakpoint is available due to expected resistances.
+Row 50: If clinical category is 'S', breakpoint should contain a value of 'MIC <', 'MIC <=', or 'disk >'. 'not applicable' is an allowed value if no breakpoint is available due to expected resistances.
+
+Checking  breakpoint standard column...
+✅ All breakpoint standard values are valid
+
+Unique breakpoint standard values: ECOFF, ECOFF ID, not applicable
+
+Checking  PMID column...
+✅ All PMID values are valid
+
+Checking evidence code column...
+The following evidence codes are new and not currently in the list of suggested values:
+ECO:0000154 heterologous protein expression evidence
+
+❌ 17 rows have failed the check. Each rule must have an evidence code and not be empty. If there are multiplegit  evidence codes for a row, they must be separated by a ',', not by a new line. Evidence codes must start with 'ECO:'.
+Row 16: ECO:0001091 knockout phenotypic evidence, ECO:0000154 heterologous protein expression evidence
+Row 17: ECO:0001091 knockout phenotypic evidence, ECO:0000154 heterologous protein expression evidence
+Row 18: ECO:0001091 knockout phenotypic evidence, ECO:0000154 heterologous protein expression evidence
+Row 19: ECO:0001091 knockout phenotypic evidence, ECO:0000154 heterologous protein expression evidence
+Row 20: ECO:0001091 knockout phenotypic evidence, ECO:0000154 heterologous protein expression evidence
+Row 21: ECO:0001091 knockout phenotypic evidence, ECO:0000154 heterologous protein expression evidence
+Row 22: ECO:0001091 knockout phenotypic evidence, ECO:0000154 heterologous protein expression evidence
+Row 23: ECO:0001091 knockout phenotypic evidence, ECO:0000154 heterologous protein expression evidence
+Row 24: ECO:0001091 knockout phenotypic evidence, ECO:0000154 heterologous protein expression evidence
+Row 25: ECO:0001091 knockout phenotypic evidence, ECO:0000154 heterologous protein expression evidence
+Row 26: ECO:0001091 knockout phenotypic evidence, ECO:0000154 heterologous protein expression evidence
+Row 27: ECO:0001091 knockout phenotypic evidence, ECO:0000154 heterologous protein expression evidence
+Row 28: ECO:0001091 knockout phenotypic evidence, ECO:0000154 heterologous protein expression evidence
+Row 29: ECO:0001091 knockout phenotypic evidence, ECO:0000154 heterologous protein expression evidence
+Row 30: ECO:0001091 knockout phenotypic evidence, ECO:0000154 heterologous protein expression evidence
+Row 31: ECO:0001091 knockout phenotypic evidence, ECO:0000154 heterologous protein expression evidence
+Row 50: ECO:0000154 heterologous protein expression evidence
+
+Checking evidence grade and limitations columns...
+✅ All evidence grades are valid
+✅ All evidence limitations are valid
+
+Summary of checks:
+✅ Passed: 16
+ - ruleID
+ - organism
+ - gene
+ - ARO accession
+ - mutation
+ - variation type
+ - variation type mutation concordance
+ - context
+ - context and mutation concordance
+ - phenotype
+ - phenotype and context concordance
+ - clinical category
+ - breakpoint
+ - breakpoint standard
+ - PMID
+ - evidence grade and limitations
+❌ Failed: 4
+  - gene accessions
+  - drug and drug class
+  - clinical category and breakpoint concordance
+  - evidence code
