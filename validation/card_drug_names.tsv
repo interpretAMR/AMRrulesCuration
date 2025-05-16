@@ -432,3 +432,24 @@ ARO:0000056	oxacillin	beta-lactamase resistant penicillin
 ARO:3000635	dicloxacillin	beta-lactamase resistant penicillin
 ARO:3000636	flucloxacillin	beta-lactamase resistant penicillin
 ARO:3004018	nafcillin	beta-lactamase resistant penicillin
+ARO:0000022	polymyxin antibiotic	lipopeptide antibiotic
+ARO:0000068	daptomycin	lipopeptide antibiotic
+ARO:3000685	arylomycin	lipopeptide antibiotic
+ARO:3000687	moenomycin	lipopeptide antibiotic
+ARO:3000697	moenomycin A1	lipopeptide antibiotic
+ARO:3003822	battacin	lipopeptide antibiotic
+ARO:3004374	malacidin A	lipopeptide antibiotic
+ARO:3004567	Ramoplanin	lipopeptide antibiotic
+ARO:3007629	cadaside antibiotic	lipopeptide antibiotic
+ARO:3007758	fengycin	lipopeptide antibiotic
+ARO:3007784	zosurabalpin	macrocyclic peptide antibiotics
+ARO:0000067	colistin	polymyxin antibiotic
+ARO:3000454	polymyxin B	polymyxin antibiotic
+ARO:3000622	colistin A	polymyxin antibiotic
+ARO:3000624	colistin B	polymyxin antibiotic
+ARO:3000625	polymyxin B1	polymyxin antibiotic
+ARO:3000626	polymyxin B2	polymyxin antibiotic
+ARO:3000627	polymyxin B3	polymyxin antibiotic
+ARO:3000628	polymyxin B4	polymyxin antibiotic
+ARO:3007630	cadaside A	cadaside antibiotic
+ARO:3007631	cadaside B	cadaside antibiotic
