@@ -1,5 +1,5 @@
 
-Validating rules file: ../draftrules/Yersinia_v0.1.txt
+Validating rules file: ../draftrules/Yersinia_v0.2.txt
 
 Checking that all required columns for spec v0.5 are present...
 
@@ -35,30 +35,30 @@ Possible matches from the same species in GTDB list:
 
 
 Possible matches from the same genera in GTDB list:
-s__Yersinia massiliensis
-s__Yersinia hibernica
-s__Yersinia aldovae
-s__Yersinia enterocolitica
+s__Yersinia ruckeri
 s__Yersinia rochesterensis
-s__Yersinia enterocolitica_E
+s__Yersinia enterocolitica
+s__Yersinia proxima
 s__Yersinia bercovieri
+s__Yersinia hibernica
+s__Yersinia kristensenii
+s__Yersinia frederiksenii
+s__Yersinia massiliensis
+s__Yersinia entomophaga
+s__Yersinia aldovae
+s__Yersinia artesiana
+s__Yersinia mollaretii
+s__Yersinia pestis
+s__Yersinia enterocolitica_E
+s__Yersinia intermedia
 s__Yersinia pekkanenii
 s__Yersinia thracica
-s__Yersinia canariae
-s__Yersinia ruckeri
-s__Yersinia kristensenii
-s__Yersinia aleksiciae
-s__Yersinia pestis
-s__Yersinia nurmii
-s__Yersinia intermedia
-s__Yersinia entomophaga
 s__Yersinia alsatica
-s__Yersinia proxima
-s__Yersinia mollaretii
 s__Yersinia rohdei
+s__Yersinia nurmii
+s__Yersinia canariae
+s__Yersinia aleksiciae
 s__Yersinia vastinensis
-s__Yersinia artesiana
-s__Yersinia frederiksenii
 s__Yersinia similis
 
 Unique organism names: s__Yersinia enterocolitica, s__Yersinia pseudotuberculosis
@@ -115,59 +115,7 @@ Checking context column...
 ✅ All context and mutation values are concordant
 
 Checking drug and drug class columns...
-❌ 51 rows have failed the check
-One of drug or drug class must contain a value that is not empty, NA or '-'. Values must be listed in the CARD drug name ontology, as per card_drug_names.tsv. Drugs and their classes should be given in all lower case.
-Row 2: Drug name Gentamycin is not a valid CARD drug name.
-Row 3: Drug name Tobramycin is not a valid CARD drug name.
-Row 4: Drug name Cefoxitin is not a valid CARD drug name.
-Row 5: Drug name Kanamycin is not a valid CARD drug name.
-Row 6: Drug name Gentamycin is not a valid CARD drug name.
-Row 7: Drug name Tobramycin is not a valid CARD drug name.
-Row 8: Drug name Amoxicillin is not a valid CARD drug name.
-Row 9: Drug name Amoxicillin-clavulanic acid is not a valid CARD drug name.
-Row 10: Drug name Ampicillin-sulbactam is not a valid CARD drug name.
-Row 11: Drug name Cefalexin is not a valid CARD drug name.
-Row 12: Drug name Ticarcillin is not a valid CARD drug name.
-Row 13: Drug name Ticarcillin is not a valid CARD drug name.
-Row 14: Drug name Etapenem is not a valid CARD drug name.
-Row 15: Drug name Amoxicillin is not a valid CARD drug name.
-Row 16: Drug name Trimethoprim is not a valid CARD drug name.
-Row 17: Drug name Trimethoprim is not a valid CARD drug name.
-Row 18: Drug name Trimethoprim is not a valid CARD drug name.
-Row 19: Drug name Trimethoprim is not a valid CARD drug name.
-Row 20: Drug name Chloramphenicol is not a valid CARD drug name.
-Row 21: Drug name Nalidixic acid is not a valid CARD drug name.
-Row 22: Drug name Nalidixic acid is not a valid CARD drug name.
-Row 23: Drug name Nalidixic acid is not a valid CARD drug name.
-Row 24: Drug name Nalidixic acid is not a valid CARD drug name.
-Row 25: Drug name Nalidixic acid is not a valid CARD drug name.
-Row 26: Drug name Nalidixic acid is not a valid CARD drug name.
-Row 27: Drug name Nalidixic acid is not a valid CARD drug name.
-Row 28: Drug name Nalidixic acid is not a valid CARD drug name.
-Row 29: Drug name Nalidixic acid is not a valid CARD drug name.
-Row 30: Drug name Nalidixic acid is not a valid CARD drug name.
-Row 32: Drug name Sulfamethoxazole is not a valid CARD drug name.
-Row 33: Drug name Sulfamethoxazole is not a valid CARD drug name.
-Row 34: Drug name Sulfamethoxazole is not a valid CARD drug name.
-Row 35: Drug name Tetracyclin is not a valid CARD drug name.
-Row 36: Drug name Tetracyclin is not a valid CARD drug name.
-Row 37: Drug name Tetracyclin is not a valid CARD drug name.
-Row 38: Drug name Tetracyclin is not a valid CARD drug name.
-Row 39: Drug name Tetracyclin is not a valid CARD drug name.
-Row 40: Drug name Streptogamin is not a valid CARD drug name.
-Row 41: Drug name Streptomycin is not a valid CARD drug name.
-Row 42: Drug name Streptomycin is not a valid CARD drug name.
-Row 43: Drug name Streptomycin is not a valid CARD drug name.
-Row 44: Drug name Amoxicillin is not a valid CARD drug name.
-Row 45: Drug name Amoxicillin is not a valid CARD drug name.
-Row 46: Drug name Ticarcillin is not a valid CARD drug name.
-Row 47: Drug name Chloramphenicol is not a valid CARD drug name.
-Row 48: Drug name Trimethoprim is not a valid CARD drug name.
-Row 49: Drug name Trimethoprim is not a valid CARD drug name.
-Row 50: Drug name Sulfamethoxazole is not a valid CARD drug name.
-Row 51: Drug name Sulfamethoxazole is not a valid CARD drug name.
-Row 52: Drug name Tetracycline is not a valid CARD drug name.
-Row 53: Drug name Tetracycline is not a valid CARD drug name.
+✅ All drug and drug class values are valid and listed in the CARD drug name ontology.
 
 Checking  phenotype column...
 ✅ All phenotype values are valid
@@ -215,7 +163,7 @@ Row 51: If clinical category is 'R', breakpoint should contain a value of 'MIC >
 Checking  breakpoint standard column...
 ✅ All breakpoint standard values are valid
 
-Unique breakpoint standard values: EUCAST v14.0 (2024), Expected resistant phenotypes v1.2 (13 January, 2023)
+Unique breakpoint standard values: Expected resistant phenotypes v1.2 (13 January, 2023), EUCAST v14.0 (2024)
 
 Checking  PMID column...
 ❌ 21 rows have failed the check
@@ -296,7 +244,7 @@ Row 52:
 Row 53: 
 
 Summary of checks:
-✅ Passed: 12
+✅ Passed: 13
  - ruleID
  - gene
  - mutation
@@ -304,16 +252,16 @@ Summary of checks:
  - variation type mutation concordance
  - context
  - context and mutation concordance
+ - drug and drug class
  - phenotype
  - clinical category
  - breakpoint
  - breakpoint standard
  - evidence code
-❌ Failed: 8
+❌ Failed: 7
   - organism
   - gene accessions
   - ARO accession
-  - drug and drug class
   - phenotype and context concordance
   - clinical category and breakpoint concordance
   - PMID
