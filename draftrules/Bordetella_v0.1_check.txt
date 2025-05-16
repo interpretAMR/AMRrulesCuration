@@ -1,0 +1,231 @@
+
+Validating rules file: ../draftrules/Bordetella_v0.1.txt
+
+Checking that all required columns for spec v0.5 are present...
+
+Continuing to validate values in each column...
+
+Checking ruleID column...
+❌ Rule IDs are not unique
+8 rows have failed the check. Rule IDs must be unique and have the same prefix.
+Row 3: BOR0002
+Row 4: BOR0003
+Row 5: BOR0002
+Row 6: BOR0003
+Row 25: BOR0022
+Row 26: BOR0022
+Row 28: BOR0003
+Row 29: BOR0003
+Multiple rule ID prefixes: BOR
+
+Checking organism column...
+❌ 22 rows have failed the check
+Organism names must be present, not 'NA' or '-'. They should start with 's__' and be in the GTDB organism names list, as per file gtdb_species_r220.txt.
+Row 5: s__Bordetella bronchiseptica
+Row 6: s__Bordetella bronchiseptica
+Row 7: s__Bordetella bronchiseptica
+Row 8: s__Bordetella bronchiseptica
+Row 9: s__Bordetella bronchiseptica
+Row 10: s__Bordetella bronchiseptica
+Row 11: s__Bordetella bronchiseptica
+Row 12: s__Bordetella parapertussis
+Row 16: s__Bordetella bronchiseptica
+Row 17: s__Bordetella bronchiseptica
+Row 18: s__Bordetella bronchiseptica
+Row 19: s__Bordetella bronchiseptica
+Row 20: s__Bordetella bronchiseptica
+Row 21: s__Bordetella bronchiseptica
+Row 22: s__Bordetella bronchiseptica
+Row 23: s__Bordetella bronchiseptica
+Row 24: s__Bordetella bronchiseptica
+Row 25: s__Bordetella bronchiseptica
+Row 26: s__Bordetella bronchiseptica
+Row 27: s__Bordetella bronchiseptica
+Row 28: s__Bordetella bronchiseptica
+Row 29: s__Bordetella bronchiseptica
+
+The following organism names are not in the GTDB list:
+
+s__Bordetella parapertussis
+s__Bordetella bronchiseptica
+
+Possible matches from the same species in GTDB list:
+s__Bordetella bronchiseptica_F
+
+Possible matches from the same genera in GTDB list:
+s__Bordetella_B ansorpii_A
+s__Bordetella_B sp027450125
+s__Bordetella_C sp002119725
+s__Bordetella_C sp001704295
+s__Bordetella_B sp937881145
+s__Bordetella_A sp019218885
+s__Bordetella_B sp002119665
+s__Bordetella_C sp001433395
+s__Bordetella sp002261475
+s__Bordetella pertussis
+s__Bordetella_A petrii_E
+s__Bordetella_B ansorpii
+s__Bordetella_A sp002261185
+s__Bordetella_C sp002261425
+s__Bordetella_C aloeverae
+s__Bordetella_C sp002209485
+s__Bordetella holmesii
+s__Bordetella hinzii
+s__Bordetella_C sp002119685
+s__Bordetella sp002261355
+s__Bordetella_A petrii_C
+s__Bordetella_A petrii
+s__Bordetella_A sp009763255
+s__Bordetella_B sp007679965
+s__Bordetella sp023386765
+s__Bordetella_C flabilis
+s__Bordetella_C sp021325795
+s__Bordetella trematum
+s__Bordetella avium
+s__Bordetella sp002261335
+s__Bordetella_A sp002261345
+s__Bordetella_A petrii_D
+s__Bordetella_C sp002261225
+s__Bordetella_C sp002261215
+s__Bordetella_C bronchialis
+s__Bordetella bronchiseptica_F
+s__Bordetella pseudohinzii
+s__Bordetella_B sp000382185
+s__Bordetella_A sp002261265
+
+Unique organism names: s__Bordetella hinzii, s__Bordetella pertussis, s__Bordetella bronchiseptica, s__Bordetella parapertussis, s__Bordetella holmesii
+
+Checking gene column...
+✅ All gene values are valid
+
+Now checking for combinatorial rules in gene column...
+✅ All gene combinatorial rule IDs are valid
+
+Checking nodeID, refseq accession, GenBank accession and HMM accession columns...
+✅ All rows contain at least one value in one of these columns.
+❌ One or more accessions aren't present in either the NCBI Reference Gene Catalog (for nodeID, refseq accession and genbank accession) or the NCBI Reference HMM Catalog (for HMM accession). Empty cells must be specified by '-'.
+
+Invalid nodeID accessions values:
+Row 29: ampC
+
+Invalid refseq accessions values:
+Row 2: NR_103973.1:1-2882
+Row 3: NR_103973.1:1-2882
+Row 4: NR_103973.1:1-2882
+Row 16: WP_080700690.1
+Row 20: WP_63844474.1
+Row 21: WP_63844476.1
+
+Invalid genbank accessions values:
+Row 27: AJS10312.1
+
+Invalid HMM accessions values:
+
+Checking ARO accession column...
+✅ All ARO accession values are valid and exist in the CARD ontology
+
+Checking mutation column...
+✅ All mutation values are valid
+
+Checking  variation type column...
+✅ All variation type values are valid
+
+Checking mutation and variation type columns are compatible...
+✅ All mutation and variation type values are compatible
+
+Checking context column...
+❌ 1 rows have failed the check
+Context column must contain either 'core' or 'acquired' and cannot be empty. If variation type is 'Combination', context must be '-'.
+Row 22: acquired; If variation type is "Combination", context must be "-".
+✅ All context and mutation values are concordant
+
+Checking drug and drug class columns...
+❌ 12 rows have failed the check
+One of drug or drug class must contain a value that is not empty, NA or '-'. Values must be listed in the CARD drug name ontology, as per card_drug_names.tsv. Drugs and their classes should be given in all lower case.
+Row 2: Drug class  is not a valid CARD drug class name.
+Row 3: Drug class  is not a valid CARD drug class name.
+Row 4: Drug class  is not a valid CARD drug class name.
+Row 5: Drug class penams is not a valid CARD drug class name.
+Row 8: Drug class sulfonamides is not a valid CARD drug class name.
+Row 9: Drug class sulfonamides is not a valid CARD drug class name.
+Row 12: Drug class penams is not a valid CARD drug class name.
+Row 13: Drug class penams is not a valid CARD drug class name.
+Row 14: Drug class penams is not a valid CARD drug class name.
+Row 15: Drug class aminoglycosides is not a valid CARD drug class name.
+Row 16: Drug class tetracycline is not a valid CARD drug class name.
+Row 27: Drug name amplicillin is not a valid CARD drug name.
+
+Checking  phenotype column...
+✅ All phenotype values are valid
+
+Checking phenotype and context columns are concordant...
+✅ All phenotype and context values are concordant
+
+Checking  clinical category column...
+✅ All clinical category values are valid
+
+Checking  breakpoint column...
+✅ All breakpoint values are valid
+
+Checking clinical category and breakpoint columns...
+❌ 18 rows have failed the check
+Row 5: If clinical category is 'R', breakpoint should contain a value of 'MIC >', 'MIC >=', or 'disk <'. 'not applicable' is an allowed value if no breakpoint is available due to expected resistances.
+Row 8: If clinical category is 'R', breakpoint should contain a value of 'MIC >', 'MIC >=', or 'disk <'. 'not applicable' is an allowed value if no breakpoint is available due to expected resistances.
+Row 9: If clinical category is 'R', breakpoint should contain a value of 'MIC >', 'MIC >=', or 'disk <'. 'not applicable' is an allowed value if no breakpoint is available due to expected resistances.
+Row 10: If clinical category is 'R', breakpoint should contain a value of 'MIC >', 'MIC >=', or 'disk <'. 'not applicable' is an allowed value if no breakpoint is available due to expected resistances.
+Row 11: If clinical category is 'R', breakpoint should contain a value of 'MIC >', 'MIC >=', or 'disk <'. 'not applicable' is an allowed value if no breakpoint is available due to expected resistances.
+Row 12: If clinical category is 'R', breakpoint should contain a value of 'MIC >', 'MIC >=', or 'disk <'. 'not applicable' is an allowed value if no breakpoint is available due to expected resistances.
+Row 13: If clinical category is 'R', breakpoint should contain a value of 'MIC >', 'MIC >=', or 'disk <'. 'not applicable' is an allowed value if no breakpoint is available due to expected resistances.
+Row 14: If clinical category is 'R', breakpoint should contain a value of 'MIC >', 'MIC >=', or 'disk <'. 'not applicable' is an allowed value if no breakpoint is available due to expected resistances.
+Row 15: If clinical category is 'R', breakpoint should contain a value of 'MIC >', 'MIC >=', or 'disk <'. 'not applicable' is an allowed value if no breakpoint is available due to expected resistances.
+Row 16: If clinical category is 'R', breakpoint should contain a value of 'MIC >', 'MIC >=', or 'disk <'. 'not applicable' is an allowed value if no breakpoint is available due to expected resistances.
+Row 17: If clinical category is 'R', breakpoint should contain a value of 'MIC >', 'MIC >=', or 'disk <'. 'not applicable' is an allowed value if no breakpoint is available due to expected resistances.
+Row 18: If clinical category is 'R', breakpoint should contain a value of 'MIC >', 'MIC >=', or 'disk <'. 'not applicable' is an allowed value if no breakpoint is available due to expected resistances.
+Row 22: If clinical category is 'R', breakpoint should contain a value of 'MIC >', 'MIC >=', or 'disk <'. 'not applicable' is an allowed value if no breakpoint is available due to expected resistances.
+Row 23: If clinical category is 'R', breakpoint should contain a value of 'MIC >', 'MIC >=', or 'disk <'. 'not applicable' is an allowed value if no breakpoint is available due to expected resistances.
+Row 24: If clinical category is 'R', breakpoint should contain a value of 'MIC >', 'MIC >=', or 'disk <'. 'not applicable' is an allowed value if no breakpoint is available due to expected resistances.
+Row 25: If clinical category is 'R', breakpoint should contain a value of 'MIC >', 'MIC >=', or 'disk <'. 'not applicable' is an allowed value if no breakpoint is available due to expected resistances.
+Row 26: If clinical category is 'R', breakpoint should contain a value of 'MIC >', 'MIC >=', or 'disk <'. 'not applicable' is an allowed value if no breakpoint is available due to expected resistances.
+Row 27: If clinical category is 'R', breakpoint should contain a value of 'MIC >', 'MIC >=', or 'disk <'. 'not applicable' is an allowed value if no breakpoint is available due to expected resistances.
+
+Checking  breakpoint standard column...
+✅ All breakpoint standard values are valid
+
+Unique breakpoint standard values: Inferred from EUCAST distribution and PMID:26275219, PMID: 16046466, ECOFF (April 2025), none, Expected resistant phenotype (PMID:15917575), PMID:19914850, 2021 EUCAST PK/PD (nonspecies related) breakpoints, PMID: 17224413, ECOFF (August 2024), PMID: 19914850, ECOFF (May 2025), PMID: 26275219, PMID:12624047
+
+Checking  PMID column...
+❌ 2 rows have failed the check
+PMID column must contain a value that is not NA or '-'
+Row 15: -
+Row 16: -
+
+Checking evidence code column...
+✅ All evidence codes are valid
+
+Checking evidence grade and limitations columns...
+✅ All evidence grades are valid
+✅ All evidence limitations are valid
+
+Summary of checks:
+✅ Passed: 13
+ - gene
+ - ARO accession
+ - mutation
+ - variation type
+ - variation type mutation concordance
+ - context and mutation concordance
+ - phenotype
+ - phenotype and context concordance
+ - clinical category
+ - breakpoint
+ - breakpoint standard
+ - evidence code
+ - evidence grade and limitations
+❌ Failed: 7
+  - ruleID
+  - organism
+  - gene accessions
+  - context
+  - drug and drug class
+  - clinical category and breakpoint concordance
+  - PMID

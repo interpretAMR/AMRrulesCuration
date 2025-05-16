@@ -3,7 +3,7 @@ Validating rules file: ../draftrules/Campylobacter_jejuni_v0.1.txt
 
 Checking that all required columns for spec v0.5 are present...
 
-Continuting to validate values in each column...
+Continuing to validate values in each column...
 
 Checking ruleID column...
 All rule IDs have passed auto validation
@@ -11,7 +11,287 @@ All rule IDs have passed auto validation
 Rule prefix: CAM
 
 Checking organism column...
-✅ All organism names passed auto validation
+❌ 55 rows have failed the check
+Organism names must be present, not 'NA' or '-'. They should start with 's__' and be in the GTDB organism names list, as per file gtdb_species_r220.txt.
+Row 2: s__Campylobacter jejuni
+Row 3: s__Campylobacter jejuni
+Row 4: s__Campylobacter jejuni
+Row 5: s__Campylobacter jejuni
+Row 6: s__Campylobacter jejuni
+Row 7: s__Campylobacter jejuni
+Row 8: s__Campylobacter jejuni
+Row 9: s__Campylobacter jejuni
+Row 10: s__Campylobacter jejuni
+Row 11: s__Campylobacter jejuni
+Row 12: s__Campylobacter jejuni
+Row 13: s__Campylobacter jejuni
+Row 14: s__Campylobacter jejuni
+Row 15: s__Campylobacter jejuni
+Row 16: s__Campylobacter jejuni
+Row 17: s__Campylobacter jejuni
+Row 18: s__Campylobacter jejuni
+Row 19: s__Campylobacter jejuni
+Row 20: s__Campylobacter jejuni
+Row 21: s__Campylobacter jejuni
+Row 22: s__Campylobacter jejuni
+Row 23: s__Campylobacter jejuni
+Row 24: s__Campylobacter jejuni
+Row 25: s__Campylobacter jejuni
+Row 26: s__Campylobacter jejuni
+Row 27: s__Campylobacter jejuni
+Row 28: s__Campylobacter jejuni
+Row 29: s__Campylobacter jejuni
+Row 30: s__Campylobacter jejuni
+Row 31: s__Campylobacter jejuni
+Row 32: s__Campylobacter jejuni
+Row 33: s__Campylobacter jejuni
+Row 34: s__Campylobacter jejuni
+Row 35: s__Campylobacter jejuni
+Row 36: s__Campylobacter jejuni
+Row 37: s__Campylobacter jejuni
+Row 38: s__Campylobacter jejuni
+Row 39: s__Campylobacter jejuni
+Row 40: s__Campylobacter jejuni
+Row 41: s__Campylobacter jejuni
+Row 42: s__Campylobacter jejuni
+Row 43: s__Campylobacter jejuni
+Row 44: s__Campylobacter jejuni
+Row 45: s__Campylobacter jejuni
+Row 46: s__Campylobacter jejuni
+Row 47: s__Campylobacter jejuni
+Row 48: s__Campylobacter jejuni
+Row 49: s__Campylobacter jejuni
+Row 50: s__Campylobacter jejuni
+Row 51: s__Campylobacter jejuni
+Row 52: s__Campylobacter jejuni
+Row 53: s__Campylobacter jejuni
+Row 54: s__Campylobacter jejuni
+Row 55: s__Campylobacter jejuni
+Row 56: s__Campylobacter jejuni
+
+The following organism names are not in the GTDB list:
+
+s__Campylobacter jejuni
+
+Possible matches from the same species in GTDB list:
+
+
+Possible matches from the same genera in GTDB list:
+s__Campylobacter_A sp030249845
+s__Campylobacter_A suis
+s__Campylobacter_A sp938046705
+s__Campylobacter_D insulaenigrae
+s__Campylobacter_E sp022369455
+s__Campylobacter_A sp905372745
+s__Campylobacter_B sp017934385
+s__Campylobacter_B sp938045465
+s__Campylobacter_F sputorum
+s__Campylobacter_B sp905373215
+s__Campylobacter_D lari_C
+s__Campylobacter_D concheus
+s__Campylobacter_A curvus
+s__Campylobacter_D taeniopygiae
+s__Campylobacter_B sp938045205
+s__Campylobacter_B sp938017615
+s__Campylobacter_A massiliensis
+s__Campylobacter_D volucris
+s__Campylobacter_B sp900539505
+s__Campylobacter_A rectus
+s__Campylobacter_A caledonicus
+s__Campylobacter_B sp938017705
+s__Campylobacter_B sp937996225
+s__Campylobacter_A concisus_P
+s__Campylobacter_A concisus_L
+s__Campylobacter_D sp020135845
+s__Campylobacter_D aviculae
+s__Campylobacter_A concisus_AM
+s__Campylobacter_B sp938030785
+s__Campylobacter sp002139855
+s__Campylobacter lanienae
+s__Campylobacter lawsonii
+s__Campylobacter sp945928165
+s__Campylobacter_B sp938030685
+s__Campylobacter_D lari_E
+s__Campylobacter_B sp937981295
+s__Campylobacter_A sp905371695
+s__Campylobacter_A sp902387145
+s__Campylobacter_B sp938015785
+s__Campylobacter_A concisus_A
+s__Campylobacter_A concisus_K
+s__Campylobacter_A sp937896205
+s__Campylobacter_A sp021203945
+s__Campylobacter_A concisus_AB
+s__Campylobacter_B sp938031315
+s__Campylobacter_D sp020024835
+s__Campylobacter_D estrildidarum
+s__Campylobacter_A concisus_H
+s__Campylobacter_B sp938045595
+s__Campylobacter_B sp012728225
+s__Campylobacter_A showae_A
+s__Campylobacter_A concisus_S
+s__Campylobacter_B sp937973075
+s__Campylobacter fetus
+s__Campylobacter_B sp947090385
+s__Campylobacter_A sp030532465
+s__Campylobacter_D sp030528245
+s__Campylobacter_A sp937965895
+s__Campylobacter_E sp026616895
+s__Campylobacter_A concisus_AC
+s__Campylobacter_A concisus_AG
+s__Campylobacter_A concisus_AL
+s__Campylobacter_D sp016599045
+s__Campylobacter_A concisus_X
+s__Campylobacter_D volucris_A
+s__Campylobacter_A sp938039205
+s__Campylobacter ovis
+s__Campylobacter_B ureolyticus
+s__Campylobacter_D sp022511325
+s__Campylobacter_A sp938045225
+s__Campylobacter_B sp937959485
+s__Campylobacter_A concisus_AH
+s__Campylobacter_A concisus_N
+s__Campylobacter_A concisus_Y
+s__Campylobacter_A concisus_O
+s__Campylobacter_B portucalensis
+s__Campylobacter_B geochelonis
+s__Campylobacter_B sp938018035
+s__Campylobacter_A concisus_R
+s__Campylobacter_A concisus_U
+s__Campylobacter_D sp949294425
+s__Campylobacter_A concisus
+s__Campylobacter_D sp008633915
+s__Campylobacter_B sp938045405
+s__Campylobacter_D armoricus
+s__Campylobacter sp937875715
+s__Campylobacter_D bilis
+s__Campylobacter_D sp944323605
+s__Campylobacter_A sp004803835
+s__Campylobacter iguaniorum
+s__Campylobacter_B sp938017775
+s__Campylobacter_A sp004803855
+s__Campylobacter_B sp022775765
+s__Campylobacter_A concisus_D
+s__Campylobacter_D avium
+s__Campylobacter_B sp937949835
+s__Campylobacter_A showae_D
+s__Campylobacter_B sp012519705
+s__Campylobacter_B gracilis_A
+s__Campylobacter_D sp934718785
+s__Campylobacter_D novaezeelandiae
+s__Campylobacter_D sp004378855
+s__Campylobacter_A concisus_V
+s__Campylobacter_D troglodytis
+s__Campylobacter_D ornithocola
+s__Campylobacter_B hominis
+s__Campylobacter_A sp012978815
+s__Campylobacter_B sp938002845
+s__Campylobacter_A concisus_J
+s__Campylobacter sp002317305
+s__Campylobacter_B sp937997535
+s__Campylobacter_D jejuni_D
+s__Campylobacter_D hepaticus
+s__Campylobacter_D peloridis
+s__Campylobacter_D sp006864455
+s__Campylobacter_D helveticus
+s__Campylobacter_A concisus_AS
+s__Campylobacter_A sp937997465
+s__Campylobacter_A concisus_E
+s__Campylobacter_D jejuni
+s__Campylobacter_D sp006864365
+s__Campylobacter_E canadensis
+s__Campylobacter sp017506845
+s__Campylobacter_A concisus_B
+s__Campylobacter_D sp006864535
+s__Campylobacter_A concisus_Z
+s__Campylobacter_B gracilis
+s__Campylobacter_D sp025772985
+s__Campylobacter_D jejuni_B
+s__Campylobacter_A majalis
+s__Campylobacter_A concisus_AT
+s__Campylobacter_A concisus_C
+s__Campylobacter_A concisus_T
+s__Campylobacter_B sp019423325
+s__Campylobacter_A concisus_M
+s__Campylobacter_D lari
+s__Campylobacter_D subantarcticus
+s__Campylobacter_A concisus_AF
+s__Campylobacter sp017646085
+s__Campylobacter infans
+s__Campylobacter_A sp937890585
+s__Campylobacter_B ureolyticus_A
+s__Campylobacter_D jejuni_A
+s__Campylobacter_D coli_B
+s__Campylobacter_D upsaliensis
+s__Campylobacter_D coli
+s__Campylobacter_B sp938030145
+s__Campylobacter hyointestinalis
+s__Campylobacter_D sp026241315
+s__Campylobacter_A concisus_F
+s__Campylobacter_A concisus_AI
+s__Campylobacter_A sp938041615
+s__Campylobacter_B sp937921625
+s__Campylobacter_F sputorum_B
+s__Campylobacter_A concisus_AK
+s__Campylobacter_A sp024680445
+s__Campylobacter_B sp947255105
+s__Campylobacter_A concisus_AO
+s__Campylobacter_A sp938018145
+s__Campylobacter_A mucosalis
+s__Campylobacter_A sp025319965
+s__Campylobacter_A sp938039245
+s__Campylobacter_B sp017469645
+s__Campylobacter_A concisus_AE
+s__Campylobacter_A concisus_G
+s__Campylobacter_E sp018501205
+s__Campylobacter_B sp938045535
+s__Campylobacter_A sp013201975
+s__Campylobacter_D sp934728065
+s__Campylobacter testudinum
+s__Campylobacter_A sp938045625
+s__Campylobacter_D sp900772495
+s__Campylobacter_A sp938040115
+s__Campylobacter sp900753405
+s__Campylobacter_A concisus_AJ
+s__Campylobacter_A concisus_Q
+s__Campylobacter_B blaseri
+s__Campylobacter_B sp938036585
+s__Campylobacter_B sp938030815
+s__Campylobacter_D vulpis
+s__Campylobacter_A concisus_AN
+s__Campylobacter_B corcagiensis
+s__Campylobacter_B sp938041645
+s__Campylobacter_B sp938045345
+s__Campylobacter sp002139915
+s__Campylobacter_B sp937980635
+s__Campylobacter_D sp003627915
+s__Campylobacter_B sp938045775
+s__Campylobacter_B sp937997595
+s__Campylobacter_D sp000816245
+s__Campylobacter_B sp937990735
+s__Campylobacter_A concisus_W
+s__Campylobacter_A showae_B
+s__Campylobacter_A sp019702925
+s__Campylobacter_A pinnipediorum
+s__Campylobacter sp017940085
+s__Campylobacter_B sp905373295
+s__Campylobacter_D coli_A
+s__Campylobacter_D sp016598935
+s__Campylobacter_A anatolicus
+s__Campylobacter_A concisus_AD
+s__Campylobacter_A concisus_I
+s__Campylobacter_A showae
+s__Campylobacter_D lari_D
+s__Campylobacter sp900319915
+s__Campylobacter sp945873855
+s__Campylobacter_B sp937997405
+s__Campylobacter_D cuniculorum
+s__Campylobacter_A concisus_AP
+s__Campylobacter_A concisus_AR
+s__Campylobacter_A concisus_AQ
+s__Campylobacter_A concisus_AA
+s__Campylobacter_A showae_E
+s__Campylobacter_D jejuni_C
+s__Campylobacter_D sp900539255
 
 Unique organism names: s__Campylobacter jejuni
 
@@ -38,14 +318,77 @@ Checking mutation and variation type columns are compatible...
 ❌ 1 rows have failed the check
 Row 56: Mutation must start with 'c.-', 'c.(-', or 'c.[-' if variation type is 'Promoter variant detected'. The - symbol indicates the position before the start of the gene where the mutation occurs.
 
-Checking  context column...
+Checking context column...
 ✅ All context values are valid
+✅ All context and mutation values are concordant
 
 Checking drug and drug class columns...
-✅ All drug and drug class values are valid
+❌ 23 rows have failed the check
+One of drug or drug class must contain a value that is not empty, NA or '-'. Values must be listed in the CARD drug name ontology, as per card_drug_names.tsv. Drugs and their classes should be given in all lower case.
+Row 13: Drug class tetracycline is not a valid CARD drug class name.
+Row 14: Drug class tetracycline is not a valid CARD drug class name.
+Row 15: Drug class tetracycline is not a valid CARD drug class name.
+Row 16: Drug class tetracycline is not a valid CARD drug class name.
+Row 17: Drug class tetracycline is not a valid CARD drug class name.
+Row 18: Drug class macrolide is not a valid CARD drug class name.
+Row 33: Drug class Quinolones is not a valid CARD drug class name.
+Row 34: Drug class  is not a valid CARD drug class name.
+Row 35: Drug class  is not a valid CARD drug class name.
+Row 36: Drug class  is not a valid CARD drug class name.
+Row 37: Drug class  is not a valid CARD drug class name.
+Row 38: Drug class  is not a valid CARD drug class name.
+Row 39: Drug class  is not a valid CARD drug class name.
+Row 40: Drug class  is not a valid CARD drug class name.
+Row 41: Drug class  is not a valid CARD drug class name.
+Row 42: Drug class  is not a valid CARD drug class name.
+Row 43: Drug class  is not a valid CARD drug class name.
+Row 44: Drug class  is not a valid CARD drug class name.
+Row 45: Drug class  is not a valid CARD drug class name.
+Row 46: Drug class penicillin is not a valid CARD drug class name.
+Row 49: Drug class carbapenems is not a valid CARD drug class name.
+Row 51: Drug class penicillin is not a valid CARD drug class name.
+Row 54: Drug class carbapenems is not a valid CARD drug class name.
 
 Checking  phenotype column...
 ✅ All phenotype values are valid
+
+Checking phenotype and context columns are concordant...
+❌ 34 rows have failed the check
+If the gene context is a 'core' gene, the expected phenotype should generally be 'wildtype', unless the rule refers to a specific variant of the core gene for which there is evidence of a nonwildtype phenotype (in which case the variant should be coded as 'acquired' not core)
+Row 19: nonwildtype and core
+Row 20: nonwildtype and core
+Row 21: nonwildtype and core
+Row 22: nonwildtype and core
+Row 23: nonwildtype and core
+Row 24: nonwildtype and core
+Row 25: nonwildtype and core
+Row 26: nonwildtype and core
+Row 27: nonwildtype and core
+Row 28: nonwildtype and core
+Row 29: nonwildtype and core
+Row 34: nonwildtype and core
+Row 35: nonwildtype and core
+Row 36: nonwildtype and core
+Row 37: nonwildtype and core
+Row 38: nonwildtype and core
+Row 39: nonwildtype and core
+Row 40: nonwildtype and core
+Row 41: nonwildtype and core
+Row 42: nonwildtype and core
+Row 43: nonwildtype and core
+Row 44: nonwildtype and core
+Row 45: nonwildtype and core
+Row 46: nonwildtype and core
+Row 47: nonwildtype and core
+Row 48: nonwildtype and core
+Row 49: nonwildtype and core
+Row 50: nonwildtype and core
+Row 51: nonwildtype and core
+Row 52: nonwildtype and core
+Row 53: nonwildtype and core
+Row 54: nonwildtype and core
+Row 55: nonwildtype and core
+Row 56: nonwildtype and core
 
 Checking  clinical category column...
 ✅ All clinical category values are valid
@@ -59,7 +402,7 @@ Checking clinical category and breakpoint columns...
 Checking  breakpoint standard column...
 ✅ All breakpoint standard values are valid
 
-Unique breakpoint standard values: EUCAST v15.0 (2025), ECOFF (May 2025)
+Unique breakpoint standard values: ECOFF (May 2025), EUCAST v15.0 (2025)
 
 Checking  PMID column...
 ❌ 2 rows have failed the check
@@ -75,16 +418,15 @@ Checking evidence grade and limitations columns...
 ✅ All evidence limitations are valid
 
 Summary of checks:
-✅ Passed: 16
+✅ Passed: 15
  - ruleID
- - organism
  - gene
  - gene accessions
  - ARO accession
  - mutation
  - variation type
  - context
- - drug and drug class
+ - context and mutation concordance
  - phenotype
  - clinical category
  - breakpoint
@@ -92,6 +434,9 @@ Summary of checks:
  - breakpoint standard
  - evidence code
  - evidence grade and limitations
-❌ Failed: 2
+❌ Failed: 5
+  - organism
   - variation type mutation concordance
+  - drug and drug class
+  - phenotype and context concordance
   - PMID
