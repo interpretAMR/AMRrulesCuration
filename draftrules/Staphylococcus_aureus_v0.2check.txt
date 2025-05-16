@@ -1,7 +1,5 @@
 
-Validating rules file: ../draftrules/Staphylococcus_aureus_v0.1.txt
-
-Removing second row as it contains the 'required' and 'optional' call-outs for columns.
+Validating rules file: ../draftrules/Staphylococcus_aureus_v0.2.txt
 
 Checking that all required columns for spec v0.5 are present...
 
@@ -31,7 +29,6 @@ Row 2
 Invalid nodeID accessions values:
 
 Invalid refseq accessions values:
-Row 24: --
 
 Invalid genbank accessions values:
 Row 5: BAA14147.1
@@ -90,34 +87,7 @@ Checking context column...
 ✅ All context and mutation values are concordant
 
 Checking drug and drug class columns...
-❌ 26 rows have failed the check
-One of drug or drug class must contain a value that is not empty, NA or '-'. Values must be listed in the CARD drug name ontology, as per card_drug_names.tsv. Drugs and their classes should be given in all lower case.
-Row 5: Drug class fluoroquinolones is not a valid CARD drug class name.
-Row 8: Drug class fluoroquinolones is not a valid CARD drug class name.
-Row 9: Drug class  is not a valid CARD drug class name.
-Row 10: Drug class  is not a valid CARD drug class name.
-Row 11: Drug class  is not a valid CARD drug class name.
-Row 12: Drug class  is not a valid CARD drug class name.
-Row 13: Drug class  is not a valid CARD drug class name.
-Row 14: Drug class fluoroquinolones is not a valid CARD drug class name.
-Row 15: Drug class  is not a valid CARD drug class name.
-Row 16: Drug class  is not a valid CARD drug class name.
-Row 17: Drug class fluoroquinolones is not a valid CARD drug class name.
-Row 18: Drug class  is not a valid CARD drug class name.
-Row 19: Drug class  is not a valid CARD drug class name.
-Row 20: Drug class fluoroquinolones is not a valid CARD drug class name.
-Row 24: Drug class peptides is not a valid CARD drug class name.
-Row 26: Drug class cephalosporins is not a valid CARD drug class name.
-Row 28: Drug class penicillins is not a valid CARD drug class name.
-Row 30: Drug class fluoroquinolones is not a valid CARD drug class name.
-Row 34: Drug class fluoroquinolones is not a valid CARD drug class name.
-Row 37: Drug class aminoglycosides is not a valid CARD drug class name.
-Row 38: Drug class macrolides is not a valid CARD drug class name.
-Row 40: Drug class aminoglycosides is not a valid CARD drug class name.
-Row 41: Drug name kanamycin is not a valid CARD drug name.
-Row 42: Drug class oxazolidinones is not a valid CARD drug class name.
-Row 44: Drug class diaminopyrimidines is not a valid CARD drug class name.
-Row 46: Drug class phenicols is not a valid CARD drug class name.
+✅ All drug and drug class values are valid and listed in the CARD drug name ontology.
 
 Checking  phenotype column...
 ✅ All phenotype values are valid
@@ -148,15 +118,15 @@ Checking clinical category and breakpoint columns...
 Checking  breakpoint standard column...
 ✅ All breakpoint standard values are valid
 
-Unique breakpoint standard values: Expected resistant phenotypes v1.2 (13 January, 2023)
-EUCAST v14.0 (2024-01-01), Expected resistant phenotypes v1.2 (13 January, 2023); EUCAST v15.0 (2025-01-01); CLSI M100Ed35E, Expected resistant phenotypes v1.2 (13 January, 2023); ECOFF (2025-4-17); CLSI M100Ed35E, Expected resistant phenotypes v1.2 (13 January, 2023); EUCAST v15.0 (2025-01-01) + ECOFF (2025-4-17); CLSI M100Ed35E, Expected resistant phenotypes v1.2 (13 January, 2023); EUCAST v15.0 (2025-01-01), Expected resistant phenotypes v1.2 (13 January, 2023); CLSI M100Ed35E, Expected resistant phenotypes v1.2 (13 January, 2023); ECOFF (2025-4-17)
+Unique breakpoint standard values: Expected resistant phenotypes v1.2 (13 January, 2023); EUCAST v15.0 (2025-01-01); CLSI M100Ed35E, Expected resistant phenotypes v1.2 (13 January, 2023); CLSI M100Ed35E, Expected resistant phenotypes v1.2 (13 January, 2023)
+EUCAST v14.0 (2024-01-01), Expected resistant phenotypes v1.2 (13 January, 2023); ECOFF (2025-4-17); CLSI M100Ed35E, Expected resistant phenotypes v1.2 (13 January, 2023); ECOFF (2025-4-17), Expected resistant phenotypes v1.2 (13 January, 2023); EUCAST v15.0 (2025-01-01) + ECOFF (2025-4-17); CLSI M100Ed35E, Expected resistant phenotypes v1.2 (13 January, 2023); EUCAST v15.0 (2025-01-01)
 
 Checking  PMID column...
 ✅ All PMID values are valid
 
 Checking evidence code column...
 
-❌ 1 rows have failed the check. Each rule must have an evidence code and not be empty. If there are mulptile evidence codes for a row, they must be separated by a ',', not by a new line. Evidence codes must start with 'ECO:'.
+❌ 1 rows have failed the check. Each rule must have an evidence code and not be empty. If there are multiple evidence codes for a row, they must be separated by a ',', not by a new line. Evidence codes must start with 'ECO:'.
 Row 2: 
 
 Checking evidence grade and limitations columns...
@@ -167,7 +137,7 @@ strong, moderate, weak
 Row 2: 
 
 Summary of checks:
-✅ Passed: 13
+✅ Passed: 14
  - ruleID
  - organism
  - gene
@@ -176,15 +146,15 @@ Summary of checks:
  - variation type mutation concordance
  - context
  - context and mutation concordance
+ - drug and drug class
  - phenotype
  - breakpoint
  - clinical category and breakpoint concordance
  - breakpoint standard
  - PMID
-❌ Failed: 7
+❌ Failed: 6
   - gene accessions
   - variation type
-  - drug and drug class
   - phenotype and context concordance
   - clinical category
   - evidence code
