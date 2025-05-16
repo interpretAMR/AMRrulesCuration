@@ -281,7 +281,7 @@ ARO:3007486	wychimicin	polyketide with antibiotic activity
 ARO:3007573	fasamycin	polyketide with antibiotic activity
 ARO:3007574	formicamycin	polyketide with antibiotic activity
 ARO:3007600	cervimycin	polyketide with antibiotic activity
-ARO:3007680	"2,4-diacetylphloroglucinol"	polyketide with antibiotic activity
+ARO:3007680	2,4-diacetylphloroglucinol	polyketide with antibiotic activity
 ARO:3007754	Lasalocid A	polyketide with antibiotic activity
 ARO:3007088	murepavadin	protegrin-1-like antibiotic
 ARO:3003413	pyrazinamide	pyrazine antibiotic
@@ -453,3 +453,41 @@ ARO:3000627	polymyxin B3	polymyxin antibiotic
 ARO:3000628	polymyxin B4	polymyxin antibiotic
 ARO:3007630	cadaside A	cadaside antibiotic
 ARO:3007631	cadaside B	cadaside antibiotic
+ARO:0000009	tunicamycin	antibiotic mixture
+ARO:0000014	gentamicin C	antibiotic mixture
+ARO:0000041	bacitracin	antibiotic mixture
+ARO:0000053	bleomycin	antibiotic mixture
+ARO:3000199	gramicidin D	antibiotic mixture
+ARO:3000227	tyrothricin	antibiotic mixture
+ARO:3000454	polymyxin B	antibiotic mixture
+ARO:3003997	amoxicillin-clavulanic acid	antibiotic mixture
+ARO:3003998	ampicillin-sulbactam	antibiotic mixture
+ARO:3004020	piperacillin-sulbactam	antibiotic mixture
+ARO:3004021	piperacillin-tazobactam	antibiotic mixture
+ARO:3004022	quinupristin-dalfopristin	antibiotic mixture
+ARO:3004023	ticarcillin-clavulanic acid	antibiotic mixture
+ARO:3004024	trimethoprim-sulfamethoxazole	antibiotic mixture
+ARO:3004701	ceftazidime-cloxacillin	antibiotic mixture
+ARO:3004702	cefepime-cloxacillin	antibiotic mixture
+ARO:3004703	imipenem-cloxacillin	antibiotic mixture
+ARO:3004705	ceftazidime-clavulanic acid	antibiotic mixture
+ARO:3004707	cefoxitin-clavulanate	antibiotic mixture
+ARO:3004708	cefoxitin-sulbactam	antibiotic mixture
+ARO:3004709	cefoxitin-tazobactam	antibiotic mixture
+ARO:3004710	cefotaxime-clavulanic acid	antibiotic mixture
+ARO:3004711	cefotaxime-tazobactam	antibiotic mixture
+ARO:3004712	ceftazidime-tazobactam	antibiotic mixture
+ARO:3004713	aztreonam-clavulanate	antibiotic mixture
+ARO:3004714	aztreonam-tazobactam	antibiotic mixture
+ARO:3004724	ceftolozane-tazobactam	antibiotic mixture
+ARO:3007040	cefotaxime-ceftiofur-tazobactam-clavulanate	antibiotic mixture
+ARO:3007072	ceftazidime-avibactam	antibiotic mixture
+ARO:3007145	imipenem-cilastatin-relebactam	antibiotic mixture
+ARO:3007146	meropenem-vaborbactam	antibiotic mixture
+ARO:3007148	cefepime-taniborbactam	antibiotic mixture
+ARO:3007364	cefepime-tazobactam	antibiotic mixture
+ARO:3007365	cefepime-enmetazobactam	antibiotic mixture
+ARO:3007366	aztreonam-avibactam	antibiotic mixture
+ARO:3007382	gentamicin	antibiotic mixture
+ARO:3007422	ceftaroline-avibactam	antibiotic mixture
+ARO:3007467	sulbactam-durlobactam	antibiotic mixture

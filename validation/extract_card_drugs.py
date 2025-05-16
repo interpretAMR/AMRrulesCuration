@@ -44,9 +44,11 @@ for drug_class, aro_accession in drug_names.items():
 
 # we then want to specifically pull out all the drug names for the different beta-lactam classes
 # and also the polymyxin classes 
+# additionally extracting 'antibiotic mixture', ARO:3000707 - this has betalactam + inhibitors
 betalac_aros = ['ARO:3009105', 'ARO:3009106', 'ARO:3009107', 'ARO:3009108', 
              'ARO:3009109', 'ARO:3009123', 'ARO:3009124', 'ARO:3009125',
-             'ARO:3000035', 'ARO:3007783', 'ARO:0000022', 'ARO:3007629']
+             'ARO:3000035', 'ARO:3007783', 'ARO:0000022', 'ARO:3007629',
+             'ARO:3000707']
 
 for aro_accession in betalac_aros:
     children = parse_obo_file('validation/card-ontology/aro.obo', aro_accession)
