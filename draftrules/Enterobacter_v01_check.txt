@@ -1,0 +1,105 @@
+
+Validating rules file: /Users/ipmbkhot/Library/CloudStorage/GoogleDrive-drkatholt@gmail.com/My Drive/OrgSpecAMR/AMR rules/CurationWG/drafts/Enterobacter/Enterobacter_v01.txt
+
+Removing second row as it contains the 'required' and 'optional' call-outs for columns.
+
+Checking that all required columns for spec v0.5 are present...
+
+Continuing to validate values in each column...
+
+Checking ruleID column...
+All rule IDs have passed auto validation
+✅ All values are valid
+Rule prefix: ECC
+
+Checking organism column...
+✅ All organism names passed validation
+
+Unique organism names: s__Enterobacter roggenkampii, s__Enterobacter hormaechei
+
+Checking gene column...
+✅ All gene values are valid
+
+Now checking for combinatorial rules in gene column...
+✅ All gene combinatorial rule IDs are valid
+
+Checking nodeID, refseq accession, GenBank accession and HMM accession columns...
+✅ All rows contain at least one value in one of these columns.
+✅ All accessions are present in the relevant catalogues.
+
+Checking ARO accession column...
+✅ All ARO accession values are valid and exist in the CARD ontology
+
+Checking mutation column...
+✅ All mutation values are valid
+
+Checking  variation type column...
+✅ All variation type values are valid
+
+Checking mutation and variation type columns are compatible...
+✅ All mutation and variation type values are compatible
+
+Checking context column...
+✅ All context values are valid
+✅ All context and mutation values are concordant
+
+Checking drug and drug class columns...
+✅ All drug and drug class values are valid and listed in the CARD drug name ontology.
+
+Checking  phenotype column...
+✅ All phenotype values are valid
+
+Checking phenotype and context columns are concordant...
+✅ All phenotype and context values are concordant
+
+Checking  clinical category column...
+❌ 2 rows have failed the check
+clinical category column must contain one of the following values:
+S, I, R
+Row 11: 
+Row 21: 
+
+Checking  breakpoint column...
+✅ All breakpoint values are valid
+
+Checking clinical category and breakpoint columns...
+✅ All clinical category and breakpoint values are concordant
+
+Checking  breakpoint standard column...
+✅ All breakpoint standard values are valid
+
+Unique breakpoint standard values: EUCAST v15.0 (2025). Expected resistant phenotypes v 1.2 (13 January, 2023)., EUCAST v15.0 (2025), Expected resistant phenotypes v 1.2 (13 January, 2023).
+
+Checking  PMID column...
+✅ All PMID values are valid
+
+Checking evidence code column...
+✅ All evidence codes are valid
+
+Checking evidence grade and limitations columns...
+✅ All evidence grades are valid
+✅ All evidence limitations are valid
+
+Summary of checks:
+✅ Passed: 19
+ - ruleID
+ - organism
+ - gene
+ - gene accessions
+ - ARO accession
+ - mutation
+ - variation type
+ - variation type mutation concordance
+ - context
+ - context and mutation concordance
+ - drug and drug class
+ - phenotype
+ - phenotype and context concordance
+ - breakpoint
+ - clinical category and breakpoint concordance
+ - breakpoint standard
+ - PMID
+ - evidence code
+ - evidence grade and limitations
+❌ Failed: 1
+  - clinical category
