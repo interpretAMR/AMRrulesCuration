@@ -78,56 +78,7 @@ Checking  phenotype column...
 ✅ All phenotype values are valid
 
 Checking phenotype and context columns are concordant...
-❌ 48 rows have failed the check
-If the gene context is a 'core' gene, the expected phenotype should generally be 'wildtype', unless the rule refers to a specific variant of the core gene for which there is evidence of a nonwildtype phenotype (in which case the variant should be coded as 'acquired' not core)
-Row 20: nonwildtype and core
-Row 21: nonwildtype and core
-Row 22: nonwildtype and core
-Row 23: nonwildtype and core
-Row 24: nonwildtype and core
-Row 25: nonwildtype and core
-Row 26: nonwildtype and core
-Row 27: nonwildtype and core
-Row 28: nonwildtype and core
-Row 29: nonwildtype and core
-Row 30: nonwildtype and core
-Row 31: nonwildtype and core
-Row 32: nonwildtype and core
-Row 33: nonwildtype and core
-Row 35: nonwildtype and core
-Row 36: nonwildtype and core
-Row 40: nonwildtype and core
-Row 42: nonwildtype and core
-Row 43: nonwildtype and core
-Row 44: nonwildtype and core
-Row 45: nonwildtype and core
-Row 46: nonwildtype and core
-Row 47: nonwildtype and core
-Row 48: nonwildtype and core
-Row 49: nonwildtype and core
-Row 50: nonwildtype and core
-Row 51: nonwildtype and core
-Row 52: nonwildtype and core
-Row 53: nonwildtype and core
-Row 54: nonwildtype and core
-Row 55: nonwildtype and core
-Row 58: nonwildtype and core
-Row 59: nonwildtype and core
-Row 61: nonwildtype and core
-Row 62: nonwildtype and core
-Row 63: nonwildtype and core
-Row 64: nonwildtype and core
-Row 65: nonwildtype and core
-Row 66: nonwildtype and core
-Row 68: nonwildtype and core
-Row 69: nonwildtype and core
-Row 70: nonwildtype and core
-Row 71: nonwildtype and core
-Row 72: nonwildtype and core
-Row 73: nonwildtype and core
-Row 75: nonwildtype and core
-Row 77: nonwildtype and core
-Row 78: nonwildtype and core
+✅ All phenotype and context values are concordant
 
 Checking  clinical category column...
 ✅ All clinical category values are valid
@@ -141,7 +92,7 @@ Checking clinical category and breakpoint columns...
 Checking  breakpoint standard column...
 ✅ All breakpoint standard values are valid
 
-Unique breakpoint standard values: EUCAST v14.0 (2024), EUCAST v15.0 (2025), ECOFF (May 2025)
+Unique breakpoint standard values: EUCAST v15.0 (2025), ECOFF (May 2025), EUCAST v14.0 (2024)
 
 Checking  PMID column...
 ✅ All PMID values are valid
@@ -154,7 +105,7 @@ Checking evidence grade and limitations columns...
 ✅ All evidence limitations are valid
 
 Summary of checks:
-✅ Passed: 18
+✅ Passed: 19
  - ruleID
  - organism
  - gene
@@ -166,6 +117,7 @@ Summary of checks:
  - context and mutation concordance
  - drug and drug class
  - phenotype
+ - phenotype and context concordance
  - clinical category
  - breakpoint
  - clinical category and breakpoint concordance
@@ -173,6 +125,5 @@ Summary of checks:
  - PMID
  - evidence code
  - evidence grade and limitations
-❌ Failed: 2
+❌ Failed: 1
   - gene accessions
-  - phenotype and context concordance

@@ -1,0 +1,249 @@
+
+Validating rules file: ../draftrules/Neisseria_gonorrhoeae_v0.2.txt
+
+Checking that all required columns for spec v0.5 are present...
+
+Continuing to validate values in each column...
+
+Checking ruleID column...
+All rule IDs have passed auto validation
+✅ All values are valid
+Rule prefix: NGO
+
+Checking organism column...
+✅ All organism names passed validation
+
+Unique organism names: s__Neisseria gonorrhoeae
+
+Checking gene column...
+✅ All gene values are valid
+
+Now checking for combinatorial rules in gene column...
+✅ All gene combinatorial rule IDs are valid
+
+Checking nodeID, refseq accession, GenBank accession and HMM accession columns...
+✅ All rows contain at least one value in one of these columns.
+❌ One or more accessions aren't present in either the NCBI Reference Gene Catalog (for nodeID, refseq accession and genbank accession) or the NCBI Reference HMM Catalog (for HMM accession). Empty cells must be specified by '-'.
+
+Invalid nodeID accessions values:
+
+Invalid refseq accessions values:
+Row 2: NZ_AP019853.2:1155759-1157299
+Row 3: NC_002946.2:1119158-1116249
+Row 4: NC_002946.2:1119158-1116249
+Row 5: NC_002946.2:1119158-1116249
+Row 6: NC_002946.2:1119158-1116249
+Row 7: NC_002946.2:1119158-1116249
+Row 8: NC_002946.2:1119158-1116249
+Row 9: NC_002946.2:1119158-1116249
+Row 10: NC_002946.2:1119158-1116249
+Row 11: NC_002946.2:1119158-1116249
+Row 12: NC_002946.2:1119158-1116249
+Row 27: NZ_AP023073.1:147313-147537
+Row 28: NZ_CP012026.1:1110850-1110550
+Row 29: NZ_CP012026.1:1110850-1110550
+Row 30: NZ_CP012026.1:1110850-1110550
+Row 31: NZ_CP012026.1:1110850-1110550
+Row 32: WP_003695678.1
+Row 33: WP_003695678.1
+Row 34: WP_003695678.1
+Row 37: NZ_CP043871.1:1392766-1393015
+Row 38: NZ_CP043871.1:1392766-1393015
+Row 39: NZ_CP043871.1:1392766-1393015
+Row 43: NZ_CP043871.1:1392766-1393015
+Row 44: NZ_CP043871.1:1392766-1393015
+Row 45: NZ_CP043871.1:1392766-1393015
+Row 49: NZ_CP043871.1:1392766-1393015
+Row 50: NZ_CP043871.1:1392766-1393015
+Row 51: NZ_CP043871.1:1392766-1393015
+Row 52: NZ_AP023073.1:1198657-1198990
+Row 53: NZ_AP023073.1:1198657-1198990
+
+Invalid genbank accessions values:
+
+Invalid HMM accessions values:
+
+Checking ARO accession column...
+✅ All ARO accession values are valid and exist in the CARD ontology
+
+Checking mutation column...
+✅ All mutation values are valid
+
+Checking  variation type column...
+✅ All variation type values are valid
+
+Checking mutation and variation type columns are compatible...
+✅ All mutation and variation type values are compatible
+
+Checking context column...
+✅ All context values are valid
+✅ All context and mutation values are concordant
+
+Checking drug and drug class columns...
+✅ All drug and drug class values are valid and listed in the CARD drug name ontology.
+
+Checking  phenotype column...
+✅ All phenotype values are valid
+
+Checking phenotype and context columns are concordant...
+❌ 111 rows have failed the check
+If the gene context is a 'core' gene, the expected phenotype should generally be 'wildtype', unless the rule refers to a specific variant of the core gene for which there is evidence of a nonwildtype phenotype (in which case the variant should be coded as 'acquired' not core)
+Row 2: nonwildtype and core
+Row 3: nonwildtype and core
+Row 4: nonwildtype and core
+Row 5: nonwildtype and core
+Row 6: nonwildtype and core
+Row 7: nonwildtype and core
+Row 8: nonwildtype and core
+Row 9: nonwildtype and core
+Row 10: nonwildtype and core
+Row 11: nonwildtype and core
+Row 12: nonwildtype and core
+Row 15: nonwildtype and core
+Row 16: nonwildtype and core
+Row 17: nonwildtype and core
+Row 18: nonwildtype and core
+Row 19: nonwildtype and core
+Row 20: nonwildtype and core
+Row 22: nonwildtype and core
+Row 23: nonwildtype and core
+Row 24: nonwildtype and core
+Row 25: nonwildtype and core
+Row 26: nonwildtype and core
+Row 27: nonwildtype and core
+Row 28: nonwildtype and core
+Row 30: nonwildtype and core
+Row 31: nonwildtype and core
+Row 33: nonwildtype and core
+Row 34: nonwildtype and core
+Row 35: nonwildtype and core
+Row 36: nonwildtype and core
+Row 37: nonwildtype and core
+Row 38: nonwildtype and core
+Row 39: nonwildtype and core
+Row 40: nonwildtype and core
+Row 41: nonwildtype and core
+Row 42: nonwildtype and core
+Row 43: nonwildtype and core
+Row 44: nonwildtype and core
+Row 45: nonwildtype and core
+Row 46: nonwildtype and core
+Row 47: nonwildtype and core
+Row 48: nonwildtype and core
+Row 49: nonwildtype and core
+Row 50: nonwildtype and core
+Row 51: nonwildtype and core
+Row 52: nonwildtype and core
+Row 53: nonwildtype and core
+Row 54: nonwildtype and core
+Row 57: nonwildtype and core
+Row 58: nonwildtype and core
+Row 59: nonwildtype and core
+Row 60: nonwildtype and core
+Row 61: nonwildtype and core
+Row 62: nonwildtype and core
+Row 63: nonwildtype and core
+Row 64: nonwildtype and core
+Row 65: nonwildtype and core
+Row 66: nonwildtype and core
+Row 67: nonwildtype and core
+Row 68: nonwildtype and core
+Row 69: nonwildtype and core
+Row 70: nonwildtype and core
+Row 71: nonwildtype and core
+Row 72: nonwildtype and core
+Row 73: nonwildtype and core
+Row 74: nonwildtype and core
+Row 75: nonwildtype and core
+Row 76: nonwildtype and core
+Row 77: nonwildtype and core
+Row 78: nonwildtype and core
+Row 79: nonwildtype and core
+Row 80: nonwildtype and core
+Row 81: nonwildtype and core
+Row 82: nonwildtype and core
+Row 83: nonwildtype and core
+Row 84: nonwildtype and core
+Row 85: nonwildtype and core
+Row 86: nonwildtype and core
+Row 87: nonwildtype and core
+Row 88: nonwildtype and core
+Row 89: nonwildtype and core
+Row 90: nonwildtype and core
+Row 91: nonwildtype and core
+Row 92: nonwildtype and core
+Row 93: nonwildtype and core
+Row 94: nonwildtype and core
+Row 95: nonwildtype and core
+Row 96: nonwildtype and core
+Row 97: nonwildtype and core
+Row 98: nonwildtype and core
+Row 99: nonwildtype and core
+Row 100: nonwildtype and core
+Row 101: nonwildtype and core
+Row 102: nonwildtype and core
+Row 103: nonwildtype and core
+Row 104: nonwildtype and core
+Row 105: nonwildtype and core
+Row 106: nonwildtype and core
+Row 107: nonwildtype and core
+Row 108: nonwildtype and core
+Row 109: nonwildtype and core
+Row 110: nonwildtype and core
+Row 111: nonwildtype and core
+Row 112: nonwildtype and core
+Row 113: nonwildtype and core
+Row 114: nonwildtype and core
+Row 115: nonwildtype and core
+Row 116: nonwildtype and core
+Row 117: nonwildtype and core
+Row 118: nonwildtype and core
+Row 119: nonwildtype and core
+
+Checking  clinical category column...
+✅ All clinical category values are valid
+
+Checking  breakpoint column...
+✅ All breakpoint values are valid
+
+Checking clinical category and breakpoint columns...
+✅ All clinical category and breakpoint values are concordant
+
+Checking  breakpoint standard column...
+✅ All breakpoint standard values are valid
+
+Unique breakpoint standard values: ECOFF (January 2024), not applicable, EUCAST v14.0 (2024)
+
+Checking  PMID column...
+✅ All PMID values are valid
+
+Checking evidence code column...
+✅ All evidence codes are valid
+
+Checking evidence grade and limitations columns...
+✅ All evidence grades are valid
+✅ All evidence limitations are valid
+
+Summary of checks:
+✅ Passed: 18
+ - ruleID
+ - organism
+ - gene
+ - ARO accession
+ - mutation
+ - variation type
+ - variation type mutation concordance
+ - context
+ - context and mutation concordance
+ - drug and drug class
+ - phenotype
+ - clinical category
+ - breakpoint
+ - clinical category and breakpoint concordance
+ - breakpoint standard
+ - PMID
+ - evidence code
+ - evidence grade and limitations
+❌ Failed: 2
+  - gene accessions
+  - phenotype and context concordance
