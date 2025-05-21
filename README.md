@@ -55,7 +55,7 @@ Before submitting rules for review, please first check them using the Python [va
 
 ## Member List (by subgroup)
 
-***Data & Tools -*** *Jane Hawkey/Kat Holt*, Andrew McArthur, Finlay Maguire, Michael Feldgarden, Brody Duncan, Kristy Horan, Leonid Chindelevitch, Kara Tsang, Amogelang Raphenya, Dag Harmsen, Emily Bordeleau, Mackenzie Wilke, Romain Pogorelcnik, Yu Wan, Zoe Dyson, Bogdan Iorga, Derek Sarovich, John Rossen, Silvia Argimon, Charlene Rodrigues, Rolf Kaas, Nick Duggett, Louise Teixeira-Cerdeira, Matthijs Berends
+***Data & Tools -*** *Jane Hawkey/Kat Holt*, Andrew McArthur, Finlay Maguire, Michael Feldgarden, Brody Duncan, Kristy Horan, Leonid Chindelevitch, Kara Tsang, Amogelang Raphenya, Dag Harmsen, Emily Bordeleau, Mackenzie Wilke, Romain Pogorelcnik, Yu Wan, Zoe Dyson, Bogdan Iorga, Derek Sarovich, John Rossen, Silvia Argimon, Charlene Rodrigues, Rolf Kaas, Nick Duggett, Louise Teixeira Cerdeira, Matthijs Berends
 
 ***Enterococcus -*** *Francesc Coll*, Thomas Demuyser, Ana R. Freitas, Guido Werner, Precious Osadebamwen, Theo Gouliouris, Fiona Walsh, Valeria Bortolaia, Basil Britto Xavier, Helena Seth-Smith
 
@@ -111,7 +111,7 @@ Before submitting rules for review, please first check them using the Python [va
 
 ***Chryseobacterium indologenes -*** *Rietie Venter*
 
-***Corynebacterium diphtheriae -*** *Sylvain Brisse*, Louise Teixeira-Cerdeira
+***Corynebacterium diphtheriae -*** *Sylvain Brisse*, Louise Teixeira Cerdeira
 
 ***Legionella -*** *Charlotte Michel*, Ghislaine Descours, Christophe	Ginevra, Stefano De Giorgi, Nancy Flountzi, Jarraud	Sophie
 
