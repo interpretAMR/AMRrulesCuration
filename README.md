@@ -55,19 +55,19 @@ Before submitting rules for review, please first check them using the Python [va
 
 ## Member List (by subgroup)
 
-***Data & Tools -*** *Jane Hawkey/Kat Holt*, Andrew McArthur, Finlay Maguire, Michael Feldgarden, Brody Duncan, Kristy Horan, Leonid Chindelevitch, Kara Tsang, Amogelang Raphenya, Dag Harmsen, Emily Bordeleau, Mackenzie Wilke, Romain Pogorelcnik, Yu Wan, Zoe Dyson, Bogdan Iorga, Derek Sarovich, John Rossen, Silvia Argimon, Charlene Rodrigues, Rolf Kaas, Nick Duggett, Louise Teixeira Cerdeira, Matthijs Berends
+***Data & Tools -*** *Jane Hawkey/Kat Holt*, Andrew McArthur, Finlay Maguire, Michael Feldgarden, Brody Duncan, Kristy Horan, Leonid Chindelevitch, Kara Tsang, Amogelang Raphenya, Dag Harmsen, Emily Bordeleau, Mackenzie Wilke, Romain Pogorelcnik, Yu Wan, Zoe Dyson, Bogdan Iorga, Derek Sarovich, John Rossen, Silvia Argimon, Charlene Rodrigues, Rolf Kaas, Nick Duggett, Louise Teixeira Cerdeira, Matthijs Berends, Adrian Egli, João Perdigão
 
 ***Enterococcus -*** *Francesc Coll*, Thomas Demuyser, Ana R. Freitas, Guido Werner, Precious Osadebamwen, Theo Gouliouris, Fiona Walsh, Valeria Bortolaia, Basil Britto Xavier, Helena Seth-Smith
 
 ***Staphylococcus -*** *Natacha Couto*, Birgitta Duim, Valeria Bortolaia, Sarah Baines, Sandra Reuter, Assaf Rokney, Holly Grace Espiriu, Manal AbuOun, Sankarganesh Jeyaraj, Robert Kozak, Basil Britto Xavier, Nick Duggett, Birgit Strommenger
 
-***Acinetobacter baumannii -*** *Paul Higgins*, Rahul Garg, Mehrad Hamidian, Bogdan Iorga, Priyanka Khopkar-Kale, Margaret Lam, Bruno Silvester Lopes, Ignasi Roca, Varun Shamanna, Clement Tsui, David Wareham, Valeria Bortolaia
+***Acinetobacter baumannii -*** *Paul Higgins*, Rahul Garg, Mehrad Hamidian, Bogdan Iorga, Priyanka Khopkar-Kale, Margaret Lam, Bruno Silvester Lopes, Ignasi Roca, Varun Shamanna, Clement Tsui, David Wareham, Valeria Bortolaia, Adrian Egli
 
 ***Enterobacter -*** *Teresa Coque/Rafael Canton*, Paul Higgins, Fernando Lazaro Perona, Po-Yu Liu, Elena Martinez, Rietie Venter, Ana Budimir, Angela Novais, Patrick Harris, Valeria Bortolaia, Val Fernandez
 
-***Pseudomonas aeruginosa -*** *Antonio Oliver*, Adriana Cabal Rosel, Alasdair Hubbard, Bogdan Lorga, Xena Li, Carla Lopez Causape, Juliette Severin, David Wareham, Adam Witney, Ørjan Samuelsen, Bela Kocsis, Joana Moreira da Silva, Derek Sarovich, Fernando Lazaro Perona, Valeria Bortolaia 
+***Pseudomonas aeruginosa -*** *Antonio Oliver*, Adriana Cabal Rosel, Alasdair Hubbard, Bogdan Lorga, Xena Li, Carla Lopez Causape, Juliette Severin, David Wareham, Adam Witney, Ørjan Samuelsen, Bela Kocsis, Joana Moreira da Silva, Derek Sarovich, Fernando Lazaro Perona, Valeria Bortolaia, Francesca Saluzzo
 
-***Klebsiella pneumoniae -*** *Kat Holt/Kara Tsang*, Valeria Bortolaia, Adam Komorowski, Elisenda Miro, Jon Iredell, Ørjan Samuelsen, Sally Partridge, Manal AbuOun, Sandra Reuter, Sankarganesh Jeyaraj, Fernando Lazaro Perona, Richard Goodman, Teresa Coque, Bogdan Iorga, Clement Tsui, Margaret Lam, Priyanka Khopkar-Kale, Varun Shamanna, Adam Witney, Alasdair Hubbard, Nicole Stoesser, Sam Lipworth, Deepali Desai, Ângela	Novais, +KlebNet Geno/Pheno Consortium
+***Klebsiella pneumoniae -*** *Kat Holt/Kara Tsang*, Valeria Bortolaia, Adam Komorowski, Elisenda Miro, Jon Iredell, Ørjan Samuelsen, Sally Partridge, Manal AbuOun, Sandra Reuter, Sankarganesh Jeyaraj, Fernando Lazaro Perona, Richard Goodman, Teresa Coque, Bogdan Iorga, Clement Tsui, Margaret Lam, Priyanka Khopkar-Kale, Varun Shamanna, Adam Witney, Alasdair Hubbard, Nicole Stoesser, Sam Lipworth, Deepali Desai, Ângela	Novais, Luis Gustavo Carvalho Pacheco, Iren Høyland Löhr, Daniela M Cirillo, Adrian Egli, Francesca Saluzzo, Nicholas Feasey, João Perdigão, Timothy Walsh, Oliver Pearse, Kelly Wyres +KlebNet Geno/Pheno Consortium
 
 ***Escherichia coli/Shigella -*** *Ebenezer Foster-Nyarko* Pieter-Jan Ceyssens, Fiona Walsh, Carolina Silva Nodari, Soe Yu Naing, Richard Goodman, Abdurrahman Hassan Jibril, Jelalu Kemal Birmeka, Elena Martinez, Teresa Coque, Ramon Maluping, Ana Vale, Gultekin Unal, Axel Hamprecht, Valeria Bortolaia, Bogdan Lorga, Alasdair Hubbard, Manal AbuOun, Jon Iredell, Sally Partridge, Nicole Stoesser, Sam Lipworth, Etienne Rupée, Gherard Batisti Biffignandi, Kate Baker
 
@@ -75,7 +75,7 @@ Before submitting rules for review, please first check them using the Python [va
 
 ***Neisseria gonorrhoeae -*** *Leonor Sanchez Buso*, Yonatan Grad, Sheeba Manoharan-Basil, Martin McHugh, Tatum Mortimer, Anna Roditscheff, Faina Wehrli, Adam Witney, Raffael Frei
 
-***Mycobacterium tuberculosis -*** *Leonid Chindelevitch*, Iñaki Comas, Philip Fowler, Kristy Horan, Priyanka Khopkar-Kale, Mariana López, Conor Meehan, Adam Witney, Brian Alcock
+***Mycobacterium tuberculosis -*** *Leonid Chindelevitch*, Iñaki Comas, Philip Fowler, Kristy Horan, Priyanka Khopkar-Kale, Mariana López, Conor Meehan, Adam Witney, Brian Alcock, Francesca Saluzzo, João Perdigão
 
 ***Streptococcus -*** *Mario Ramirez*, Assaf Rokney, Holly Grace Espiriu, Stefanie Desmet
 
