@@ -1,7 +1,5 @@
 
-Validating rules file: /Users/ipmbkhot/Library/CloudStorage/GoogleDrive-drkatholt@gmail.com/My Drive/OrgSpecAMR/AMR rules/CurationWG/drafts/Enterococcus/AMR Rules Spec v0.5.enterococci.v0.4.Efc.tsv
-
-Removing second row as it contains the 'required' and 'optional' call-outs for columns.
+Validating rules file: ../rules/Enterococcus_faecalis.txt
 
 Checking that all required columns for spec v0.5 are present...
 
@@ -32,10 +30,6 @@ Invalid nodeID accessions values:
 Invalid refseq accessions values:
 
 Invalid genbank accessions values:
-Row 2: AEA94594.1
-Row 3: AEA94594.1
-Row 4: AEA94594.1
-Row 5: AEA94594.1
 Row 6: AEA94845.1
 Row 7: AEA94845.1
 Row 8: AEA94845.1
@@ -57,8 +51,8 @@ Row 26: HG970098.1
 Row 27: HG970103.1
 Row 28: HG970098.1
 Row 29: HG970103.1
-Row 30: HG970098.1
-Row 31: HG970103.1
+Row 30: AAO80603.1
+Row 31: AAO80604.1
 Row 32: AAO80603.1
 Row 33: AAO80604.1
 Row 34: AAO80603.1
@@ -71,13 +65,9 @@ Row 40: AAO80603.1
 Row 41: AAO80604.1
 Row 42: AAO80603.1
 Row 43: AAO80604.1
-Row 44: AAO80603.1
-Row 45: AAO80604.1
-Row 46: AAO80603.1
-Row 47: AAO80604.1
-Row 48: AB091338.1
-Row 49: AB091338.1
-Row 50: AF028811.1
+Row 44: AB091338.1
+Row 45: AB091338.1
+Row 46: AF028811.1
 
 Invalid HMM accessions values:
 
@@ -98,9 +88,7 @@ Checking context column...
 ✅ All context and mutation values are concordant
 
 Checking drug and drug class columns...
-❌ 1 rows have failed the check
-One of drug or drug class must contain a value that is not empty, NA or '-'. Values must be listed in the CARD drug name ontology, as per card_drug_names.tsv. Drugs and their classes should be given in all lower case.
-Row 15: Drug class streptogramins is not a valid CARD drug class name.
+✅ All drug and drug class values are valid and listed in the CARD drug name ontology.
 
 Checking  phenotype column...
 ✅ All phenotype values are valid
@@ -115,16 +103,8 @@ Checking  breakpoint column...
 ✅ All breakpoint values are valid
 
 Checking clinical category and breakpoint columns...
-❌ 9 rows have failed the check
-Row 24: If clinical category is 'S', breakpoint should contain a value of 'MIC <', 'MIC <=', or 'disk >'. 'not applicable' is an allowed value if no breakpoint is available due to expected resistances.
-Row 25: If clinical category is 'S', breakpoint should contain a value of 'MIC <', 'MIC <=', or 'disk >'. 'not applicable' is an allowed value if no breakpoint is available due to expected resistances.
-Row 30: If clinical category is 'S', breakpoint should contain a value of 'MIC <', 'MIC <=', or 'disk >'. 'not applicable' is an allowed value if no breakpoint is available due to expected resistances.
-Row 31: If clinical category is 'S', breakpoint should contain a value of 'MIC <', 'MIC <=', or 'disk >'. 'not applicable' is an allowed value if no breakpoint is available due to expected resistances.
-Row 40: If clinical category is 'S', breakpoint should contain a value of 'MIC <', 'MIC <=', or 'disk >'. 'not applicable' is an allowed value if no breakpoint is available due to expected resistances.
-Row 41: If clinical category is 'S', breakpoint should contain a value of 'MIC <', 'MIC <=', or 'disk >'. 'not applicable' is an allowed value if no breakpoint is available due to expected resistances.
+❌ 1 rows have failed the check
 Row 46: If clinical category is 'S', breakpoint should contain a value of 'MIC <', 'MIC <=', or 'disk >'. 'not applicable' is an allowed value if no breakpoint is available due to expected resistances.
-Row 47: If clinical category is 'S', breakpoint should contain a value of 'MIC <', 'MIC <=', or 'disk >'. 'not applicable' is an allowed value if no breakpoint is available due to expected resistances.
-Row 50: If clinical category is 'S', breakpoint should contain a value of 'MIC <', 'MIC <=', or 'disk >'. 'not applicable' is an allowed value if no breakpoint is available due to expected resistances.
 
 Checking  breakpoint standard column...
 ✅ All breakpoint standard values are valid
@@ -138,7 +118,7 @@ Checking evidence code column...
 The following evidence codes are new and not currently in the list of suggested values:
 ECO:0000154 heterologous protein expression evidence
 
-❌ 17 rows have failed the check. Each rule must have an evidence code and not be empty. If there are multiplegit  evidence codes for a row, they must be separated by a ',', not by a new line. Evidence codes must start with 'ECO:'.
+❌ 15 rows have failed the check. Each rule must have an evidence code and not be empty. If there are multiplegit  evidence codes for a row, they must be separated by a ',', not by a new line. Evidence codes must start with 'ECO:'.
 Row 16: ECO:0001091 knockout phenotypic evidence, ECO:0000154 heterologous protein expression evidence
 Row 17: ECO:0001091 knockout phenotypic evidence, ECO:0000154 heterologous protein expression evidence
 Row 18: ECO:0001091 knockout phenotypic evidence, ECO:0000154 heterologous protein expression evidence
@@ -153,16 +133,14 @@ Row 26: ECO:0001091 knockout phenotypic evidence, ECO:0000154 heterologous prote
 Row 27: ECO:0001091 knockout phenotypic evidence, ECO:0000154 heterologous protein expression evidence
 Row 28: ECO:0001091 knockout phenotypic evidence, ECO:0000154 heterologous protein expression evidence
 Row 29: ECO:0001091 knockout phenotypic evidence, ECO:0000154 heterologous protein expression evidence
-Row 30: ECO:0001091 knockout phenotypic evidence, ECO:0000154 heterologous protein expression evidence
-Row 31: ECO:0001091 knockout phenotypic evidence, ECO:0000154 heterologous protein expression evidence
-Row 50: ECO:0000154 heterologous protein expression evidence
+Row 46: ECO:0000154 heterologous protein expression evidence
 
 Checking evidence grade and limitations columns...
 ✅ All evidence grades are valid
 ✅ All evidence limitations are valid
 
 Summary of checks:
-✅ Passed: 16
+✅ Passed: 17
  - ruleID
  - organism
  - gene
@@ -172,6 +150,7 @@ Summary of checks:
  - variation type mutation concordance
  - context
  - context and mutation concordance
+ - drug and drug class
  - phenotype
  - phenotype and context concordance
  - clinical category
@@ -179,8 +158,7 @@ Summary of checks:
  - breakpoint standard
  - PMID
  - evidence grade and limitations
-❌ Failed: 4
+❌ Failed: 3
   - gene accessions
-  - drug and drug class
   - clinical category and breakpoint concordance
   - evidence code

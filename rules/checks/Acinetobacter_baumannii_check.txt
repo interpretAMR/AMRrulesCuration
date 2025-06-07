@@ -1,5 +1,5 @@
 
-Validating rules file: ../draftrules/Acinetobacter_baumannii_v0.3.txt
+Validating rules file: ../rules/Acinetobacter_baumannii.txt
 
 Checking that all required columns for spec v0.5 are present...
 
@@ -23,7 +23,17 @@ Now checking for combinatorial rules in gene column...
 
 Checking nodeID, refseq accession, GenBank accession and HMM accession columns...
 ✅ All rows contain at least one value in one of these columns.
-✅ All accessions are present in the relevant catalogues.
+❌ One or more accessions aren't present in either the NCBI Reference Gene Catalog (for nodeID, refseq accession and genbank accession) or the NCBI Reference HMM Catalog (for HMM accession). Empty cells must be specified by '-'.
+
+Invalid nodeID accessions values:
+
+Invalid refseq accessions values:
+Row 160: WP_001170306.1
+Row 168: 
+
+Invalid genbank accessions values:
+
+Invalid HMM accessions values:
 
 Checking ARO accession column...
 ✅ All ARO accession values are valid and exist in the CARD ontology
@@ -35,16 +45,17 @@ Checking  variation type column...
 ✅ All variation type values are valid
 
 Checking mutation and variation type columns are compatible...
-❌ 2 rows have failed the check
+❌ 1 rows have failed the check
 Row 147: Mutation must start with 'c.-', 'c.(-', or 'c.[-' if variation type is 'Promoter variant detected'. The - symbol indicates the position before the start of the gene where the mutation occurs.
-Row 150: Mutation must start with 'c.-', 'c.(-', or 'c.[-' if variation type is 'Promoter variant detected'. The - symbol indicates the position before the start of the gene where the mutation occurs.
 
 Checking context column...
 ✅ All context values are valid
 ✅ All context and mutation values are concordant
 
 Checking drug and drug class columns...
-✅ All drug and drug class values are valid and listed in the CARD drug name ontology.
+❌ 1 rows have failed the check
+One of drug or drug class must contain a value that is not empty, NA or '-'. Values must be listed in the CARD drug name ontology, as per card_drug_names.tsv. Drugs and their classes should be given in all lower case.
+Row 160: Both drug and drug class are empty. At least one of these columns must contain a valid CARD drug or drug class name.
 
 Checking  phenotype column...
 ✅ All phenotype values are valid
@@ -62,13 +73,25 @@ Checking clinical category and breakpoint columns...
 ✅ All clinical category and breakpoint values are concordant
 
 Checking  breakpoint standard column...
-✅ All breakpoint standard values are valid
+❌ 1 rows have failed the check
+breakpoint standard column must contain a value that is not NA or '-'
+Row 160: -
 
-Unique breakpoint standard values: ECOFF (May 2025), EUCAST v14.0 (2024), EUCAST v15.0 (2025)
+Unique breakpoint standard values: EUCAST v14.0 (2024), -, ECOFF (May 2025), EUCAST v15.0 (2025), EUCAST Expected Resistant Phenotypes v1.2 (2023)
 
 Checking  PMID column...
 ❌ 81 rows have failed the check
 PMID column must contain a value that is not NA or '-'
+Row 7: -
+Row 8: -
+Row 9: -
+Row 10: -
+Row 11: -
+Row 12: -
+Row 13: -
+Row 14: -
+Row 15: -
+Row 16: -
 Row 17: -
 Row 18: -
 Row 19: -
@@ -83,35 +106,9 @@ Row 27: -
 Row 28: -
 Row 29: -
 Row 30: -
-Row 31: -
-Row 32: -
 Row 33: -
-Row 34: -
-Row 35: -
-Row 36: -
-Row 37: -
-Row 38: -
-Row 39: -
-Row 40: -
 Row 41: -
-Row 42: -
-Row 43: -
-Row 44: -
-Row 45: -
 Row 46: -
-Row 47: -
-Row 48: -
-Row 49: -
-Row 50: -
-Row 51: -
-Row 52: -
-Row 53: -
-Row 54: -
-Row 55: -
-Row 56: -
-Row 57: -
-Row 58: -
-Row 59: -
 Row 60: -
 Row 61: -
 Row 62: -
@@ -141,43 +138,67 @@ Row 85: -
 Row 86: -
 Row 87: -
 Row 88: -
+Row 89: -
+Row 90: -
+Row 91: -
+Row 92: -
+Row 93: -
+Row 94: -
 Row 95: -
 Row 96: -
 Row 97: -
-Row 119: -
-Row 120: -
-Row 121: -
-Row 134: -
-Row 135: -
-Row 136: -
+Row 98: -
+Row 99: -
+Row 100: -
+Row 101: -
+Row 102: -
+Row 103: -
+Row 104: -
+Row 105: -
+Row 106: -
+Row 107: -
+Row 112: -
+Row 113: -
+Row 128: -
+Row 129: -
+Row 138: -
+Row 139: -
 
 Checking evidence code column...
-✅ All evidence codes are valid
+The following evidence codes are new and not currently in the list of suggested values:
+ECO:0000012 functional complementation evidence; ECO:00001091 knockout phenotypic evidence
+
+❌ 2 rows have failed the check. Each rule must have an evidence code and not be empty. If there are multiplegit  evidence codes for a row, they must be separated by a ',', not by a new line. Evidence codes must start with 'ECO:'.
+Row 160: -
+Row 168: ECO:0000012 functional complementation evidence; ECO:00001091 knockout phenotypic evidence
 
 Checking evidence grade and limitations columns...
-✅ All evidence grades are valid
 ✅ All evidence limitations are valid
+❌ 1 rows have failed the check
+Evidence grade column must contain one of the following values:
+strong, moderate, weak
+Row 160: -
 
 Summary of checks:
-✅ Passed: 18
+✅ Passed: 13
  - ruleID
  - organism
  - gene
- - gene accessions
  - ARO accession
  - mutation
  - variation type
  - context
  - context and mutation concordance
- - drug and drug class
  - phenotype
  - phenotype and context concordance
  - clinical category
  - breakpoint
  - clinical category and breakpoint concordance
- - breakpoint standard
- - evidence code
- - evidence grade and limitations
-❌ Failed: 2
+❌ Failed: 7
+  - gene accessions
   - variation type mutation concordance
+  - drug and drug class
+  - breakpoint standard
   - PMID
+  - evidence code
+  - evidence grade and limitations

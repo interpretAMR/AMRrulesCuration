@@ -1,7 +1,5 @@
 
-Validating rules file: /Users/ipmbkhot/Library/CloudStorage/GoogleDrive-drkatholt@gmail.com/My Drive/OrgSpecAMR/AMR rules/CurationWG/drafts/Enterobacter/Enterobacter_v01.txt
-
-Removing second row as it contains the 'required' and 'optional' call-outs for columns.
+Validating rules file: ../rules/Escherichia_coli.txt
 
 Checking that all required columns for spec v0.5 are present...
 
@@ -10,12 +8,12 @@ Continuing to validate values in each column...
 Checking ruleID column...
 All rule IDs have passed auto validation
 ✅ All values are valid
-Rule prefix: ECC
+Rule prefix: ECO
 
 Checking organism column...
 ✅ All organism names passed validation
 
-Unique organism names: s__Enterobacter roggenkampii, s__Enterobacter hormaechei
+Unique organism names: s__Escherichia coli
 
 Checking gene column...
 ✅ All gene values are valid
@@ -25,7 +23,37 @@ Now checking for combinatorial rules in gene column...
 
 Checking nodeID, refseq accession, GenBank accession and HMM accession columns...
 ✅ All rows contain at least one value in one of these columns.
-✅ All accessions are present in the relevant catalogues.
+❌ One or more accessions aren't present in either the NCBI Reference Gene Catalog (for nodeID, refseq accession and genbank accession) or the NCBI Reference HMM Catalog (for HMM accession). Empty cells must be specified by '-'.
+
+Invalid nodeID accessions values:
+
+Invalid refseq accessions values:
+Row 26: WP_181203065.1
+Row 27: WP_181203065.1
+Row 28: WP_181203065.1
+Row 29: WP_181203065.1
+Row 30: WP_181203065.1
+Row 31: WP_181203065.1
+Row 32: WP_181203065.1
+Row 33: WP_001352591.1
+Row 34: WP_001352591.1
+Row 35: WP_001352591.1
+Row 36: WP_001352591.1
+Row 37: WP_001352591.1
+Row 38: WP_001352591.1
+Row 39: WP_001352591.1
+Row 83: WP_000948731.1
+Row 84: WP_001180089.1
+
+Invalid genbank accessions values:
+Row 20: BAC99094.1
+Row 21: BAC99094.1
+Row 22: BAC99094.1
+Row 23: BAC99094.1
+Row 24: BAC99094.1
+Row 25: BAC99094.1
+
+Invalid HMM accessions values:
 
 Checking ARO accession column...
 ✅ All ARO accession values are valid and exist in the CARD ontology
@@ -53,11 +81,7 @@ Checking phenotype and context columns are concordant...
 ✅ All phenotype and context values are concordant
 
 Checking  clinical category column...
-❌ 2 rows have failed the check
-clinical category column must contain one of the following values:
-S, I, R
-Row 11: 
-Row 21: 
+✅ All clinical category values are valid
 
 Checking  breakpoint column...
 ✅ All breakpoint values are valid
@@ -68,7 +92,7 @@ Checking clinical category and breakpoint columns...
 Checking  breakpoint standard column...
 ✅ All breakpoint standard values are valid
 
-Unique breakpoint standard values: EUCAST v15.0 (2025). Expected resistant phenotypes v 1.2 (13 January, 2023)., EUCAST v15.0 (2025), Expected resistant phenotypes v 1.2 (13 January, 2023).
+Unique breakpoint standard values: ECOFF (May 2025), EUCAST v15.0 (2025), EUCAST v14.0 (2024)
 
 Checking  PMID column...
 ✅ All PMID values are valid
@@ -85,7 +109,6 @@ Summary of checks:
  - ruleID
  - organism
  - gene
- - gene accessions
  - ARO accession
  - mutation
  - variation type
@@ -95,6 +118,7 @@ Summary of checks:
  - drug and drug class
  - phenotype
  - phenotype and context concordance
+ - clinical category
  - breakpoint
  - clinical category and breakpoint concordance
  - breakpoint standard
@@ -102,4 +126,4 @@ Summary of checks:
  - evidence code
  - evidence grade and limitations
 ❌ Failed: 1
-  - clinical category
+  - gene accessions

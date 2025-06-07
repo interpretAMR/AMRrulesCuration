@@ -1,5 +1,5 @@
 
-Validating rules file: ../draftrules/Staphylococcus_aureus_v0.2.txt
+Validating rules file: ../rules/Staphylococcus_aureus.txt
 
 Checking that all required columns for spec v0.5 are present...
 
@@ -33,37 +33,31 @@ Invalid refseq accessions values:
 Invalid genbank accessions values:
 Row 5: BAA14147.1
 Row 6: BAA14147.1
-Row 7: BAA14147.1
+Row 7: CCQ22388.1
 Row 8: CCQ22388.1
 Row 9: CCQ22388.1
 Row 10: CCQ22388.1
 Row 11: CCQ22388.1
-Row 12: CCQ22388.1
-Row 13: CCQ22388.1
-Row 14: AGP27106.1
-Row 15: AGP27106.1
-Row 16: AGP27106.1
-Row 17: WP_002289367.1
-Row 18: WP_002289367.1
-Row 19: WP_002289367.1
+Row 12: AGP27106.1
+Row 13: AGP27106.1
+Row 14: WP_002289367.1
+Row 15: WP_002289367.1
+Row 16: BAB41874.1
+Row 17: BAB41874.1
+Row 18: BAB41874.1
+Row 19: BAB41874.1
 Row 20: BAB41874.1
 Row 21: BAB41874.1
 Row 22: BAB41874.1
 Row 23: BAB41874.1
 Row 24: BAB41874.1
-Row 25: BAB41874.1
-Row 26: BAB41874.1
-Row 27: BAB41874.1
-Row 28: BAB41874.1
-Row 29: BAB41874.1
-Row 30: BAB43261.1
-Row 31: BAB43261.1
-Row 32: BAB56495.1
-Row 33: BAB56495.1
-Row 34: ATC67679.1
-Row 35: ATC67679.1
-Row 36: ATC67679.1
-Row 37: CYF42523.1
+Row 25: BAB43261.1
+Row 26: BAB43261.1
+Row 27: BAB56495.1
+Row 28: BAB56495.1
+Row 29: ATC67679.1
+Row 30: ATC67679.1
+Row 31: CYF42523.1
 
 Invalid HMM accessions values:
 
@@ -93,21 +87,19 @@ Checking  phenotype column...
 ✅ All phenotype values are valid
 
 Checking phenotype and context columns are concordant...
-❌ 1 rows have failed the check
-If the gene context is a 'core' gene, the expected phenotype should generally be 'wildtype', unless the rule refers to a specific variant of the core gene for which there is evidence of a nonwildtype phenotype (in which case the variant should be coded as 'acquired' not core)
-Row 22: nonwildtype and core
+✅ All phenotype and context values are concordant
 
 Checking  clinical category column...
 ❌ 7 rows have failed the check
 clinical category column must contain one of the following values:
 S, I, R
-Row 7: 
-Row 19: 
-Row 21: 
-Row 31: 
+Row 6: 
+Row 15: 
+Row 17: 
+Row 26: 
+Row 30: 
 Row 35: 
 Row 41: 
-Row 47: 
 
 Checking  breakpoint column...
 ✅ All breakpoint values are valid
@@ -118,15 +110,15 @@ Checking clinical category and breakpoint columns...
 Checking  breakpoint standard column...
 ✅ All breakpoint standard values are valid
 
-Unique breakpoint standard values: Expected resistant phenotypes v1.2 (13 January, 2023); EUCAST v15.0 (2025-01-01); CLSI M100Ed35E, Expected resistant phenotypes v1.2 (13 January, 2023); CLSI M100Ed35E, Expected resistant phenotypes v1.2 (13 January, 2023)
-EUCAST v14.0 (2024-01-01), Expected resistant phenotypes v1.2 (13 January, 2023); ECOFF (2025-4-17); CLSI M100Ed35E, Expected resistant phenotypes v1.2 (13 January, 2023); ECOFF (2025-4-17), Expected resistant phenotypes v1.2 (13 January, 2023); EUCAST v15.0 (2025-01-01) + ECOFF (2025-4-17); CLSI M100Ed35E, Expected resistant phenotypes v1.2 (13 January, 2023); EUCAST v15.0 (2025-01-01)
+Unique breakpoint standard values: Expected resistant phenotypes v1.2 (13 January, 2023); CLSI M100Ed35E, Expected resistant phenotypes v1.2 (13 January, 2023); EUCAST v15.0 (2025-01-01), Expected resistant phenotypes v1.2 (13 January, 2023)
+EUCAST v14.0 (2024-01-01), Expected resistant phenotypes v1.2 (13 January, 2023); ECOFF (2025-4-17); CLSI M100Ed35E, Expected resistant phenotypes v1.2 (13 January, 2023); ECOFF (2025-4-17), Expected resistant phenotypes v1.2 (13 January, 2023); EUCAST v15.0 (2025-01-01) + ECOFF (2025-4-17); CLSI M100Ed35E, Expected resistant phenotypes v1.2 (13 January, 2023); EUCAST v15.0 (2025-01-01); CLSI M100Ed35E
 
 Checking  PMID column...
 ✅ All PMID values are valid
 
 Checking evidence code column...
 
-❌ 1 rows have failed the check. Each rule must have an evidence code and not be empty. If there are multiple evidence codes for a row, they must be separated by a ',', not by a new line. Evidence codes must start with 'ECO:'.
+❌ 1 rows have failed the check. Each rule must have an evidence code and not be empty. If there are multiplegit  evidence codes for a row, they must be separated by a ',', not by a new line. Evidence codes must start with 'ECO:'.
 Row 2: 
 
 Checking evidence grade and limitations columns...
@@ -137,7 +129,7 @@ strong, moderate, weak
 Row 2: 
 
 Summary of checks:
-✅ Passed: 14
+✅ Passed: 15
  - ruleID
  - organism
  - gene
@@ -148,14 +140,14 @@ Summary of checks:
  - context and mutation concordance
  - drug and drug class
  - phenotype
+ - phenotype and context concordance
  - breakpoint
  - clinical category and breakpoint concordance
  - breakpoint standard
  - PMID
-❌ Failed: 6
+❌ Failed: 5
   - gene accessions
   - variation type
-  - phenotype and context concordance
   - clinical category
   - evidence code
   - evidence grade and limitations

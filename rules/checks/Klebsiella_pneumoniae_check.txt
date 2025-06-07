@@ -1,5 +1,5 @@
 
-Validating rules file: ../draftrules/Enterococcus_faecium_v0.2.txt
+Validating rules file: ../rules/Klebsiella_pneumoniae.txt
 
 Checking that all required columns for spec v0.5 are present...
 
@@ -8,12 +8,12 @@ Continuing to validate values in each column...
 Checking ruleID column...
 All rule IDs have passed auto validation
 ✅ All values are valid
-Rule prefix: EFM
+Rule prefix: KPN
 
 Checking organism column...
 ✅ All organism names passed validation
 
-Unique organism names: s__Enterococcus_B faecium
+Unique organism names: s__Klebsiella pneumoniae
 
 Checking gene column...
 ✅ All gene values are valid
@@ -28,25 +28,12 @@ Checking nodeID, refseq accession, GenBank accession and HMM accession columns..
 Invalid nodeID accessions values:
 
 Invalid refseq accessions values:
+Row 2: WP_419672855.1
+Row 3: WP_419141451.1
+Row 4: WP_419388593.1
+Row 5: WP_417645943.1
 
 Invalid genbank accessions values:
-Row 7: AFC64318.1
-Row 8: AFC64318.1
-Row 9: AFC64318.1
-Row 10: AFC64318.1
-Row 11: AFC64318.1
-Row 12: AFC64749.1
-Row 13: AFC64749.1
-Row 14: AFC64749.1
-Row 15: AFC64749.1
-Row 16: AZV36500.1
-Row 17: AZV36500.1
-Row 18: AZV36500.1
-Row 19: AZV36123.1
-Row 20: AFC64635.1
-Row 21: AFC64635.1
-Row 22: AFC63082.1
-Row 23: AFC63082.1
 
 Invalid HMM accessions values:
 
@@ -82,32 +69,25 @@ Checking  breakpoint column...
 ✅ All breakpoint values are valid
 
 Checking clinical category and breakpoint columns...
-❌ 3 rows have failed the check
-Row 7: If clinical category is 'R', breakpoint should contain a value of 'MIC >', 'MIC >=', or 'disk <'. 'not applicable' is an allowed value if no breakpoint is available due to expected resistances.
-Row 10: If clinical category is 'R', breakpoint should contain a value of 'MIC >', 'MIC >=', or 'disk <'. 'not applicable' is an allowed value if no breakpoint is available due to expected resistances.
-Row 17: If clinical category is 'S', breakpoint should contain a value of 'MIC <', 'MIC <=', or 'disk >'. 'not applicable' is an allowed value if no breakpoint is available due to expected resistances.
+✅ All clinical category and breakpoint values are concordant
 
 Checking  breakpoint standard column...
 ✅ All breakpoint standard values are valid
 
-Unique breakpoint standard values: not applicable, ECOFF ID, ECOFF
+Unique breakpoint standard values: Expected resistant phenotypes v1.2 (13 January, 2023), ECOFF (May 2025), EUCAST v15.0 (2025)
 
 Checking  PMID column...
 ✅ All PMID values are valid
 
 Checking evidence code column...
-The following evidence codes are new and not currently in the list of suggested values:
-ECO:0001583 small interfering RNA knockdown evidence
-
-❌ 1 rows have failed the check. Each rule must have an evidence code and not be empty. If there are multiplegit  evidence codes for a row, they must be separated by a ',', not by a new line. Evidence codes must start with 'ECO:'.
-Row 19: ECO:0001583 small interfering RNA knockdown evidence
+✅ All evidence codes are valid
 
 Checking evidence grade and limitations columns...
 ✅ All evidence grades are valid
 ✅ All evidence limitations are valid
 
 Summary of checks:
-✅ Passed: 17
+✅ Passed: 19
  - ruleID
  - organism
  - gene
@@ -122,10 +102,10 @@ Summary of checks:
  - phenotype and context concordance
  - clinical category
  - breakpoint
+ - clinical category and breakpoint concordance
  - breakpoint standard
  - PMID
+ - evidence code
  - evidence grade and limitations
-❌ Failed: 3
+❌ Failed: 1
   - gene accessions
-  - clinical category and breakpoint concordance
-  - evidence code
