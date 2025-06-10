@@ -4,6 +4,8 @@ import argparse as ArgumentParser
 import csv
 import re
 import subprocess
+import urllib.request
+import io
 # required for reading in the OBO onotology files
 import obonet
 
@@ -77,6 +79,17 @@ def parse_obo_file(obo_file):
     aro_terms = [node for node in aro_obo.nodes if node.startswith('ARO:')]
 
     return aro_terms
+
+def download_amrfp_files(url):
+
+    # Use urllib to download the file
+    with urllib.request.urlopen(url) as response:
+        content = response.read().decode('utf-8')  # Decode the response as UTF-8
+    
+    # Parse the downloaded content as a TSV file
+    content_io = io.StringIO(content)
+
+    return content_io
 
 def check_if_allowed_value(value_list, col_name, allowable_values):
 
@@ -184,9 +197,20 @@ def check_organism(txid_list, organism_list):
         elif not organism.startswith('s__'):
             invalid_org_indices[index] = "Organism name " + organism + " does not start with 's__'"
             invalid_org_names.append(organism)
-        elif organism not in ncbi_organism_dict.values():
+        elif organism.replace('s__', '', 1) not in ncbi_organism_dict.values():
             invalid_org_indices[index] = "Organism name " + organism + " is not in the NCBI taxonomy list"
             invalid_org_names.append(organism)
+    
+    # for all valid taxids, check that the associated organism name matches the one in the list
+    for index, txid in enumerate(txid_list):
+        txid = txid.strip()
+        if txid in ncbi_organism_dict:
+            expected_organism = ncbi_organism_dict[txid]
+            # we need to split the 's__' prefix from the organism name before checking
+            current_organism = organism_list[index].strip().replace('s__', '', 1)
+            if index not in invalid_org_indices and current_organism != expected_organism:
+                invalid_org_indices[index] = f"Organism name {current_organism} does not match expected name {expected_organism} for taxid {txid}"
+                invalid_org_names.append(current_organism)
 
 
     if not invalid_txid_indices and not invalid_org_indices:
@@ -260,30 +284,34 @@ def check_gene(gene_list, rule_list):
     else:
         return False
 
-def check_id_accessions(nodeID_list, refseq_list, genbank_list, hmm_list, variation_type_list, refseq_file, refseq_nodes, hmm_file):
+def check_id_accessions(nodeID_list, protein_list, nucleotide_list, hmm_list, variation_type_list, refseq_url, node_url, hmm_file):
     
     print("\nChecking nodeID, refseq accession, GenBank accession and HMM accession columns...")
 
     # parse the refseq file - get the refseq nucl and prot accessions, genbank accessions and hmm accessions to check against
     # Combine the nucl and prot accessions together
-    refseq_accessions = [] 
-    genbank_accessions = []
-    refseq = csv.DictReader(open(refseq_file, newline=''), delimiter='\t')
+    protein_accessions = [] 
+    nucleotide_accessions = []
+    print("Downloading NCBI Reference Gene Catalog file...")
+    refseq_file = download_amrfp_files(refseq_url)
+    refseq = csv.DictReader(refseq_file, delimiter='\t')
     for row in refseq:
-        if "RefSeq protein" in row:
-            refseq_accessions.append(row["RefSeq protein"])
-        if "RefSeq nucleotide" in row:
-            refseq_accessions.append(row["RefSeq nucleotide"])
-        if "GenBank protein" in row:
-            genbank_accessions.append(row["GenBank protein"])
-        if "GenBank nucleotide" in row:
-            genbank_accessions.append(row["GenBank nucleotide"])
+        if "refseq_protein_accession" in row:
+            protein_accessions.append(row["refseq_protein_accession"])
+        if "refseq_nucleotide_accession" in row:
+            nucleotide_accessions.append(row["refseq_nucleotide_accession"])
+        if "genbank_protein_accession" in row:
+            protein_accessions.append(row["genbank_protein_accession"])
+        if "genbank_nucleotide_accession" in row:
+            nucleotide_accessions.append(row["genbank_nucleotide_accession"])
     # remove any empty strings
-    refseq_accessions = [value for value in refseq_accessions if value != ""]
-    genbank_accessions = [value for value in genbank_accessions if value != ""]
+    protein_accessions = [value for value in protein_accessions if value != ""]
+    nucleotide_accessions = [value for value in nucleotide_accessions if value != ""]
 
     refseq_node_ids = []
-    refseq_hierarchy = csv.DictReader(open(refseq_nodes, newline=''), delimiter='\t')
+    print("Downloading NCBI Gene Hierarchy file...")
+    node_file = download_amrfp_files(node_url)
+    refseq_hierarchy = csv.DictReader(node_file, delimiter='\t')
     for row in refseq_hierarchy:
         if "parent_node_id" in row:
             refseq_node_ids.append(row["parent_node_id"])
@@ -303,7 +331,7 @@ def check_id_accessions(nodeID_list, refseq_list, genbank_list, hmm_list, variat
 
     # Check that in combination, at least one of these columns has a value
     invalid_indices = []
-    for index, values in enumerate(zip(nodeID_list, refseq_list, genbank_list, hmm_list)):
+    for index, values in enumerate(zip(nodeID_list, protein_list, nucleotide_list, hmm_list)):
         if all(value == '' or value in ['NA', '-'] for value in values):
             # if all the values are empty, check if variation type is 'Combination' for this row
             # if variation type is 'Combination', then this is a valid value
@@ -324,16 +352,16 @@ def check_id_accessions(nodeID_list, refseq_list, genbank_list, hmm_list, variat
         value = value.strip()
         if index not in invalid_indices and value not in refseq_node_ids and value != '-':
             invalid_node.append(index)
-    invalid_refseq = []
-    for index, value in enumerate(refseq_list):
+    invalid_prot = []
+    for index, value in enumerate(protein_list):
         value = value.strip()
-        if index not in invalid_indices and value not in refseq_accessions and value != '-':
-            invalid_refseq.append(index)
-    invalid_gb = []
-    for index, value in enumerate(genbank_list):
+        if index not in invalid_indices and value not in protein_accessions and value != '-':
+            invalid_prot.append(index)
+    invalid_nucl = []
+    for index, value in enumerate(nucleotide_list):
         value = value.strip()
-        if index not in invalid_indices and value not in genbank_accessions and value != '-':
-            invalid_gb.append(index)
+        if index not in invalid_indices and value not in nucleotide_accessions and value != '-':
+            invalid_nucl.append(index)
     invalid_hmm = []
     for index, value in enumerate(hmm_list):
         value = value.strip()
@@ -346,24 +374,24 @@ def check_id_accessions(nodeID_list, refseq_list, genbank_list, hmm_list, variat
         print(f"❌ {len(invalid_indices)} rows have failed the check because at least one of either nodeID, refseq accession, GenBank accession and HMM accession must contain a value. The only exception to this is if the variation type is 'Combination', in which case all of these columns can be '-'.")
         for index in invalid_indices:
             print(f"Row {index + 2}")
-    if invalid_node or invalid_refseq or invalid_gb or invalid_hmm:
+    if invalid_node or invalid_prot or invalid_nucl or invalid_hmm:
         print(f"❌ One or more accessions aren't present in either the NCBI Reference Gene Catalog (for nodeID, refseq accession and genbank accession) or the NCBI Reference HMM Catalog (for HMM accession). Empty cells must be specified by '-'.")
         print("\nInvalid nodeID accessions values:")
         for index in invalid_node:
             print(f"Row {index + 2}: {nodeID_list[index]}")
-        print("\nInvalid refseq accessions values:")
-        for index in invalid_refseq:
-            print(f"Row {index + 2}: {refseq_list[index]}")
-        print("\nInvalid genbank accessions values:")
-        for index in invalid_gb:
-            print(f"Row {index + 2}: {genbank_list[index]}")
-        print("\nInvalid HMM accessions values:")
+        print("\nInvalid protein accession values:")
+        for index in invalid_prot:
+            print(f"Row {index + 2}: {protein_list[index]}")
+        print("\nInvalid nucleotide accession values:")
+        for index in invalid_nucl:
+            print(f"Row {index + 2}: {nucleotide_list[index]}")
+        print("\nInvalid HMM accession values:")
         for index in invalid_hmm:
             print(f"Row {index + 2}: {hmm_list[index]}")
     else:
         print("✅ All accessions are present in the relevant catalogues.")
 
-    if not invalid_indices and not invalid_node and not invalid_refseq and not invalid_gb and not invalid_hmm:
+    if not invalid_indices and not invalid_node and not invalid_prot and not invalid_nucl and not invalid_hmm:
         return True
     else:
         return False
@@ -405,7 +433,7 @@ def check_context(context_list, variation_type_list):
     # valid values are core or acquired
     # if variation_type_list isn't None, make sure we check that context is either
     #core or acquired if validation_type isn't 'Combination'
-    print("\nChecking context column...")
+    print("\nChecking gene context column...")
 
     invalid_indices = {}
     if variation_type_list is not None:
@@ -413,24 +441,24 @@ def check_context(context_list, variation_type_list):
             context = context.strip()
             variation = variation.strip()
             if context not in ['core', 'acquired'] and variation != 'Combination':
-                reason = "Context must be 'core' or 'acquired' if variation type is not 'Combination'."
+                reason = "Gene context must be 'core' or 'acquired' if variation type is not 'Combination'."
                 invalid_indices[index] = reason
             if context != '-' and variation == 'Combination':
-                reason = 'If variation type is "Combination", context must be "-".'
+                reason = 'If variation type is "Combination", gene context must be "-".'
                 invalid_indices[index] = reason
     if not variation_type_list:
         for index, context in enumerate(context_list):
             context = context.strip()
             if context not in ['core', 'acquired']:
-                reason = "Context must be 'core' or 'acquired'."
+                reason = "Gene context must be 'core' or 'acquired'."
                 invalid_indices[index] = reason
     
     if not invalid_indices:
-        print("✅ All context values are valid")
+        print("✅ All gene context values are valid")
         return True
     else:
         print(f"❌ {len(invalid_indices)} rows have failed the check")
-        print("Context column must contain either 'core' or 'acquired' and cannot be empty. If variation type is 'Combination', context must be '-'.")
+        print("Gene context column must contain either 'core' or 'acquired' and cannot be empty. If variation type is 'Combination', context must be '-'.")
         for index in invalid_indices:
             print(f"Row {index + 2}: {context_list[index]}; {invalid_indices[index]}")
         return False
@@ -736,17 +764,14 @@ def main():
         rule_ids = None
         summary_checks["ruleID"] = False
 
-    # check txid is present, valid, and matches organism
+    # check txid is present, valid, and matches organism, and organism is present and valid (not empty, '-', or NA)
     if "txid" in columns and "organism" in columns:
         txid_list = get_column("txid", draftrules)
         organism_list = get_column("organism", draftrules)
-        summary_checks["txid"] = check_organism(txid_list, organism_list)
-    # check that the value in organism is always present (can't be blank, '-' or NA, must start with s__)
-    if "organism" in columns:
-        summary_checks["organism"] = check_organism(get_column("organism", draftrules))
+        summary_checks["txid and organism"] = check_organism(txid_list, organism_list)
     else:
-        print("\n❌ No organism column found in file. Spec v0.6 requires this column to be present. Continuing to validate other columns...")
-        summary_checks["organism"] = False
+        print("\n❌ No organism or txid column found in file. Spec v0.6 requires this column to be present. Continuing to validate other columns...")
+        summary_checks["txid and organism"] = False
 
     # check that gene always has a value, and that this value is not '-' or NA or missing, as it should always be some kind of string
     if "gene" in columns and "ruleID" in columns:
@@ -758,24 +783,27 @@ def main():
         print("\n❌ No gene column found in file. Spec v0.6 requires this column to be present. Continuing to validate other columns...")
         summary_checks["gene"] = False
 
-    # check that for columns nodeID, refseq accession, GenBank accession, and HMM accession, at least one of these columns has a value
-    # TODO: Automate downloads of relevant files from AMRFP ftp server?
-    # TODO: print what version of the AMRFP database we're checking in case things are removed and no longer present
+    # check that for columns nodeID, protein accession, nucleotide accession, and HMM accession, at least one of these columns has a value
     if "nodeID" in columns and "protein accession" in columns and "nucleotide accession" in columns and "HMM accession" in columns:
-        refseq_file = 'refgenes_2024-12-18.1.tsv'
-        hmm_file = 'hmms_amrfp_2024-12-18.1.tsv'
-        refseq_nodes_file = 'ReferenceGeneHierarchy_2024-12-18.1.txt'
+        refseq_url = 'https://ftp.ncbi.nlm.nih.gov/pathogen/Antimicrobial_resistance/AMRFinderPlus/database/latest/ReferenceGeneCatalog.txt'
+        hmm_url = 'hmms_amrfp_2024-12-18.1.tsv'
+        amrfp_nodes_url = 'https://ftp.ncbi.nlm.nih.gov/pathogen/Antimicrobial_resistance/AMRFinderPlus/database/latest/ReferenceGeneHierarchy.txt'
+        amrfp_version_url = 'https://ftp.ncbi.nlm.nih.gov/pathogen/Antimicrobial_resistance/AMRFinderPlus/database/latest/version.txt'
+        # Tell the user what version of the database we're checking against
+        amrfp_db_version = download_amrfp_files(amrfp_version_url).read().strip()
+        print(f"\nChecking against AMRFinderPlus database version {amrfp_db_version}...")
+
         # check this column in combo with variation type, but if that col doesn't exist, just set to None and check the rest
         if "variation type" in columns:
-            summary_checks["gene accessions"] = check_id_accessions(get_column("nodeID", draftrules), get_column("protein accession", draftrules), get_column("nucleotide accession", draftrules), get_column("HMM accession", draftrules), get_column("variation type", draftrules), refseq_file, refseq_nodes_file, hmm_file)
+            summary_checks["gene accessions"] = check_id_accessions(get_column("nodeID", draftrules), get_column("protein accession", draftrules), get_column("nucleotide accession", draftrules), get_column("HMM accession", draftrules), get_column("variation type", draftrules), refseq_url, amrfp_nodes_url, hmm_url)
         else:
-            summary_checks["gene accessions"] = check_id_accessions(get_column("nodeID", draftrules), get_column("protein accession", draftrules), get_column("nucleotide accession", draftrules), get_column("HMM accession", draftrules), None, refseq_file, refseq_nodes_file, hmm_file)
+            summary_checks["gene accessions"] = check_id_accessions(get_column("nodeID", draftrules), get_column("protein accession", draftrules), get_column("nucleotide accession", draftrules), get_column("HMM accession", draftrules), None, refseq_url, amrfp_nodes_url, hmm_url)
 
     else:
         for column in ["nodeID", "protein accession", "nucleotide accession", "HMM accession"]:
             if column not in columns:
                 print(f"\n❌ {column} column not found in file.")
-        print("\n❌ Spec v0.6 requires all of nodeID, refseq accession, GenBank accession, HMM accession and variation type columns to be present in order to validate. Continuing to validate other columns...")
+        print("\n❌ Spec v0.6 requires all of nodeID, protein accession, nucleotide accession, HMM accession and variation type columns to be present in order to validate. Continuing to validate other columns...")
         summary_checks["gene accessions"] = False
 
     if "ARO accession" in columns:
@@ -860,6 +888,12 @@ def main():
     else:
         print("\n❌ No breakpoint standard column found in file. Spec v0.6 requires this column to be present. Continuing to validate other columns...")
         summary_checks["breakpoint standard"] = False
+    
+    if "breakpoint condition" in columns:
+        summary_checks["breakpoint condition"] = check_if_not_missing(get_column("breakpoint condition", draftrules), "breakpoint condition", list_unique=True)
+    else:
+        print("\n❌ No breakpoint condition column found in file. Spec v0.6 requires this column to be present. Continuing to validate other columns...")
+        summary_checks["breakpoint condition"] = False
 
     if "PMID" in columns:
         summary_checks["PMID"] = check_if_not_missing(get_column("PMID", draftrules), "PMID")
@@ -893,6 +927,7 @@ def main():
     print(f"❌ Failed: {len(failed_checks)}")
     for check in failed_checks:
         print(f"  - {check}")
+    print("Checked against AMRFinderPlus database version:", amrfp_db_version)
 
 if __name__ == "__main__":
     main()
