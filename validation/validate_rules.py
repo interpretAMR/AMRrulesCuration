@@ -150,33 +150,53 @@ def check_ruleIDs(id_list):
     else:
         return False
 
-def check_organism(organism_list):
+def check_organism(txid_list, organism_list):
     
-    print("\nChecking organism column...")
+    print("\nChecking txid and organism columns...")
 
-    # read in the valid GTDB organism names
-    with open('gtdb_species_r220.txt', 'r') as f:
-        gtdb_organism_names = [line.strip() for line in f.readlines()]
+    # read in the valid NCBI organism names and their corresponding txids
+    with open('card-ontology/ncbi_taxonomy.tsv', 'r') as f:
+        reader = csv.DictReader(f, delimiter='\t')
+        ncbi_organism_dict = {row['Accession']: row['Name'] for row in reader}
+        
     
     # Initialize a dictionary to store invalid rows and reasons
-    invalid_indices = {}
+    invalid_txid_indices = {}
+    invalid_org_indices = {}
     invalid_org_names = []
+    invalid_txids = []
+
+    # for each txid, check that its a value (so not empty, NA, or '-'), and that it's in the ncbi_organism_dict keys
+    for index, txid in enumerate(txid_list):
+        txid = txid.strip()
+        if txid in ['NA', '-', '']:
+            invalid_txid_indices[index] = "txid is empty, 'NA', or '-'"
+        elif txid not in ncbi_organism_dict.keys():
+            invalid_txid_indices[index] = "Taxonomic ID " + txid + " is not in the NCBI taxonomy list"
+            invalid_txids.append(txid)
     
-    # Check for empty, NA, or '-' values, and that the organism name is in the GTDB organism names list
-    for index, value in enumerate(organism_list):
-        value = value.strip()
-        if value in ['NA', '-', '']:
-            invalid_indices[index] = "Value is empty, 'NA', or '-'"
-        elif value not in gtdb_organism_names:
-            invalid_indices[index] = "Organism name " + value + " is not in the GTDB organism names list"
-            invalid_org_names.append(value)
-    
-    if not invalid_indices:
-        print("✅ All organism names passed validation")
+    for index, organism in enumerate(organism_list):
+        organism = organism.strip()
+        # check that the organism name is not empty, NA, or '-'
+        if organism in ['NA', '-', '']:
+            invalid_org_indices[index] = "Organism name is empty, 'NA', or '-'"
+        # check that the organism name starts with 's__' and is in the NCBI organism names list
+        elif not organism.startswith('s__'):
+            invalid_org_indices[index] = "Organism name " + organism + " does not start with 's__'"
+            invalid_org_names.append(organism)
+        elif organism not in ncbi_organism_dict.values():
+            invalid_org_indices[index] = "Organism name " + organism + " is not in the NCBI taxonomy list"
+            invalid_org_names.append(organism)
+
+
+    if not invalid_txid_indices and not invalid_org_indices:
+        print("✅ All txid and organism names passed validation")
     else:
-        print(f"❌ {len(invalid_indices)} rows have failed the check")
-        print("Organism names must be present, not 'NA' or '-'. They should start with 's__' and be in the GTDB organism names list, as per file gtdb_species_r220.txt.")
-        for index in invalid_indices:
+        print(f"❌ {len(invalid_txid_indices) + len(invalid_org_indices)} rows have failed the check")
+        print("txids and organism names must be present, not 'NA' or '-'. Organism names should start with 's__'. Both txids and organism names should be in the NCBI taxonomic list, as per file card_ontology/ncbi_taxonomy.tsv.")
+        for index in invalid_txid_indices:
+            print(f"Row {index + 2}: {txid_list[index]}")
+        for index in invalid_org_indices:
             print(f"Row {index + 2}: {organism_list[index]}")
     
     unique_organisms = set(organism_list)
@@ -184,29 +204,15 @@ def check_organism(organism_list):
     # becase the value isn't in the GTDB list, go through the GTDB list and extract anything
     # where the genus is the same, and provide those as options for the user to consider
     if len(invalid_org_names) > 0:
-        print("\nThe following organism names are not in the GTDB list:\n")
+        print("\nThe following organism names are not in the NCBI list:\n")
         unique_invalid_org_names = set(invalid_org_names)
-        matching_organisms_genus = []
-        matching_organisms_spp = []
         for org_name in unique_invalid_org_names:
             print(org_name)
-            # extract the genus from the name
-            genus = org_name.split(' ')[0]
-            # first try and find any GTDB organism names which are very close to this species
-            # eg they have an _D or something at the end
-            matching_organisms_spp = matching_organisms_spp + [name for name in gtdb_organism_names if name.startswith(org_name) and name != org_name]
-            # if we don't find any, try and find any GTDB organism names which are the same genus
-            matching_organisms_genus = matching_organisms_genus + [name for name in gtdb_organism_names if name.startswith(genus)]
-        if matching_organisms_spp or matching_organisms_genus:
-            unique_matching_spp = set(matching_organisms_spp)
-            unique_matching_genus = set(matching_organisms_genus)
-            print(f"\nPossible matches from the same species in GTDB list:\n{'\n'.join(unique_matching_spp)}")
-            print(f"\nPossible matches from the same genera in GTDB list:\n{'\n'.join(unique_matching_genus)}")
 
     unique_organisms_str = ', '.join(map(str, unique_organisms))
     print(f"\nUnique organism names: {unique_organisms_str}")
 
-    if not invalid_indices:
+    if not invalid_txid_indices and not invalid_org_indices:
         return True
     else:
         return False
@@ -730,6 +736,11 @@ def main():
         rule_ids = None
         summary_checks["ruleID"] = False
 
+    # check txid is present, valid, and matches organism
+    if "txid" in columns and "organism" in columns:
+        txid_list = get_column("txid", draftrules)
+        organism_list = get_column("organism", draftrules)
+        summary_checks["txid"] = check_organism(txid_list, organism_list)
     # check that the value in organism is always present (can't be blank, '-' or NA, must start with s__)
     if "organism" in columns:
         summary_checks["organism"] = check_organism(get_column("organism", draftrules))

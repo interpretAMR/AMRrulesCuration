@@ -42,6 +42,8 @@ ARO:3007382	gentamicin	aminoglycoside antibiotic
 ARO:3003957	palmitic acid	antibacterial free fatty acids
 ARO:3003958	oleic acid	antibacterial free fatty acids
 ARO:3003959	linoleic acid	antibacterial free fatty acids
+ARO:3007638	hygromycin A	antibiotic without defined classification
+ARO:3009165	antifungal without defined classification	antibiotic without defined classification
 ARO:0000055	bicyclomycin	bicyclomycin-like antibiotic
 ARO:3007774	dragmacidin A	bis-indole alkaloid with antibiotic activity
 ARO:3007775	dragmacidin B	bis-indole alkaloid with antibiotic activity
@@ -142,6 +144,11 @@ ARO:3007517	ketoconazole	imidazole antibiotic
 ARO:3007518	miconazole	imidazole antibiotic
 ARO:3007519	econazole	imidazole antibiotic
 ARO:3007520	oxiconazole	imidazole antibiotic
+ARO:3009159	Bifonazole	imidazole antibiotic
+ARO:3009169	triflumizole	imidazole antibiotic
+ARO:3009171	oxpoconazole	imidazole antibiotic
+ARO:3009175	carbendazim	imidazole antibiotic
+ARO:3009180	hexaconazole	imidazole antibiotic
 ARO:3007471	narasin	ionophore with antibiotic activity
 ARO:3007484	monensin	ionophore with antibiotic activity
 ARO:3007485	nigericin	ionophore with antibiotic activity
@@ -195,11 +202,15 @@ ARO:3007792	aplasmomycin	macrolide antibiotic
 ARO:3007793	boromycin	macrolide antibiotic
 ARO:3007795	Azalomycin F	macrolide antibiotic
 ARO:3007796	tylvalosin	macrolide antibiotic
+ARO:3009156	neutramycin	macrolide antibiotic
+ARO:3009176	brefeldin A	macrolide antibiotic
+ARO:3000697	moenomycin A1	moenomycin antibiotic
 ARO:3000550	aztreonam	monobactam
 ARO:3003821	BAL30072	monobactam
 ARO:3004728	carumonam	monobactam
 ARO:3004729	LYS228	monobactam
 ARO:3000554	mupirocin	mupirocin-like antibiotic
+ARO:3009155	atovaquone	napthoquinone antibiotics
 ARO:0000075	nitrofurantoin	nitrofuran antibiotic
 ARO:3000688	furazolidone	nitrofuran antibiotic
 ARO:3007655	nifuroxazide	nitrofuran antibiotic
@@ -218,6 +229,7 @@ ARO:3007139	cordycepin	nucleoside antibiotic
 ARO:3007479	caprazamycin	nucleoside antibiotic
 ARO:3007481	pseudouridimycin	nucleoside antibiotic
 ARO:3007687	zidovudine	nucleoside antibiotic
+ARO:3009160	5-fluorocytosine	nucleoside antibiotic
 ARO:3003780	nybomycin	nybomycin-like antibiotic
 ARO:3000552	arsphenamine	organoarsenic antibiotic
 ARO:3007534	arsinothricin	organoarsenic antibiotic
@@ -286,6 +298,7 @@ ARO:3007754	Lasalocid A	polyketide with antibiotic activity
 ARO:3007088	murepavadin	protegrin-1-like antibiotic
 ARO:3003413	pyrazinamide	pyrazine antibiotic
 ARO:3007558	5-flucytosine	pyrimidine antifungal drug
+ARO:3009138	5-Fluorouracil	pyrimidine antifungal drug
 ARO:3000169	rifampin	rifamycin antibiotic
 ARO:3000517	rifaximin	rifamycin antibiotic
 ARO:3000530	rifabutin	rifamycin antibiotic
@@ -349,6 +362,13 @@ ARO:3007511	itraconazole	triazole antibiotic
 ARO:3007512	voriconazole	triazole antibiotic
 ARO:3007513	posaconazole	triazole antibiotic
 ARO:3007514	isavuconazole	triazole antibiotic
+ARO:3009162	Ravuconazole	triazole antibiotic
+ARO:3009181	tebuconazole	triazole antibiotic
+ARO:3009182	propiconazole	triazole antibiotic
+ARO:3009187	bromuconazole	triazole antibiotic
+ARO:3009189	cyproconazole	triazole antibiotic
+ARO:3009190	difenoconazole	triazole antibiotic
+ARO:3009191	epoxiconazole	triazole antibiotic
 ARO:3004858	Zoliflodacin	zoliflodacin-like antibiotic
 ARO:0000058	cefazolin	first-generation cephalosporin
 ARO:3000641	cefalexin	first-generation cephalosporin
@@ -435,8 +455,6 @@ ARO:3004018	nafcillin	beta-lactamase resistant penicillin
 ARO:0000022	polymyxin antibiotic	lipopeptide antibiotic
 ARO:0000068	daptomycin	lipopeptide antibiotic
 ARO:3000685	arylomycin	lipopeptide antibiotic
-ARO:3000687	moenomycin	lipopeptide antibiotic
-ARO:3000697	moenomycin A1	lipopeptide antibiotic
 ARO:3003822	battacin	lipopeptide antibiotic
 ARO:3004374	malacidin A	lipopeptide antibiotic
 ARO:3004567	Ramoplanin	lipopeptide antibiotic
