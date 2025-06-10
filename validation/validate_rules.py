@@ -91,11 +91,16 @@ def download_amrfp_files(url):
 
     return content_io
 
-def check_if_allowed_value(value_list, col_name, allowable_values):
+def check_if_allowed_value(value_list, col_name, allowable_values, missing_allowed=False):
 
     print("\nChecking  " + col_name + " column...")
 
-    invalid_indices = [index for index, value in enumerate(value_list) if value.strip() == '' or value.strip() in ['NA', '-'] or value.strip() not in allowable_values]
+    if missing_allowed:
+        # can be empty, but this must be reflected by a '-', otherwise must be an allowed value (which should include '-')
+        invalid_indices = [index for index, value in enumerate(value_list) if value.strip() == '' or value.strip() in ['NA'] or value.strip() not in allowable_values]
+    else:
+        # disallow '-' as it must be one of the approved values
+        invalid_indices = [index for index, value in enumerate(value_list) if value.strip() == '' or value.strip() in ['NA', '-'] or value.strip() not in allowable_values]
 
     if not invalid_indices:
         print("✅ All " + col_name + " values are valid")
@@ -640,7 +645,7 @@ def check_evidence_code(evidence_code_list):
     
     print("\nChecking evidence code column...")
 
-    allowable_values = ["ECO:0001091 knockout phenotypic evidence", "ECO:0000012 functional complementation evidence", "ECO:0001113 point mutation phenotypic evidence", "ECO:0000024 protein-binding evidence", "ECO:0001034 crystallography evidence", "ECO:0000005 enzymatic activity assay evidence", "ECO:0000042 gain-of-function mutant phenotypic evidence", "ECO:0007000 high throughput mutant phenotypic evidence", "ECO:0001103 natural variation mutant evidence", "ECO:0005027 genetic transformation evidence", "ECO:0000020 protein inhibition evidence"]
+    allowable_values = ["ECO:0001091 knockout phenotypic evidence", "ECO:0000012 functional complementation evidence", "ECO:0001113 point mutation phenotypic evidence", "ECO:0000024 protein-binding evidence", "ECO:0001034 crystallography evidence", "ECO:0000005 enzymatic activity assay evidence", "ECO:0000042 gain-of-function mutant phenotypic evidence", "ECO:0007000 high throughput mutant phenotypic evidence", "ECO:0001103 natural variation mutant evidence", "ECO:0005027 genetic transformation evidence", "ECO:0000020 protein inhibition evidence", "ECO:0006404 experimentally evolved mutant phenotypic evidence", "ECO:0000054 double mutant phenotype evidence"]
 
     # can be more than one of those values in this column, so need to split on the , separating them
     invalid_indices = []
@@ -890,7 +895,28 @@ def main():
         summary_checks["breakpoint standard"] = False
     
     if "breakpoint condition" in columns:
-        summary_checks["breakpoint condition"] = check_if_not_missing(get_column("breakpoint condition", draftrules), "breakpoint condition", list_unique=True)
+        breakpoint_condition_list = ["-",
+                                "Endocarditis",
+                                "Endocarditis with combination treatment",
+                                "Intravenous",
+                                "Meningitis",
+                                "Meningitis, Endocarditis",
+                                "Non-endocarditis",
+                                "Non-meningitis",
+                                "Non-meningitis, Non-endocarditis",
+                                "Non-pneumonia",
+                                "Oral",
+                                "Oral, Infections originating from the urinary tract",
+                                "Oral, Other indications",
+                                "Oral, Uncomplicated urinary tract infection",
+                                "Pneumonia",
+                                "Prophylaxis",
+                                "Respiratory",
+                                "Screen",
+                                "Skin",
+                                "Uncomplicated urinary tract infection"
+                            ]
+        summary_checks["breakpoint condition"] = check_if_allowed_value(get_column("breakpoint condition", draftrules), "breakpoint condition", breakpoint_condition_list, missing_allowed=True)
     else:
         print("\n❌ No breakpoint condition column found in file. Spec v0.6 requires this column to be present. Continuing to validate other columns...")
         summary_checks["breakpoint condition"] = False
