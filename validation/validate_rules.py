@@ -525,7 +525,7 @@ def check_mutation_variation(mutation_list, variation_list):
             reason = "Mutation must start with 'c.' if variation type is 'Nucleotide variant detected'"
         elif variation == "Protein variant detected" and not mutation.startswith("p."):
             reason = "Mutation must start with 'p.' if variation type is 'Protein variant detected'"
-        elif variation == "Promoter variant detected" and not re.match(r"^c\.\[-?|\(-?|-", mutation):
+        elif variation == "Promoter variant detected" and not re.match(r"^c\.(-|\[-|\(-)", mutation):
             reason = "Mutation must start with 'c.-', 'c.(-', or 'c.[-' if variation type is 'Promoter variant detected'. The - symbol indicates the position before the start of the gene where the mutation occurs."
         elif variation == "Nucleotide variant detected in multi-copy gene" and not mutation.startswith("c."):
             reason = "Mutation must start with 'c.' if variation type is 'Nucleotide variant detected in multi-copy gene'"
@@ -673,7 +673,8 @@ def check_evidence_code(evidence_code_list):
             unique_codes = set(invalid_codes)
             print("The following evidence codes are new and not currently in the list of suggested values:")
             print(f"{', '.join(unique_codes)}")
-        print(f"\n❌ {len(invalid_indices)} rows have failed the check. Each rule must have an evidence code and not be empty. If there are multiplegit  evidence codes for a row, they must be separated by a ',', not by a new line. Evidence codes must start with 'ECO:'.")
+            print("If these are valid ECO codes, please ignore this message from the check.")
+        print(f"\n❌ {len(invalid_indices)} rows have failed the check. Each rule must have an evidence code and not be empty. If there are multiple evidence codes for a row, they must be separated by a ',', not by a new line. Evidence codes must start with 'ECO:'.")
         for index in invalid_indices:
             print(f"Row {index + 2}: {evidence_code_list[index]}")
         return False
