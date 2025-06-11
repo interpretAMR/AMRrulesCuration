@@ -641,6 +641,48 @@ def check_sir_breakpoint(clinical_category_list, breakpoint_list):
             print(f"Row {index}: {reason}")
         return False
 
+def check_bp_standard(breakpoint_standard_list):
+    
+    print("\nChecking breakpoint standard column...")
+
+    # allowable values are ECOFF (Month Year), Name version (year), EUCAST Expected resistant phenotypes [version] ([date]), EUCAST [organism] Expert Rules [version (year])]
+    # eg EUCAST v14.0 (2024), ECOFF (May 2025), EUCAST Expected Resistant Phenotypes v1.2 (2023)
+    # we need regex to check these
+
+    suggested_values = [
+        r'^ECOFF \(\w+ \d{4}\)$',  # ECOFF (Month Year)
+        r'^EUCAST .+ Expert Rules \(\w+ \d{4}\)$',  # EUCAST [organism] Expert Rules (Month year)
+        r'^EUCAST Expected Resistant Phenotypes v\d+(\.\d+)? \(\d{4}\)$',  # EUCAST Expected Resistant Phenotypes version (year)
+        r'^(EUCAST|CLSI)\s+v\d+(\.\d+)?\s+\(\d{4}\)$'  # EUCAST/CLSI version (year)
+    ]
+    invalid_indices_dict = {}
+    unique_values = set(breakpoint_standard_list)
+    for index, value in enumerate(breakpoint_standard_list):
+        value = value.strip()
+        if value == '' or value in ['NA', '-']:
+            continue
+        if not any(re.match(pattern, value) for pattern in suggested_values):
+            invalid_indices_dict[index + 2] = value
+    if not invalid_indices_dict:
+        print("✅ All breakpoint standard values match expected patterns.")
+        print("Here is a list of the unique values found in the column:")
+        unique_values_str = '\n'.join(unique_values)
+        print(unique_values_str)
+        return True
+    else:
+        print(f"❌ {len(invalid_indices_dict)} rows have failed the check")
+        print("We check for the following formats: ECOFF (Month Year), EUCAST [organism] Expert Rules (Month year), EUCAST Expected Resistant Phenotypes vX (year), or EUCAST/CLSI vX (year).")
+        print("Breakpoint standard values that didn't match this format are:")
+        for index, value in invalid_indices_dict.items():
+            print(f"Row {index}: {value}")
+        print("Please double check these entries to ensure they are valid.")
+
+        print("Here is a list of the unique values found in the column:")
+        unique_values_str = '\n'.join(unique_values)
+        print(unique_values_str)
+
+        return False
+
 def check_evidence_code(evidence_code_list):
     
     print("\nChecking evidence code column...")
@@ -890,7 +932,7 @@ def main():
         summary_checks["clinical category and breakpoint concordance"] = False
 
     if "breakpoint standard" in columns:
-        summary_checks["breakpoint standard"] = check_if_not_missing(get_column("breakpoint standard", draftrules), "breakpoint standard", list_unique=True)
+        summary_checks["breakpoint standard"] = check_bp_standard(get_column("breakpoint standard", draftrules))
     else:
         print("\n❌ No breakpoint standard column found in file. Spec v0.6 requires this column to be present. Continuing to validate other columns...")
         summary_checks["breakpoint standard"] = False
